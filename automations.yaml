@@ -1,0 +1,21 @@
+- alias: In the morning, there will be light
+  initial_state: True
+  trigger:
+    platform: time
+    at: "06:00:00"
+  action:
+    service: light.turn_on
+    entity_id: light.hue_color_lamp_1
+    data:
+      transition: 2700
+      brightness: 255
+
+- alias: In the morning, turn lights off again
+  initial_state: True
+  trigger:
+    platform: time
+    at: "07:15:00"
+  action:
+    service: light.turn_off
+    entity_id: light.hue_color_lamp_1
+

@@ -1,0 +1,12 @@
+device_tracker.andrei_phone:
+  friendly_name: Andrei
+  icon: mdi:human-male
+
+device_tracker.lee_phone:
+  friendly_name: Lee
+  icon: mdi:human-female
+
+device_tracker.lee_ipad:
+  friendly_name: Lee iPad
+  icon: mdi:tablet-ipad
+

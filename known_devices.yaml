@@ -1,0 +1,221 @@
+andrei_phone:
+  hide_if_away: true
+  icon:
+  mac: 38:94:96:9E:32:81
+  name: Andrei
+  track: true
+
+lee_phone:
+  hide_if_away: true
+  icon:
+  mac: AC:5F:3E:61:39:57
+  name: Lee
+  track: true
+
+lee_ipad:
+  hide_if_away: true
+  icon:
+  mac: C8:F6:50:1C:78:93
+  name: iPad
+  picture:
+  track: true
+
+'000022222222':
+  hide_if_away: false
+  icon:
+  mac: 00:00:22:22:22:22
+  name: '000022222222'
+  picture:
+  track: false
+
+0026b978a3f5:
+  hide_if_away: false
+  icon:
+  mac: 00:26:B9:78:A3:F5
+  name: 0026b978a3f5
+  picture:
+  track: false
+
+0026b978a3f6:
+  hide_if_away: false
+  icon:
+  mac: 00:26:B9:78:A3:F6
+  name: 0026b978a3f6
+  picture:
+  track: false
+
+00c0b74e78d1:
+  hide_if_away: false
+  icon:
+  mac: 00:C0:B7:4E:78:D1
+  name: 00c0b74e78d1
+  picture:
+  track: false
+
+70188b3667b9:
+  hide_if_away: false
+  icon:
+  mac: 70:18:8B:36:67:B9
+  name: 70188b3667b9
+  picture:
+  track: false
+
+2c27d7921690:
+  hide_if_away: false
+  icon:
+  mac: 2C:27:D7:92:16:90
+  name: 2c27d7921690
+  picture:
+  track: false
+
+001b38b2c6b1:
+  hide_if_away: false
+  icon:
+  mac: 00:1B:38:B2:C6:B1
+  name: 001b38b2c6b1
+  picture:
+  track: false
+
+00c0b7cbdc9a:
+  hide_if_away: false
+  icon:
+  mac: 00:C0:B7:CB:DC:9A
+  name: 00c0b7cbdc9a
+  picture:
+  track: false
+
+288023e6661a:
+  hide_if_away: false
+  icon:
+  mac: 28:80:23:E6:66:1A
+  name: 288023e6661a
+  picture:
+  track: false
+
+0418d6e0c968:
+  hide_if_away: false
+  icon:
+  mac: 04:18:D6:E0:C9:68
+  name: 0418d6e0c968
+  picture:
+  track: false
+
+f8597135f453:
+  hide_if_away: false
+  icon:
+  mac: F8:59:71:35:F4:53
+  name: f8597135f453
+  picture:
+  track: false
+
+b0ee7b6c8880:
+  hide_if_away: false
+  icon:
+  mac: B0:EE:7B:6C:88:80
+  name: b0ee7b6c8880
+  picture:
+  track: false
+
+e4ce8f5c973f:
+  hide_if_away: false
+  icon:
+  mac: E4:CE:8F:5C:97:3F
+  name: e4ce8f5c973f
+  picture:
+  track: false
+
+000af503267c:
+  hide_if_away: false
+  icon:
+  mac: 00:0A:F5:03:26:7C
+  name: 000af503267c
+  picture:
+  track: false
+
+606bffae9d18:
+  hide_if_away: false
+  icon:
+  mac: 60:6B:FF:AE:9D:18
+  name: 606bffae9d18
+  picture:
+  track: false
+
+c8ff28b1c414:
+  hide_if_away: false
+  icon:
+  mac: C8:FF:28:B1:C4:14
+  name: c8ff28b1c414
+  picture:
+  track: false
+
+00904c58f512:
+  hide_if_away: false
+  icon:
+  mac: 00:90:4C:58:F5:12
+  name: 00904c58f512
+  picture:
+  track: false
+
+0090a9b95e12:
+  hide_if_away: false
+  icon:
+  mac: 00:90:A9:B9:5E:12
+  name: 0090a9b95e12
+  picture:
+  track: false
+
+5882a821b55a:
+  hide_if_away: false
+  icon:
+  mac: 58:82:A8:21:B5:5A
+  name: 5882a821b55a
+  picture:
+  track: false
+
+34d27011f329:
+  hide_if_away: false
+  icon:
+  mac: 34:D2:70:11:F3:29
+  name: 34d27011f329
+  picture:
+  track: false
+
+f877b8d3ebc7:
+  hide_if_away: false
+  icon:
+  mac: F8:77:B8:D3:EB:C7
+  name: f877b8d3ebc7
+  picture:
+  track: false
+
+340286823fca:
+  hide_if_away: false
+  icon:
+  mac: 34:02:86:82:3F:CA
+  name: 340286823fca
+  picture:
+  track: false
+
+b4ae2b2c08d3:
+  hide_if_away: false
+  icon:
+  mac: B4:AE:2B:2C:08:D3
+  name: b4ae2b2c08d3
+  picture:
+  track: false
+
+001cebe90c40:
+  hide_if_away: false
+  icon:
+  mac: 00:1C:EB:E9:0C:40
+  name: 001cebe90c40
+  picture:
+  track: false
+
+001788b1dff7:
+  hide_if_away: false
+  icon:
+  mac: 00:17:88:B1:DF:F7
+  name: 001788b1dff7
+  picture:
+  track: false

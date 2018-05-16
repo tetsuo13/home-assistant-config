@@ -1,0 +1,15 @@
+  - name: Sternberger
+    latitude: 36.0853104
+    longitude: -79.8474929
+    radius: 250
+    icon: mdi:school
+
+  - name: Partners
+    latitude: 36.07958
+    longitude: -79.7966169
+    icon: mdi:school
+
+  - name: Key Risk
+    latitude: 36.0800469
+    longitude: -79.9654359
+

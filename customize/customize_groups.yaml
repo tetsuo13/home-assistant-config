@@ -1,0 +1,7 @@
+group.bedroom:
+  friendly_name: Bedroom
+
+group.bedroom_lights:
+  friendly_name: Bedroom Lights
+  icon: mdi:lamp
+

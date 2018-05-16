@@ -1,0 +1,39 @@
+# https://home-assistant.io/components/group
+
+#
+# Views
+#
+
+  default_view:
+    name: Rooms
+    view: yes
+    icon: mdi:home
+    entities:
+      - group.location
+      - group.master_bedroom
+
+#
+# Lights
+#
+
+  Bedroom Lights:
+    - light.hue_color_lamp_1
+
+#
+# Rooms
+#
+
+  Master Bedroom:
+    control: hidden
+    entities:
+      #- group.bedroom_lights
+      - light.hue_color_lamp_1
+
+#
+# Other
+#
+
+  Location:
+    - device_tracker.andrei_phone
+    - device_tracker.lee_phone
+
