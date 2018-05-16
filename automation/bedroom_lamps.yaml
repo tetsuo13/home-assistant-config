@@ -1,4 +1,4 @@
-- alias: In the morning, there will be light
+- alias: Turn on Lights to Wake Us Up
   initial_state: True
   trigger:
     platform: time
@@ -10,7 +10,7 @@
       transition: 2700
       brightness: 255
 
-- alias: In the morning, turn lights off again
+- alias: Turn Off Lights Before Work
   initial_state: True
   trigger:
     platform: time

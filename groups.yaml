@@ -11,13 +11,7 @@
     entities:
       - group.location
       - group.master_bedroom
-
-#
-# Lights
-#
-
-  Bedroom Lights:
-    - light.hue_color_lamp_1
+      - group.automations_for_lights
 
 #
 # Rooms
@@ -26,7 +20,6 @@
   Master Bedroom:
     control: hidden
     entities:
-      #- group.bedroom_lights
       - light.hue_color_lamp_1
 
 #
@@ -36,4 +29,12 @@
   Location:
     - device_tracker.andrei_phone
     - device_tracker.lee_phone
+
+#
+# Automations
+#
+
+  Automations for Lights:
+    - automation.turn_on_lights_to_wake_us_up
+    - automation.turn_off_lights_before_work
 

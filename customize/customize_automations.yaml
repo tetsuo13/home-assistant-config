@@ -1,0 +1,8 @@
+automation.turn_on_lights_to_wake_us_up:
+  friendly_name: Turn on Lights to Wake Us Up
+  icon: mdi:lightbulb-outline
+
+automation.turn_off_lights_before_work:
+  friendly_name: Turn Off Lights After Waking Us Up
+  icon: mdi:lightbulb-outline
+

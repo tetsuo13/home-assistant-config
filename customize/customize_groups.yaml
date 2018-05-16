@@ -1,7 +1,3 @@
-group.bedroom:
-  friendly_name: Bedroom
-
-group.bedroom_lights:
-  friendly_name: Bedroom Lights
-  icon: mdi:lamp
+group.automations_for_lights:
+  friendly_name: Automations for Lights
 
