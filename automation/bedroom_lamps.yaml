@@ -4,17 +4,13 @@
     platform: time
     at: "06:00:00"
   action:
-    service: light.turn_on
-    entity_id: light.hue_color_lamp_1
-    data:
-      transition: 2700
-      brightness: 255
+    service: script.wakeup
 
 - alias: Turn Off Lights Before Work
   initial_state: True
   trigger:
     platform: time
-    at: "07:15:00"
+    at: "07:30:00"
   action:
     service: light.turn_off
     entity_id: light.hue_color_lamp_1
