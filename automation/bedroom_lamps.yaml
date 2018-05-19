@@ -3,6 +3,14 @@
   trigger:
     platform: time
     at: "06:00:00"
+  condition:
+  - condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
   action:
     service: script.wakeup
 
@@ -11,6 +19,14 @@
   trigger:
     platform: time
     at: "07:30:00"
+  condition:
+  - condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
   action:
     service: light.turn_off
     entity_id: light.hue_color_lamp_1
