@@ -12,4 +12,5 @@ wakeup:
         entity_id: light.hue_color_lamp_1
         brightness: 255
         transition: 1800
+        rgb_color: [255, 255, 255]
 
