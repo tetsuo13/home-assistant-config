@@ -37,4 +37,5 @@
   Automations for Lights:
     - automation.turn_on_lights_to_wake_us_up
     - automation.turn_off_lights_before_work
+    - automation.turn_on_lights_sunset
 

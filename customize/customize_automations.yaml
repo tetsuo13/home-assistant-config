@@ -6,3 +6,7 @@ automation.turn_off_lights_before_work:
   friendly_name: Turn Off Lights After Waking Us Up
   icon: mdi:lightbulb-outline
 
+automation.turn_on_lights_sunset:
+  friendly_name: Turn On Lights - Sunset
+  icon: mdi:lightbulb-outline
+
