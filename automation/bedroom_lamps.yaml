@@ -42,3 +42,12 @@
       entity_id: light.hue_color_lamp_1
       effect: colorloop
 
+- alias: Turn Off Lights Midnight
+  initial_state: True
+  trigger:
+    platform: time
+    at: "11:59:00"
+  action:
+    service: light.turn_off
+    entity_id: light.hue_color_lamp_1
+

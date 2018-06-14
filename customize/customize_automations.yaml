@@ -10,3 +10,7 @@ automation.turn_on_lights_sunset:
   friendly_name: Turn On Lights - Sunset
   icon: mdi:lightbulb-outline
 
+automation.turn_off_lights_midnight:
+  friendly_name: Turn Off Lights - Midnight
+  icon: mdi:lightbulb-outline
+
