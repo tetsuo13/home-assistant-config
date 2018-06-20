@@ -35,7 +35,7 @@
   initial_state: True
   trigger:
     platform: time
-    at: "18:30:00"
+    at: "18:15:00"
   action:
     service: light.turn_on
     data:
@@ -46,7 +46,7 @@
   initial_state: True
   trigger:
     platform: time
-    at: "11:59:00"
+    at: "22:05:00"
   action:
     service: light.turn_off
     entity_id: light.hue_color_lamp_1
