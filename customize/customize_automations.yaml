@@ -14,3 +14,10 @@ automation.turn_off_lights_midnight:
   friendly_name: Turn Off Lights - Midnight
   icon: mdi:lightbulb-outline
 
+automation.turn_on_lights_eob:
+  friendly_name: Turn on Lights EOB
+  icon: mdi:lightbulb-outline
+
+automation.turn_off_lights_end_of_night:
+  friendly_name: Turn Off Lights - End of Night
+  icon: mdi:lightbulb-outline

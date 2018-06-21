@@ -11,6 +11,7 @@
     entities:
       - group.location
       - group.master_bedroom
+      - group.kitchen
       - group.automations_for_lights
 
 #
@@ -21,6 +22,17 @@
     control: hidden
     entities:
       - light.hue_color_lamp_1
+
+#
+# Lights
+#
+
+  Kitchen:
+    control: hidden
+    icon: mdi:lightbulb-outline
+    entities:
+      - light.hue_white_lamp_1
+      - light.hue_white_lamp_2
 
 #
 # Other
