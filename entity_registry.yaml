@@ -1,24 +1,45 @@
 media_player.rokuden_2:
+  config_entry_id:
   name:
   platform: plex
   unique_id: 629ec1325d23ff97ab5663cd780fe37f
 media_player.tv_un65ks8500:
+  config_entry_id:
   name:
   platform: plex
   unique_id: kjo9zfmlf6
 media_player.rokubedroom_2:
+  config_entry_id:
   name:
   platform: plex
   unique_id: b04639970240ade527fecbff4e8970e0
 light.hue_color_lamp_1:
+  config_entry_id:
   name:
   platform: hue
   unique_id: 00:17:88:01:03:f1:92:0a-0b
 light.hue_white_lamp_1:
+  config_entry_id:
   name:
   platform: hue
   unique_id: 00:17:88:01:03:08:0b:ff-0b
 light.hue_white_lamp_2:
+  config_entry_id:
   name:
   platform: hue
   unique_id: 00:17:88:01:03:08:2c:89-0b
+media_player.rokubedroom:
+  config_entry_id:
+  name:
+  platform: roku
+  unique_id: YR003J270587
+media_player.rokuden:
+  config_entry_id:
+  name:
+  platform: roku
+  unique_id: YW005M118418
+media_player.firefox:
+  config_entry_id:
+  name:
+  platform: plex
+  unique_id: kg5lhq72jl9d5m6y2xw1rsy6
