@@ -4,13 +4,12 @@ wakeup:
     - alias: Bedroom Lights On
       service: light.turn_on
       data:
-        entity_id: light.hue_color_lamp_1
+        entity_id: light.hue_white_lamp_1
         brightness: 1
     - alias: Bedroom Lights Transition
       service: light.turn_on
       data:
-        entity_id: light.hue_color_lamp_1
+        entity_id: light.hue_white_lamp_1
         brightness: 255
         transition: 1800
-        rgb_color: [255, 255, 255]
 

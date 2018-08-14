@@ -1,4 +1,8 @@
-light.hue_color_lamp_1:
+light.hue_white_lamp_1:
   friendly_name: Andrei's bedside
+  icon: mdi:lightbulb-outline
+
+light.hue_white_lamp_2:
+  friendly_name: Lee's bedside
   icon: mdi:lightbulb-outline
 

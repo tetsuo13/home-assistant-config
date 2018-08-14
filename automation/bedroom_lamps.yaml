@@ -2,7 +2,7 @@
   initial_state: True
   trigger:
     platform: time
-    at: "06:00:00"
+    at: "06:15:00"
   condition:
   - condition: time
     weekday:
@@ -29,7 +29,7 @@
       - fri
   action:
     service: light.turn_off
-    entity_id: light.hue_color_lamp_1
+    entity_id: light.hue_white_lamp_1
 
 - alias: Turn On Lights Sunset
   initial_state: True
@@ -39,8 +39,9 @@
   action:
     service: light.turn_on
     data:
-      entity_id: light.hue_color_lamp_1
-      effect: colorloop
+      entity_id:
+        - light.hue_white_lamp_1
+        - light.hue_white_lamp_2
 
 - alias: Turn Off Lights Midnight
   initial_state: True
@@ -49,5 +50,7 @@
     at: "22:05:00"
   action:
     service: light.turn_off
-    entity_id: light.hue_color_lamp_1
+    entity_id:
+      - light.hue_white_lamp_1
+      - light.hue_white_lamp_2
 
