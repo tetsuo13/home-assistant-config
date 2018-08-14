@@ -2,7 +2,7 @@
   initial_state: True
   trigger:
     platform: time
-    at: "06:15:00"
+    at: "06:10:00"
   condition:
   - condition: time
     weekday:
@@ -18,7 +18,7 @@
   initial_state: True
   trigger:
     platform: time
-    at: "07:15:00"
+    at: "07:30:00"
   condition:
   - condition: time
     weekday:
@@ -35,7 +35,7 @@
   initial_state: True
   trigger:
     platform: time
-    at: "18:15:00"
+    at: "18:10:00"
   action:
     service: light.turn_on
     data:
