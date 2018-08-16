@@ -1,3 +1,6 @@
 group.automations_for_lights:
   friendly_name: Automations for Lights
 
+group.outside:
+  friendly_name: Outside
+

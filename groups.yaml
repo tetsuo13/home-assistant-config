@@ -11,6 +11,7 @@
     entities:
       - group.location
       - group.master_bedroom
+      - group.outside
       - group.automations_for_lights
 
 #
@@ -22,6 +23,11 @@
     entities:
       - light.hue_white_lamp_1
       - light.hue_white_lamp_2
+
+  Outside:
+    control: hidden
+    entities:
+      - light.hue_color_lamp_1
 
 #
 # Other
