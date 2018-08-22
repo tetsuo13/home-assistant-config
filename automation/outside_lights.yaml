@@ -1,0 +1,22 @@
+- alias: Turn On Outside Lights Sunset
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '-00:15:00'
+  action:
+    - service: light.turn_on
+      data:
+        entity_id:
+          - light.hue_color_lamp_1
+        brightness_pct: 75
+
+- alias: Turn Off Outside Lights Sunrise
+  trigger:
+    platform: sun
+    event: sunrise
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - light.hue_color_lamp_1
+

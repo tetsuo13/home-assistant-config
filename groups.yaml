@@ -46,4 +46,6 @@
     - automation.turn_off_lights_before_work
     - automation.turn_on_lights_sunset
     - automation.turn_off_lights_midnight
+    - automation.turn_on_outside_lights_sunset
+    - automation.turn_off_outside_lights_sunrise
 
