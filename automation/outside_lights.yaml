@@ -10,10 +10,10 @@
           - light.hue_color_lamp_1
         brightness_pct: 75
 
-- alias: Turn Off Outside Lights Sunrise
+- alias: Turn Off Outside Lights 1:00am
   trigger:
-    platform: sun
-    event: sunrise
+    platform: time
+    at: "01:00:00"
   action:
     - service: light.turn_off
       data:

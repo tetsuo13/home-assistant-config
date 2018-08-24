@@ -18,7 +18,7 @@ automation.turn_on_outside_lights_sunset:
   friendly_name: Turn On Outside Lights - Sunset
   icon: mdi:lightbulb-outline
 
-automation.turn_off_outside_lights_sunrise:
-  friendly_name: Turn Off Outside Lights - Sunrise
+automation.turn_off_outside_lights_100am:
+  friendly_name: Turn Off Outside Lights - 1:00am
   icon: mdi:lightbulb-outline
 
