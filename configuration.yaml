@@ -71,6 +71,11 @@ hue:
     - host: 10.8.16.2
       allow_unreachable: true
 
+wemo:
+  static:
+    - 10.8.16.3
+    - 10.8.16.4
+
 device_tracker: !include device_tracker.yaml
 group: !include groups.yaml
 automation: !include_dir_merge_list automation/

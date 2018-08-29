@@ -1,0 +1,22 @@
+- alias: Spike Basking Lights On In Morning
+  initial_state: True
+  trigger:
+    platform: time
+    at: "06:30:00"
+  action:
+    - service: switch.turn_on
+      entity_id: switch.wemo_mini_1
+    - service: switch.turn_off
+      entity_id: switch.wemo_mini_1_2
+
+- alias: Spike Night Light On At Night
+  initial_state: True
+  trigger:
+    platform: time
+    at: "19:30:00"
+  action:
+    - service: switch.turn_off
+      entity_id: switch.wemo_mini_1
+    - service: switch.turn_on
+      entity_id: switch.wemo_mini_1_2
+

@@ -1,0 +1,8 @@
+switch.wemo_mini_1:
+  friendly_name: Basking & UV lamps
+  icon: mdi:lightbulb-outline
+
+switch.wemo_mini_1_2:
+  friendly_name: Night light
+  icon: mdi:lightbulb-outline
+

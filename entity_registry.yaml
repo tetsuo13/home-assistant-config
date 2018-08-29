@@ -43,3 +43,13 @@ media_player.firefox:
   name:
   platform: plex
   unique_id: kg5lhq72jl9d5m6y2xw1rsy6
+switch.wemo_mini_1:
+  config_entry_id:
+  name:
+  platform: wemo
+  unique_id: 221724K01003D0
+switch.wemo_mini_1_2:
+  config_entry_id:
+  name:
+  platform: wemo
+  unique_id: 221724K01013D3

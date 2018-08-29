@@ -12,6 +12,7 @@
       - group.location
       - group.master_bedroom
       - group.outside
+      - group.spike
       - group.automations_for_lights
 
 #
@@ -28,6 +29,12 @@
     control: hidden
     entities:
       - light.hue_color_lamp_1
+
+  Spike:
+    control: hidden
+    entities:
+      - switch.wemo_mini_1
+      - switch.wemo_mini_1_2
 
 #
 # Other
@@ -48,4 +55,6 @@
     - automation.turn_off_lights_midnight
     - automation.turn_on_outside_lights_sunset
     - automation.turn_off_outside_lights_100am
+    - automation.spike_basking_lights_on_in_morning
+    - automation.spike_night_light_on_at_night
 
