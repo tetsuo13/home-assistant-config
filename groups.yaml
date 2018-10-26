@@ -53,6 +53,8 @@
     - automation.turn_off_lights_before_work
     - automation.turn_on_lights_sunset
     - automation.turn_off_lights_midnight
+    - automation.turn_on_outside_lights_early_morning
+    - automation.turn_off_outside_lights_sunrise
     - automation.turn_on_outside_lights_sunset
     - automation.turn_off_outside_lights_100am
     - automation.spike_basking_lights_on_in_morning

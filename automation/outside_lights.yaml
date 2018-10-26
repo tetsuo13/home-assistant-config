@@ -1,3 +1,23 @@
+- alias: TUrn On Outside Lights Early Morning
+  trigger:
+    platform: time
+    at: "06:15:00"
+  action:
+    - service: light.turn_on
+      data:
+        entity_id:
+          - light.hue_color_lamp_1
+
+- alias: Turn Off Outside Lights Sunrise
+  trigger:
+    platform: sun
+    event: sunrise
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - light.hue_color_lamp_1
+
 - alias: Turn On Outside Lights Sunset
   trigger:
     platform: sun
