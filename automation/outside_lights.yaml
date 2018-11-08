@@ -1,12 +1,13 @@
-- alias: TUrn On Outside Lights Early Morning
+- alias: Turn On Outside Lights Early Morning
   trigger:
     platform: time
     at: "06:15:00"
   action:
     - service: light.turn_on
       data:
-        entity_id:
-          - light.hue_color_lamp_1
+        entity_id: light.hue_color_lamp_1
+        brightness: 255
+        rgb_color: [255, 255, 255]
 
 - alias: Turn Off Outside Lights Sunrise
   trigger:
@@ -26,9 +27,9 @@
   action:
     - service: light.turn_on
       data:
-        entity_id:
-          - light.hue_color_lamp_1
+        entity_id: light.hue_color_lamp_1
         brightness_pct: 75
+        rgb_color: [255, 255, 255]
 
 - alias: Turn Off Outside Lights 1:00am
   trigger:
