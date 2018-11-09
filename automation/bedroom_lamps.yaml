@@ -34,7 +34,8 @@
 - alias: Turn On Lights Sunset
   initial_state: True
   trigger:
-    platform: run
+    platform: sun
+    event: sunset
     offset: '-00:15:00'
   action:
     service: light.turn_on
