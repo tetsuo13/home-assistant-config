@@ -6,6 +6,15 @@ This is the [Home Assistant](https://home-assistant.io/) configuration used in m
 
 The [Cookbook](https://www.home-assistant.io/cookbook/) at Home Assistant's web site was extremely helpful in seeing how others got started.
 
+```
+docker run --detach --restart=always \
+--name="home-assistant" \
+--volume=/etc/home-assistant:/config \
+--volume=/etc/localtime:/etc/localtime:ro \
+--net=host \
+homeassistant/home-assistant
+```
+
 # Connected Devices
 
 ## WiFi Connected Devices
@@ -20,3 +29,4 @@ The [Cookbook](https://www.home-assistant.io/cookbook/) at Home Assistant's web 
 ## Hardwired Devices
 
 * __[Philips Hue Bridge](https://www2.meethue.com/en-us/p/hue-bridge/046677458478)__
+
