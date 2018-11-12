@@ -1,8 +1,32 @@
-- alias: Spike Basking Lights On In Morning
+- alias: Spike Basking Lights On In Weekday Morning
   initial_state: True
   trigger:
     platform: time
     at: "06:30:00"
+  condition:
+  - condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    - service: switch.turn_on
+      entity_id: switch.wemo_mini_1
+    - service: switch.turn_off
+      entity_id: switch.wemo_mini_1_2
+
+- alias: Spike Basking Lights On In Weekend Morning
+  initial_state: True
+  trigger:
+    platform: time
+    at: "07:30:00"
+  condition:
+  - condition: time
+    weekday:
+      - sat
+      - sun
   action:
     - service: switch.turn_on
       entity_id: switch.wemo_mini_1

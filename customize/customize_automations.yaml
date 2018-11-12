@@ -30,8 +30,12 @@ automation.turn_off_outside_lights_100am:
   friendly_name: Turn Off Outside Lights - 1:00am
   icon: mdi:lightbulb-outline
 
-automation.spike_basking_lights_on_in_morning:
-  friendly_name: Spike Basking Lights On In Morning
+automation.spike_basking_lights_on_in_weekday_morning:
+  friendly_name: Spike Basking Lights On In Weekday Morning
+  icon: mdi:lightbulb-outline
+
+automation.spike_basking_lights_on_in_weekend_morning:
+  friendly_name: Spike Basking Lights On In Weekend Morning
   icon: mdi:lightbulb-outline
 
 automation.spike_night_light_on_at_night:
