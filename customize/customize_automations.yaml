@@ -1,44 +1,46 @@
+# Order matters
+
 automation.turn_on_lights_to_wake_us_up:
-  friendly_name: Turn on Lights to Wake Us Up
+  friendly_name: Bedroom Lights On at 6:10am
   icon: mdi:lightbulb-outline
 
 automation.turn_off_lights_before_work:
-  friendly_name: Turn Off Lights After Waking Us Up
+  friendly_name: Bedroom Lights Off at 7:45am
   icon: mdi:lightbulb-outline
 
 automation.turn_on_lights_sunset:
-  friendly_name: Turn On Lights - Sunset
+  friendly_name: Bedroom Lights On at Sunset
   icon: mdi:lightbulb-outline
 
 automation.turn_off_lights_midnight:
-  friendly_name: Turn Off Lights - Midnight
+  friendly_name: Bedroom Lights Off at 9:30pm
   icon: mdi:lightbulb-outline
 
 automation.turn_on_outside_lights_early_morning:
-  friendly_name: Turn On Outside Lights - Early Morning
+  friendly_name: Deck Lights On at 6:15am
   icon: mdi:lightbulb-outline
 
 automation.turn_off_outside_lights_sunrise:
-  friendly_name: Turn Off Outside Lights - Sunrise
+  friendly_name: Deck Lights Off at Sunrise
   icon: mdi:lightbulb-outline
 
 automation.turn_on_outside_lights_sunset:
-  friendly_name: Turn On Outside Lights - Sunset
+  friendly_name: Deck Lights On at Sunset
   icon: mdi:lightbulb-outline
 
 automation.turn_off_outside_lights_100am:
-  friendly_name: Turn Off Outside Lights - 1:00am
+  friendly_name: Deck Lights Off at 1:00am
   icon: mdi:lightbulb-outline
 
 automation.spike_basking_lights_on_in_weekday_morning:
-  friendly_name: Spike Basking Lights On In Weekday Morning
+  friendly_name: Spike Basking Lights On at 6:30am (Weekdays)
   icon: mdi:lightbulb-outline
 
 automation.spike_basking_lights_on_in_weekend_morning:
-  friendly_name: Spike Basking Lights On In Weekend Morning
+  friendly_name: Spike Basking Lights On at 7:30am (Weekends)
   icon: mdi:lightbulb-outline
 
 automation.spike_night_light_on_at_night:
-  friendly_name: Spike Night Light On At Night
+  friendly_name: Spike Night Light On at 7:30pm
   icon: mdi:lightbulb-outline
 
