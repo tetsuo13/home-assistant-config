@@ -9,5 +9,6 @@ pipelines:
   default:
     - step:
         script:
-          - pip3 install homeassistant
+          - pip install --upgrade pip
+          - pip install homeassistant
           - hass -c . --script check_config
