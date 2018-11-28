@@ -8,8 +8,6 @@ image: python:3.5.1
 pipelines:
   default:
     - step:
-        caches:
-          - pip
-        script: # Modify the commands below to build your repository.
+        script:
           - pip3 install homeassistant
           - hass -c . --script check_config
