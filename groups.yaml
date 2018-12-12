@@ -7,13 +7,14 @@
   default_view:
     name: Rooms
     view: yes
-    icon: mdi:home
+    icon: mdi:home-assistant
     entities:
       - group.location
       - group.master_bedroom
       - group.outside
       - group.spike
       - group.automations_for_lights
+      - group.thermostats
 
 #
 # Rooms
@@ -43,6 +44,17 @@
   Location:
     - device_tracker.andrei_phone
     - device_tracker.lee_phone
+
+#
+## Thermostats
+##
+
+  Thermostats:
+    - climate.home
+    - sensor.home_humidity
+    - binary_sensor.home_occupancy
+    - sensor.living_room_temperature
+    - binary_sensor.living_room_occupancy
 
 #
 # Automations

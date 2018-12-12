@@ -1,0 +1,11 @@
+climate.home:
+  friendly_name: Hallway
+  entity_picture: /local/images/ecobee.jpg
+
+sensor.home_humidity:
+  friendly_name: Hallway Humidity
+  icon: mdi:water-percent
+
+binary_sensor.home_occupancy:
+  friendly_name: Hallway Occupancy
+

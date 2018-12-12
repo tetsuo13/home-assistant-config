@@ -4,3 +4,6 @@ group.automations_for_lights:
 group.outside:
   friendly_name: Outside
 
+group.thermostats:
+  friendly_name: Thermostats
+

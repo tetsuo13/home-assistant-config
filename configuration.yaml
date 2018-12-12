@@ -76,9 +76,13 @@ wemo:
     - 10.8.16.3
     - 10.8.16.4
 
+ecobee:
+  api_key: !secret ecobee_key
+
 device_tracker: !include device_tracker.yaml
 group: !include groups.yaml
 automation: !include_dir_merge_list automation/
 script: !include scripts.yaml
 zone: !include zones.yaml
+sensor: !include sensor.yaml
 

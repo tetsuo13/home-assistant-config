@@ -15,18 +15,20 @@ docker run --detach --restart=always \
 homeassistant/home-assistant
 ```
 
-# Connected Devices
+# Devices
 
-## WiFi Connected Devices
+## Lighting
 
-* __[Belkin Wemo Mini Smart Plug](https://www.belkin.com/us/p/P-F7C063/)__ (F7C063fc)
+* [Philips Hue white and color ambience bulb](https://www2.meethue.com/en-us/p/hue-white-and-color-ambiance-single-bulb-e26/046677464486) (LCT016)
+* [Philips Hue white ambience bulb](https://www2.meethue.com/en-us/p/hue-single-bulb-e26/046677461003) (LWB014)
+* [Philips Hue Bridge](https://www2.meethue.com/en-us/p/hue-bridge/046677458478) (BSB002)
 
-## Philips Hue Devices
+## Climate
 
-* __[Philips Hue white and color ambience bulb](https://www2.meethue.com/en-us/p/hue-white-and-color-ambiance-single-bulb-e26/046677464486)__ (LCT016)
-* __[Philips Hue white ambience bulb](https://www2.meethue.com/en-us/p/hue-single-bulb-e26/046677461003)__ (LWB014)
+* [Ecobee 4](https://www.ecobee.com/ecobee4/) (EB-STATE4-01)
 
-## Hardwired Devices
+## Sensor / Switch
 
-* __[Philips Hue Bridge](https://www2.meethue.com/en-us/p/hue-bridge/046677458478)__ (BSB002)
+* [Belkin Wemo Mini Smart Plug](https://www.belkin.com/us/p/P-F7C063/) (F7C063fc)
+* [Ecobee room sensor](https://www.ecobee.com/room-sensors/) (BK4G)
 
