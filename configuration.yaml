@@ -62,6 +62,9 @@ tts:
 # Cloud
 cloud:
 
+lovelace:
+  mode: yaml
+
 hue:
   bridges:
     - host: 10.8.16.2
@@ -76,7 +79,6 @@ ecobee:
   api_key: !secret ecobee_key
 
 device_tracker: !include device_tracker.yaml
-group: !include groups.yaml
 automation: !include_dir_merge_list automation/
 script: !include scripts.yaml
 zone: !include zones.yaml

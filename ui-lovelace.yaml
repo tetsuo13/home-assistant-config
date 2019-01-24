@@ -1,0 +1,53 @@
+title: Home
+views:
+  - title: Home
+    icon: mdi:home
+    cards:
+      - type: entities
+        title: Location
+        show_header_toggle: false
+        entities:
+          - entity: device_tracker.andrei_phone
+          - entity: device_tracker.lee_phone
+      - type: entities
+        title: Master Bedroom
+        entities:
+          - entity: light.hue_white_lamp_1
+          - entity: light.hue_white_lamp_2
+      - type: entities
+        title: Outside
+        entities:
+          - entity: light.hue_color_lamp_1
+      - type: entities
+        title: Spike
+        entities:
+          - entity: switch.wemo_mini_1
+          - entity: switch.wemo_mini_1_2
+      - type: entities
+        title: Thermostats
+        show_header_toggle: false
+        entities:
+          - entity: climate.home
+          - entity: sensor.home_humidity
+          - entity: binary_sensor.home_occupancy
+          - entity: sensor.living_room_temperature
+          - entity: binary_sensor.living_room_occupancy
+  - title: Automations
+    icon: mdi:timer
+    cards:
+      - type: entities
+        title: Automations for Lights
+        show_header_toggle: false
+        entities:
+          - entity: automation.turn_on_lights_to_wake_us_up
+          - entity: automation.turn_off_lights_before_work
+          - entity: automation.turn_on_lights_sunset
+          - entity: automation.turn_off_lights_midnight
+          - entity: automation.turn_on_outside_lights_early_morning
+          - entity: automation.turn_off_outside_lights_sunrise
+          - entity: automation.turn_on_outside_lights_sunset
+          - entity: automation.turn_off_outside_lights_1_00am
+          - entity: automation.spike_basking_lights_on_in_weekday_morning
+          - entity: automation.spike_basking_lights_on_in_weekend_morning
+          - entity: automation.spike_night_light_on_at_night
+
