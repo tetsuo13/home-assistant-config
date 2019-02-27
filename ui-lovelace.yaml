@@ -29,9 +29,11 @@ views:
         entities:
           - entity: climate.home
           - entity: sensor.home_humidity
+          - entity: sensor.home_temperature
           - entity: binary_sensor.home_occupancy
           - entity: sensor.living_room_temperature
           - entity: binary_sensor.living_room_occupancy
+          - entity: weather.home
   - title: Automations
     icon: mdi:timer
     cards:

@@ -6,6 +6,12 @@ sensor.home_humidity:
   friendly_name: Hallway Humidity
   icon: mdi:water-percent
 
+sensor.home_temperature:
+  friendly_name: Hallway Temperature
+
 binary_sensor.home_occupancy:
   friendly_name: Hallway Occupancy
+
+weather.home:
+  friendly_name: Weather Condition
 
