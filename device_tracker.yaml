@@ -15,5 +15,5 @@
    verify_ssl: false
    detection_time: 60
    ssid_filter:
-     - 'helium'
+     - !secret ubiquiti_ssid
 
