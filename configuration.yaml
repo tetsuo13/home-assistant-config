@@ -78,6 +78,10 @@ wemo:
 ecobee:
   api_key: !secret ecobee_key
 
+# https://www.home-assistant.io/docs/z-wave/installation
+zwave:
+  usb_path: /dev/ttyACM0
+
 device_tracker: !include device_tracker.yaml
 automation: !include_dir_merge_list automation/
 script: !include scripts.yaml
