@@ -67,13 +67,13 @@ lovelace:
 
 hue:
   bridges:
-    - host: 10.8.16.2
+    - host: !secret hue_bridge_ip
       allow_unreachable: true
 
 wemo:
   static:
-    - 10.8.16.3
-    - 10.8.16.4
+    - !secret wemo_1_ip
+    - !secret wemo_2_ip
 
 ecobee:
   api_key: !secret ecobee_key
