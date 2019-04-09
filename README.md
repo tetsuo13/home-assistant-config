@@ -35,3 +35,7 @@ homeassistant/home-assistant
 * [Ecobee room sensor](https://www.ecobee.com/room-sensors/) (BK4G)
 * [Fibaro Z-Wave Flood Sensor](https://www.fibaro.com/en/products/flood-sensor/) (FGFS-101)
 
+# Other Noteable Configuration
+
+* https://github.com/klaasnicolaas/Smarthome-homeassistant-config
+

@@ -1,0 +1,11 @@
+# https://home-assistant.io/components/device_tracker/
+
+platform: unifi
+host: 127.0.0.1
+username: !secret ubiquiti_username
+password: !secret ubiquiti_password
+verify_ssl: false
+detection_time: 60
+ssid_filter:
+  - !secret ubiquiti_ssid
+

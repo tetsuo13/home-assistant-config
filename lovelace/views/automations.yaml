@@ -1,0 +1,19 @@
+title: Automations
+icon: mdi:timer
+cards:
+  - type: entities
+    title: Automations for Lights
+    show_header_toggle: false
+    entities:
+      - entity: automation.turn_on_lights_to_wake_us_up
+      - entity: automation.turn_off_lights_before_work
+      - entity: automation.turn_on_lights_sunset
+      - entity: automation.turn_off_lights_midnight
+      - entity: automation.turn_on_outside_lights_early_morning
+      - entity: automation.turn_off_outside_lights_sunrise
+      - entity: automation.turn_on_outside_lights_sunset
+      - entity: automation.turn_off_outside_lights_1_00am
+      - entity: automation.spike_basking_lights_on_in_weekday_morning
+      - entity: automation.spike_basking_lights_on_in_weekend_morning
+      - entity: automation.spike_night_light_on_at_night
+

@@ -8,83 +8,19 @@ homeassistant:
   latitude: !secret latitude
   longitude: !secret longitude
   # Impacts weather/sunrise data (altitude above sea level in meters)
-  elevation: 263
+  elevation: !secret elevation
   # metric for Metric, imperial for Imperial
   unit_system: imperial
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: !secret time_zone
   # Customization file
   customize: !include_dir_merge_named customize/
-
-# Enables the frontend
-frontend:
+  # https://www.home-assistant.io/docs/configuration/packages/
+  packages: !include_dir_named components/packages
 
 # Enables configuration UI
 config:
 
-http:
-  # Secrets are defined in the file secrets.yaml
-  # api_password: !secret http_password
-  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-  # base_url: example.duckdns.org:8123
-
-# Checks for available updates
-# Note: This component will send some information about your system to
-# the developers to assist with development of Home Assistant.
-# For more information, please see:
-# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
-updater:
-  # Optional, allows Home Assistant developers to focus on popular components.
-  # include_used_components: true
-
-# Discover some devices automatically
-discovery:
-
-# Allows you to issue voice commands from the frontend in enabled browsers
-conversation:
-
-# Enables support for tracking state changes over time
-history:
-
-# View all events in a logbook
-logbook:
-
-# Enables a map showing the location of tracked devices
-map:
-
-# Track the sun
-sun:
-
-# Text to speech
-tts:
-  - platform: google
-
-# Cloud
-cloud:
-
 lovelace:
   mode: yaml
-
-hue:
-  bridges:
-    - host: !secret hue_bridge_ip
-      allow_unreachable: true
-
-wemo:
-  static:
-    - !secret wemo_1_ip
-    - !secret wemo_2_ip
-
-ecobee:
-  api_key: !secret ecobee_key
-
-# https://www.home-assistant.io/docs/z-wave/installation
-zwave:
-  usb_path: /dev/ttyACM0
-
-device_tracker: !include device_tracker.yaml
-automation: !include_dir_merge_list automation/
-script: !include scripts.yaml
-zone: !include zones.yaml
-sensor: !include sensor.yaml
 
