@@ -4,8 +4,6 @@
 
 This is the configuration used in my [Home Assistant](https://home-assistant.io/) setup.
 
-The [Cookbook](https://www.home-assistant.io/cookbook/) at Home Assistant's web site was extremely helpful in seeing how others got started.
-
 ```
 docker run --detach --restart=always \
 --name="home-assistant" \
@@ -35,7 +33,9 @@ homeassistant/home-assistant
 * [Ecobee room sensor](https://www.ecobee.com/room-sensors/) (BK4G)
 * [Fibaro Z-Wave Flood Sensor](https://www.fibaro.com/en/products/flood-sensor/) (FGFS-101)
 
-# Other Noteable Configuration
+# Other Noteable Configurations
+
+The [Cookbook](https://www.home-assistant.io/cookbook/) at Home Assistant's web site was extremely helpful in seeing how others got started however below is a list of other configurations that were particularly inspiring:
 
 * https://github.com/klaasnicolaas/Smarthome-homeassistant-config
 
