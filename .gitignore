@@ -6,6 +6,7 @@
 *.uuid
 *.xml
 
+.HA_VERSION
 .storage
 deps/
 tts/
