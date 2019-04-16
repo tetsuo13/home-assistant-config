@@ -1,0 +1,7 @@
+binary_sensor.home_occupancy:
+  friendly_name: Hallway Occupancy
+
+binary_sensor.fibaro_system_fgfs101_flood_sensor_flood:
+  friendly_name: Laundry Room Floor
+  device_class: moisture
+
