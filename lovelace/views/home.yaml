@@ -2,12 +2,6 @@ title: Home
 icon: mdi:home
 cards:
   - type: entities
-    title: Location
-    show_header_toggle: false
-    entities:
-      - entity: device_tracker.andrei_phone
-      - entity: device_tracker.lee_phone
-  - type: entities
     title: Lights
     entities:
       - entity: light.hue_white_lamp_1
