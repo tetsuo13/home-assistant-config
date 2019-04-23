@@ -36,13 +36,14 @@
   trigger:
     platform: sun
     event: sunset
-    offset: '-00:45:00'
+    offset: "-1:00:00"
   action:
     service: light.turn_on
-    entity_id:
-      - light.hue_white_lamp_1
-      - light.hue_white_lamp_2
     data:
+      entity_id:
+        - light.hue_white_lamp_1
+        - light.hue_white_lamp_2
+      brightness: 255
       transition: 1200
 
 - alias: Turn Off Lights Midnight
