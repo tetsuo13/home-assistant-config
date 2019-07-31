@@ -30,7 +30,7 @@ homeassistant/home-assistant
 
 * [Aeotec Z-Stick Gen5](https://aeotec.com/z-wave-usb-stick) (ZW090)
 * [Belkin Wemo Mini Smart Plug](https://www.belkin.com/us/p/P-F7C063/) (F7C063fc)
-* [Ecobee room sensor](https://www.ecobee.com/room-sensors/) (BK4G)
+* [Ecobee room sensor](https://www.ecobee.com/room-sensors/)
 * [Fibaro Z-Wave Flood Sensor](https://www.fibaro.com/en/products/flood-sensor/) (FGFS-101)
 
 # Other Noteable Configurations
