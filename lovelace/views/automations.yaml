@@ -13,11 +13,4 @@ cards:
       - entity: automation.turn_off_outside_lights_sunrise
       - entity: automation.turn_on_outside_lights_sunset
       - entity: automation.turn_off_outside_lights_1_00am
-  - type: entities
-    title: Spike
-    show_header_toggle: false
-    entities:
-      - entity: automation.spike_basking_lights_on_in_weekday_morning
-      - entity: automation.spike_basking_lights_on_in_weekend_morning
-      - entity: automation.spike_night_light_on_at_night
 

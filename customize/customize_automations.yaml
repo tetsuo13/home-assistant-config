@@ -32,15 +32,3 @@ automation.turn_off_outside_lights_1_00am:
   friendly_name: Deck Lights Off at 1:00am
   icon: mdi:lightbulb-outline
 
-automation.spike_basking_lights_on_in_weekday_morning:
-  friendly_name: Basking Lights On at 6:30am (Weekdays)
-  icon: mdi:lightbulb-outline
-
-automation.spike_basking_lights_on_in_weekend_morning:
-  friendly_name: Basking Lights On at 7:30am (Weekends)
-  icon: mdi:lightbulb-outline
-
-automation.spike_night_light_on_at_night:
-  friendly_name: Night Light On at 7:30pm
-  icon: mdi:lightbulb-outline
-

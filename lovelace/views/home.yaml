@@ -17,11 +17,6 @@ cards:
       - entity: binary_sensor.master_bedroom_occupancy
       - entity: binary_sensor.fibaro_system_fgfs101_flood_sensor_flood
   - type: entities
-    title: Spike
-    entities:
-      - entity: switch.wemo_mini_1
-      - entity: switch.wemo_mini_1_2
-  - type: entities
     title: Thermostats
     show_header_toggle: false
     entities:
