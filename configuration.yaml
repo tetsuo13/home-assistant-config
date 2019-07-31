@@ -24,3 +24,6 @@ config:
 lovelace:
   mode: yaml
 
+# Enable the system-health card in dev-info
+system_health:
+
