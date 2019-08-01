@@ -38,4 +38,5 @@ homeassistant/home-assistant
 The [Cookbook](https://www.home-assistant.io/cookbook/) at Home Assistant's web site was extremely helpful in seeing how others got started however below is a list of other configurations that were particularly inspiring:
 
 * https://github.com/klaasnicolaas/Smarthome-homeassistant-config
+* https://github.com/geekofweek/homeassistant
 
