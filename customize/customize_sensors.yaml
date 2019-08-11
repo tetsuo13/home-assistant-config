@@ -5,3 +5,7 @@ binary_sensor.fibaro_system_fgfs101_flood_sensor_flood:
   friendly_name: Laundry Room Floor
   device_class: moisture
 
+binary_sensor.ecolink_door_window_sensor_sensor:
+  friendly_name: Kitchen Door
+  device_class: door
+
