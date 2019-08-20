@@ -2,17 +2,9 @@
 <img src="https://github.com/home-assistant/home-assistant-assets/blob/master/loading-screen.gif" />
 </p>
 
-This is the configuration used in my [Home Assistant](https://home-assistant.io/) setup.
+This is the configuration used in my [Home Assistant](https://home-assistant.io/) (HA) setup.
 
-```
-docker run --detach --restart=always \
---name="home-assistant" \
---volume=/etc/home-assistant:/config \
---volume=/etc/localtime:/etc/localtime:ro \
---net=host \
---device /dev/ttyACM0 \
-homeassistant/home-assistant
-```
+Runs on a [Raspberry Pi 3B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) using [HassOS](https://github.com/home-assistant/hassos).
 
 # Devices
 
