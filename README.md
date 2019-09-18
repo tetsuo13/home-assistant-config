@@ -2,6 +2,8 @@
 <img src="https://github.com/home-assistant/home-assistant-assets/blob/master/loading-screen.gif" />
 </p>
 
+[![Actions Status](https://github.com/tetsuo13/home-assistant/workflows/Test%20config/badge.svg)](https://github.com/tetsuo13/home-assistant/actions)
+
 This is the configuration used in my [Home Assistant](https://home-assistant.io/) (HA) setup.
 
 Runs on a [Raspberry Pi 3B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) using [HassOS](https://github.com/home-assistant/hassos).
