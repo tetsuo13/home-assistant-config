@@ -1,0 +1,6 @@
+# https://www.home-assistant.io/components/tts/
+#
+tts:
+  - platform: google_translate
+    base_url: !secret base_url
+

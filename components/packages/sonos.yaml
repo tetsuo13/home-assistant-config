@@ -1,0 +1,6 @@
+# https://www.home-assistant.io/components/sonos/
+#
+sonos:
+  media_player:
+    hosts: !secret sonos_ip
+

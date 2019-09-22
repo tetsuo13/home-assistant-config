@@ -27,6 +27,10 @@ Runs on a [Raspberry Pi 3B](https://www.raspberrypi.org/products/raspberry-pi-3-
 * [Ecolink Door & Window Sensor](https://discoverecolink.com/product/dwzwave25-eco/) (DW-ZWAVE2.5-ECO)
 * [Fibaro Z-Wave Flood Sensor](https://www.fibaro.com/en/products/flood-sensor/) (FGFS-101)
 
+## Media
+
+* [Sonos WiFi bookshelf speaker](https://www.sonos.com/en-us/symfonisk-by-sonos-and-ikea) (SYMFONISK)
+
 # Other Noteable Configurations
 
 The [Cookbook](https://www.home-assistant.io/cookbook/) at Home Assistant's web site was extremely helpful in seeing how others got started however below is a list of other configurations that were particularly inspiring:

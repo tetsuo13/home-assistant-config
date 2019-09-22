@@ -32,3 +32,11 @@ automation.turn_off_outside_lights_1_00am:
   friendly_name: Deck Lights Off at 1:00am
   icon: mdi:lightbulb-outline
 
+automation.announce_kitchen_door_opened:
+  friendly_name: Announce Kitchen Door Opened
+  icon: mdi:door-open
+
+automation.announce_kitchen_door_closed:
+  friendly_name: Announce Kitchen Door Closed
+  icon: mdi:door-closed
+

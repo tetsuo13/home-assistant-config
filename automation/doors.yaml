@@ -1,0 +1,28 @@
+- alias: Announce Kitchen Door Opened
+  trigger:
+    platform: state
+    entity_id: binary_sensor.ecolink_door_window_sensor_sensor
+    from: 'off'
+    to: 'on'
+  action:
+    service: script.sonos_say
+    data:
+      sonos_entity: media_player.unnamed_room
+      volume: 0.5
+      message: 'Kitchen door open'
+      delay: '00:00:05'
+
+- alias: Announce Kitchen Door Closed
+  trigger:
+    platform: state
+    entity_id: binary_sensor.ecolink_door_window_sensor_sensor
+    from: 'on'
+    to: 'off'
+  action:
+    service: script.sonos_say
+    data:
+      sonos_entity: media_player.unnamed_room
+      volume: 0.5
+      message: 'Kitchen door closed'
+      delay: '00:00:05'
+

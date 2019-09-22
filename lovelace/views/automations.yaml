@@ -13,4 +13,10 @@ cards:
       - entity: automation.turn_off_outside_lights_sunrise
       - entity: automation.turn_on_outside_lights_sunset
       - entity: automation.turn_off_outside_lights_1_00am
+  - type: entities
+    title: Sensors
+    show_header_toggle: false
+    entities:
+      - entity: automation.announce_kitchen_door_opened
+      - entity: automation.announce_kitchen_door_closed
 
