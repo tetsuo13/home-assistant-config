@@ -4,6 +4,9 @@
     entity_id: binary_sensor.ecolink_door_window_sensor_sensor
     from: 'off'
     to: 'on'
+  condition:
+    condition: template
+    value_template: '{{ states.sensor.date.attributes.month != 10 }}'
   action:
     service: script.sonos_say
     data:
@@ -12,12 +15,31 @@
       message: 'Kitchen door open'
       delay: '00:00:05'
 
+- alias: Announce Kitchen Door Opened (Holloween)
+  trigger:
+    platform: state
+    entity_id: binary_sensor.ecolink_door_window_sensor_sensor
+    from: 'off'
+    to: 'on'
+  condition:
+    condition: template
+    value_template: '{{ states.sensor.date.attributes.month == 10 }}'
+  action:
+    service: media_player.play_media
+    data:
+      entity_id: media_player.unnamed_room
+      media_content_id: 'http://pi01:8123/local/audio/ghost01.mp3'
+      media_content_type: 'music'
+
 - alias: Announce Kitchen Door Closed
   trigger:
     platform: state
     entity_id: binary_sensor.ecolink_door_window_sensor_sensor
     from: 'on'
     to: 'off'
+  condition:
+    condition: template
+    value_template: '{{ states.sensor.date.attributes.month != 10 }}'
   action:
     service: script.sonos_say
     data:
@@ -25,4 +47,20 @@
       volume: 0.5
       message: 'Kitchen door closed'
       delay: '00:00:05'
+
+- alias: Announce Kitchen Door Closed (Halloween)
+  trigger:
+    platform: state
+    entity_id: binary_sensor.ecolink_door_window_sensor_sensor
+    from: 'on'
+    to: 'off'
+  condition:
+    condition: template
+    value_template: '{{ states.sensor.date.attributes.month == 10 }}'
+  action:
+    service: media_player.play_media
+    data:
+      entity_id: media_player.unnamed_room
+      media_content_id: 'http://pi01:8123/local/audio/howl01.mp3'
+      media_content_type: 'music'
 
