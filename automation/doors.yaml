@@ -6,7 +6,9 @@
     to: 'on'
   condition:
     condition: template
-    value_template: '{{ states.sensor.date.attributes.month != 10 }}'
+    value_template: >
+      {% set month = now().month %}
+      {{ month != 10 }}
   action:
     service: script.sonos_say
     data:
@@ -23,7 +25,9 @@
     to: 'on'
   condition:
     condition: template
-    value_template: '{{ states.sensor.date.attributes.month == 10 }}'
+    value_template: >
+      {% set month = now().month %}
+      {{ month == 10 }}
   action:
     service: media_player.play_media
     data:
@@ -39,7 +43,9 @@
     to: 'off'
   condition:
     condition: template
-    value_template: '{{ states.sensor.date.attributes.month != 10 }}'
+    value_template: >
+      {% set month = now().month %}
+      {{ month != 10 }}
   action:
     service: script.sonos_say
     data:
@@ -56,7 +62,9 @@
     to: 'off'
   condition:
     condition: template
-    value_template: '{{ states.sensor.date.attributes.month == 10 }}'
+    value_template: >
+      {% set month = now().month %}
+      {{ month == 10 }}
   action:
     service: media_player.play_media
     data:
