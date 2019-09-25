@@ -21,7 +21,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install homeassistant
-        pip install homeassistant_openzwave
+        pip install python_openzwave
         python -m homeassistant --version
         cp secrets.yaml.dist secrets.yaml
         touch home-assistant_v2.db
