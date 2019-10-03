@@ -29,11 +29,12 @@
       {% set month = now().month %}
       {{ month == 10 }}
   action:
-    service: media_player.play_media
+    service: script.sonos_play_file
     data:
-      entity_id: media_player.unnamed_room
-      media_content_id: 'http://pi01:8123/local/audio/ghost01.mp3'
-      media_content_type: 'music'
+      sonos_entity: media_player.unnamed_room
+      volume: 0.5
+      audio_url: "audio/ghost01.mp3"
+      delay: "00:00:05"
 
 - alias: Announce Kitchen Door Closed
   trigger:
@@ -66,9 +67,10 @@
       {% set month = now().month %}
       {{ month == 10 }}
   action:
-    service: media_player.play_media
+    service: script.sonos_play_file
     data:
-      entity_id: media_player.unnamed_room
-      media_content_id: 'http://pi01:8123/local/audio/howl01.mp3'
-      media_content_type: 'music'
+      sonos_entity: media_player.unnamed_room
+      volume: 0.5
+      audio_url: "audio/howl01.mp3"
+      delay: "00:00:05"
 
