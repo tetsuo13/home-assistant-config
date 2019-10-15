@@ -1,45 +1,49 @@
+# Tried incorporating complex delay calculation based on the media duration
+# however it made things worse than just using a static delay.
+# https://community.home-assistant.io/t/sonos-tts-script/8896/21
+
 sonos_say:
   alias: "Sonos TTS script"
   sequence:
     - service: sonos.snapshot
       data_template:
-        entity_id: "{{ sonos_entity }}"
+        entity_id: "{{ 'media_player.' ~ sonos_entity }}"
     - service: sonos.unjoin
       data_template:
-        entity_id: "{{ sonos_entity }}"
+        entity_id: "{{ 'media_player.' ~ sonos_entity }}"
     - service: media_player.volume_set
       data_template:
-        entity_id: "{{ sonos_entity }}"
+        entity_id: "{{ 'media_player.' ~ sonos_entity }}"
         volume_level: "{{ volume }}"
     - service: tts.google_translate_say
       data_template:
-        entity_id: "{{ sonos_entity }}"
+        entity_id: "{{ 'media_player.' ~ sonos_entity }}"
         message: "{{ message }}"
     - delay: "{{ delay }}"
     - service: sonos.restore
       data_template:
-        entity_id: "{{ sonos_entity }}"
+        entity_id: "{{ 'media_player.' ~ sonos_entity }}"
 
 sonos_play_file:
   alias: "Sonos play file script"
   sequence:
     - service: sonos.snapshot
       data_template:
-        entity_id: "{{ sonos_entity }}"
+        entity_id: "{{ 'media_player.' ~ sonos_entity }}"
     - service: sonos.unjoin
       data_template:
-        entity_id: "{{ sonos_entity }}"
+        entity_id: "{{ 'media_player.' ~ sonos_entity }}"
     - service: media_player.volume_set
       data_template:
-        entity_id: "{{ sonos_entity }}"
+        entity_id: "{{ 'media_player.' ~ sonos_entity }}"
         volume_level: "{{ volume }}"
     - service: media_player.play_media
       data_template:
-        entity_id: "{{ sonos_entity }}"
+        entity_id: "{{ 'media_player.' ~ sonos_entity }}"
         media_content_id: "http://pi01:8123/local/{{ audio_url }}"
         media_content_type: "music"
     - delay: "{{ delay }}"
     - service: sonos.restore
       data_template:
-        entity_id: "{{ sonos_entity }}"
+        entity_id: "{{ 'media_player.' ~ sonos_entity }}"
 

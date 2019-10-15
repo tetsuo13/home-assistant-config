@@ -12,7 +12,7 @@
   action:
     service: script.sonos_say
     data:
-      sonos_entity: media_player.unnamed_room
+      sonos_entity: unnamed_room
       volume: 0.5
       message: 'Kitchen door open'
       delay: '00:00:05'
@@ -31,10 +31,10 @@
   action:
     service: script.sonos_play_file
     data:
-      sonos_entity: media_player.unnamed_room
+      sonos_entity: unnamed_room
       volume: 0.5
       audio_url: "audio/ghost01.mp3"
-      delay: "00:00:05"
+      delay: '00:00:08'
 
 - alias: Announce Kitchen Door Closed
   trigger:
@@ -50,7 +50,7 @@
   action:
     service: script.sonos_say
     data:
-      sonos_entity: media_player.unnamed_room
+      sonos_entity: unnamed_room
       volume: 0.5
       message: 'Kitchen door closed'
       delay: '00:00:05'
@@ -69,8 +69,8 @@
   action:
     service: script.sonos_play_file
     data:
-      sonos_entity: media_player.unnamed_room
+      sonos_entity: unnamed_room
       volume: 0.5
       audio_url: "audio/howl01.mp3"
-      delay: "00:00:05"
+      delay: '00:00:08'
 
