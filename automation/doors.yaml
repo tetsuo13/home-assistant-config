@@ -17,7 +17,7 @@
       message: 'Kitchen door open'
       delay: '00:00:05'
 
-- alias: Announce Kitchen Door Opened (Holloween)
+- alias: Announce Kitchen Door Opened (Halloween)
   trigger:
     platform: state
     entity_id: binary_sensor.ecolink_door_window_sensor_sensor
