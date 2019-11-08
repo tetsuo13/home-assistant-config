@@ -1,2 +1,3 @@
-media_player.unnamed_room:
-  friendly_name: Sonos Den
+media_player.sonos01:
+  friendly_name: Sonos Bedroom
+
