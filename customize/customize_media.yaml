@@ -1,3 +1,6 @@
 media_player.sonos01:
   friendly_name: Sonos Bedroom
 
+media_player.sonos02:
+  friendly_name: Sonos Den
+

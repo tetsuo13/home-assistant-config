@@ -2,5 +2,7 @@
 #
 sonos:
   media_player:
-    hosts: !secret sonos_ip
+    hosts:
+      - !secret sonos01_ip
+      - !secret sonos02_ip
 
