@@ -31,6 +31,10 @@ Runs on a [Raspberry Pi 3B](https://www.raspberrypi.org/products/raspberry-pi-3-
 
 * [Sonos WiFi bookshelf speaker](https://www.sonos.com/en-us/symfonisk-by-sonos-and-ikea) (SYMFONISK)
 
+# Features
+
+In the month of October, opening/closing doors will play Halloween sounds. For example, opening a door will trigger goulish sounds on all Sonos speakers while closing a door will trigger a wolf howling.
+
 # Other Noteable Configurations
 
 The [Cookbook](https://www.home-assistant.io/cookbook/) at Home Assistant's web site was extremely helpful in seeing how others got started however below is a list of other configurations that were particularly inspiring:
