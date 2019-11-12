@@ -12,7 +12,6 @@
   action:
     service: script.sonos_say
     data:
-      sonos_entity: sonos01
       volume: 0.5
       message: 'Kitchen door open'
       delay: '00:00:05'
@@ -31,7 +30,6 @@
   action:
     service: script.sonos_play_file
     data:
-      sonos_entity: sonos01
       volume: 0.5
       audio_url: "audio/ghost01.mp3"
       delay: '00:00:08'
@@ -50,7 +48,6 @@
   action:
     service: script.sonos_say
     data:
-      sonos_entity: sonos01
       volume: 0.5
       message: 'Kitchen door closed'
       delay: '00:00:05'
@@ -69,7 +66,6 @@
   action:
     service: script.sonos_play_file
     data:
-      sonos_entity: sonos01
       volume: 0.5
       audio_url: "audio/howl01.mp3"
       delay: '00:00:08'
