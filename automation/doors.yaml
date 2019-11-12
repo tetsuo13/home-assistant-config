@@ -5,10 +5,16 @@
     from: 'off'
     to: 'on'
   condition:
-    condition: template
-    value_template: >
-      {% set month = now().month %}
-      {{ month != 10 }}
+    condition: and
+    conditions:
+      - condition: template
+      - value_template: >
+          {% set month = now().month %}
+          {{ month != 10 }}
+      - condition: template
+      - value_template: >
+          {% set month = now().month %}
+          {{ month != 11 }}
   action:
     service: script.sonos_say
     data:
@@ -34,6 +40,24 @@
       audio_url: "audio/ghost01.mp3"
       delay: '00:00:08'
 
+- alias: Announce Kitchen Door Opened (Thanksgiving)
+  trigger:
+    platform: state
+    entity_id: binary_sensor.ecolink_door_window_sensor_sensor
+    from: 'off'
+    to: 'on'
+  condition:
+    condition: template
+    value_template: >
+      {% set month = now().month %}
+      {{ month == 11 }}
+  action:
+    service: script.sonos_play_file
+    data:
+      volume: 0.5
+      audio_url: "audio/turkey01.mp3"
+      delay: '00:00:08'
+
 - alias: Announce Kitchen Door Closed
   trigger:
     platform: state
@@ -41,10 +65,16 @@
     from: 'on'
     to: 'off'
   condition:
-    condition: template
-    value_template: >
-      {% set month = now().month %}
-      {{ month != 10 }}
+    condition: and
+    conditions:
+      - condition: template
+      - value_template: >
+          {% set month = now().month %}
+          {{ month != 10 }}
+      - condition: template
+      - value_template: >
+          {% set month = now().month %}
+          {{ month != 11 }}
   action:
     service: script.sonos_say
     data:
@@ -68,5 +98,23 @@
     data:
       volume: 0.5
       audio_url: "audio/howl01.mp3"
+      delay: '00:00:08'
+
+- alias: Announce Kitchen Door Closed (Thanksgiving)
+  trigger:
+    platform: state
+    entity_id: binary_sensor.ecolink_door_window_sensor_sensor
+    from: 'on'
+    to: 'off'
+  condition:
+    condition: template
+    value_template: >
+      {% set month = now().month %}
+      {{ month == 11 }}
+  action:
+    service: script.sonos_play_file
+    data:
+      volume: 0.5
+      audio_url: "audio/turkey01.mp3"
       delay: '00:00:08'
 
