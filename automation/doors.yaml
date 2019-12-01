@@ -5,16 +5,10 @@
     from: 'off'
     to: 'on'
   condition:
-    condition: and
-    conditions:
-      - condition: template
-      - value_template: >
-          {% set month = now().month %}
-          {{ month != 10 }}
-      - condition: template
-      - value_template: >
-          {% set month = now().month %}
-          {{ month != 11 }}
+    condition: template
+    value_template: >
+      {% set month = now().month %}
+      {{ month < 10 }}
   action:
     service: script.sonos_say
     data:
@@ -58,6 +52,24 @@
       audio_url: "audio/turkey01.mp3"
       delay: '00:00:08'
 
+- alias: Announce Kitchen Door Opened (Christmas)
+  trigger:
+    platform: state
+    entity_id: binary_sensor.ecolink_door_window_sensor_sensor
+    from: 'off'
+    to: 'on'
+  condition:
+    condition: template
+    value_template: >
+      {% set month = now().month %}
+      {{ month == 12 }}
+  action:
+    service: script.sonos_play_file
+    data:
+      volume: 0.5
+      audio_url: "audio/christmas01.mp3"
+      delay: '00:00:06'
+
 - alias: Announce Kitchen Door Closed
   trigger:
     platform: state
@@ -65,16 +77,10 @@
     from: 'on'
     to: 'off'
   condition:
-    condition: and
-    conditions:
-      - condition: template
-      - value_template: >
-          {% set month = now().month %}
-          {{ month != 10 }}
-      - condition: template
-      - value_template: >
-          {% set month = now().month %}
-          {{ month != 11 }}
+    condition: template
+    value_template: >
+      {% set month = now().month %}
+      {{ month < 10 }}
   action:
     service: script.sonos_say
     data:
@@ -117,4 +123,22 @@
       volume: 0.5
       audio_url: "audio/turkey01.mp3"
       delay: '00:00:08'
+
+- alias: Announce Kitchen Door Closed (Christmas)
+  trigger:
+    platform: state
+    entity_id: binary_sensor.ecolink_door_window_sensor_sensor
+    from: 'on'
+    to: 'off'
+  condition:
+    condition: template
+    value_template: >
+      {% set month = now().month %}
+      {{ month == 12 }}
+  action:
+    service: script.sonos_play_file
+    data:
+      volume: 0.5
+      audio_url: "audio/christmas01.mp3"
+      delay: '00:00:06'
 
