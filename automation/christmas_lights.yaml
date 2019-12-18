@@ -1,0 +1,26 @@
+- alias: Turn On Lights At Sunset
+  trigger:
+    platform: sun
+    event: sunset
+  action:
+    service: switch.turn_on
+    data:
+      entity_id:
+        - switch.wemo_mini_1
+        - switch.wemo_mini_1_2
+        - switch.wemo_mini_3
+        - switch.wemo_mini_4
+
+- alias: Turn Off Lights 11:02pm
+  trigger:
+    platform: time
+    at: "23:02:00"
+  action:
+    service: switch.turn_off
+    data:
+      entity_id:
+        - switch.wemo_mini_1
+        - switch.wemo_mini_1_2
+        - switch.wemo_mini_3
+        - switch.wemo_mini_4
+
