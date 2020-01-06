@@ -8,14 +8,6 @@ cards:
       - entity: light.hue_white_lamp_2
       - entity: light.hue_color_lamp_1
   - type: entities
-    title: Christmas Lights
-    show_header_toggle: true
-    entities:
-      - entity: switch.wemo_mini_1
-      - entity: switch.wemo_mini_1_2
-      - entity: switch.wemo_mini_3
-      - entity: switch.wemo_mini_4
-  - type: entities
     title: Sensors
     show_header_toggle: false
     entities:
