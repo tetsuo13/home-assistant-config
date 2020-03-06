@@ -4,30 +4,25 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    strategy:
-      max-parallel: 4
-      matrix:
-        python-version: [3.5, 3.6, 3.7]
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v1
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: Install dependencies
+    - uses: actions/checkout@v2
+
+    - name: Prep stub files into configuration folder
       run: |
-        python -m pip install --upgrade pip
-        pip install homeassistant
-        pip install homeassistant-pyozw
-        python -m homeassistant --version
         cp secrets.yaml.dist secrets.yaml
         touch home-assistant_v2.db
         touch home-assistant.log
         touch OZW_Log.txt
-    - name: Check config
-      run: |
-        python -m homeassistant --script check_config -c . --info all
+
+    - name: Home Assistant version
+      uses: "docker://homeassistant/home-assistant:stable"
+      with:
+        args: python -m homeassistant --version
+
+    - name: Home Assistant check config
+      uses: "docker://homeassistant/home-assistant:stable"
+      with:
+        args: python -m homeassistant --config . --script check_config --info all
 
