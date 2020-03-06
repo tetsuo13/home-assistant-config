@@ -1,4 +1,6 @@
 ---
+extends: default
+
 rules:
   empty-lines:
     max: 1
