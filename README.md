@@ -6,7 +6,7 @@
 
 This is the configuration used in my [Home Assistant](https://home-assistant.io/) (HA) setup.
 
-Runs on a [Raspberry Pi 3B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) using [HassOS](https://github.com/home-assistant/hassos).
+Runs on a [Raspberry Pi 3B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) using [HassOS](https://github.com/home-assistant/operating-system).
 
 # Devices
 
