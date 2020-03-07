@@ -1,9 +1,0 @@
-extends: default
-
-rules:
-  empty-lines:
-    max: 2
-  line-length:
-    max: 80
-    level: warning
-

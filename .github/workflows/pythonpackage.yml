@@ -3,23 +3,12 @@ name: Test config
 on: [push]
 
 jobs:
-  yamllint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Run YAML Lint
-        uses: ibiqlik/action-yamllint@v1
-        with:
-          config_file: .yamllint.yml
-
   home_assistant:
     runs-on: ubuntu-latest
-    needs: [yamllint]
     steps:
       - uses: actions/checkout@v2
 
-      - name: Prep stub files into configuration folder
+      - name: Prep stub files in configuration folder
         run: |
           cp secrets.yaml.dist secrets.yaml
           touch home-assistant_v2.db
