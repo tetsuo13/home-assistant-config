@@ -33,7 +33,11 @@ Runs on a [Raspberry Pi 3B](https://www.raspberrypi.org/products/raspberry-pi-3-
 
 # Features
 
-In the month of October, opening/closing doors will play Halloween sounds. For example, opening a door will trigger goulish sounds on all Sonos speakers while closing a door will trigger a wolf howling.
+There are certain periods where opening/closing doors will play sounds instead of the normal announcement. For example, opening a door around Halloween will trigger goulish sounds on all Sonos speakers. Here's a list of time periods and the sounds used:
+
+* November: turkey gobble
+* October: goulish sounds and howling wolf
+* December: sleigh bells
 
 # Other Noteable Configurations
 
