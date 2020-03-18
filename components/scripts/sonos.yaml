@@ -1,3 +1,5 @@
+# From https://www.home-assistant.io/cookbook/sonos_say/
+# #
 # Tried incorporating complex delay calculation based on the media duration
 # however it made things worse than just using a static delay.
 # https://community.home-assistant.io/t/sonos-tts-script/8896/21
@@ -6,13 +8,11 @@ sonos_say:
   alias: "Sonos TTS script"
   sequence:
     - service: sonos.snapshot
+      data_template:
+        entity_id: "all"
     - service: sonos.unjoin
       data_template:
         entity_id: "all"
-    - service: media_player.volume_set
-      data_template:
-        entity_id: "all"
-        volume_level: "{{ volume }}"
     - service: tts.google_translate_say
       data_template:
         entity_id: "all"
