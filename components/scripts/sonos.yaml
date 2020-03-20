@@ -9,39 +9,63 @@ sonos_say:
   sequence:
     - service: sonos.snapshot
       data_template:
-        entity_id: "all"
+        entity_id:
+          - media_player.sonos01
+          - media_player.sonos02
     - service: sonos.unjoin
       data_template:
-        entity_id: "all"
+        entity_id:
+          - media_player.sonos01
+          - media_player.sonos02
+    - service: media_player.volume_set
+      data_template:
+        entity_id:
+          - media_player.sonos01
+          - media_player.sonos02
+        volume_level: "0.5"
     - service: tts.google_translate_say
       data_template:
-        entity_id: "all"
+        entity_id:
+          - media_player.sonos01
+          - media_player.sonos02
         message: "{{ message }}"
     - delay: "{{ delay }}"
     - service: sonos.restore
       data_template:
-        entity_id: "all"
+        entity_id:
+          - media_player.sonos01
+          - media_player.sonos02
 
 sonos_play_file:
   alias: "Sonos play file script"
   sequence:
     - service: sonos.snapshot
       data_template:
-        entity_id: "all"
+        entity_id:
+          - media_player.sonos01
+          - media_player.sonos02
     - service: sonos.unjoin
       data_template:
-        entity_id: "all"
+        entity_id:
+          - media_player.sonos01
+          - media_player.sonos02
     - service: media_player.volume_set
       data_template:
-        entity_id: "all"
-        volume_level: "{{ volume }}"
+        entity_id:
+          - media_player.sonos01
+          - media_player.sonos02
+        volume_level: "0.5"
     - service: media_player.play_media
       data_template:
-        entity_id: "all"
+        entity_id:
+          - media_player.sonos01
+          - media_player.sonos02
         media_content_id: "http://pi01:8123/local/{{ audio_url }}"
         media_content_type: "music"
     - delay: "{{ delay }}"
     - service: sonos.restore
       data_template:
-        entity_id: "all"
+        entity_id:
+          - media_player.sonos01
+          - media_player.sonos02
 
