@@ -29,5 +29,5 @@ cards:
       - entity: sensor.den_temperature
       - entity: sensor.master_bedroom_temperature
       - entity: sensor.fibaro_system_fgfs101_flood_sensor_temperature
-      - entity: weather.home
+      - entity: weather.home_2
 

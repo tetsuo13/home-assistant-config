@@ -9,7 +9,7 @@ sensor.home_humidity:
 sensor.home_temperature:
   friendly_name: Hallway Temperature
 
-weather.home:
+weather.home_2:
   friendly_name: Weather Condition
 
 sensor.fibaro_system_fgfs101_flood_sensor_temperature:
