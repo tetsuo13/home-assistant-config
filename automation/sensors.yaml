@@ -1,0 +1,14 @@
+- alias: Notify of Water Under Kitchen Sink
+  trigger:
+    platform: state
+    entity_id: binary_sensor.fibaro_system_fgfs101_flood_sensor_flood
+    from: 'off'
+    to: 'on'
+    for:
+      seconds: 15
+  action:
+    service: notify.email
+    data_template:
+      title: "Water detected under kitchen sink"
+      message: "You should probably check it out."
+

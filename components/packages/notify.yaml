@@ -1,0 +1,12 @@
+# https://www.home-assistant.io/integrations/smtp
+
+notify:
+  - name: email
+    platform: smtp
+    server: !secret smtp_server
+    port: !secret smtp_port
+    timeout: 15
+    sender: !secret smtp_sender
+    recipient: !secret smtp_recipient
+    sender_name: Home Assistant
+
