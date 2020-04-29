@@ -39,6 +39,11 @@ There are certain periods where opening/closing doors will play sounds instead o
 * October: goulish sounds and howling wolf
 * December: sleigh bells
 
+# Screenshots
+
+![UI](screenshots/home.png "Home page")
+![UI](screenshots/automations.png "Automations")
+
 # Other Noteable Configurations
 
 The [Cookbook](https://www.home-assistant.io/cookbook/) at Home Assistant's web site was extremely helpful in seeing how others got started however below is a list of other configurations that were particularly inspiring:
