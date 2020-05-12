@@ -60,7 +60,8 @@ sonos_play_file:
         entity_id:
           - media_player.sonos01
           - media_player.sonos02
-        media_content_id: "http://pi01:8123/local/{{ audio_url }}"
+        # TODO: Would be nice to concatenate a secret with a string here.
+        media_content_id: "http://10.8.13.24:8123/local/{{ audio_url }}"
         media_content_type: "music"
     - delay: "{{ delay }}"
     - service: sonos.restore
