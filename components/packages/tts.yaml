@@ -3,7 +3,6 @@
 #
 tts:
   - platform: google_translate
-    base_url: !secret base_url
     # Most of the TTS usage is to make announcements about doors opening or
     # closing. These don't change so cache them as long as possible.
     time_memory: 57600
