@@ -1,7 +1,23 @@
+# Turn on the lights at 06:45 on weekdays unless the sun has already risen
+# by 06:30. Summer months, when the sun rises very early, the lights won't
+# come on. Winter months, when it rises closer to 07:30, the lights will.
 - alias: Turn On Outside Lights Early Morning
   trigger:
     platform: time
-    at: "06:15:00"
+    at: '06:45:00'
+  condition:
+    condition: and
+    conditions:
+      - condition: sun
+        before: sunrise
+        before_offset: '00:15:00'
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
   action:
     - service: light.turn_on
       data:
