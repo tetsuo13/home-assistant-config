@@ -7,8 +7,12 @@
     for:
       seconds: 15
   action:
-    service: notify.email
-    data_template:
-      title: "Water detected under kitchen sink"
-      message: "You should probably check it out."
+    - service: notify.email
+      data_template:
+        title: "Water detected under kitchen sink"
+        message: "You should probably check it out."
+    - service: script.sonos_say
+      data:
+        message: "Bugga!! We've sprunga a leak under the sink!"
+        delay: '00:00:10'
 
