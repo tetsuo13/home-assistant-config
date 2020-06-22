@@ -23,7 +23,7 @@ sonos_say:
         entity_id:
           - media_player.sonos01
           - media_player.sonos02
-        volume_level: "0.5"
+        volume_level: "0.4"
     - service: media_player.play_media
       data_template:
         entity_id:
@@ -32,7 +32,7 @@ sonos_say:
         # TODO: Would be nice to concatenate a secret with a string here.
         media_content_id: "http://10.8.13.24:8123/local/audio/chime01.mp3"
         media_content_type: "music"
-    - delay: "00:00:03"
+    - delay: "00:00:02"
     - service: tts.google_translate_say
       data_template:
         entity_id:
@@ -64,7 +64,7 @@ sonos_play_file:
         entity_id:
           - media_player.sonos01
           - media_player.sonos02
-        volume_level: "0.5"
+        volume_level: "0.4"
     - service: media_player.play_media
       data_template:
         entity_id:
