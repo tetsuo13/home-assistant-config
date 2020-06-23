@@ -1,0 +1,6 @@
+# https://www.home-assistant.io/integrations/http/#configuration-variables
+
+http:
+  use_x_forwarded_for: true
+  trusted_proxies: !secret trusted_proxy
+
