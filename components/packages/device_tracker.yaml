@@ -1,4 +1,0 @@
-# https://www.home-assistant.io/components/device_tracker/
-
-device_tracker: !include_dir_list ../device_trackers
-
