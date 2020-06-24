@@ -46,9 +46,10 @@ There are certain periods where opening/closing doors will play sounds instead o
 
 # Other Noteable Configurations
 
-The [Cookbook](https://www.home-assistant.io/cookbook/) at Home Assistant's web site was extremely helpful in seeing how others got started however below is a list of other configurations that were particularly inspiring:
+The [Cookbook](https://www.home-assistant.io/cookbook/) at Home Assistant's web site was extremely helpful in seeing how others got started however below is a list, in no special order, of other configurations that were particularly inspiring:
 
 * https://github.com/SilvrrGIT/HomeAssistant
 * https://github.com/klaasnicolaas/Smarthome-homeassistant-config
 * https://github.com/geekofweek/homeassistant
+* https://github.com/scstraus/home-assistant-config
 
