@@ -13,6 +13,6 @@
         message: "You should probably check it out."
     - service: script.sonos_say
       data:
-        message: "Bugga!! We've sprunga a leak under the sink!"
+        message: "Crikey! We've sprunga a leak under the sink! Crikey! We've sprunga a leak under the sink!"
         delay: '00:00:10'
 
