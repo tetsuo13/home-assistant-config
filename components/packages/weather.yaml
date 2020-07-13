@@ -1,4 +1,8 @@
-# https://www.home-assistant.io/integrations/met/
+# https://www.home-assistant.io/integrations/weather/
+# https://www.home-assistant.io/integrations/openweathermap/
 
-met:
+weather:
+  - platform: openweathermap
+    api_key: !secret openweathermap_api_key
+    mode: freedaily
 

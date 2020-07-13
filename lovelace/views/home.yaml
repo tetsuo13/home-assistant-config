@@ -18,8 +18,10 @@ cards:
       - entity: binary_sensor.fibaro_system_fgfs101_flood_sensor_flood
       - entity: binary_sensor.ecolink_door_window_sensor_sensor
     state_color: true
+    # https://www.home-assistant.io/lovelace/weather-forecast/
   - type: weather-forecast
-    entity: weather.home_2
+    entity: weather.openweathermap
+    name: Home
   - type: entities
     title: Thermostats
     show_header_toggle: false
