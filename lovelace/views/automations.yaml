@@ -12,7 +12,7 @@ cards:
       - entity: automation.turn_on_outside_lights_early_morning
       - entity: automation.turn_off_outside_lights_sunrise
       - entity: automation.turn_on_outside_lights_sunset
-      - entity: automation.turn_off_outside_lights_1_00am
+      - entity: automation.turn_off_outside_lights_11_15pm
   - type: entities
     title: Sensors
     show_header_toggle: false

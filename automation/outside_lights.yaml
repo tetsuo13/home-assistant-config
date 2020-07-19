@@ -47,10 +47,10 @@
         brightness_pct: 75
         rgb_color: [255, 255, 255]
 
-- alias: Turn Off Outside Lights 1:00am
+- alias: Turn Off Outside Lights 11:15pm
   trigger:
     platform: time
-    at: "01:00:00"
+    at: "23:15:00"
   action:
     - service: light.turn_off
       data:
