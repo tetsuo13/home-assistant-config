@@ -1,5 +1,5 @@
 title: Automations
-icon: mdi:timer
+icon: mdi:timer-outline
 cards:
   - type: entities
     title: Automations for Lights
