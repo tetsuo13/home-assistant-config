@@ -12,7 +12,7 @@ automation.turn_on_lights_before_sunset:
   friendly_name: Bedroom Lights On Before Sunset
   icon: mdi:lightbulb-outline
 
-automation.turn_off_lights_midnight:
+automation.turn_off_lights_9_30pm:
   friendly_name: Bedroom Lights Off at 9:30pm
   icon: mdi:lightbulb-outline
 

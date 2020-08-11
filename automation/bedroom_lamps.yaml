@@ -46,7 +46,7 @@
       brightness: 255
       transition: 1500
 
-- alias: Turn Off Lights Midnight
+- alias: Turn Off Lights 9:30pm
   initial_state: True
   trigger:
     platform: time
