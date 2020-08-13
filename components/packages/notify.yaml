@@ -1,3 +1,4 @@
+# https://www.home-assistant.io/integrations/notify.group/
 # https://www.home-assistant.io/integrations/smtp
 
 notify:
@@ -12,4 +13,11 @@ notify:
       - !secret smtp_recipient2
       - !secret smtp_recipient3
     sender_name: Home Assistant
+
+  - name: mobile_apps
+    platform: group
+    services:
+      - service: mobile_app_lees_ipad
+      - service: mobile_app_sm_g950u1
+      - service: mobile_app_gt_i9195
 
