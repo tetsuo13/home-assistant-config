@@ -15,4 +15,7 @@
       data:
         message: "Crikey! We've sprunga leak under the sink! I said crikey! We've sprunga leak under the sink!"
         delay: '00:00:10'
+    - service: notify.mobile_apps
+      data:
+        message: "There's water under the kitchen sink!"
 
