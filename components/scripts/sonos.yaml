@@ -25,7 +25,7 @@ sonos_say:
         entity_id:
           - media_player.sonos01
           - media_player.sonos02
-        volume_level: "0.4"
+        volume_level: "0.3"
     - service: media_player.play_media
       data_template:
         entity_id:
