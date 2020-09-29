@@ -1,4 +1,7 @@
 # https://www.home-assistant.io/components/logbook/
 
 logbook:
+  exclude:
+    entity_globs:
+      - sensor.openweathermap_*
 
