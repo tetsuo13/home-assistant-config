@@ -40,6 +40,8 @@ There are certain periods where opening/closing doors will play sounds instead o
 * October: goulish sounds and howling wolf
 * December: sleigh bells
 
+Christmas lights automations aren't available year-round (they're added when the tree goes up and removed again when the tree goes down). See [c013a7c](https://github.com/tetsuo13/home-assistant-config/commit/c013a7c10aa19f6366598c1a0cd125f82ec8b465) on how to add them.
+
 # Screenshots
 
 ![UI](screenshots/home.png "Home page")
