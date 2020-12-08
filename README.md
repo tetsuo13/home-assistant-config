@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/home-assistant/home-assistant-assets/blob/master/loading-screen.gif" />
+<img src="https://github.com/home-assistant/assets/blob/master/misc/loading-screen.gif" width="250" height="250" />
 </p>
 
 [![Actions Status](https://github.com/tetsuo13/home-assistant/workflows/Test%20config/badge.svg)](https://github.com/tetsuo13/home-assistant/actions)
