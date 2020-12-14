@@ -7,10 +7,10 @@ switch.wemo_mini_1_2:
   icon: mdi:star
 
 switch.wemo_mini_3:
-  friendly_name: Bedroom 3 star
-  icon: mdi:star
-
-switch.wemo_mini_4:
   friendly_name: Christmas tree
   icon: mdi:pine-tree
+
+switch.wemo_mini_4:
+  friendly_name: Bedroom 3 star
+  icon: mdi:star
 
