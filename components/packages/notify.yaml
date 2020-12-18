@@ -19,5 +19,5 @@ notify:
     services:
       - service: mobile_app_lees_ipad
       - service: mobile_app_sm_g950u1
-      - service: mobile_app_gt_i9195
+      - service: mobile_app_andrei_s_phone
 
