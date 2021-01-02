@@ -19,10 +19,4 @@ cards:
     entities:
       - entity: automation.announce_kitchen_door_opened
       - entity: automation.announce_kitchen_door_closed
-  - type: entities
-    title: Christmas Lights
-    show_header_toggle: true
-    entities:
-      - entity: automation.turn_on_lights_at_sunset
-      - entity: automation.turn_off_lights_11_07pm
 
