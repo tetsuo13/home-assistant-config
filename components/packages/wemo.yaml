@@ -1,0 +1,6 @@
+# https://www.home-assistant.io/components/wemo/
+
+wemo:
+  static:
+    - !secret wemo_1_ip
+

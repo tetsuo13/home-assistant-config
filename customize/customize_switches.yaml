@@ -1,0 +1,4 @@
+switch.wemo_mini_1:
+  friendly_name: Air purifier
+  icon: mdi:air-filter
+

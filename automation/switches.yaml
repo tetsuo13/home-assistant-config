@@ -1,0 +1,18 @@
+- alias: Turn Off Air Purifier Morning
+  trigger:
+    platform: time
+    at: "07:30:00"
+  action:
+    service: switch.turn_off
+    data:
+      entity_id: switch.wemo_mini_1
+
+- alias: Turn On Air Purifier Mid-Morning
+  trigger:
+    platform: time
+    at: "09:00:00"
+  action:
+    service: switch.turn_on
+    data:
+      entity_id: switch.wemo_mini_1
+
