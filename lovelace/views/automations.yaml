@@ -13,6 +13,8 @@ cards:
       - entity: automation.turn_off_outside_lights_sunrise
       - entity: automation.turn_on_outside_lights_sunset
       - entity: automation.turn_off_outside_lights_11_15pm
+      - entity: automation.turn_on_night_light_at_sunset
+      - entity: automation.turn_off_night_light_8_00am
   - type: entities
     title: Sensors
     show_header_toggle: false

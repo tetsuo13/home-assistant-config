@@ -12,6 +12,7 @@ Runs on a [Raspberry Pi 3B](https://www.raspberrypi.org/products/raspberry-pi-3-
 
 ## Lighting
 
+* [Litake LED Strip Lights](https://www.litakeled.com/collections/party-lights/products/litake-led-strip-lights-32-8ft) (WIFIDD328)
 * [Philips Hue Bridge](https://www2.meethue.com/en-us/p/hue-bridge/046677458478) (BSB002)
 * [Philips Hue white and color ambience bulb](https://www2.meethue.com/en-us/p/hue-white-and-color-ambiance-single-bulb-e26/046677464486) (LCT016)
 * [Philips Hue white ambience bulb](https://www2.meethue.com/en-us/p/hue-single-bulb-e26/046677461003) (LWB014)
@@ -43,6 +44,14 @@ There are certain periods where opening/closing doors will play sounds instead o
 Christmas lights automations aren't available year-round (they're added when the tree goes up and removed again when the tree goes down). See [c013a7c](https://github.com/tetsuo13/home-assistant-config/commit/c013a7c10aa19f6366598c1a0cd125f82ec8b465) on how to add them.
 
 Air purifier isn't smart but it's plugged into a Wemo smart plug. Air purifier is intended to run overnight. Automation cuts power in the morning to turn it off and another automation task turns power back on however someone must still manually press the "on" button on the air purifier unit to actually turn it on. Toggling power to the dumb air purifier is preferable to some of the much more expensive smart air purifiers out there.
+
+## Custom Components
+
+The following components are added on top of the standard HA install to provide additional functionality. They can be found under the `custom_components` directory.
+
+### Flux LED/MagicLight
+
+A version of the [Flux LED/MagicLight](https://www.home-assistant.io/integrations/flux_led/) component from the PR [home-assistant/core#46536](https://github.com/home-assistant/core/pull/46536) has been used. During initial setup of the Litake LED Strip Lights it was found that they wouldn't turn on. See [home-assistant/core#38927](https://github.com/home-assistant/core/issues/38927) for more info.
 
 # Screenshots
 

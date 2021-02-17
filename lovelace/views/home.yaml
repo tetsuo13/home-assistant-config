@@ -7,6 +7,7 @@ cards:
       - entity: light.hue_white_lamp_1
       - entity: light.hue_white_lamp_2
       - entity: light.hue_color_lamp_1
+      - entity: light.night_light
   - type: entities
     title: Switches
     show_header_toggle: false

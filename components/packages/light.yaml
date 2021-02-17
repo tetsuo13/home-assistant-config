@@ -1,0 +1,8 @@
+# https://www.home-assistant.io/integrations/flux_led/
+light:
+  - platform: flux_led
+    devices:
+      !secret flux_led_ip:
+        name: Night-Light
+        mode: "rgb"
+

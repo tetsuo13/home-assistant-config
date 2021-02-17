@@ -58,3 +58,25 @@
         - light.hue_white_lamp_1
         - light.hue_white_lamp_2
 
+- alias: Turn On Night-Light at Sunset
+  initial_state: True
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "-0:30:00"
+  action:
+    service: light.turn_on
+    data:
+      entity_id: light.night_light
+      brightness: 1
+
+- alias: Turn Off Night-Light 8:00am
+  initial_state: True
+  trigger:
+    platform: time
+    at: "08:00:00"
+  action:
+    service: light.turn_off
+    data:
+      entity_id: light.night_light
+
