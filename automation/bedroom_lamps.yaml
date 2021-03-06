@@ -1,3 +1,4 @@
+# Fade lights on in the morning to simulate a sunrise next to my face.
 - alias: Turn on Lights to Wake Us Up
   initial_state: True
   trigger:
@@ -12,7 +13,11 @@
       - thu
       - fri
   action:
-    service: script.wakeup
+    service: light.turn_on
+    data:
+      entity_id: light.hue_white_lamp_1
+      brightness: 255
+      transition: 1800
 
 - alias: Turn Off Lights Before Work
   initial_state: True
@@ -31,6 +36,7 @@
     service: light.turn_off
     entity_id: light.hue_white_lamp_1
 
+# Gradually fade in lights as the sun sets into the night.
 - alias: Turn On Lights Before Sunset
   initial_state: True
   trigger:
