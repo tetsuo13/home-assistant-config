@@ -74,7 +74,8 @@
     service: light.turn_on
     data:
       entity_id: light.night_light
-      brightness: 1
+      brightness: 50
+      transition: 3600
 
 - alias: Turn Off Night-Light 8:00am
   initial_state: True
