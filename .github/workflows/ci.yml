@@ -1,12 +1,16 @@
-name: Test config
+name: Continuous integration
 
-on: [push]
+on:
+  push:
+    paths-ignore:
+      - '**.md'
 
 jobs:
   home_assistant:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Clone repository
+        uses: actions/checkout@v2
 
       - name: Prep stub files in configuration folder
         run: |
