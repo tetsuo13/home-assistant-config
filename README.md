@@ -45,6 +45,14 @@ Christmas lights automations aren't available year-round (they're added when the
 
 Air purifier isn't smart but it's plugged into a Wemo smart plug. Air purifier is intended to run overnight. Automation cuts power in the morning to turn it off and another automation task turns power back on however someone must still manually press the "on" button on the air purifier unit to actually turn it on. Toggling power to the dumb air purifier is preferable to some of the much more expensive smart air purifiers out there.
 
+## Custom Components
+
+The following components are added on top of the standard HA install to provide additional functionality. They can be found under the `custom_components` directory.
+
+### Flux LED/MagicLight
+
+A version of the [Flux LED/MagicLight](https://www.home-assistant.io/integrations/flux_led/) component from the PR [home-assistant/core#46536](https://github.com/home-assistant/core/pull/46536) has been used. During initial setup of the Litake LED Strip Lights it was found that they wouldn't turn on. See [home-assistant/core#38927](https://github.com/home-assistant/core/issues/38927) for more info.
+
 # Screenshots
 
 ![UI](screenshots/home.png "Home page")
