@@ -51,7 +51,7 @@ The following components are added on top of the standard HA install to provide 
 
 ### Flux LED/MagicLight
 
-A version of the [Flux LED/MagicLight](https://www.home-assistant.io/integrations/flux_led/) component from the PR [home-assistant/core#46536](https://github.com/home-assistant/core/pull/46536) has been used. During initial setup of the Litake LED Strip Lights it was found that they wouldn't turn on. See [home-assistant/core#38927](https://github.com/home-assistant/core/issues/38927) for more info.
+A version of the [Flux LED/MagicLight](https://www.home-assistant.io/integrations/flux_led/) component from the PR [home-assistant/core#46536](https://github.com/home-assistant/core/pull/46536) has been used. During initial setup of the Litake LED Strip Lights it was found that they wouldn't turn on. That PR has been closed without being merged into HA Core however there is another PR that aims to rewrite Flux LED in [home-assistant/core#48902](https://github.com/home-assistant/core/pull/48902). This custom component will be removed once that PR is completed.
 
 # Screenshots
 
