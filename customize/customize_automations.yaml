@@ -48,6 +48,14 @@ automation.announce_kitchen_door_closed:
   friendly_name: Announce Kitchen Door Closed
   icon: mdi:door-closed
 
+automation.announce_front_door_opened:
+  friendly_name: Announce Front Door Opened
+  icon: mdi:door-open
+
+automation.announce_front_door_closed:
+  friendly_name: Announce Front Door Closed
+  icon: mdi:door-closed
+
 automation.turn_off_air_purifier_morning:
   friendly_name: Turn Off Air Purifier Morning
   icon: mdi:air-filter

@@ -16,10 +16,30 @@
       message: 'Kitchen door open'
       delay: '00:00:05'
 
-- alias: Announce Kitchen Door Opened (Halloween)
+- alias: Announce Front Door Opened
   trigger:
     platform: state
-    entity_id: binary_sensor.ecolink_door_window_sensor_sensor
+    entity_id: binary_sensor.ecolink_door_window_sensor_sensor_2
+    from: 'off'
+    to: 'on'
+  mode: queued
+  condition:
+    condition: template
+    value_template: >
+      {% set month = now().month %}
+      {{ month < 10 }}
+  action:
+    service: script.sonos_say
+    data:
+      message: 'Front door open'
+      delay: '00:00:05'
+
+- alias: Announce Doors Opened (Halloween)
+  trigger:
+    platform: state
+    entity_id:
+      - binary_sensor.ecolink_door_window_sensor_sensor
+      - binary_sensor.ecolink_door_window_sensor_sensor_2
     from: 'off'
     to: 'on'
   mode: queued
@@ -34,10 +54,12 @@
       audio_url: "audio/ghost01.mp3"
       delay: '00:00:08'
 
-- alias: Announce Kitchen Door Opened (Thanksgiving)
+- alias: Announce Doors Opened (Thanksgiving)
   trigger:
     platform: state
-    entity_id: binary_sensor.ecolink_door_window_sensor_sensor
+    entity_id:
+      - binary_sensor.ecolink_door_window_sensor_sensor
+      - binary_sensor.ecolink_door_window_sensor_sensor_2
     from: 'off'
     to: 'on'
   mode: queued
@@ -52,10 +74,12 @@
       audio_url: "audio/turkey01.mp3"
       delay: '00:00:08'
 
-- alias: Announce Kitchen Door Opened (Christmas)
+- alias: Announce Doors Opened (Christmas)
   trigger:
     platform: state
-    entity_id: binary_sensor.ecolink_door_window_sensor_sensor
+    entity_id:
+      - binary_sensor.ecolink_door_window_sensor_sensor
+      - binary_sensor.ecolink_door_window_sensor_sensor_2
     from: 'off'
     to: 'on'
   mode: queued
@@ -88,10 +112,30 @@
       message: 'Kitchen door closed'
       delay: '00:00:05'
 
-- alias: Announce Kitchen Door Closed (Halloween)
+- alias: Announce Front Door Closed
   trigger:
     platform: state
-    entity_id: binary_sensor.ecolink_door_window_sensor_sensor
+    entity_id: binary_sensor.ecolink_door_window_sensor_sensor_2
+    from: 'on'
+    to: 'off'
+  mode: queued
+  condition:
+    condition: template
+    value_template: >
+      {% set month = now().month %}
+      {{ month < 10 }}
+  action:
+    service: script.sonos_say
+    data:
+      message: 'Front door closed'
+      delay: '00:00:05'
+
+- alias: Announce Doors Closed (Halloween)
+  trigger:
+    platform: state
+    entity_id:
+      - binary_sensor.ecolink_door_window_sensor_sensor
+      - binary_sensor.ecolink_door_window_sensor_sensor_2
     from: 'on'
     to: 'off'
   mode: queued
@@ -106,10 +150,12 @@
       audio_url: "audio/howl01.mp3"
       delay: '00:00:08'
 
-- alias: Announce Kitchen Door Closed (Thanksgiving)
+- alias: Announce Doors Closed (Thanksgiving)
   trigger:
     platform: state
-    entity_id: binary_sensor.ecolink_door_window_sensor_sensor
+    entity_id:
+      - binary_sensor.ecolink_door_window_sensor_sensor
+      - binary_sensor.ecolink_door_window_sensor_sensor_2
     from: 'on'
     to: 'off'
   mode: queued
@@ -124,10 +170,12 @@
       audio_url: "audio/turkey01.mp3"
       delay: '00:00:08'
 
-- alias: Announce Kitchen Door Closed (Christmas)
+- alias: Announce Doors Closed (Christmas)
   trigger:
     platform: state
-    entity_id: binary_sensor.ecolink_door_window_sensor_sensor
+    entity_id:
+      - binary_sensor.ecolink_door_window_sensor_sensor
+      - binary_sensor.ecolink_door_window_sensor_sensor_2
     from: 'on'
     to: 'off'
   mode: queued

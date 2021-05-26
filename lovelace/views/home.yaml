@@ -23,6 +23,7 @@ cards:
       - entity: binary_sensor.master_bedroom_occupancy
       - entity: binary_sensor.fibaro_system_fgfs101_flood_sensor_flood
       - entity: binary_sensor.ecolink_door_window_sensor_sensor
+      - entity: binary_sensor.ecolink_door_window_sensor_sensor_2
     state_color: true
     # https://www.home-assistant.io/lovelace/weather-forecast/
   - type: weather-forecast

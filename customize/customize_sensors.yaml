@@ -9,3 +9,7 @@ binary_sensor.ecolink_door_window_sensor_sensor:
   friendly_name: Kitchen Door
   device_class: door
 
+binary_sensor.ecolink_door_window_sensor_sensor_2:
+  friendly_name: Front Door
+  device_class: door
+
