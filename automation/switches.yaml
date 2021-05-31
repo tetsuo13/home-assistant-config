@@ -1,7 +1,7 @@
 - alias: Turn Off Air Purifier Morning
   trigger:
     platform: time
-    at: "07:30:00"
+    at: "07:00:00"
   action:
     service: switch.turn_off
     data:
