@@ -1,0 +1,14 @@
+title: Battery Levels
+icon: mdi:battery-charging-100
+cards:
+  - type: entities
+    entities:
+      - entity: sensor.ecolink_door_window_sensor_battery_level_2
+        name: Front Door
+      - entity: sensor.ecolink_door_window_sensor_battery_level
+        name: Kitchen Door
+      - entity: sensor.fibaro_system_fgfs101_flood_sensor_battery_level
+        name: Kitchen Sink
+    show_header_toggle: false
+    title: Sensors
+
