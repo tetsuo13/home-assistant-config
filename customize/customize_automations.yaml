@@ -1,7 +1,7 @@
 # Order matters
 
 automation.turn_on_lights_to_wake_us_up:
-  friendly_name: Bedroom Lights On at 6:40am
+  friendly_name: Bedroom Lights On at 6:10am
   icon: mdi:lightbulb-outline
 
 automation.turn_off_lights_before_work:
