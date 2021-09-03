@@ -40,6 +40,14 @@ automation.turn_off_night_light_8_00am:
   friendly_name: Turn Off Night-Light 8:00am
   icon: mdi:led-strip
 
+automation.turn_on_dining_room_lamp_before_sunset:
+  friengly_name: Turn On Dining Room Lamp Before Sunset
+  icon: mdi:lamp
+
+automation.turn_off_dining_room_lamp:
+  friengly_name: Turn On Dining Room Lamp 10:30pm
+  icon: mdi:lamp
+
 automation.announce_kitchen_door_opened:
   friendly_name: Announce Kitchen Door Opened
   icon: mdi:door-open

@@ -2,3 +2,7 @@ switch.wemo_mini_1:
   friendly_name: Air Purifier
   icon: mdi:air-filter
 
+switch.wemo_mini_1_2:
+  friendly_name: Dining Room Lamp
+  icon: mdi:lamp
+

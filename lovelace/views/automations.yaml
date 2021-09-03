@@ -15,6 +15,8 @@ cards:
       - entity: automation.turn_off_outside_lights_11_15pm
       - entity: automation.turn_on_night_light_at_sunset
       - entity: automation.turn_off_night_light_8_00am
+      - entity: automation.turn_on_dining_room_lamp_before_sunset
+      - entity: automation.turn_off_dining_room_lamp
   - type: entities
     title: Sensors
     show_header_toggle: false

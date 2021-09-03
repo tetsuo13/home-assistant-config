@@ -1,0 +1,168 @@
+# Fade lights on in the morning to simulate a sunrise next to my face.
+- alias: Turn on Lights to Wake Us Up
+  initial_state: True
+  trigger:
+    platform: time
+    at: "06:10:00"
+  condition:
+  - condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    service: light.turn_on
+    data:
+      entity_id: light.hue_white_lamp_1
+      brightness: 255
+      transition: 1800
+
+- alias: Turn Off Lights Before Work
+  initial_state: True
+  trigger:
+    platform: time
+    at: "07:45:00"
+  condition:
+  - condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    service: light.turn_off
+    entity_id: light.hue_white_lamp_1
+
+# Gradually fade in lights as the sun sets into the night.
+- alias: Turn On Lights Before Sunset
+  initial_state: True
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "-1:15:00"
+  action:
+    service: light.turn_on
+    data:
+      entity_id:
+        - light.hue_white_lamp_1
+        - light.hue_white_lamp_2
+      brightness: 255
+      transition: 1500
+
+- alias: Turn Off Lights 9:30pm
+  initial_state: True
+  trigger:
+    platform: time
+    at: "21:30:00"
+  action:
+    service: light.turn_off
+    data:
+      entity_id:
+        - light.hue_white_lamp_1
+        - light.hue_white_lamp_2
+
+- alias: Turn On Night-Light at Sunset
+  initial_state: True
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "-0:30:00"
+  action:
+    service: light.turn_on
+    data:
+      entity_id: light.night_light
+      brightness: 13
+
+- alias: Turn Off Night-Light 8:00am
+  initial_state: True
+  trigger:
+    platform: time
+    at: "08:00:00"
+  action:
+    service: light.turn_off
+    data:
+      entity_id: light.night_light
+
+
+# Turn on the lights at 06:45 on weekdays unless the sun has already risen
+# by 06:30. Summer months, when the sun rises very early, the lights won't
+# come on. Winter months, when it rises closer to 07:30, the lights will.
+- alias: Turn On Outside Lights Early Morning
+  trigger:
+    platform: time
+    at: '06:45:00'
+  condition:
+    condition: and
+    conditions:
+      - condition: sun
+        before: sunrise
+        before_offset: '00:15:00'
+      - condition: time
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.hue_color_lamp_1
+        brightness: 255
+        rgb_color: [255, 255, 255]
+
+- alias: Turn Off Outside Lights Sunrise
+  trigger:
+    platform: sun
+    event: sunrise
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - light.hue_color_lamp_1
+
+- alias: Turn On Outside Lights Sunset
+  trigger:
+    platform: sun
+    event: sunset
+    offset: '-00:15:00'
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.hue_color_lamp_1
+        brightness_pct: 75
+        rgb_color: [255, 255, 255]
+
+- alias: Turn Off Outside Lights 11:15pm
+  trigger:
+    platform: time
+    at: "23:15:00"
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - light.hue_color_lamp_1
+
+- alias: Turn On Dining Room Lamp Before Sunset
+  initial_state: True
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "-1:00:00"
+  action:
+    service: switch.turn_on
+    data:
+      entity_id: switch.wemo_mini_1_2
+
+- alias: Turn Off Dining Room Lamp
+  initial_state: True
+  trigger:
+    platform: time
+    at: "22:30:00"
+  action:
+    service: switch.turn_off
+    data:
+      entity_id: switch.wemo_mini_1_2
