@@ -5,4 +5,5 @@ sonos:
     hosts:
       - !secret sonos01_ip
       - !secret sonos02_ip
+      - !secret sonos04_ip
 

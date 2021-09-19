@@ -15,22 +15,26 @@ sonos_say:
         entity_id:
           - media_player.sonos01
           - media_player.sonos02
+          - media_player.sonos04
     - service: sonos.unjoin
       data_template:
         entity_id:
           - media_player.sonos01
           - media_player.sonos02
+          - media_player.sonos04
     - service: media_player.volume_set
       data_template:
         entity_id:
           - media_player.sonos01
           - media_player.sonos02
+          - media_player.sonos04
         volume_level: "0.3"
     - service: media_player.play_media
       data_template:
         entity_id:
           - media_player.sonos01
           - media_player.sonos02
+          - media_player.sonos04
         media_content_id: "{{ base_url }}/local/audio/chime01.mp3"
         media_content_type: "music"
     - delay: "00:00:02"
@@ -39,6 +43,7 @@ sonos_say:
         entity_id:
           - media_player.sonos01
           - media_player.sonos02
+          - media_player.sonos04
         message: "{{ message }}"
     - delay: "{{ delay }}"
     - service: sonos.restore
@@ -46,6 +51,7 @@ sonos_say:
         entity_id:
           - media_player.sonos01
           - media_player.sonos02
+          - media_player.sonos04
 
 sonos_play_file:
   alias: "Sonos play file script"
@@ -57,22 +63,26 @@ sonos_play_file:
         entity_id:
           - media_player.sonos01
           - media_player.sonos02
+          - media_player.sonos04
     - service: sonos.unjoin
       data_template:
         entity_id:
           - media_player.sonos01
           - media_player.sonos02
+          - media_player.sonos04
     - service: media_player.volume_set
       data_template:
         entity_id:
           - media_player.sonos01
           - media_player.sonos02
+          - media_player.sonos04
         volume_level: "0.4"
     - service: media_player.play_media
       data_template:
         entity_id:
           - media_player.sonos01
           - media_player.sonos02
+          - media_player.sonos04
         media_content_id: "{{ base_url }}/local/{{ audio_url }}"
         media_content_type: "music"
     - delay: "{{ delay }}"
@@ -81,4 +91,5 @@ sonos_play_file:
         entity_id:
           - media_player.sonos01
           - media_player.sonos02
+          - media_player.sonos04
 
