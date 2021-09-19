@@ -1,6 +1,6 @@
 *.conf
 *.db
-*.log
+*.log*
 *.sqlite
 *.txt
 *.uuid
