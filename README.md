@@ -23,7 +23,7 @@ Runs on a [Raspberry Pi 3B](https://www.raspberrypi.org/products/raspberry-pi-3-
 
 ## Sensor / Switch
 
-* [Aeotec Z-Stick Gen5](https://aeotec.com/aeotec.com/z-wave-usb-stick/index.html) (ZW090)
+* [Aeotec Z-Stick Gen5](https://aeotec.com/z-wave-usb-stick/index.html) (ZW090)
 * [Belkin Wemo Mini Smart Plug](https://www.belkin.com/us/support-article?articleNum=226110) (F7C063fc)
 * [Ecobee room sensor](https://www.ecobee.com/room-sensors/)
 * [Ecolink Door & Window Sensor](https://discoverecolink.com/product/z-wave-door-window-sensor-oem/) (DW-ZWAVE2.5-ECO)
