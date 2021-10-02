@@ -6,3 +6,15 @@ switch.wemo_mini_1_2:
   friendly_name: Dining Room Lamp
   icon: mdi:lamp
 
+fan.jasco_products_unknown_type_4944_id_3337_level:
+  friendly_name: Living Room Fan
+  icon: mdi:fan
+
+switch.zooz_unknown_type_a000_id_a008_switch:
+  friendly_name: Guest Bathroom Fan
+  icon: mdi:fan
+
+switch.zooz_unknown_type_a000_id_a008_switch_3:
+  friendly_name: Master Bathroom Fan
+  icon: mdi:fan
+

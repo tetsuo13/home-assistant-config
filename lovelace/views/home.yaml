@@ -9,11 +9,17 @@ cards:
       - entity: light.hue_color_lamp_1
       - entity: light.night_light
       - entity: switch.wemo_mini_1_2
+      - entity: switch.jasco_products_46201_in_wall_smart_switch_switch
+      - entity: light.zooz_unknown_type_a000_id_a008_level
+      - entity: light.zooz_unknown_type_a000_id_a008_level_2
   - type: entities
     title: Switches
     show_header_toggle: false
     entities:
       - entity: switch.wemo_mini_1
+      - entity: fan.jasco_products_unknown_type_4944_id_3337_level
+      - entity: switch.zooz_unknown_type_a000_id_a008_switch
+      - entity: switch.zooz_unknown_type_a000_id_a008_switch_3
   - type: entities
     title: Sensors
     show_header_toggle: false

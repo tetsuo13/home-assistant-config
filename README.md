@@ -10,28 +10,44 @@ Runs on a [Raspberry Pi 3B](https://www.raspberrypi.org/products/raspberry-pi-3-
 
 # Devices
 
+## Hubs
+
+| Device | Connection | Home Assistant |
+| ------ | ---------- | -------------- |
+| [Aeotec Z-Stick Gen5](https://aeotec.com/z-wave-usb-stick/index.html) (ZW090-A) | USB | [Z-Wave](https://www.home-assistant.io/integrations/zwave/) |
+| [Philips Hue Bridge](https://www2.meethue.com/en-us/p/hue-bridge/046677458478) (BSB002) | Ethernet | [Philips Hue](https://www.home-assistant.io/integrations/hue) |
+
 ## Lighting
 
-* [Litake LED Strip Lights](https://www.litakeled.com/collections/party-lights/products/litake-led-strip-lights-32-8ft) (WIFIDD328)
-* [Philips Hue Bridge](https://www2.meethue.com/en-us/p/hue-bridge/046677458478) (BSB002)
-* [Philips Hue white and color ambience bulb](https://www2.meethue.com/en-us/p/hue-white-and-color-ambiance-single-bulb-e26/046677464486) (LCT016)
-* [Philips Hue white ambience bulb](https://www2.meethue.com/en-us/p/hue-single-bulb-e26/046677461003) (LWB014)
+| Device | Connection | Home Assistant |
+| ------ | ---------- | -------------- |
+| [Litake LED Strip Lights](https://www.litakeled.com/collections/party-lights/products/litake-led-strip-lights-32-8ft) (WIFIDD328) | Wi-Fi | [Flux LED/MagicLight](https://www.home-assistant.io/integrations/flux_led/) (custom component) |
+| [Philips Hue white and color ambience bulb](https://www2.meethue.com/en-us/p/hue-white-and-color-ambiance-single-bulb-e26/046677464486) (LCT016) | Hue Hub (Zigbee) | [Philips Hue](https://www.home-assistant.io/integrations/hue) |
+| [Philips Hue white ambience bulb](https://www2.meethue.com/en-us/p/hue-single-bulb-e26/046677461003) (LWB014) | Hue Hub (Zigbee) | [Philips Hue](https://www.home-assistant.io/integrations/hue) |
 
 ## Climate
 
-* [Ecobee 4](https://www.ecobee.com/en-us/smart-thermostats/smart-wifi-thermostat-with-voice-control/) (EB-STATE4-01)
+| Device | Connection | Home Assistant |
+| ------ | ---------- | -------------- |
+| [Ecobee 4](https://www.ecobee.com/en-us/smart-thermostats/smart-wifi-thermostat-with-voice-control/) (EB-STATE4-01) | Wi-Fi | [ecobee](https://www.home-assistant.io/integrations/ecobee) |
+| [Ecobee room sensor](https://www.ecobee.com/room-sensors/) | ecobee | [ecobee](https://www.home-assistant.io/integrations/ecobee) |
 
-## Sensor / Switch
+## Sensors & Switches
 
-* [Aeotec Z-Stick Gen5](https://aeotec.com/z-wave-usb-stick/index.html) (ZW090)
-* [Belkin Wemo Mini Smart Plug](https://www.belkin.com/us/support-article?articleNum=226110) (F7C063fc)
-* [Ecobee room sensor](https://www.ecobee.com/room-sensors/)
-* [Ecolink Door & Window Sensor](https://discoverecolink.com/product/z-wave-door-window-sensor-oem/) (DW-ZWAVE2.5-ECO)
-* [Fibaro Z-Wave Flood Sensor](https://www.fibaro.com/en/products/flood-sensor/) (FGFS-101)
+| Device | Connection | Home Assistant |
+| ------ | ---------- | -------------- |
+| [Belkin Wemo Mini Smart Plug](https://www.belkin.com/us/support-article?articleNum=226110) (F7C063fc) | Wi-Fi | [Belkin WeMo](https://www.home-assistant.io/integrations/wemo) |
+| [Ecolink Door & Window Sensor](https://discoverecolink.com/product/z-wave-door-window-sensor-oem/) (DW-ZWAVE2.5-ECO) | Z-Wave | [Z-Wave](https://www.home-assistant.io/integrations/zwave) |
+| [Fibaro Z-Wave Flood Sensor](https://www.fibaro.com/en/products/flood-sensor/) (FGFS-101) | Z-Wave | [Z-Wave](https://www.home-assistant.io/integrations/zwave) |
+| [GE Enbrighten Z-Wave In-Wall Smart Switch](https://byjasco.com/ge-enbrighten-z-wave-commercial-grade-wall-smart-switch-quickfit-and-simplewire) | Z-Wave | [Z-Wave](https://www.home-assistant.io/integrations/zwave) |
+| [GE Z-Wave In-Wall Smart Fan Control](https://byjasco.com/catalog/product/view/id/3334/s/ge-z-wave-plus-wall-smart-fan-control/) | Z-Wave | [Z-Wave](https://www.home-assistant.io/integrations/zwave) |
+| [ZOOZ Double Switch](https://www.getzooz.com/zooz-zen30-double-switch.html) (ZEN30) | Z-Wave | [Z-Wave](https://www.home-assistant.io/integrations/zwave) |
 
 ## Media
 
-* [Sonos WiFi bookshelf speaker](https://www.sonos.com/en-us/symfonisk-by-sonos-and-ikea) (SYMFONISK)
+| Device | Connection | Home Assistant |
+| ------ | ---------- | -------------- |
+| [Sonos WiFi bookshelf speaker](https://www.sonos.com/en-us/symfonisk-by-sonos-and-ikea) (SYMFONISK) | Wi-Fi | [Sonos](https://www.home-assistant.io/integrations/sonos) |
 
 # Features
 
