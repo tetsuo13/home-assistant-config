@@ -15,6 +15,7 @@ cards:
   - type: entities
     title: Switches
     show_header_toggle: false
+    state_color: true
     entities:
       - entity: switch.wemo_mini_1
       - entity: fan.jasco_products_unknown_type_4944_id_3337_level
