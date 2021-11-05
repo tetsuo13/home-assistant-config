@@ -41,7 +41,7 @@ Runs on a [Raspberry Pi 3B](https://www.raspberrypi.org/products/raspberry-pi-3-
 | [Fibaro Z-Wave Flood Sensor](https://www.fibaro.com/en/products/flood-sensor/) (FGFS-101) | Z-Wave | [Z-Wave](https://www.home-assistant.io/integrations/zwave) |
 | [GE Enbrighten Z-Wave In-Wall Smart Switch](https://byjasco.com/ge-enbrighten-z-wave-commercial-grade-wall-smart-switch-quickfit-and-simplewire) | Z-Wave | [Z-Wave](https://www.home-assistant.io/integrations/zwave) |
 | [GE Z-Wave In-Wall Smart Fan Control](https://byjasco.com/catalog/product/view/id/3334/s/ge-z-wave-plus-wall-smart-fan-control/) | Z-Wave | [Z-Wave](https://www.home-assistant.io/integrations/zwave) |
-| [ZSE40 4-in-1 sensor](https://www.getzooz.com/zooz-zse40-4-in-1-sensor.html) (ZSE40) | Z-Wave | [Z-Wave](https://www.home-assistant.io/integrations/zwave) |
+| [ZOOZ 4-in-1 sensor](https://www.getzooz.com/zooz-zse40-4-in-1-sensor.html) (ZSE40) | Z-Wave | [Z-Wave](https://www.home-assistant.io/integrations/zwave) |
 | [ZOOZ Double Switch](https://www.getzooz.com/zooz-zen30-double-switch.html) (ZEN30) | Z-Wave | [Z-Wave](https://www.home-assistant.io/integrations/zwave) |
 
 ## Media
