@@ -29,6 +29,7 @@ cards:
       - entity: binary_sensor.living_room_occupancy
       - entity: binary_sensor.den_occupancy
       - entity: binary_sensor.master_bedroom_occupancy
+      - entity: binary_sensor.guest_bathroom_occupancy
       - entity: binary_sensor.fibaro_system_fgfs101_flood_sensor_flood
       - entity: binary_sensor.ecolink_door_window_sensor_sensor
       - entity: binary_sensor.ecolink_door_window_sensor_sensor_2
@@ -48,4 +49,6 @@ cards:
       - entity: sensor.den_temperature
       - entity: sensor.master_bedroom_temperature
       - entity: sensor.fibaro_system_fgfs101_flood_sensor_temperature
+      - entity: sensor.zooz_zse40_4_in_1_sensor_temperature
+      - entity: sensor.zooz_zse40_4_in_1_sensor_relative_humidity
 

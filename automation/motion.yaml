@@ -1,0 +1,57 @@
+- alias: Motion - Turn On Guest Bathroom When Motion Detected Daytime
+  id: 'motion_turn_on_guest_bathroom_when_motion_detected_daytime'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.guest_bathroom_occupancy
+      from: 'off'
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: light.zooz_unknown_type_a000_id_a008_level
+      state: 'off'
+    - condition: time
+      after: '06:00:00'
+      before: '22:00:00'
+  action:
+    - service: light.turn_on
+      entity_id: light.zooz_unknown_type_a000_id_a008_level
+      data:
+        brightness_pct: 100
+
+- alias: Motion - Turn On Guest Bathroom When Motion Detected Night
+  id: 'motion_turn_on_guest_bathroom_when_motion_detected_night'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.guest_bathroom_occupancy
+      from: 'off'
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: light.zooz_unknown_type_a000_id_a008_level
+      state: 'off'
+    - condition: time
+      after: '22:00:00'
+      before: '06:00:00'
+  action:
+    - service: light.turn_on
+      entity_id: light.zooz_unknown_type_a000_id_a008_level
+      data:
+        brightness_pct: 1
+
+- alias: Motion - Turn Off Guest Bathroom When No Motion Detected
+  id: 'motion_turn_off_guest_bathroom_when_no_motion_detected'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.guest_bathroom_occupancy
+      from: 'on'
+      to: 'off'
+      for:
+        minutes: 3
+  condition:
+    - condition: state
+      entity_id: light.zooz_unknown_type_a000_id_a008_level
+      state: 'on'
+  action:
+    - service: light.turn_off
+      entity_id: light.zooz_unknown_type_a000_id_a008_level
+

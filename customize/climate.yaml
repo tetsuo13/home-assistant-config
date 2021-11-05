@@ -4,14 +4,24 @@ climate.home:
 
 sensor.home_humidity:
   friendly_name: Hallway Humidity
-  icon: mdi:water-percent
+  device_class: humidity
 
 sensor.home_temperature:
   friendly_name: Hallway Temperature
+  device_class: temperature
 
 weather.home_2:
   friendly_name: Weather Condition
 
 sensor.fibaro_system_fgfs101_flood_sensor_temperature:
   friendly_name: Under Kitchen Sink Temperature
+  device_class: temperature
+
+sensor.zooz_zse40_4_in_1_sensor_temperature:
+  friendly_name: Guest Bathroom Temperature
+  device_class: temperature
+
+sensor.zooz_zse40_4_in_1_sensor_relative_humidity:
+  friendly_name: Guest Bathroom Humidity
+  device_class: humidity
 
