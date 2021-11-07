@@ -19,3 +19,20 @@
       data:
         message: "There's water under the kitchen sink!"
 
+- alias: Motion - Turn Off Guest Bathroom Fan When No Motion Detected
+  id: 'motion_turn_off_guest_bathroom_fan_when_no_motion_detected'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.guest_bathroom_occupancy
+      from: 'on'
+      to: 'off'
+      for:
+        minutes: 5
+  condition:
+    - condition: state
+      entity_id: switch.zooz_unknown_type_a000_id_a008_switch
+      state: 'on'
+  action:
+    - service: switch.turn_off
+      entity_id: switch.zooz_unknown_type_a000_id_a008_switch
+
