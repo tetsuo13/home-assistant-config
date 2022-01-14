@@ -34,10 +34,6 @@ cards:
       - entity: binary_sensor.ecolink_door_window_sensor_sensor
       - entity: binary_sensor.ecolink_door_window_sensor_sensor_2
     state_color: true
-    # https://www.home-assistant.io/lovelace/weather-forecast/
-  - type: weather-forecast
-    entity: weather.openweathermap
-    name: Home
   - type: entities
     title: Thermostats
     show_header_toggle: false
