@@ -34,6 +34,42 @@
       message: 'Front door open'
       delay: '00:00:05'
 
+- alias: Announce Laundry Door Opened
+  trigger:
+    platform: state
+    entity_id: binary_sensor.ecolink_door_window_sensor_sensor_3
+    from: 'off'
+    to: 'on'
+  mode: queued
+  condition:
+    condition: template
+    value_template: >
+      {% set month = now().month %}
+      {{ month < 10 }}
+  action:
+    service: script.sonos_say
+    data:
+      message: 'Laundry door open'
+      delay: '00:00:05'
+
+- alias: Announce Office Door Opened
+  trigger:
+    platform: state
+    entity_id: binary_sensor.ecolink_door_window_sensor_sensor_4
+    from: 'off'
+    to: 'on'
+  mode: queued
+  condition:
+    condition: template
+    value_template: >
+      {% set month = now().month %}
+      {{ month < 10 }}
+  action:
+    service: script.sonos_say
+    data:
+      message: 'Office door open'
+      delay: '00:00:05'
+
 - alias: Announce Doors Opened (Halloween)
   trigger:
     platform: state
@@ -128,6 +164,42 @@
     service: script.sonos_say
     data:
       message: 'Front door closed'
+      delay: '00:00:05'
+
+- alias: Announce Laundry Door Closed
+  trigger:
+    platform: state
+    entity_id: binary_sensor.ecolink_door_window_sensor_sensor_3
+    from: 'on'
+    to: 'off'
+  mode: queued
+  condition:
+    condition: template
+    value_template: >
+      {% set month = now().month %}
+      {{ month < 10 }}
+  action:
+    service: script.sonos_say
+    data:
+      message: 'Laundry door closed'
+      delay: '00:00:05'
+
+- alias: Announce Office Door Closed
+  trigger:
+    platform: state
+    entity_id: binary_sensor.ecolink_door_window_sensor_sensor_4
+    from: 'on'
+    to: 'off'
+  mode: queued
+  condition:
+    condition: template
+    value_template: >
+      {% set month = now().month %}
+      {{ month < 10 }}
+  action:
+    service: script.sonos_say
+    data:
+      message: 'Office door closed'
       delay: '00:00:05'
 
 - alias: Announce Doors Closed (Halloween)

@@ -7,6 +7,10 @@ cards:
         name: Front Door
       - entity: sensor.ecolink_door_window_sensor_battery_level
         name: Kitchen Door
+      - entity: sensor.ecolink_door_window_sensor_battery_level_3
+        name: Laundry Door
+      - entity: sensor.ecolink_door_window_sensor_battery_level_4
+        name: Office Door
       - entity: sensor.fibaro_system_fgfs101_flood_sensor_battery_level
         name: Kitchen Sink
       - entity: sensor.zooz_zse40_4_in_1_sensor_battery_level

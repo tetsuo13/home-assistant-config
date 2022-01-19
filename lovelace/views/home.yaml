@@ -33,6 +33,8 @@ cards:
       - entity: binary_sensor.fibaro_system_fgfs101_flood_sensor_flood
       - entity: binary_sensor.ecolink_door_window_sensor_sensor
       - entity: binary_sensor.ecolink_door_window_sensor_sensor_2
+      - entity: binary_sensor.ecolink_door_window_sensor_sensor_3
+      - entity: binary_sensor.ecolink_door_window_sensor_sensor_4
     state_color: true
   - type: entities
     title: Thermostats

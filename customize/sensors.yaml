@@ -26,3 +26,11 @@ binary_sensor.ecolink_door_window_sensor_sensor_2:
   friendly_name: Front Door
   device_class: door
 
+binary_sensor.ecolink_door_window_sensor_sensor_3:
+  friendly_name: Laundry Door
+  device_class: door
+
+binary_sensor.ecolink_door_window_sensor_sensor_4:
+  friendly_name: Office Door
+  device_class: door
+
