@@ -82,7 +82,7 @@
   action:
     service: light.turn_on
     data:
-      entity_id: light.night_light
+      entity_id: light.controller_rgb_44_key_ir_cde6d9
       brightness: 13
 
 - alias: Turn Off Night-Light 8:00am
@@ -93,7 +93,7 @@
   action:
     service: light.turn_off
     data:
-      entity_id: light.night_light
+      entity_id: light.controller_rgb_44_key_ir_cde6d9
 
 
 # Turn on the lights at 06:45 on weekdays unless the sun has already risen

@@ -10,7 +10,7 @@ light.hue_color_lamp_1:
   friendly_name: Deck Light
   icon: mdi:lightbulb-outline
 
-light.night_light:
+light.controller_rgb_44_key_ir_cde6d9:
   friendly_name: Night-Light
   icon: mdi:led-strip
 
