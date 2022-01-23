@@ -12,6 +12,7 @@ cards:
       - entity: switch.jasco_products_46201_in_wall_smart_switch_switch
       - entity: light.zooz_unknown_type_a000_id_a008_level
       - entity: light.zooz_unknown_type_a000_id_a008_level_2
+      - entity: switch.wemo_mini_4
   - type: entities
     title: Switches
     show_header_toggle: false
