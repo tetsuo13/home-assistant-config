@@ -1,0 +1,10 @@
+# https://www.home-assistant.io/integrations/amcrest/
+
+amcrest:
+  - host: !secret amcrest_front_doorbell_host
+    username: !secret amcrest_front_doorbell_username
+    password: !secret amcrest_front_doorbell_password
+    name: Front Doorbell
+    binary_sensors:
+      - motion_detected
+

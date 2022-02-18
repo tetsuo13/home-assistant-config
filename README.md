@@ -44,6 +44,12 @@ Runs on a [Raspberry Pi 3B](https://www.raspberrypi.org/products/raspberry-pi-3-
 | [ZOOZ 4-in-1 sensor](https://www.getzooz.com/zooz-zse40-4-in-1-sensor.html) (ZSE40) | Z-Wave | [Z-Wave](https://www.home-assistant.io/integrations/zwave) |
 | [ZOOZ Double Switch](https://www.getzooz.com/zooz-zen30-double-switch.html) (ZEN30) | Z-Wave | [Z-Wave](https://www.home-assistant.io/integrations/zwave) |
 
+## Cameras
+
+| Device | Connection | Home Assistant |
+| ------ | ---------- | -------------- |
+| [Amcrest Video Doorbell](https://amcrest.com/4mp-wifi-camera-doorbell-ad410.html) (AD410) | Wi-Fi | [Amcrest](https://www.home-assistant.io/integrations/amcrest/) |
+
 ## Media
 
 | Device | Connection | Home Assistant |
