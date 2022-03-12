@@ -1,9 +1,3 @@
-# From https://www.home-assistant.io/cookbook/sonos_say/
-#
-# Tried incorporating complex delay calculation based on the media duration
-# however it made things worse than just using a static delay.
-# https://community.home-assistant.io/t/sonos-tts-script/8896/21
-
 # This will first play a chime sound before the TTS recording.
 sonos_say:
   alias: "Sonos TTS script"
@@ -12,52 +6,33 @@ sonos_say:
   sequence:
     - service: sonos.snapshot
       data_template:
-        entity_id:
-          - media_player.sonos01
-          - media_player.sonos02
-          - media_player.sonos03
-          - media_player.sonos04
+        entity_id: group.sonos_all
     - service: sonos.unjoin
       data_template:
-        entity_id:
-          - media_player.sonos01
-          - media_player.sonos02
-          - media_player.sonos03
-          - media_player.sonos04
+        entity_id: group.sonos_all
     - service: media_player.volume_set
       data_template:
-        entity_id:
-          - media_player.sonos01
-          - media_player.sonos02
-          - media_player.sonos03
-          - media_player.sonos04
+        entity_id: group.sonos_all
         volume_level: "0.3"
     - service: media_player.play_media
       data_template:
-        entity_id:
-          - media_player.sonos01
-          - media_player.sonos02
-          - media_player.sonos03
-          - media_player.sonos04
+        entity_id: group.sonos_all
         media_content_id: "{{ base_url }}/local/audio/chime01.mp3"
         media_content_type: "music"
-    - delay: "00:00:02"
+    - delay:
+        seconds: 1
+        milliseconds: 500
     - service: tts.google_translate_say
       data_template:
-        entity_id:
-          - media_player.sonos01
-          - media_player.sonos02
-          - media_player.sonos03
-          - media_player.sonos04
+        entity_id: group.sonos_all
         message: "{{ message }}"
     - delay: "{{ delay }}"
+    - service: media_player.media_stop
+      target:
+        entity_id: group.sonos_all
     - service: sonos.restore
       data_template:
-        entity_id:
-          - media_player.sonos01
-          - media_player.sonos02
-          - media_player.sonos03
-          - media_player.sonos04
+        entity_id: group.sonos_all
 
 sonos_play_file:
   alias: "Sonos play file script"
@@ -66,41 +41,21 @@ sonos_play_file:
   sequence:
     - service: sonos.snapshot
       data_template:
-        entity_id:
-          - media_player.sonos01
-          - media_player.sonos02
-          - media_player.sonos03
-          - media_player.sonos04
+        entity_id: group.sonos_all
     - service: sonos.unjoin
       data_template:
-        entity_id:
-          - media_player.sonos01
-          - media_player.sonos02
-          - media_player.sonos03
-          - media_player.sonos04
+        entity_id: group.sonos_all
     - service: media_player.volume_set
       data_template:
-        entity_id:
-          - media_player.sonos01
-          - media_player.sonos02
-          - media_player.sonos03
-          - media_player.sonos04
+        entity_id: group.sonos_all
         volume_level: "0.4"
     - service: media_player.play_media
       data_template:
-        entity_id:
-          - media_player.sonos01
-          - media_player.sonos02
-          - media_player.sonos03
-          - media_player.sonos04
+        entity_id: group.sonos_all
         media_content_id: "{{ base_url }}/local/{{ audio_url }}"
         media_content_type: "music"
     - delay: "{{ delay }}"
     - service: sonos.restore
       data_template:
-        entity_id:
-          - media_player.sonos01
-          - media_player.sonos02
-          - media_player.sonos03
-          - media_player.sonos04
+        entity_id: group.sonos_all
 

@@ -1,0 +1,7 @@
+group:
+  sonos_all:
+    - media_player.sonos01
+    - media_player.sonos02
+    - media_player.sonos03
+    - media_player.sonos04
+
