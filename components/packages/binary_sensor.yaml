@@ -8,3 +8,9 @@ binary_sensor:
         device_class: motion
         value_template: "{{ is_state('sensor.zooz_zse40_4_in_1_sensor_burglar', '0') == False }}"
 
+      someone_showering_guest_bathroom:
+        friendly_name: 'Someone is Showering in Guest Bathroom'
+        value_template: >
+          {% set humidity = states("sensor.zooz_zse40_4_in_1_sensor_relative_humidity") | float(0) %}
+          {{ humidity > 70 and is_state("binary_sensor.guest_bathroom_occupancy", "on") }}
+
