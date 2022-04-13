@@ -3,17 +3,17 @@ icon: mdi:battery-charging-100
 cards:
   - type: entities
     entities:
-      - entity: sensor.ecolink_door_window_sensor_battery_level_2
+      - entity: sensor.z_wave_door_window_sensor_battery_level
         name: Front Door
-      - entity: sensor.ecolink_door_window_sensor_battery_level
+      - entity: sensor.z_wave_door_window_sensor_battery_level_2
         name: Kitchen Door
-      - entity: sensor.ecolink_door_window_sensor_battery_level_3
+      - entity: sensor.z_wave_door_window_sensor_battery_level_4
         name: Laundry Door
-      - entity: sensor.ecolink_door_window_sensor_battery_level_4
+      - entity: sensor.z_wave_door_window_sensor_battery_level_3
         name: Office Door
       - entity: sensor.fibaro_system_fgfs101_flood_sensor_battery_level
         name: Kitchen Sink
-      - entity: sensor.zooz_zse40_4_in_1_sensor_battery_level
+      - entity: sensor.4_in_1_sensor_battery_level
         name: Guest Bathroom
     show_header_toggle: false
     title: Sensors

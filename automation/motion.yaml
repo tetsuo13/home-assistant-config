@@ -2,7 +2,7 @@
   id: 'motion_turn_on_guest_bathroom_when_motion_detected_daytime'
   trigger:
     - platform: state
-      entity_id: binary_sensor.guest_bathroom_occupancy
+      entity_id: binary_sensor.4_in_1_sensor_home_security_motion_detection
       from: 'off'
       to: 'on'
   condition:
@@ -22,7 +22,7 @@
   id: 'motion_turn_on_guest_bathroom_when_motion_detected_night'
   trigger:
     - platform: state
-      entity_id: binary_sensor.guest_bathroom_occupancy
+      entity_id: binary_sensor.4_in_1_sensor_home_security_motion_detection
       from: 'off'
       to: 'on'
   condition:
@@ -42,7 +42,7 @@
   id: 'motion_turn_off_guest_bathroom_when_no_motion_detected'
   trigger:
     - platform: state
-      entity_id: binary_sensor.guest_bathroom_occupancy
+      entity_id: binary_sensor.4_in_1_sensor_home_security_motion_detection
       from: 'on'
       to: 'off'
       for:
