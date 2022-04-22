@@ -36,7 +36,7 @@ cards:
       - entity: binary_sensor.den_occupancy
       - entity: binary_sensor.master_bedroom_occupancy
       - entity: binary_sensor.4_in_1_sensor_home_security_motion_detection
-      - entity: binary_sensor.fibaro_system_fgfs101_flood_sensor_flood
+      - entity: binary_sensor.flood_sensor_water_leak_state
       - entity: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_2
       - entity: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open
       - entity: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_4
@@ -52,7 +52,7 @@ cards:
       - entity: sensor.living_room_temperature
       - entity: sensor.den_temperature
       - entity: sensor.master_bedroom_temperature
-      - entity: sensor.fibaro_system_fgfs101_flood_sensor_temperature
+      - entity: sensor.flood_sensor_air_temperature_2
       - entity: sensor.4_in_1_sensor_air_temperature
       - entity: sensor.4_in_1_sensor_humidity
 
