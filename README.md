@@ -2,7 +2,7 @@
 <img src="https://github.com/home-assistant/assets/blob/master/misc/loading-screen.gif" width="250" height="250" />
 </p>
 
-[![Actions Status](https://github.com/tetsuo13/home-assistant/workflows/Test%20config/badge.svg)](https://github.com/tetsuo13/home-assistant/actions)
+[![Continuous integration](https://github.com/tetsuo13/home-assistant-config/actions/workflows/ci.yml/badge.svg)](https://github.com/tetsuo13/home-assistant-config/actions/workflows/ci.yml)
 
 This is the configuration used in my [Home Assistant](https://home-assistant.io/) (HA) setup.
 
