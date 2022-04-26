@@ -3,4 +3,21 @@
 binary_sensor:
   - platform: template
     sensors:
+      halloween_month:
+        friendly_name: 'Month of Halloween'
+        value_template: >
+          {% set month = now().month %}
+          {{ month == 10 }}
+
+      thanksgiving_month:
+        friendly_name: 'Month of Thanksgiving'
+        value_template: >
+          {% set month = now().month %}
+          {{ month == 11 }}
+
+      christmas_month:
+        friendly_name: 'Month of Christmas'
+        value_template: >
+          {% set month = now().month %}
+          {{ month == 12 }}
 
