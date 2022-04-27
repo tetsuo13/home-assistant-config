@@ -17,7 +17,7 @@ notify:
   - name: mobile_apps
     platform: group
     services:
-      - service: mobile_app_lees_ipad
-      - service: mobile_app_sm_g950u1
       - service: mobile_app_andrei_s_phone
+      - service: mobile_app_lees_ipad
+      - service: mobile_app_pixel_6
 
