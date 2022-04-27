@@ -52,20 +52,20 @@ automation.turn_off_dining_room_lamp:
   friengly_name: Turn On Dining Room Lamp 10:30pm
   icon: mdi:lamp
 
-automation.announce_kitchen_door_opened:
-  friendly_name: Announce Kitchen Door Opened
+automation.announce_door_opened:
+  friendly_name: Announce Door Opened
   icon: mdi:door-open
 
-automation.announce_kitchen_door_closed:
-  friendly_name: Announce Kitchen Door Closed
+automation.announce_door_opened_event:
+  friendly_name: Announce Door Opened (Event)
+  icon: mdi:door-open
+
+automation.announce_door_closed:
+  friendly_name: Announce Door Closed
   icon: mdi:door-closed
 
-automation.announce_front_door_opened:
-  friendly_name: Announce Front Door Opened
-  icon: mdi:door-open
-
-automation.announce_front_door_closed:
-  friendly_name: Announce Front Door Closed
+automation.announce_door_closed_event:
+  friendly_name: Announce Door Closed (Event)
   icon: mdi:door-closed
 
 automation.turn_off_air_purifier_morning:
