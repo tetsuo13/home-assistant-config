@@ -57,15 +57,31 @@ Runs on a [Raspberry Pi 3B](https://www.raspberrypi.org/products/raspberry-pi-3-
 | ------ | ---------- | -------------- |
 | [Sonos WiFi bookshelf speaker](https://www.sonos.com/en-us/symfonisk-by-sonos-and-ikea) (SYMFONISK) | Wi-Fi | [Sonos](https://www.home-assistant.io/integrations/sonos) |
 
-# Features
+# Automations
 
-There are certain periods where opening/closing doors will play sounds instead of the normal announcement. For example, opening a door around Halloween will trigger goulish sounds on all Sonos speakers. Here's a list of time periods and the sounds used:
+Christmas lights automations aren't available year-round (they're added when the tree goes up, removed again when the tree goes down). See [c013a7c](https://github.com/tetsuo13/home-assistant-config/commit/c013a7c10aa19f6366598c1a0cd125f82ec8b465) on how to add them.
+
+## [Door Automations](automation/doors.yaml)
+
+Opening and closing doors causes an announcement to be made through all of the Sonos speakers. A chime is played first to grab attention followed by a TTS announcement. See the [sonos.yaml](components/scripts/sonos.yaml) script on how this is done.
+
+The primary automation is to announce which door was used however this is overridden during several months:
 
 * November: turkey gobble
 * October: goulish sounds and howling wolf
 * December: sleigh bells
 
-Christmas lights automations aren't available year-round (they're added when the tree goes up and removed again when the tree goes down). See [c013a7c](https://github.com/tetsuo13/home-assistant-config/commit/c013a7c10aa19f6366598c1a0cd125f82ec8b465) on how to add them.
+There's also the birthday binary sensor which, when enabled, causes a birthday jungle to be played instead of the TTS announcement or special month sound. This binary sensor should take precedence over all other events. The days are held in [secrets.yaml.dist](secrets.yaml.dist) in the `birthday_evaluator` key, as a Python array of month and day values. Since it wasn't possible to parse a secret value into a template, the entire template was set as the secret value.
+
+## [Motion Automations](automation/motion.yaml)
+
+During the day, the bathroom lights turn on when motion is detected. Overnight, the lights only turn on at a low brightness. The lights will turn back off after a few minutes of no motion. If the fan is on, it'll turn off after a few minutes after the lights are turned off of no motion.
+
+## [Smoke Alarm Automations](automation/smoke_alarms.yaml)
+
+When a smoke alarm detects smoke or carbon monoxide, an announcement is made over all Sonos speakers, an email is sent, and a notification on the mobile app is sent. Then all available lights are turned on.
+
+## [Switch Automations](automation/switches.yaml)
 
 Air purifier isn't smart but it's plugged into a Wemo smart plug. Air purifier is intended to run overnight. Automation cuts power in the morning to turn it off and another automation task turns power back on however someone must still manually press the "on" button on the air purifier unit to actually turn it on. Toggling power to the dumb air purifier is preferable to some of the much more expensive smart air purifiers out there.
 

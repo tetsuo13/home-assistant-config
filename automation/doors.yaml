@@ -32,6 +32,9 @@
     - condition: state
       entity_id: binary_sensor.christmas_month
       state: "off"
+    - condition: state
+      entity_id: binary_sensor.today_is_someones_birthday
+      state: "off"
   action:
     service: script.sonos_say
     data:
@@ -72,6 +75,9 @@
     - condition: state
       entity_id: binary_sensor.christmas_month
       state: "off"
+    - condition: state
+      entity_id: binary_sensor.today_is_someones_birthday
+      state: "off"
   action:
     service: script.sonos_say
     data:
@@ -91,6 +97,15 @@
   mode: queued
   action:
     - choose:
+        - conditions:
+            - condition: state
+              entity_id: binary_sensor.today_is_someones_birthday
+              state: "on"
+          sequence:
+            - service: script.sonos_play_file
+              data:
+                audio_url: "audio/birthday01.mp3"
+                delay: "00:00:16"
         - conditions:
             - condition: state
               entity_id: binary_sensor.halloween_month
@@ -132,6 +147,15 @@
   mode: queued
   action:
     - choose:
+        - conditions:
+            - condition: state
+              entity_id: binary_sensor.today_is_someones_birthday
+              state: "on"
+          sequence:
+            - service: script.sonos_play_file
+              data:
+                audio_url: "audio/birthday01.mp3"
+                delay: "00:00:16"
         - conditions:
             - condition: state
               entity_id: binary_sensor.halloween_month
