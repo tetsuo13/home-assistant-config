@@ -68,11 +68,3 @@ automation.announce_door_closed_event:
   friendly_name: Announce Door Closed (Event)
   icon: mdi:door-closed
 
-automation.turn_off_air_purifier_morning:
-  friendly_name: Turn Off Air Purifier Morning
-  icon: mdi:air-filter
-
-automation.turn_on_air_purifier_mid_morning:
-  friendly_name: Turn On Air Purifier Mid-Morning
-  icon: mdi:air-filter
-
