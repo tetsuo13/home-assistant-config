@@ -17,6 +17,38 @@
       variables:
         type_detected: 'Carbon monoxide'
         location_detected: 'laundry'
+    - platform: state
+      entity_id: binary_sensor.zcombo_g_smoke_co_alarm_smoke_alarm_smoke_detected_2
+      to: 'on'
+      for:
+        seconds: 15
+      variables:
+        type_detected: 'Smoke'
+        location_detected: 'hallway'
+    - platform: state
+      entity_id: binary_sensor.zcombo_g_smoke_co_alarm_co_alarm_carbon_monoxide_detected_2
+      to: 'on'
+      for:
+        seconds: 15
+      variables:
+        type_detected: 'Carbon monoxide'
+        location_detected: 'hallway'
+    - platform: state
+      entity_id: binary_sensor.zcombo_g_smoke_co_alarm_smoke_alarm_smoke_detected_3
+      to: 'on'
+      for:
+        seconds: 15
+      variables:
+        type_detected: 'Smoke'
+        location_detected: 'workshop'
+    - platform: state
+      entity_id: binary_sensor.zcombo_g_smoke_co_alarm_co_alarm_carbon_monoxide_detected_3
+      to: 'on'
+      for:
+        seconds: 15
+      variables:
+        type_detected: 'Carbon monoxide'
+        location_detected: 'workshop'
   action:
     - service: notify.email
       data_template:
@@ -37,6 +69,10 @@
     entity_id:
       - binary_sensor.zcombo_g_smoke_co_alarm_smoke_alarm_smoke_detected
       - binary_sensor.zcombo_g_smoke_co_alarm_co_alarm_carbon_monoxide_detected
+      - binary_sensor.zcombo_g_smoke_co_alarm_smoke_alarm_smoke_detected_2
+      - binary_sensor.zcombo_g_smoke_co_alarm_co_alarm_carbon_monoxide_detected_2
+      - binary_sensor.zcombo_g_smoke_co_alarm_smoke_alarm_smoke_detected_3
+      - binary_sensor.zcombo_g_smoke_co_alarm_co_alarm_carbon_monoxide_detected_3
     to: 'on'
     for:
       seconds: 15

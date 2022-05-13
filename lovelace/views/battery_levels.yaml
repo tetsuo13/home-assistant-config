@@ -24,4 +24,7 @@ cards:
     entities:
       - entity: sensor.zcombo_g_smoke_co_alarm_battery_level
         name: Laundry
-
+      - entity: sensor.zcombo_g_smoke_co_alarm_battery_level_2
+        name: Hallway
+      - entity: sensor.zcombo_g_smoke_co_alarm_battery_level_3
+        name: Workshop
