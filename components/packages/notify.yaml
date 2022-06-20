@@ -6,6 +6,8 @@ notify:
     platform: smtp
     server: !secret smtp_server
     port: !secret smtp_port
+    username: !secret smtp_username
+    password: !secret smtp_password
     timeout: 15
     sender: !secret smtp_sender
     recipient:
