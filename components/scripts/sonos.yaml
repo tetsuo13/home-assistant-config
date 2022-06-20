@@ -8,9 +8,6 @@ sonos_say:
     - service: sonos.snapshot
       data_template:
         entity_id: group.sonos_all
-    - service: sonos.unjoin
-      data_template:
-        entity_id: group.sonos_all
     - service: media_player.volume_set
       data_template:
         entity_id: group.sonos_all
@@ -21,8 +18,7 @@ sonos_say:
         media_content_id: "{{ base_url }}/local/audio/chime01.mp3"
         media_content_type: "music"
     - delay:
-        seconds: 1
-        milliseconds: 500
+        seconds: 3
     - service: tts.google_translate_say
       data_template:
         entity_id: group.sonos_all
@@ -42,9 +38,6 @@ sonos_play_file:
     base_url: !secret internal_url
   sequence:
     - service: sonos.snapshot
-      data_template:
-        entity_id: group.sonos_all
-    - service: sonos.unjoin
       data_template:
         entity_id: group.sonos_all
     - service: media_player.volume_set
