@@ -85,6 +85,8 @@ When a smoke alarm detects smoke or carbon monoxide, an announcement is made ove
 
 Air purifier isn't smart but it's plugged into a Wemo smart plug. Air purifier is intended to run overnight. Automation cuts power in the morning to turn it off and another automation task turns power back on however someone must still manually press the "on" button on the air purifier unit to actually turn it on. Toggling power to the dumb air purifier is preferable to some of the much more expensive smart air purifiers out there.
 
+The "Live" light is a bulb connected to a Wi-Fi switch that's meant to be on when Microsoft Teams is in a call. Determining the status of Teams is done by calling a RESTful service which returns a simple JSON result that's interpretted as either true or false. The responsibility of determining the status of Teams is offloaded to [Teams Status Pub](https://github.com/tetsuo13/TeamsStatusPub).
+
 # Screenshots
 
 ![UI](screenshots/home.png "Home page")

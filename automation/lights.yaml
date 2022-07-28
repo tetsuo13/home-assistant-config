@@ -176,3 +176,13 @@
     data:
       entity_id: switch.wemo_mini_1_2
 
+- alias: Toggle Live Sign When Busy in Teams
+  trigger:
+    platform: state
+    entity_id: binary_sensor.teams_on_call
+  action:
+    - service: >
+        switch.turn_{{ trigger.to_state.state }}
+      target:
+        entity_id: switch.wemo_mini_4
+
