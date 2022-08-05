@@ -14,11 +14,11 @@ fan.jasco_products_unknown_type_4944_id_3337_level:
   friendly_name: Living Room Fan
   icon: mdi:fan
 
-switch.zooz_unknown_type_a000_id_a008_switch_2:
+switch.dimmer_dry_contact_relay:
   friendly_name: Guest Bathroom Fan
   icon: mdi:fan
 
-switch.zooz_unknown_type_a000_id_a008_switch_4:
+switch.dimmer_dry_contact_relay_2:
   friendly_name: Master Bathroom Fan
   icon: mdi:fan
 

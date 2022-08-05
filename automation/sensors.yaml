@@ -31,9 +31,9 @@
         minutes: 5
   condition:
     - condition: state
-      entity_id: switch.zooz_unknown_type_a000_id_a008_switch_2
+      entity_id: switch.dimmer_dry_contact_relay
       state: 'on'
   action:
     - service: switch.turn_off
-      entity_id: switch.zooz_unknown_type_a000_id_a008_switch_2
+      entity_id: switch.dimmer_dry_contact_relay
 

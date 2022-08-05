@@ -25,8 +25,8 @@ cards:
     entities:
       - entity: switch.wemo_mini_1
       - entity: fan.jasco_products_unknown_type_4944_id_3337_level
-      - entity: switch.zooz_unknown_type_a000_id_a008_switch_2
-      - entity: switch.zooz_unknown_type_a000_id_a008_switch_4
+      - entity: switch.dimmer_dry_contact_relay
+      - entity: switch.dimmer_dry_contact_relay_2
   - type: entities
     title: Sensors
     show_header_toggle: false
