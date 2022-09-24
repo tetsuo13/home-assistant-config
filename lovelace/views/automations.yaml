@@ -8,8 +8,8 @@ cards:
       - entity: automation.turn_on_lights_to_wake_us_up
       - entity: automation.turn_off_lights_before_work
       - entity: automation.turn_on_lights_before_sunset
-      - entity: automation.turn_off_lee_s_bedside_at_9_00pm
-      - entity: automation.turn_off_andrei_s_bedside_by_9_30pm
+      - entity: automation.turn_off_lee_s_bedside_by_8_30pm
+      - entity: automation.turn_off_andrei_s_bedside_by_9_15pm
       - entity: automation.turn_on_outside_lights_early_morning
       - entity: automation.turn_off_outside_lights_sunrise
       - entity: automation.turn_on_outside_lights_sunset

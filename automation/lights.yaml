@@ -52,21 +52,21 @@
       brightness: 255
       transition: 1500
 
-- alias: Turn Off Lee's Bedside By 8:45pm
+- alias: Turn Off Lee's Bedside By 8:30pm
   initial_state: True
   trigger:
     platform: time
-    at: "20:15:00"
+    at: "20:00:00"
   action:
     service: light.turn_off
     data:
       entity_id: light.hue_white_lamp_3
       transition: 1800
 
-- alias: Turn Off Andrei's Bedside By 9:30pm
+- alias: Turn Off Andrei's Bedside By 9:15pm
   trigger:
     platform: time
-    at: "21:00:00"
+    at: "20:45:00"
   action:
     service: light.turn_off
     data:

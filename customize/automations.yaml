@@ -12,12 +12,12 @@ automation.turn_on_lights_before_sunset:
   friendly_name: Bedroom Lights On Before Sunset
   icon: mdi:lightbulb-outline
 
-automation.turn_off_lee_s_bedside_by_8_45pm:
-  friendly_name: Turn Off Lee's Bedside By 8:45pm
+automation.turn_off_lee_s_bedside_by_8_30pm:
+  friendly_name: Turn Off Lee's Bedside By 8:30pm
   icon: mdi:lightbulb-outline
 
-automation.turn_off_andrei_s_bedside_by_9_30pm:
-  friendly_name: Turn Off Andrei's Bedside Off By 9:30pm
+automation.turn_off_andrei_s_bedside_by_9_15pm:
+  friendly_name: Turn Off Andrei's Bedside Off By 9:15pm
   icon: mdi:lightbulb-outline
 
 automation.turn_on_outside_lights_early_morning:
