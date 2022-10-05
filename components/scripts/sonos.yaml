@@ -43,7 +43,7 @@ sonos_play_file:
     - service: media_player.volume_set
       data_template:
         entity_id: group.sonos_all
-        volume_level: "0.4"
+        volume_level: "0.3"
     - service: media_player.play_media
       data_template:
         entity_id: group.sonos_all
