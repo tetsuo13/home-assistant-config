@@ -100,7 +100,7 @@ The "Live" light is a bulb connected to a Wi-Fi switch that's meant to be on whe
 
 The [examples](https://www.home-assistant.io/examples/) at Home Assistant's web site were extremely helpful in seeing how others got started however below is a list, in no special order, of other configurations that were particularly inspiring:
 
-* https://github.com/klaasnicolaas/Smarthome-homeassistant-config
 * https://github.com/geekofweek/homeassistant
 * https://github.com/scstraus/home-assistant-config
+* https://github.com/mcaminiti/homeassistant
 
