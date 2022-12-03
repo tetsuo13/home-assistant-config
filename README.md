@@ -92,9 +92,9 @@ There are automations to gradually fade on bedside lamps on weekday mornings, tu
 
 The "Live" light is a bulb connected to a Wi-Fi switch that's meant to be on when Microsoft Teams is in a call. Determining the status of Teams is done by calling a RESTful service which returns a simple JSON result that's interpretted as either true or false. The responsibility of determining the status of Teams is offloaded to [Teams Status Pub](https://github.com/tetsuo13/TeamsStatusPub).
 
-# Custom Integrations
+# Custom Components
 
-
+There are some custom components in use. See the [README](custom_components/README.md) file in the [`custom_components`](custom_components) directory for more details.
 
 # Screenshots
 
