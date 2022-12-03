@@ -49,6 +49,7 @@ Runs on a [Raspberry Pi 3B](https://www.raspberrypi.org/products/raspberry-pi-3-
 
 | Device | Connection | Home Assistant |
 | ------ | ---------- | -------------- |
+| Amcrest PoE Camera (IP5M) | Ethernet | [Dahua](https://github.com/rroller/dahua) |
 | [Amcrest Video Doorbell](https://amcrest.com/4mp-wifi-camera-doorbell-ad410.html) (AD410) | Wi-Fi | [Amcrest](https://www.home-assistant.io/integrations/amcrest/) |
 
 ## Media
@@ -90,6 +91,10 @@ Air purifier isn't smart but it's plugged into a Wemo smart plug. Air purifier i
 There are automations to gradually fade on bedside lamps on weekday mornings, turn off before leaving for work, gradually fade on again at sundown, and gradually fade off by bedtime. Similar automations to handle outside lights.
 
 The "Live" light is a bulb connected to a Wi-Fi switch that's meant to be on when Microsoft Teams is in a call. Determining the status of Teams is done by calling a RESTful service which returns a simple JSON result that's interpretted as either true or false. The responsibility of determining the status of Teams is offloaded to [Teams Status Pub](https://github.com/tetsuo13/TeamsStatusPub).
+
+# Custom Integrations
+
+
 
 # Screenshots
 

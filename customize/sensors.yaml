@@ -38,3 +38,7 @@ binary_sensor.4_in_1_sensor_home_security_motion_detection:
   friendly_name: Guest Bathroom Occupancy
   device_class: motion
 
+switch.front_door_smart_motion_detection:
+  friendly_name: Front Door Motion
+  device_class: motion
+

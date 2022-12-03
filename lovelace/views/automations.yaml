@@ -19,7 +19,12 @@ cards:
       - entity: automation.turn_on_dining_room_lamp_before_sunset
       - entity: automation.turn_off_dining_room_lamp
   - type: entities
-    title: Sensors
+    title: Motion
+    show_header_toggle: false
+    entities:
+      - entity: switch.front_door_smart_motion_detection
+  - type: entities
+    title: Doors
     show_header_toggle: false
     entities:
       - entity: automation.announce_door_opened
