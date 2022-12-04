@@ -78,6 +78,8 @@ There's also the birthday binary sensor which, when enabled, causes a birthday j
 
 During the day, the bathroom lights turn on when motion is detected. Overnight, the lights only turn on at a low brightness. The lights will turn back off after a few minutes of no motion. If the fan is on, it'll turn off after a few minutes after the lights are turned off of no motion.
 
+Home Assistant doesn't send a notification when the front door senses motion. Instead, when motion is detected by the camera, it sends a notification to the Amcrest Smart Home app which in turns sends a notification to the phone. The icon shown on the automations tab of the dashboard controls whether or not the camera should notify the Amcrest app.
+
 ## [Smoke Alarm Automations](automation/smoke_alarms.yaml)
 
 When a smoke alarm detects smoke or carbon monoxide, an announcement is made over all Sonos speakers, an email is sent, and a notification on the mobile app is sent. Then all available lights are turned on.
