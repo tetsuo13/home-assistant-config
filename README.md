@@ -4,6 +4,12 @@
 
 [![Continuous integration](https://github.com/tetsuo13/home-assistant-config/actions/workflows/ci.yml/badge.svg)](https://github.com/tetsuo13/home-assistant-config/actions/workflows/ci.yml)
 
+- [Devices](#devices)
+- [Automations](#automations)
+- [Custom Components](#custom-components)
+- [Screenshots](#screenshots)
+- [Other Noteable Configurations](#other-noteable-configurations)
+
 This is the configuration used in my [Home Assistant](https://home-assistant.io/) (HA) setup.
 
 Runs on a [Raspberry Pi 3B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) using [Home Assistant Operating System](https://github.com/home-assistant/operating-system).
