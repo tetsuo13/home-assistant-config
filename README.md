@@ -64,7 +64,7 @@ Christmas lights automations aren't available year-round (they're added when the
 
 ## [Door Automations](automation/doors.yaml)
 
-Opening and closing doors causes an announcement to be made through all of the Sonos speakers. A chime is played first to grab attention followed by a TTS announcement. See the [sonos.yaml](components/scripts/sonos.yaml) script on how this is done.
+Opening and closing doors causes an announcement to be made through all of the Sonos speakers. A chime is played first to grab attention followed by a TTS announcement. See the [`sonos.yaml`](components/scripts/sonos.yaml) script on how this is done.
 
 The primary automation is to announce which door was used however this is overridden during several months:
 
@@ -72,7 +72,7 @@ The primary automation is to announce which door was used however this is overri
 * October: goulish sounds and howling wolf
 * December: sleigh bells
 
-There's also the birthday binary sensor which, when enabled, causes a birthday jingle to be played instead of the TTS announcement or special month sound. This binary sensor should take precedence over all other events. The days are held in [secrets.yaml.dist](secrets.yaml.dist) in the `birthday_evaluator` key, as a Python array of month and day values. Since it wasn't possible to parse a secret value into a template, the entire template was set as the secret value.
+There's also the birthday binary sensor which, when enabled, causes a birthday jingle to be played instead of the TTS announcement or special month sound. This binary sensor should take precedence over all other events. The days are held in [`secrets.yaml.dist`](secrets.yaml.dist) in the `birthday_evaluator` key, as a Python array of month and day values. Since it wasn't possible to parse a secret value into a template, the entire template was set as the secret value.
 
 ## [Motion Automations](automation/motion.yaml)
 
