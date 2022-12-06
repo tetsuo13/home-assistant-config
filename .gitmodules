@@ -1,0 +1,3 @@
+[submodule "custom_components/dahua_dist"]
+	path = custom_components/dahua_dist
+	url = https://github.com/rroller/dahua.git

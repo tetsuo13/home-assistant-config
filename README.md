@@ -49,6 +49,7 @@ Runs on a [Raspberry Pi 3B](https://www.raspberrypi.org/products/raspberry-pi-3-
 
 | Device | Connection | Home Assistant |
 | ------ | ---------- | -------------- |
+| Amcrest PoE Camera (IP5M) | Ethernet | [Dahua](https://github.com/rroller/dahua) |
 | [Amcrest Video Doorbell](https://amcrest.com/4mp-wifi-camera-doorbell-ad410.html) (AD410) | Wi-Fi | [Amcrest](https://www.home-assistant.io/integrations/amcrest/) |
 
 ## Media
@@ -77,6 +78,8 @@ There's also the birthday binary sensor which, when enabled, causes a birthday j
 
 During the day, the bathroom lights turn on when motion is detected. Overnight, the lights only turn on at a low brightness. The lights will turn back off after a few minutes of no motion. If the fan is on, it'll turn off after a few minutes after the lights are turned off of no motion.
 
+Home Assistant doesn't send a notification when the front door senses motion. Instead, when motion is detected by the camera, it sends a notification to the Amcrest Smart Home app which in turns sends a notification to the phone. The icon shown on the automations tab of the dashboard controls whether or not the camera should notify the Amcrest app.
+
 ## [Smoke Alarm Automations](automation/smoke_alarms.yaml)
 
 When a smoke alarm detects smoke or carbon monoxide, an announcement is made over all Sonos speakers, an email is sent, and a notification on the mobile app is sent. Then all available lights are turned on.
@@ -90,6 +93,10 @@ Air purifier isn't smart but it's plugged into a Wemo smart plug. Air purifier i
 There are automations to gradually fade on bedside lamps on weekday mornings, turn off before leaving for work, gradually fade on again at sundown, and gradually fade off by bedtime. Similar automations to handle outside lights.
 
 The "Live" light is a bulb connected to a Wi-Fi switch that's meant to be on when Microsoft Teams is in a call. Determining the status of Teams is done by calling a RESTful service which returns a simple JSON result that's interpretted as either true or false. The responsibility of determining the status of Teams is offloaded to [Teams Status Pub](https://github.com/tetsuo13/TeamsStatusPub).
+
+# Custom Components
+
+There are some custom components in use. See the [README](custom_components/README.md) file in the [`custom_components`](custom_components) directory for more details.
 
 # Screenshots
 
