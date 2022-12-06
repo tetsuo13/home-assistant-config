@@ -4,6 +4,12 @@
 
 [![Continuous integration](https://github.com/tetsuo13/home-assistant-config/actions/workflows/ci.yml/badge.svg)](https://github.com/tetsuo13/home-assistant-config/actions/workflows/ci.yml)
 
+- [Devices](#devices)
+- [Automations](#automations)
+- [Custom Components](#custom-components)
+- [Screenshots](#screenshots)
+- [Other Noteable Configurations](#other-noteable-configurations)
+
 This is the configuration used in my [Home Assistant](https://home-assistant.io/) (HA) setup.
 
 Runs on a [Raspberry Pi 3B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) using [Home Assistant Operating System](https://github.com/home-assistant/operating-system).
@@ -60,11 +66,11 @@ Runs on a [Raspberry Pi 3B](https://www.raspberrypi.org/products/raspberry-pi-3-
 
 # Automations
 
-Christmas lights automations aren't available year-round (they're added when the tree goes up, removed again when the tree goes down). See [c013a7c](https://github.com/tetsuo13/home-assistant-config/commit/c013a7c10aa19f6366598c1a0cd125f82ec8b465) on how to add them.
+Christmas lights automations aren't available year-round (they're added when the tree goes up, removed again when the tree goes down). See previous years in [#15](https://github.com/tetsuo13/home-assistant-config/pull/15) and [c013a7c](https://github.com/tetsuo13/home-assistant-config/commit/c013a7c10aa19f6366598c1a0cd125f82ec8b465) on what was done.
 
 ## [Door Automations](automation/doors.yaml)
 
-Opening and closing doors causes an announcement to be made through all of the Sonos speakers. A chime is played first to grab attention followed by a TTS announcement. See the [sonos.yaml](components/scripts/sonos.yaml) script on how this is done.
+Opening and closing doors causes an announcement to be made through all of the Sonos speakers. A chime is played first to grab attention followed by a TTS announcement. See the [`sonos.yaml`](components/scripts/sonos.yaml) script on how this is done.
 
 The primary automation is to announce which door was used however this is overridden during several months:
 
@@ -72,7 +78,7 @@ The primary automation is to announce which door was used however this is overri
 * October: goulish sounds and howling wolf
 * December: sleigh bells
 
-There's also the birthday binary sensor which, when enabled, causes a birthday jingle to be played instead of the TTS announcement or special month sound. This binary sensor should take precedence over all other events. The days are held in [secrets.yaml.dist](secrets.yaml.dist) in the `birthday_evaluator` key, as a Python array of month and day values. Since it wasn't possible to parse a secret value into a template, the entire template was set as the secret value.
+There's also the birthday binary sensor which, when enabled, causes a birthday jingle to be played instead of the TTS announcement or special month sound. This binary sensor should take precedence over all other events. The days are held in [`secrets.yaml.dist`](secrets.yaml.dist) in the `birthday_evaluator` key, as a Python array of month and day values. Since it wasn't possible to parse a secret value into a template, the entire template was set as the secret value.
 
 ## [Motion Automations](automation/motion.yaml)
 
