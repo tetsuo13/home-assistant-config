@@ -1,8 +1,12 @@
-# https://www.home-assistant.io/components/wemo/
+# https://www.home-assistant.io/integrations/wemo/
 
 wemo:
   static:
     - !secret wemo_1_ip
     - !secret wemo_2_ip
+    - !secret wemo_3_ip
     - !secret wemo_4_ip
+    - !secret wemo_5_ip
+    - !secret wemo_6_ip
+    - !secret wemo_7_ip
 

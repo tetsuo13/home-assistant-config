@@ -1,0 +1,7 @@
+# All Christmas customizations collected in this file even though they would
+# be better suited in other files in this directory because it's seasonal.
+
+switch.wemo_mini_3:
+  friendly_name: Dining Room Star
+  icon: mdi:star
+
