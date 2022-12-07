@@ -1,5 +1,5 @@
-# https://www.home-assistant.io/components/sonos/
-#
+# https://www.home-assistant.io/integrations/sonos/
+
 sonos:
   media_player:
     hosts:

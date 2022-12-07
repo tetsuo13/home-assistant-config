@@ -1,4 +1,4 @@
-# https://www.home-assistant.io/components/ecobee/
+# https://www.home-assistant.io/integrations/ecobee/
 
 ecobee:
   api_key: !secret ecobee_key
