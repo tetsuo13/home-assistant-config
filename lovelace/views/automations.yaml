@@ -31,4 +31,9 @@ cards:
       - entity: automation.announce_door_opened_event
       - entity: automation.announce_door_closed
       - entity: automation.announce_door_closed_event
+  - type: entities
+    title: Christmas Automations
+    entities:
+      - entity: automation.turn_on_christmas_lights_at_sunset
+      - entity: automation.turn_off_christmas_lights_11_13pm
 

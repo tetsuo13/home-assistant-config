@@ -1,0 +1,26 @@
+- alias: Turn On Christmas Lights at Sunset
+  trigger:
+    platform: sun
+    event: sunset
+  action:
+    service: switch.turn_on
+    data:
+      entity_id:
+        - switch.wemo_mini_3
+        - switch.418
+        - switch.366
+        - switch.672
+
+- alias: Turn Off Christmas Lights 11:13pm
+  trigger:
+    platform: time
+    at: "23:13:00"
+  action:
+    service: switch.turn_off
+    data:
+      entity_id:
+        - switch.wemo_mini_3
+        - switch.418
+        - switch.366
+        - switch.672
+

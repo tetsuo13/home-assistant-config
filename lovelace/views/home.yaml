@@ -30,11 +30,12 @@ cards:
     camera_view: live
   - type: entities
     title: Christmas Center
+    state_color: true
     entities:
-      - entity: switch.366
-      - entity: switch.418
-      - entity: switch.672
       - entity: switch.wemo_mini_3
+      - entity: switch.418
+      - entity: switch.366
+      - entity: switch.672
   - type: entities
     title: Switches
     show_header_toggle: false

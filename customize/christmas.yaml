@@ -1,7 +1,22 @@
-# All Christmas customizations collected in this file even though they would
-# be better suited in other files in this directory because it's seasonal.
-
 switch.wemo_mini_3:
   friendly_name: Dining Room Star
   icon: mdi:star
+
+switch.418:
+  friendly_name: Bedroom 2 Star
+  icon: mdi:star
+
+switch.366:
+  friendly_name: Bedroom 3 Star
+  icon: mdi:star
+
+switch.672:
+  friendly_name: Mantelpiece
+  icon: mdi:fireplace-off
+
+automation.turn_on_christmas_lights_at_sunset:
+  friendly_name: Turn On Lights at Sunset
+
+automation.turn_off_christmas_lights_11_13pm:
+  friendly_name: Turn Off Lights at 11:13pm
 
