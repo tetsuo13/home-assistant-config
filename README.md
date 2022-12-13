@@ -48,6 +48,7 @@ Runs on a [Raspberry Pi 3B](https://www.raspberrypi.org/products/raspberry-pi-3-
 | [First Alert Smoke & CO Alarm](https://www.resideo.com/us/en/products/security/alarms/combo-smoke-carbon-monoxide-alarms/zcombo-wireless-smoke-carbon-monoxide-alarm-works-with-zwave-ring-zcombo/) | Z-Wave JS | [Z-Wave JS](https://www.home-assistant.io/integrations/zwave_js) |
 | [GE Enbrighten Z-Wave In-Wall Smart Switch](https://byjasco.com/ge-enbrighten-z-wave-plus-smart-switch-quickfit-and-simplewire) | Z-Wave JS | [Z-Wave JS](https://www.home-assistant.io/integrations/zwave_js) |
 | [GE Z-Wave In-Wall Smart Fan Control](https://byjasco.com/enbrighten-z-wave-in-wall-smart-fan-control-white-almond) | Z-Wave JS | [Z-Wave JS](https://www.home-assistant.io/integrations/zwave_js) |
+| [TP-Link Kasa Smart Plug](https://www.tp-link.com/us/home-networking/smart-plug/hs103/) (HS103VS) | Wi-Fi | [TP-Link](https://www.home-assistant.io/integrations/tplink/) |
 | [ZOOZ 4-in-1 sensor](https://www.getzooz.com/zooz-zse40-4-in-1-sensor/) (ZSE40) | Z-Wave JS | [Z-Wave JS](https://www.home-assistant.io/integrations/zwave_js) |
 | [ZOOZ Double Switch](https://www.getzooz.com/zooz-zen30-double-switch/) (ZEN30) | Z-Wave JS | [Z-Wave JS](https://www.home-assistant.io/integrations/zwave_js) |
 
