@@ -36,6 +36,7 @@ cards:
       - entity: switch.418
       - entity: switch.366
       - entity: switch.672
+      - entity: switch.tp_link_smart_plug_ac23
   - type: entities
     title: Switches
     show_header_toggle: false

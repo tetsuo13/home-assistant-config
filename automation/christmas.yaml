@@ -10,6 +10,7 @@
         - switch.418
         - switch.366
         - switch.672
+        - switch.tp_link_smart_plug_ac23
 
 - alias: Turn Off Christmas Lights 11:13pm
   trigger:
@@ -23,4 +24,5 @@
         - switch.418
         - switch.366
         - switch.672
+        - switch.tp_link_smart_plug_ac23
 

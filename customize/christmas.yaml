@@ -14,6 +14,10 @@ switch.672:
   friendly_name: Mantelpiece
   icon: mdi:fireplace-off
 
+switch.tp_link_smart_plug_ac23:
+  friendly_name: Christmas Tree
+  icon: mdi:pine-tree
+
 automation.turn_on_christmas_lights_at_sunset:
   friendly_name: Turn On Lights at Sunset
 
