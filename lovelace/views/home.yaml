@@ -33,9 +33,9 @@ cards:
     state_color: true
     entities:
       - entity: switch.wemo_mini_3
-      - entity: switch.418
-      - entity: switch.366
-      - entity: switch.672
+      - entity: switch.tp_link_smart_plug_ac7b
+      - entity: switch.tp_link_smart_plug_ad70
+      - entity: switch.tp_link_smart_plug_d6d2
       - entity: switch.tp_link_smart_plug_ac23
   - type: entities
     title: Switches

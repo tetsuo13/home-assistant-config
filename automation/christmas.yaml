@@ -7,9 +7,9 @@
     data:
       entity_id:
         - switch.wemo_mini_3
-        - switch.418
-        - switch.366
-        - switch.672
+        - switch.tp_link_smart_plug_ac7b
+        - switch.tp_link_smart_plug_ad70
+        - switch.tp_link_smart_plug_d6d2
         - switch.tp_link_smart_plug_ac23
 
 - alias: Turn Off Christmas Lights 11:13pm
@@ -21,8 +21,8 @@
     data:
       entity_id:
         - switch.wemo_mini_3
-        - switch.418
-        - switch.366
-        - switch.672
+        - switch.tp_link_smart_plug_ac7b
+        - switch.tp_link_smart_plug_ad70
+        - switch.tp_link_smart_plug_d6d2
         - switch.tp_link_smart_plug_ac23
 

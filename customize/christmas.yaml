@@ -2,15 +2,15 @@ switch.wemo_mini_3:
   friendly_name: Dining Room Star
   icon: mdi:star
 
-switch.418:
+switch.tp_link_smart_plug_ac7b:
   friendly_name: Bedroom 2 Star
   icon: mdi:star
 
-switch.366:
+switch.tp_link_smart_plug_ad70:
   friendly_name: Bedroom 3 Star
   icon: mdi:star
 
-switch.672:
+switch.tp_link_smart_plug_d6d2:
   friendly_name: Mantelpiece
   icon: mdi:fireplace-off
 
