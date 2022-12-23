@@ -68,3 +68,7 @@ automation.announce_door_closed_event:
   friendly_name: Announce Door Closed (Event)
   icon: mdi:door-closed
 
+automation.motion_send_camera_snapshot_notification_on_motion:
+  friendly_name: Send Camera Snapshot Notification on Motion
+  device_class: motion
+

@@ -55,3 +55,29 @@
     - service: light.turn_off
       entity_id: light.zooz_unknown_type_a000_id_a008_level
 
+# The automatic snapshot for Android works well so long as the receiving app
+# is on the same network as Home Assistant, otherwise the notification won't
+# have a camera snapshot.
+- alias: Motion - Send Camera Snapshot Notification On Motion
+  id: "motion_send_camera_snapshot_notification_on_motion"
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.office_motion_alarm
+      to: "on"
+      variables:
+        camera_name: "camera.office_main"
+    - platform: state
+      entity_id: binary_sensor.laundry_motion_alarm
+      to: "on"
+      variables:
+        camera_name: "camera.laundry_main"
+  action:
+    - delay:
+        seconds: 4
+    - service: notify.mobile_apps
+      data:
+        title: "Camera Motion Detected"
+        message: "{{ trigger.to_state.name }}"
+        data:
+          image: "/api/camera_proxy/{{ camera_name }}"
+
