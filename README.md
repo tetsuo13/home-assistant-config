@@ -110,7 +110,11 @@ There are some custom components in use. See the [README](custom_components/READ
 ![UI](screenshots/home.png "Home page")
 ![UI](screenshots/automations.png "Automations")
 
-# Other Noteable Configurations
+# Links
+
+This repo tries to adhere to the [YAML Style Guide](https://developers.home-assistant.io/docs/documenting/yaml-style-guide) at the Home Assistant Developer Docs. (Adding a GitHub Actions job for YAML linting would be nice here.)
+
+## Other Noteable Configurations
 
 The [examples](https://www.home-assistant.io/examples/) at Home Assistant's web site were extremely helpful in seeing how others got started however below is a list, in no special order, of other configurations that were particularly inspiring:
 
