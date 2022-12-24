@@ -1,0 +1,6 @@
+---
+extends: default
+
+ignore: |
+  custom_components/dahua_dist/
+
