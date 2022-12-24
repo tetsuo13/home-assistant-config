@@ -3,7 +3,7 @@ name: Continuous integration
 on:
   push:
     paths-ignore:
-      - '**.md'
+      - "**.md"
 
 jobs:
   home_assistant:
@@ -13,6 +13,9 @@ jobs:
         uses: actions/checkout@v3
         with:
           submodules: true
+
+      - name: YAML lint
+        uses: ibiqlik/action-yamllint@v3
 
       - name: Prep stub files in configuration folder
         run: |
