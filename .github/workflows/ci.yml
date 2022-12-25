@@ -15,8 +15,8 @@ jobs:
         with:
           submodules: true
 
-      - name: Home Assistant check configuration
-        uses: frenck/action-home-assistant@v1
+      - name: Home Assistant Core check configuration
+        uses: frenck/action-home-assistant@v1.4
         with:
           version: stable
           secrets: secrets.yaml.dist
