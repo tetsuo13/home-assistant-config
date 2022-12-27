@@ -19,6 +19,12 @@ binary_sensor:
         friendly_name: "Today is Someone's Birthday"
         value_template: !secret birthday_evaluator
 
+      someone_showering_guest_bathroom:
+        friendly_name: "Someone is Showering in Guest Bathroom"
+        value_template: >
+          {% set humidity = states("sensor.zooz_zse40_4_in_1_sensor_relative_humidity") | float(0) %}
+          {{ humidity > 40 and is_state("binary_sensor.4_in_1_sensor_home_security_motion_detection", "on") }}
+
   # Service will return a single object with key "busy" and a boolean value.
   # Sensor value to match the boolean value.
   # Example payload: {"busy":false}
@@ -26,10 +32,4 @@ binary_sensor:
     resource: !secret teams_rest_url
     name: "Teams on call"
     value_template: "{{ value_json.busy }}"
-
-      someone_showering_guest_bathroom:
-        friendly_name: 'Someone is Showering in Guest Bathroom'
-        value_template: >
-          {% set humidity = states("sensor.zooz_zse40_4_in_1_sensor_relative_humidity") | float(0) %}
-          {{ humidity > 70 and is_state("binary_sensor.guest_bathroom_occupancy", "on") }}
 
