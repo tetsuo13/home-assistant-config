@@ -6,6 +6,8 @@ notify:
     platform: smtp
     server: !secret smtp_server
     port: !secret smtp_port
+    username: !secret smtp_username
+    password: !secret smtp_password
     timeout: 15
     sender: !secret smtp_sender
     recipient:
@@ -17,7 +19,7 @@ notify:
   - name: mobile_apps
     platform: group
     services:
-      - service: mobile_app_lees_ipad
-      - service: mobile_app_sm_g950u1
       - service: mobile_app_andrei_s_phone
+      - service: mobile_app_lees_ipad
+      - service: mobile_app_pixel_6
 

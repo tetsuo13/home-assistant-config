@@ -5,7 +5,7 @@ cards:
     title: Lights
     entities:
       - entity: light.hue_white_lamp_1
-      - entity: light.hue_white_lamp_2
+      - entity: light.hue_white_lamp_3
       - entity: light.hue_color_lamp_1
       - entity: light.controller_rgb_44_key_ir_cde6d9
       - entity: switch.wemo_mini_1_2
@@ -18,6 +18,16 @@ cards:
     entities: []
     camera_image: camera.front_doorbell
     camera_view: live
+  - type: picture-glance
+    title: Laundry
+    entities: []
+    camera_image: camera.laundry_main
+    camera_view: live
+  - type: picture-glance
+    title: Office
+    entities: []
+    camera_image: camera.office_main
+    camera_view: live
   - type: entities
     title: Switches
     show_header_toggle: false
@@ -25,8 +35,8 @@ cards:
     entities:
       - entity: switch.wemo_mini_1
       - entity: fan.jasco_products_unknown_type_4944_id_3337_level
-      - entity: switch.zooz_unknown_type_a000_id_a008_switch
-      - entity: switch.zooz_unknown_type_a000_id_a008_switch_3
+      - entity: switch.dimmer_dry_contact_relay
+      - entity: switch.dimmer_dry_contact_relay_2
   - type: entities
     title: Sensors
     show_header_toggle: false
@@ -35,12 +45,12 @@ cards:
       - entity: binary_sensor.living_room_occupancy
       - entity: binary_sensor.den_occupancy
       - entity: binary_sensor.master_bedroom_occupancy
-      - entity: binary_sensor.guest_bathroom_occupancy
-      - entity: binary_sensor.fibaro_system_fgfs101_flood_sensor_flood
-      - entity: binary_sensor.ecolink_door_window_sensor_sensor
-      - entity: binary_sensor.ecolink_door_window_sensor_sensor_2
-      - entity: binary_sensor.ecolink_door_window_sensor_sensor_3
-      - entity: binary_sensor.ecolink_door_window_sensor_sensor_4
+      - entity: binary_sensor.4_in_1_sensor_home_security_motion_detection
+      - entity: binary_sensor.flood_sensor_water_leak_state
+      - entity: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_2
+      - entity: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open
+      - entity: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_4
+      - entity: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_3
     state_color: true
   - type: entities
     title: Thermostats
@@ -52,7 +62,7 @@ cards:
       - entity: sensor.living_room_temperature
       - entity: sensor.den_temperature
       - entity: sensor.master_bedroom_temperature
-      - entity: sensor.fibaro_system_fgfs101_flood_sensor_temperature
-      - entity: sensor.zooz_zse40_4_in_1_sensor_temperature
-      - entity: sensor.zooz_zse40_4_in_1_sensor_relative_humidity
+      - entity: sensor.flood_sensor_air_temperature_2
+      - entity: sensor.4_in_1_sensor_air_temperature
+      - entity: sensor.4_in_1_sensor_humidity
 

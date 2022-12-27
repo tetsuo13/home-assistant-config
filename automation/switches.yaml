@@ -1,13 +1,38 @@
-- alias: Turn Off Air Purifier Morning
+- alias: Turn Off Air Purifier Weekdays (6:45am)
+  id: "turn_off_air_purifier_weekdays"
   trigger:
     platform: time
     at: "06:45:00"
+  condition:
+  - condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+    service: switch.turn_off
+    data:
+      entity_id: switch.wemo_mini_1
+
+- alias: Turn Off Air Purifier Weekends (7:15am)
+  id: "turn_off_air_purifier_weekends"
+  trigger:
+    platform: time
+    at: "07:15:00"
+  condition:
+  - condition: time
+    weekday:
+      - sat
+      - sun
   action:
     service: switch.turn_off
     data:
       entity_id: switch.wemo_mini_1
 
 - alias: Turn On Air Purifier Mid-Morning
+  id: "turn_on_air_purifier_midmorning"
   trigger:
     platform: time
     at: "09:00:00"

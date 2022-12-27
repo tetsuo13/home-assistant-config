@@ -1,6 +1,3 @@
-# Available icons. Replace "mdi-" with "mdi:"
-# https://cdn.materialdesignicons.com/2.3.54/
-
 homeassistant:
   # Name of the location where Home Assistant is running
   name: Home
@@ -9,14 +6,16 @@ homeassistant:
   longitude: !secret longitude
   # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: !secret elevation
-  # metric for Metric, imperial for Imperial
-  unit_system: imperial
+  unit_system: !secret unit_system
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: !secret time_zone
-  # Customization file
+  # https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements
+  country: !secret country
   customize: !include_dir_merge_named customize/
-  # https://www.home-assistant.io/docs/configuration/packages/
   packages: !include_dir_named components/packages
+
+automation: !include_dir_merge_list automation
+script: !include_dir_merge_named components/scripts
 
 # Enables configuration UI
 config:

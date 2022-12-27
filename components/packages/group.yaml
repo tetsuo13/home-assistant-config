@@ -1,0 +1,11 @@
+# https://www.home-assistant.io/integrations/group
+
+group:
+  sonos_all:
+    name: All Sonos Speakers
+    entities:
+      - media_player.sonos01
+      - media_player.sonos02
+      - media_player.sonos03
+      - media_player.sonos04
+

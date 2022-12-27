@@ -7,25 +7,18 @@ on:
 
 jobs:
   home_assistant:
+    name: Home Assistant
     runs-on: ubuntu-latest
     steps:
       - name: Clone repository
         uses: actions/checkout@v3
-
-      - name: Prep stub files in configuration folder
-        run: |
-          cp secrets.yaml.dist secrets.yaml
-          touch home-assistant_v2.db
-          touch home-assistant.log
-          touch OZW_Log.txt
-
-      - name: Home Assistant version
-        uses: "docker://homeassistant/home-assistant:stable"
         with:
-          args: python -m homeassistant --version
+          submodules: true
 
-      - name: Home Assistant check config
-        uses: "docker://homeassistant/home-assistant:stable"
+      - name: Home Assistant Core check configuration
+        uses: frenck/action-home-assistant@v1.4
         with:
-          args: python -m homeassistant --config . --script check_config --info all
+          version: stable
+          secrets: secrets.yaml.dist
+          path: "."
 

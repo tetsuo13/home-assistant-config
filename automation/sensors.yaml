@@ -1,7 +1,8 @@
-- alias: Notify of Water Under Kitchen Sink
+- alias: Laundry flooding
+  id: 'laundry_flooding'
   trigger:
     platform: state
-    entity_id: binary_sensor.fibaro_system_fgfs101_flood_sensor_flood
+    entity_id: binary_sensor.flood_sensor_water_leak_state
     from: 'off'
     to: 'on'
     for:
@@ -9,30 +10,30 @@
   action:
     - service: notify.email
       data_template:
-        title: "Water detected under kitchen sink"
+        title: "Laundry room is flooding"
         message: "You should probably check it out."
     - service: script.sonos_say
       data:
-        message: "Crikey! We've sprunga leak under the sink! I said crikey! We've sprunga leak under the sink!"
-        delay: '00:00:10'
+        message: "Crikey! We've sprunga leak in the laundry room! I said crikey! We've sprunga leak in the laundry room!"
+        delay: '00:00:15'
     - service: notify.mobile_apps
       data:
-        message: "There's water under the kitchen sink!"
+        message: "The laundry room is flooding"
 
 - alias: Motion - Turn Off Guest Bathroom Fan When No Motion Detected
   id: 'motion_turn_off_guest_bathroom_fan_when_no_motion_detected'
   trigger:
     - platform: state
-      entity_id: binary_sensor.guest_bathroom_occupancy
+      entity_id: binary_sensor.4_in_1_sensor_home_security_motion_detection
       from: 'on'
       to: 'off'
       for:
         minutes: 5
   condition:
     - condition: state
-      entity_id: switch.zooz_unknown_type_a000_id_a008_switch
+      entity_id: switch.dimmer_dry_contact_relay
       state: 'on'
   action:
     - service: switch.turn_off
-      entity_id: switch.zooz_unknown_type_a000_id_a008_switch
+      entity_id: switch.dimmer_dry_contact_relay
 

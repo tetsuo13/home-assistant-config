@@ -1,6 +1,6 @@
-# https://www.home-assistant.io/components/tts/
+# https://www.home-assistant.io/integrations/tts/
 # https://www.home-assistant.io/integrations/google_translate/
-#
+
 tts:
   - platform: google_translate
     # Most of the TTS usage is to make announcements about doors opening or

@@ -1,0 +1,89 @@
+- alias: Smoke Alarm - Alert
+  id: 'smoke_alarm_alert'
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.zcombo_g_smoke_co_alarm_smoke_alarm_smoke_detected
+      to: 'on'
+      for:
+        seconds: 15
+      variables:
+        type_detected: 'Smoke'
+        location_detected: 'laundry'
+    - platform: state
+      entity_id: binary_sensor.zcombo_g_smoke_co_alarm_co_alarm_carbon_monoxide_detected
+      to: 'on'
+      for:
+        seconds: 15
+      variables:
+        type_detected: 'Carbon monoxide'
+        location_detected: 'laundry'
+    - platform: state
+      entity_id: binary_sensor.zcombo_g_smoke_co_alarm_smoke_alarm_smoke_detected_2
+      to: 'on'
+      for:
+        seconds: 15
+      variables:
+        type_detected: 'Smoke'
+        location_detected: 'hallway'
+    - platform: state
+      entity_id: binary_sensor.zcombo_g_smoke_co_alarm_co_alarm_carbon_monoxide_detected_2
+      to: 'on'
+      for:
+        seconds: 15
+      variables:
+        type_detected: 'Carbon monoxide'
+        location_detected: 'hallway'
+    - platform: state
+      entity_id: binary_sensor.zcombo_g_smoke_co_alarm_smoke_alarm_smoke_detected_3
+      to: 'on'
+      for:
+        seconds: 15
+      variables:
+        type_detected: 'Smoke'
+        location_detected: 'workshop'
+    - platform: state
+      entity_id: binary_sensor.zcombo_g_smoke_co_alarm_co_alarm_carbon_monoxide_detected_3
+      to: 'on'
+      for:
+        seconds: 15
+      variables:
+        type_detected: 'Carbon monoxide'
+        location_detected: 'workshop'
+  action:
+    - service: notify.email
+      data_template:
+        title: "Alert! {{ type_detected }} detected in {{ location_detected }} room"
+        message: "{{ type_detected }} was detected in the {{ location_detected }} room! Investigate immediately and evacuate!"
+    - service: script.sonos_say
+      data:
+        message: "{{ type_detected }} was detected in the {{ location_detected }} room! Investigate immediately and evacuate!"
+        delay: '00:00:06'
+    - service: notify.mobile_apps
+      data:
+        message: "Alert! {{ type_detected }} detected in {{ location_detected }} room! Investigate immediately and evacuate!"
+
+- alias: Smoke Alarm - Turn On Lights
+  id: 'smoke_alarm_turn_on_lights'
+  trigger:
+    platform: state
+    entity_id:
+      - binary_sensor.zcombo_g_smoke_co_alarm_smoke_alarm_smoke_detected
+      - binary_sensor.zcombo_g_smoke_co_alarm_co_alarm_carbon_monoxide_detected
+      - binary_sensor.zcombo_g_smoke_co_alarm_smoke_alarm_smoke_detected_2
+      - binary_sensor.zcombo_g_smoke_co_alarm_co_alarm_carbon_monoxide_detected_2
+      - binary_sensor.zcombo_g_smoke_co_alarm_smoke_alarm_smoke_detected_3
+      - binary_sensor.zcombo_g_smoke_co_alarm_co_alarm_carbon_monoxide_detected_3
+    to: 'on'
+    for:
+      seconds: 15
+  action:
+    service: light.turn_on
+    data:
+      entity_id:
+        - light.hue_white_lamp_1
+        - light.hue_white_lamp_3
+        - light.hue_color_lamp_1
+        - switch.jasco_products_46201_in_wall_smart_switch_switch
+        - light.zooz_unknown_type_a000_id_a008_level
+        - light.zooz_unknown_type_a000_id_a008_level_2
+

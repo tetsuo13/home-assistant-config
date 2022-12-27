@@ -12,12 +12,12 @@ automation.turn_on_lights_before_sunset:
   friendly_name: Bedroom Lights On Before Sunset
   icon: mdi:lightbulb-outline
 
-automation.turn_off_lee_s_bedside_by_8_45pm:
-  friendly_name: Turn Off Lee's Bedside By 8:45pm
+automation.turn_off_lee_s_bedside_by_8_30pm:
+  friendly_name: Turn Off Lee's Bedside By 8:30pm
   icon: mdi:lightbulb-outline
 
-automation.turn_off_andrei_s_bedside_by_9_30pm:
-  friendly_name: Turn Off Andrei's Bedside Off By 9:30pm
+automation.turn_off_andrei_s_bedside_by_9_15pm:
+  friendly_name: Turn Off Andrei's Bedside Off By 9:15pm
   icon: mdi:lightbulb-outline
 
 automation.turn_on_outside_lights_early_morning:
@@ -52,27 +52,23 @@ automation.turn_off_dining_room_lamp:
   friengly_name: Turn On Dining Room Lamp 10:30pm
   icon: mdi:lamp
 
-automation.announce_kitchen_door_opened:
-  friendly_name: Announce Kitchen Door Opened
+automation.announce_door_opened:
+  friendly_name: Announce Door Opened
   icon: mdi:door-open
 
-automation.announce_kitchen_door_closed:
-  friendly_name: Announce Kitchen Door Closed
-  icon: mdi:door-closed
-
-automation.announce_front_door_opened:
-  friendly_name: Announce Front Door Opened
+automation.announce_door_opened_event:
+  friendly_name: Announce Door Opened (Event)
   icon: mdi:door-open
 
-automation.announce_front_door_closed:
-  friendly_name: Announce Front Door Closed
+automation.announce_door_closed:
+  friendly_name: Announce Door Closed
   icon: mdi:door-closed
 
-automation.turn_off_air_purifier_morning:
-  friendly_name: Turn Off Air Purifier Morning
-  icon: mdi:air-filter
+automation.announce_door_closed_event:
+  friendly_name: Announce Door Closed (Event)
+  icon: mdi:door-closed
 
-automation.turn_on_air_purifier_mid_morning:
-  friendly_name: Turn On Air Purifier Mid-Morning
-  icon: mdi:air-filter
+automation.motion_send_camera_snapshot_notification_on_motion:
+  friendly_name: Send Camera Snapshot Notification on Motion
+  device_class: motion
 

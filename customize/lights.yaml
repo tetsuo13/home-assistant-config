@@ -2,7 +2,7 @@ light.hue_white_lamp_1:
   friendly_name: Andrei's Bedside
   icon: mdi:lightbulb-outline
 
-light.hue_white_lamp_2:
+light.hue_white_lamp_3:
   friendly_name: Lee's Bedside
   icon: mdi:lightbulb-outline
 

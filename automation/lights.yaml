@@ -48,25 +48,25 @@
     data:
       entity_id:
         - light.hue_white_lamp_1
-        - light.hue_white_lamp_2
+        - light.hue_white_lamp_3
       brightness: 255
       transition: 1500
 
-- alias: Turn Off Lee's Bedside By 8:45pm
+- alias: Turn Off Lee's Bedside By 8:30pm
   initial_state: True
   trigger:
     platform: time
-    at: "20:15:00"
+    at: "20:00:00"
   action:
     service: light.turn_off
     data:
-      entity_id: light.hue_white_lamp_2
+      entity_id: light.hue_white_lamp_3
       transition: 1800
 
-- alias: Turn Off Andrei's Bedside By 9:30pm
+- alias: Turn Off Andrei's Bedside By 9:15pm
   trigger:
     platform: time
-    at: "21:00:00"
+    at: "20:45:00"
   action:
     service: light.turn_off
     data:
@@ -175,4 +175,13 @@
     service: switch.turn_off
     data:
       entity_id: switch.wemo_mini_1_2
+
+- alias: Toggle Live Sign When Busy in Teams
+  trigger:
+    platform: state
+    entity_id: binary_sensor.teams_on_call
+  action:
+    - service: switch.turn_{{ trigger.to_state.state }}
+      target:
+        entity_id: switch.wemo_mini_4
 

@@ -1,4 +1,0 @@
-# https://www.home-assistant.io/docs/z-wave/installation
-zwave:
-  usb_path: !secret zwave_usb_path
-
