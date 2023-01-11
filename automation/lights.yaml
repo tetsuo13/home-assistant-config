@@ -6,13 +6,13 @@
     platform: time
     at: "06:10:00"
   condition:
-  - condition: time
-    weekday:
-      - mon
-      - tue
-      - wed
-      - thu
-      - fri
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
   action:
     service: light.turn_on
     data:
@@ -26,13 +26,13 @@
     platform: time
     at: "07:45:00"
   condition:
-  - condition: time
-    weekday:
-      - mon
-      - tue
-      - wed
-      - thu
-      - fri
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
   action:
     service: light.turn_off
     entity_id: light.hue_white_lamp_1
