@@ -1,3 +1,4 @@
+---
 - alias: Laundry flooding
   id: 'laundry_flooding'
   trigger:

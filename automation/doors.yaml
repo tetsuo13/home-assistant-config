@@ -1,3 +1,4 @@
+---
 - alias: Announce Door Opened
   id: "announce_door_opened"
   trigger:

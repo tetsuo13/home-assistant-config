@@ -1,3 +1,4 @@
+---
 - alias: Turn Off Air Purifier Weekdays (6:45am)
   id: "turn_off_air_purifier_weekdays"
   trigger:

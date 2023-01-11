@@ -1,3 +1,4 @@
+---
 - alias: Motion - Turn On Guest Bathroom When Motion Detected Daytime
   id: 'motion_turn_on_guest_bathroom_when_motion_detected_daytime'
   trigger:

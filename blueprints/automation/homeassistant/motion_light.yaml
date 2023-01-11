@@ -1,3 +1,4 @@
+---
 blueprint:
   name: Motion-activated Light
   description: Turn on a light when motion is detected.
@@ -48,3 +49,4 @@ action:
   - delay: !input no_motion_wait
   - service: light.turn_off
     target: !input light_target
+

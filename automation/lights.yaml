@@ -1,3 +1,4 @@
+---
 # Fade lights on in the morning to simulate a sunrise next to my face.
 - alias: Turn on Lights to Wake Us Up
   initial_state: True
