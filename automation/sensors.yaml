@@ -15,6 +15,7 @@
         message: "You should probably check it out."
     - service: script.sonos_say
       data:
+        # yamllint disable-line rule:line-length
         message: "Crikey! We've sprunga leak in the laundry room! I said crikey! We've sprunga leak in the laundry room!"
         delay: '00:00:15'
     - service: notify.mobile_apps

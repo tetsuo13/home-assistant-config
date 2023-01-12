@@ -1,4 +1,5 @@
 ---
+# yamllint disable rule:line-length
 title: Home
 icon: mdi:home
 cards:

@@ -1,4 +1,5 @@
 ---
+# yamllint disable rule:line-length
 - alias: Smoke Alarm - Alert
   id: 'smoke_alarm_alert'
   trigger:

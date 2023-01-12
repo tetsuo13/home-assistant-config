@@ -1,4 +1,5 @@
 ---
+# yamllint disable rule:line-length
 blueprint:
   name: Zone Notification
   description: Send a notification to a device when a person leaves a specific zone.
