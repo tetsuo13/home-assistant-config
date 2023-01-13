@@ -1,16 +1,17 @@
+---
 - alias: Turn Off Air Purifier Weekdays (6:45am)
   id: "turn_off_air_purifier_weekdays"
   trigger:
     platform: time
     at: "06:45:00"
   condition:
-  - condition: time
-    weekday:
-      - mon
-      - tue
-      - wed
-      - thu
-      - fri
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
   action:
     service: switch.turn_off
     data:
@@ -22,10 +23,10 @@
     platform: time
     at: "07:15:00"
   condition:
-  - condition: time
-    weekday:
-      - sat
-      - sun
+    - condition: time
+      weekday:
+        - sat
+        - sun
   action:
     service: switch.turn_off
     data:

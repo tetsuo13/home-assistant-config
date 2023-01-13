@@ -1,3 +1,5 @@
+---
+# yamllint disable rule:line-length
 blueprint:
   name: Confirmable Notification
   description: >-
@@ -72,3 +74,4 @@ sequence:
         sequence: !input confirm_action
       - conditions: "{{ wait.trigger.event.data.action == 'DISMISS' }}"
         sequence: !input dismiss_action
+

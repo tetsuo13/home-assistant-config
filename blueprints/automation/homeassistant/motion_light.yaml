@@ -1,7 +1,9 @@
+---
 blueprint:
   name: Motion-activated Light
   description: Turn on a light when motion is detected.
   domain: automation
+  # yamllint disable-line rule:line-length
   source_url: https://github.com/home-assistant/core/blob/dev/homeassistant/components/automation/blueprints/motion_light.yaml
   input:
     motion_entity:
@@ -48,3 +50,4 @@ action:
   - delay: !input no_motion_wait
   - service: light.turn_off
     target: !input light_target
+

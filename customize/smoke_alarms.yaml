@@ -1,3 +1,4 @@
+---
 binary_sensor.zcombo_g_smoke_co_alarm_co_alarm_carbon_monoxide_detected:
   friendly_name: Laundry Carbon Monoxide Detected
 

@@ -1,3 +1,4 @@
+---
 binary_sensor.home_occupancy:
   friendly_name: Hallway Occupancy
   device_class: motion

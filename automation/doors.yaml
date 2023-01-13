@@ -1,3 +1,5 @@
+---
+# yamllint disable rule:line-length
 - alias: Announce Door Opened
   id: "announce_door_opened"
   trigger:

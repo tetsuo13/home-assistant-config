@@ -1,17 +1,18 @@
+---
 # Fade lights on in the morning to simulate a sunrise next to my face.
 - alias: Turn on Lights to Wake Us Up
-  initial_state: True
+  initial_state: true
   trigger:
     platform: time
     at: "06:10:00"
   condition:
-  - condition: time
-    weekday:
-      - mon
-      - tue
-      - wed
-      - thu
-      - fri
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
   action:
     service: light.turn_on
     data:
@@ -20,25 +21,25 @@
       transition: 1800
 
 - alias: Turn Off Lights Before Work
-  initial_state: True
+  initial_state: true
   trigger:
     platform: time
     at: "07:45:00"
   condition:
-  - condition: time
-    weekday:
-      - mon
-      - tue
-      - wed
-      - thu
-      - fri
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
   action:
     service: light.turn_off
     entity_id: light.hue_white_lamp_1
 
 # Gradually fade in lights as the sun sets into the night.
 - alias: Turn On Lights Before Sunset
-  initial_state: True
+  initial_state: true
   trigger:
     platform: sun
     event: sunset
@@ -53,7 +54,7 @@
       transition: 1500
 
 - alias: Turn Off Lee's Bedside By 8:30pm
-  initial_state: True
+  initial_state: true
   trigger:
     platform: time
     at: "20:00:00"
@@ -74,7 +75,7 @@
       transition: 1800
 
 - alias: Turn On Night-Light at Sunset
-  initial_state: True
+  initial_state: true
   trigger:
     platform: sun
     event: sunset
@@ -86,7 +87,7 @@
       brightness: 13
 
 - alias: Turn Off Night-Light 8:00am
-  initial_state: True
+  initial_state: true
   trigger:
     platform: time
     at: "08:00:00"
@@ -156,7 +157,7 @@
           - light.hue_color_lamp_1
 
 - alias: Turn On Dining Room Lamp Before Sunset
-  initial_state: True
+  initial_state: true
   trigger:
     platform: sun
     event: sunset
@@ -167,7 +168,7 @@
       entity_id: switch.wemo_mini_1_2
 
 - alias: Turn Off Dining Room Lamp
-  initial_state: True
+  initial_state: true
   trigger:
     platform: time
     at: "22:30:00"

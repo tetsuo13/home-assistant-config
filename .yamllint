@@ -1,0 +1,14 @@
+---
+extends: default
+
+yaml-files:
+  - '*.yaml'
+  - secrets.yaml.dist
+
+ignore: |
+  custom_components/dahua_dist/
+
+rules:
+  empty-lines:
+    max-end: 1
+
