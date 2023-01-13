@@ -1,4 +1,5 @@
 ---
+# yamllint disable rule:line-length
 # https://www.home-assistant.io/integrations/binary_sensor
 
 binary_sensor:
