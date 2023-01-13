@@ -112,7 +112,7 @@ There are some custom components in use. See the [README](custom_components/READ
 
 # Links
 
-This repo tries to adhere to the [YAML Style Guide](https://developers.home-assistant.io/docs/documenting/yaml-style-guide) at the Home Assistant Developer Docs. (Adding a GitHub Actions job for YAML linting would be nice here.)
+This repo tries to adhere to the [YAML Style Guide](https://developers.home-assistant.io/docs/documenting/yaml-style-guide) at the Home Assistant Developer Docs.
 
 ## Other Noteable Configurations
 

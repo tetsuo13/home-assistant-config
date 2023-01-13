@@ -1,3 +1,4 @@
+---
 climate.home:
   friendly_name: Hallway
   entity_picture: /local/images/ecobee.jpg

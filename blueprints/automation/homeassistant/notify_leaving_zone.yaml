@@ -1,3 +1,5 @@
+---
+# yamllint disable rule:line-length
 blueprint:
   name: Zone Notification
   description: Send a notification to a device when a person leaves a specific zone.
@@ -41,3 +43,4 @@ action:
   type: notify
   device_id: !input notify_device
   message: "{{ person_name }} has left {{ zone_state }}"
+
