@@ -39,3 +39,30 @@
     - service: switch.turn_off
       entity_id: switch.dimmer_dry_contact_relay
 
+- alias: Notification - Low Battery Notification
+  id: 'notification_low_battery_notification'
+  trigger:
+    - platform: numeric_state
+      entity_id:
+        - entity: sensor.z_wave_door_window_sensor_battery_level
+        - entity: sensor.z_wave_door_window_sensor_battery_level_2
+        - entity: sensor.z_wave_door_window_sensor_battery_level_4
+        - entity: sensor.z_wave_door_window_sensor_battery_level_3
+        - entity: sensor.flood_sensor_battery_level
+        - entity: sensor.4_in_1_sensor_battery_level
+        - entity: sensor.zcombo_g_smoke_co_alarm_battery_level
+        - entity: sensor.zcombo_g_smoke_co_alarm_battery_level_2
+        - entity: sensor.zcombo_g_smoke_co_alarm_battery_level_3
+      before: 30
+      for:
+        hours: 1
+        minutes: 0
+        seconds: 0
+  action:
+    - service: notify.mobile_apps
+      data:
+        message: "{{ trigger.to_state.attributes.friendly_name }} Low"
+        data:
+          tag: bettery
+          group: battery
+
