@@ -44,16 +44,16 @@
   trigger:
     - platform: numeric_state
       entity_id:
-        - entity: sensor.z_wave_door_window_sensor_battery_level
-        - entity: sensor.z_wave_door_window_sensor_battery_level_2
-        - entity: sensor.z_wave_door_window_sensor_battery_level_4
-        - entity: sensor.z_wave_door_window_sensor_battery_level_3
-        - entity: sensor.flood_sensor_battery_level
-        - entity: sensor.4_in_1_sensor_battery_level
-        - entity: sensor.zcombo_g_smoke_co_alarm_battery_level
-        - entity: sensor.zcombo_g_smoke_co_alarm_battery_level_2
-        - entity: sensor.zcombo_g_smoke_co_alarm_battery_level_3
-      before: 30
+        - sensor.z_wave_door_window_sensor_battery_level
+        - sensor.z_wave_door_window_sensor_battery_level_2
+        - sensor.z_wave_door_window_sensor_battery_level_4
+        - sensor.z_wave_door_window_sensor_battery_level_3
+        - sensor.flood_sensor_battery_level
+        - sensor.4_in_1_sensor_battery_level
+        - sensor.zcombo_g_smoke_co_alarm_battery_level
+        - sensor.zcombo_g_smoke_co_alarm_battery_level_2
+        - sensor.zcombo_g_smoke_co_alarm_battery_level_3
+      below: 30
       for:
         hours: 1
         minutes: 0
