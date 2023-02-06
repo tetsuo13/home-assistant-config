@@ -39,7 +39,7 @@
     - service: switch.turn_off
       entity_id: switch.dimmer_dry_contact_relay
 
-# All devies with batteries should be listed here.
+# All devices with batteries should be listed here.
 - alias: Notification - Low Battery Notification
   id: 'notification_low_battery_notification'
   trigger:
