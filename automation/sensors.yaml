@@ -39,6 +39,7 @@
     - service: switch.turn_off
       entity_id: switch.dimmer_dry_contact_relay
 
+# All devies with batteries should be listed here.
 - alias: Notification - Low Battery Notification
   id: 'notification_low_battery_notification'
   trigger:
@@ -61,7 +62,7 @@
   action:
     - service: notify.mobile_apps
       data:
-        message: "{{ trigger.to_state.attributes.friendly_name }} Low"
+        message: "There's a battery that's low ({{ trigger.to_state.name }})"
         data:
           tag: bettery
           group: battery
