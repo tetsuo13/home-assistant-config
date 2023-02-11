@@ -44,6 +44,7 @@
 
 - alias: Turn On Both Living Room Bookshelf Lamps From Single Switch
   id: turn_on_both_living_room_bookshelf_lamps_from_single_switch
+  # yamllint disable-line rule:line-length
   description: Physically toggling the one reachable switch should toggle the other switch in tandem
   trigger:
     - platform: state
