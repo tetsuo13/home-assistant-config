@@ -146,16 +146,6 @@
         brightness_pct: 75
         rgb_color: [255, 255, 255]
 
-- alias: Turn Off Outside Lights 11:15pm
-  trigger:
-    platform: time
-    at: "23:15:00"
-  action:
-    - service: light.turn_off
-      data:
-        entity_id:
-          - light.hue_color_lamp_1
-
 - alias: Turn On Dining Room Lamp Before Sunset
   initial_state: true
   trigger:
