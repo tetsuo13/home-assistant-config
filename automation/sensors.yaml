@@ -43,26 +43,27 @@
   id: low_battery_notification
   description: Notify of low battery level in devices which have them
   trigger:
-    - platform: numeric_state
+    - platform: state
       entity_id:
-        - sensor.z_wave_door_window_sensor_battery_level
-        - sensor.z_wave_door_window_sensor_battery_level_2
-        - sensor.z_wave_door_window_sensor_battery_level_4
-        - sensor.z_wave_door_window_sensor_battery_level_3
-        - sensor.flood_sensor_battery_level
-        - sensor.4_in_1_sensor_battery_level
-        - sensor.zcombo_g_smoke_co_alarm_battery_level
-        - sensor.zcombo_g_smoke_co_alarm_battery_level_2
-        - sensor.zcombo_g_smoke_co_alarm_battery_level_3
-      below: 30
+        - binary_sensor.4_in_1_sensor_low_battery_level
+        - binary_sensor.flood_sensor_low_battery_level
+        - binary_sensor.z_wave_door_window_sensor_low_battery_level
+        - binary_sensor.z_wave_door_window_sensor_low_battery_level_2
+        - binary_sensor.z_wave_door_window_sensor_low_battery_level_3
+        - binary_sensor.z_wave_door_window_sensor_low_battery_level_4
+        - binary_sensor.zcombo_g_smoke_co_alarm_low_battery_level
+        - binary_sensor.zcombo_g_smoke_co_alarm_low_battery_level_2
+        - binary_sensor.zcombo_g_smoke_co_alarm_low_battery_level_3
+      from: 'off'
+      to: 'on'
       for:
-        hours: 1
-        minutes: 0
+        hours: 0
+        minutes: 5
         seconds: 0
   action:
     - service: notify.mobile_apps
       data:
-        message: "There's a battery that's low ({{ trigger.to_state.name }})"
+        message: "There's a battery that's low ({{ trigger.to_state.friendly_name }})"
         data:
           tag: bettery
           group: battery
