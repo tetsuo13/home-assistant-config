@@ -1,6 +1,6 @@
 ---
 - alias: Turn Off Air Purifier Weekdays (6:45am)
-  id: "turn_off_air_purifier_weekdays"
+  id: turn_off_air_purifier_weekdays
   trigger:
     platform: time
     at: "06:45:00"
@@ -18,7 +18,7 @@
       entity_id: switch.wemo_mini_1
 
 - alias: Turn Off Air Purifier Weekends (7:15am)
-  id: "turn_off_air_purifier_weekends"
+  id: turn_off_air_purifier_weekends
   trigger:
     platform: time
     at: "07:15:00"
@@ -33,7 +33,7 @@
       entity_id: switch.wemo_mini_1
 
 - alias: Turn On Air Purifier Mid-Morning
-  id: "turn_on_air_purifier_midmorning"
+  id: turn_on_air_purifier_midmorning
   trigger:
     platform: time
     at: "09:00:00"
@@ -41,4 +41,16 @@
     service: switch.turn_on
     data:
       entity_id: switch.wemo_mini_1
+
+- alias: Turn On Both Living Room Bookshelf Lamps From Single Switch
+  id: turn_on_both_living_room_bookshelf_lamps_from_single_switch
+  # yamllint disable-line rule:line-length
+  description: Physically toggling the one reachable switch should toggle the other switch in tandem
+  trigger:
+    - platform: state
+      entity_id: switch.tp_link_smart_plug_d6d2
+  action:
+    - service: "switch.turn_{{ trigger.to_state.state }}"
+      target:
+        entity_id: switch.tp_link_smart_plug_ac23
 
