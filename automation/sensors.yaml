@@ -73,4 +73,4 @@
         message: >-
           The {{ trigger.to_state.attributes.friendly_name }} is low.
           You should probably check it out.
- 
+
