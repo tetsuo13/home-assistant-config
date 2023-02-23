@@ -6,23 +6,23 @@ binary_sensor:
   - platform: template
     sensors:
       halloween_month:
-        friendly_name: "Month of Halloween"
+        friendly_name: Month of Halloween
         value_template: "{{ now().month == 10 }}"
 
       thanksgiving_month:
-        friendly_name: "Month of Thanksgiving"
+        friendly_name: Month of Thanksgiving
         value_template: "{{ now().month == 11 }}"
 
       christmas_month:
-        friendly_name: "Month of Christmas"
+        friendly_name: Month of Christmas
         value_template: "{{ now().month == 12 }}"
 
       today_is_someones_birthday:
-        friendly_name: "Today is Someone's Birthday"
+        friendly_name: Today is Someone's Birthday
         value_template: !secret birthday_evaluator
 
       someone_showering_guest_bathroom:
-        friendly_name: "Someone is Showering in Guest Bathroom"
+        friendly_name: Someone is Showering in Guest Bathroom
         value_template: >
           {% set humidity = states("sensor.zooz_zse40_4_in_1_sensor_relative_humidity") | float(0) %}
           {{ humidity > 40 and is_state("binary_sensor.4_in_1_sensor_home_security_motion_detection", "on") }}
@@ -32,6 +32,6 @@ binary_sensor:
   # Example payload: {"busy":false}
   - platform: rest
     resource: !secret teams_rest_url
-    name: "Teams on call"
+    name: Teams on call
     value_template: "{{ value_json.busy }}"
 
