@@ -21,14 +21,14 @@ binary_sensor:
         friendly_name: Today is Someone's Birthday
         value_template: !secret birthday_evaluator
 
+      # The threshold is fairly arbitrary and unscientific. Based on
+      # watching walking into the room, feeling when it's too humid, and
+      # referencing the result of (humidity - average) at that time.
       someone_showering_guest_bathroom:
         friendly_name: Someone is Showering in Guest Bathroom
         value_template: >
           {% set humidity = states("sensor.4_in_1_sensor_humidity") | int(default=0) %}
           {% set average = states("sensor.guest_bathroom_humidity_average_over_last_24h") | int(default=0) %}
-          # This value is fairly arbitrary and unscientific. Based on watching
-          # walking into the room, feeling when it's too humid, and
-          # referencing the result of (humidity - average) at that time.
           {% set threshold = 10 %}
           {{ (humidity - average) > threshold }}
 
