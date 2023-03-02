@@ -91,9 +91,13 @@ Home Assistant doesn't send a notification when the front door senses motion. In
 
 When a smoke alarm detects smoke or carbon monoxide, an announcement is made over all Sonos speakers, an email is sent, and a notification on the mobile app is sent. Then all available lights are turned on.
 
-## [Switch Automations](automation/switches.yaml)
+## [Fan Automations](automation/fans.yaml)
 
 Air purifier isn't smart but it's plugged into a Wemo smart plug. Air purifier is intended to run overnight. Automation cuts power in the morning to turn it off and another automation task turns power back on however someone must still manually press the "on" button on the air purifier unit to actually turn it on. Toggling power to the dumb air purifier is preferable to some of the much more expensive smart air purifiers out there.
+
+The guest bathroom fan will turn on when there's motion detected and the humidity level rises more than 10%. It'll stay on until either manually turned off or the next automation triggers.
+
+The guest bathroom fan will turn off after 5 minutes of no motion detected in the room.
 
 ## [Light Automations](automation/lights.yaml)
 

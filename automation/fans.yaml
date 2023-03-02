@@ -43,6 +43,29 @@
     data:
       entity_id: switch.wemo_mini_1
 
+- alias: Turn On Guest Bathroom Fan When Someone's Showering
+  id: turn_on_guest_bathroom_fan_when_someones_showering
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.someone_is_showering_in_guest_bathroom
+      from: "off"
+      to: "on"
+      for:
+        minutes: 1
+    - platform: state
+      entity_id: binary_sensor.4_in_1_sensor_home_security_motion_detection
+      from: "on"
+      to: "off"
+      for:
+        minutes: 5
+  condition:
+    - condition: state
+      entity_id: switch.dimmer_dry_contact_relay
+      state: "off"
+  action:
+    - service: switch.turn_on
+      entity_id: switch.dimmer_dry_contact_relay
+
 - alias: Turn Off Guest Bathroom Fan When No Motion Detected
   id: turn_off_guest_bathroom_fan_when_no_motion_detected
   trigger:
