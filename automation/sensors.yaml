@@ -22,23 +22,6 @@
       data:
         message: "The laundry room is flooding"
 
-- alias: Motion - Turn Off Guest Bathroom Fan When No Motion Detected
-  id: 'motion_turn_off_guest_bathroom_fan_when_no_motion_detected'
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.4_in_1_sensor_home_security_motion_detection
-      from: 'on'
-      to: 'off'
-      for:
-        minutes: 5
-  condition:
-    - condition: state
-      entity_id: switch.dimmer_dry_contact_relay
-      state: 'on'
-  action:
-    - service: switch.turn_off
-      entity_id: switch.dimmer_dry_contact_relay
-
 - alias: Low Battery Notification
   id: low_battery_notification
   description: Notify of low battery level in devices which have batteries

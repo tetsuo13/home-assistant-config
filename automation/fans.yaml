@@ -1,4 +1,5 @@
 ---
+
 - alias: Turn Off Air Purifier Weekdays (6:45am)
   id: turn_off_air_purifier_weekdays
   trigger:
@@ -42,15 +43,20 @@
     data:
       entity_id: switch.wemo_mini_1
 
-- alias: Turn On Both Living Room Bookshelf Lamps From Single Switch
-  id: turn_on_both_living_room_bookshelf_lamps_from_single_switch
-  # yamllint disable-line rule:line-length
-  description: Physically toggling the one reachable switch should toggle the other switch in tandem
+- alias: Motion - Turn Off Guest Bathroom Fan When No Motion Detected
+  id: 'motion_turn_off_guest_bathroom_fan_when_no_motion_detected'
   trigger:
     - platform: state
-      entity_id: switch.tp_link_smart_plug_d6d2
+      entity_id: binary_sensor.4_in_1_sensor_home_security_motion_detection
+      from: 'on'
+      to: 'off'
+      for:
+        minutes: 5
+  condition:
+    - condition: state
+      entity_id: switch.dimmer_dry_contact_relay
+      state: 'on'
   action:
-    - service: "switch.turn_{{ trigger.to_state.state }}"
-      target:
-        entity_id: switch.tp_link_smart_plug_ac23
+    - service: switch.turn_off
+      entity_id: switch.dimmer_dry_contact_relay
 
