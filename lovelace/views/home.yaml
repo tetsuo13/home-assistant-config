@@ -3,19 +3,6 @@
 title: Home
 icon: mdi:home
 cards:
-  - type: entities
-    title: Lights
-    entities:
-      - entity: light.hue_white_lamp_1
-      - entity: light.hue_white_lamp_3
-      - entity: light.hue_color_lamp_1
-      - entity: light.controller_rgb_44_key_ir_cde6d9
-      - entity: switch.wemo_mini_1_2
-      - entity: switch.jasco_products_46201_in_wall_smart_switch_switch
-      - entity: switch.living_room_bookshelf_lamps
-      - entity: light.zooz_unknown_type_a000_id_a008_level
-      - entity: light.zooz_unknown_type_a000_id_a008_level_2
-      - entity: switch.wemo_mini_4
   - type: picture-glance
     title: Front Door
     entities: []
@@ -31,6 +18,19 @@ cards:
     entities: []
     camera_image: camera.office_main
     camera_view: live
+  - type: entities
+    title: Lights
+    entities:
+      - entity: light.hue_white_lamp_1
+      - entity: light.hue_white_lamp_3
+      - entity: light.hue_color_lamp_1
+      - entity: light.controller_rgb_44_key_ir_cde6d9
+      - entity: switch.wemo_mini_1_2
+      - entity: switch.jasco_products_46201_in_wall_smart_switch_switch
+      - entity: switch.living_room_bookshelf_lamps
+      - entity: light.zooz_unknown_type_a000_id_a008_level
+      - entity: light.zooz_unknown_type_a000_id_a008_level_2
+      - entity: switch.wemo_mini_4
   - type: entities
     title: Switches
     show_header_toggle: false
