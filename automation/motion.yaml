@@ -1,18 +1,18 @@
 ---
 - alias: Motion - Turn On Guest Bathroom When Motion Detected Daytime
-  id: 'motion_turn_on_guest_bathroom_when_motion_detected_daytime'
+  id: motion_turn_on_guest_bathroom_when_motion_detected_daytime
   trigger:
     - platform: state
       entity_id: binary_sensor.4_in_1_sensor_home_security_motion_detection
-      from: 'off'
-      to: 'on'
+      from: "off"
+      to: "on"
   condition:
     - condition: state
       entity_id: light.zooz_unknown_type_a000_id_a008_level
-      state: 'off'
+      state: "off"
     - condition: time
-      after: '06:00:00'
-      before: '22:00:00'
+      after: "06:00:00"
+      before: "22:00:00"
   action:
     - service: light.turn_on
       entity_id: light.zooz_unknown_type_a000_id_a008_level
@@ -20,38 +20,38 @@
         brightness_pct: 100
 
 - alias: Motion - Turn On Guest Bathroom When Motion Detected Night
-  id: 'motion_turn_on_guest_bathroom_when_motion_detected_night'
+  id: motion_turn_on_guest_bathroom_when_motion_detected_night
   trigger:
     - platform: state
       entity_id: binary_sensor.4_in_1_sensor_home_security_motion_detection
-      from: 'off'
-      to: 'on'
+      from: "off"
+      to: "on"
   condition:
     - condition: state
       entity_id: light.zooz_unknown_type_a000_id_a008_level
-      state: 'off'
+      state: "off"
     - condition: time
-      after: '22:00:00'
-      before: '06:00:00'
+      after: "22:00:00"
+      before: "06:00:00"
   action:
     - service: light.turn_on
       entity_id: light.zooz_unknown_type_a000_id_a008_level
       data:
-        brightness_pct: 19
+        brightness_pct: 21
 
 - alias: Motion - Turn Off Guest Bathroom When No Motion Detected
-  id: 'motion_turn_off_guest_bathroom_when_no_motion_detected'
+  id: motion_turn_off_guest_bathroom_when_no_motion_detected
   trigger:
     - platform: state
       entity_id: binary_sensor.4_in_1_sensor_home_security_motion_detection
-      from: 'on'
-      to: 'off'
+      from: "on"
+      to: "off"
       for:
         minutes: 3
   condition:
     - condition: state
       entity_id: light.zooz_unknown_type_a000_id_a008_level
-      state: 'on'
+      state: "on"
   action:
     - service: light.turn_off
       entity_id: light.zooz_unknown_type_a000_id_a008_level
@@ -60,24 +60,24 @@
 # is on the same network as Home Assistant, otherwise the notification won't
 # have a camera snapshot.
 - alias: Motion - Send Camera Snapshot Notification On Motion
-  id: "motion_send_camera_snapshot_notification_on_motion"
+  id: motion_send_camera_snapshot_notification_on_motion
   trigger:
     - platform: state
       entity_id: binary_sensor.office_motion_alarm
       to: "on"
       variables:
-        camera_name: "camera.office_main"
+        camera_name: camera.office_main
     - platform: state
       entity_id: binary_sensor.laundry_motion_alarm
       to: "on"
       variables:
-        camera_name: "camera.laundry_main"
+        camera_name: camera.laundry_main
   action:
     - delay:
         seconds: 4
     - service: notify.mobile_apps
       data:
-        title: "Camera Motion Detected"
+        title: Camera Motion Detected
         message: "{{ trigger.to_state.name }}"
         data:
           image: "/api/camera_proxy/{{ camera_name }}"
