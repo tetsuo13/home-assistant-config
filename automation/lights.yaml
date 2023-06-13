@@ -1,10 +1,11 @@
 ---
 # Fade lights on in the morning to simulate a sunrise next to my face.
 - alias: Turn on Lights to Wake Us Up
+  id: turn_on_light_to_wake_us_up
   initial_state: true
   trigger:
     platform: time
-    at: "06:10:00"
+    at: "06:45:00"
   condition:
     - condition: time
       weekday:
