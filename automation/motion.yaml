@@ -75,7 +75,7 @@
   action:
     - delay:
         seconds: 4
-    - service: notify.mobile_apps
+    - service: notify.mobile_apps_admin
       data:
         title: Camera Motion Detected
         message: "{{ trigger.to_state.name }}"
