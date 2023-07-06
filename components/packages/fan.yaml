@@ -1,5 +1,6 @@
 ---
 # https://www.home-assistant.io/integrations/fan.template/
+# yamllint disable rule:line-length
 
 fan:
   - platform: template
