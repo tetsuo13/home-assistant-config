@@ -54,7 +54,7 @@ cards:
     state_color: true
     entities:
       - entity: switch.wemo_mini_1
-      - entity: fan.jasco_products_unknown_type_4944_id_3337_level
+      - entity: fan.living_room_preset_mode
       - entity: switch.dimmer_dry_contact_relay
       - entity: switch.dimmer_dry_contact_relay_2
   - type: entities
