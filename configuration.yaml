@@ -22,7 +22,7 @@ homeassistant:
   media_dirs:
     # Snapshots aren't created in a browseable location. Add location for
     # easier reviewing and deleting.
-    camera_snapshots: /config/www/images/snapshots
+    camera_snapshots: www/images/snapshots
 
 automation: !include_dir_merge_list automation
 script: !include_dir_merge_named components/scripts
