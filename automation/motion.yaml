@@ -74,7 +74,7 @@
         camera_name: camera.laundry_main
   variables:
     snapshot_filename: >
-      "{{ camera_name }}-{{ now().strftime('%Y%m%d-%H%M%S.%f') }}.jpg"
+      {{ camera_name }}-{{ now().strftime('%Y%m%d-%H%M%S.%f') }}.jpg
     snapshot_absolute_path: www/images/snapshots/{{ snapshot_filename }}
     # Secret made available as a variable in order to be able to concatenate
     # it with the filename.
