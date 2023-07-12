@@ -72,13 +72,25 @@
       to: "on"
       variables:
         camera_name: camera.laundry_main
+  variables:
+    snapshot_filename: "{{ camera_name }}-{{ now().strftime('%Y%m%d-%H%M%S.%f') }}.jpg"
+    snapshot_absolute_path: www/images/snapshots/{{ snapshot_filename }}
+    # Secret made available as a variable in order to be able to concatenate
+    # it with the filename.
+    snapshot_base_url: !secret camera_snapshots_public_url
   action:
     - delay:
         seconds: 4
+    - service: camera.snapshot
+      data:
+        entity_id: "{{ camera_name }}"
+        filename: "{{ snapshot_absolute_path }}"
     - service: notify.mobile_apps_admin
       data:
         title: Camera Motion Detected
         message: "{{ trigger.to_state.name }}"
         data:
-          image: "/api/camera_proxy/{{ camera_name }}"
+          image: "{{ snapshot_base_url }}/{{ snapshot_filename }}"
+          # Use this instead for debugging, is only accessible on intranet.
+          #image: "/api/camera_proxy/{{ camera_name }}"
 
