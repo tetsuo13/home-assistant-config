@@ -85,9 +85,13 @@ There's also the birthday binary sensor which, when enabled, causes a birthday j
 
 During the day, the bathroom lights turn on when motion is detected. Overnight, the lights only turn on at a low brightness. The lights will turn back off after a few minutes of no motion. If the fan is on, it'll turn off after a few minutes after the lights are turned off of no motion.
 
-### Camera Detection
+### Motion Detection with Cameras
 
-Home Assistant doesn't send a notification when the front door senses motion. Instead, when motion is detected by the camera, it sends a notification to the Amcrest Smart Home app which in turns sends a notification to the phone. The icon shown on the automations tab of the dashboard controls whether or not the camera should notify the Amcrest app.
+Home Assistant doesn't send a notification when the front door senses motion. Instead, when motion is detected by the camera, it sends a notification to the Amcrest Smart Home app which in turns sends a notification to the phone. The icon shown on the automations tab of the dashboard controls whether or not the camera should notify the Amcrest app. While that behavior is also controlled from within the Amcrest Smart Home app, the aim is to provide as much control as possible from within Home Assistant.
+
+Motion detection notification is handled by taking a camera snapshot and sending a notification to the Companion App with a URL to the snapshot that's accessible from the Internet. The snapshots are created under the `www/images/snapshots` directory so that viewing them doesn't require authentication.
+
+Camera snapshots are made available for review in the Media section of Home Assistant. This was done because notifications sent to the Companion App are euphemoral: you view them at the moment of notification, swipe it away, and have no ability to view it again unless going to the NVR. On the other hand the vast majority of these snapshots are useless because the motion detected was a falling leaf, for example, so it will never be looked at again. While the images from the Media browser can be manually deleted there's a scheduled shell script that will delete older images automatically.
 
 ## [Smoke Alarm Automations](automation/smoke_alarms.yaml)
 
