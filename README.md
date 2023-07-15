@@ -91,7 +91,25 @@ Home Assistant doesn't send a notification when the front door senses motion. In
 
 Motion detection notification is handled by taking a camera snapshot and sending a notification to the Companion App with a URL to the snapshot that's accessible from the Internet. The snapshots are created under the `www/images/snapshots` directory so that viewing them doesn't require authentication.
 
-Camera snapshots are made available for review in the Media section of Home Assistant. This was done because notifications sent to the Companion App are euphemoral: you view them at the moment of notification, swipe it away, and have no ability to view it again unless going to the NVR. On the other hand the vast majority of these snapshots are useless because the motion detected was a falling leaf, for example, so it will never be looked at again. While the images from the Media browser can be manually deleted there's a scheduled shell script that will delete older images automatically.
+Camera snapshots are made available for review in the Media section of Home Assistant. This was done because notifications sent to the Companion App are ephemeral: you view them at the moment of notification, swipe it away, and have no ability to view it again unless going to the NVR. On the other hand the vast majority of these snapshots are useless because the motion detected was a falling leaf, for example, so it will never be looked at again. While the images from the Media browser can be manually deleted there's a scheduled shell script that will delete older images automatically.
+
+The reverse proxy is handled by Nginx. A request to `https://home-assistant.example.com/snapshots/camera.laundry_main-20230711-223051.140195.jpg` hits the reverse proxy, the path and file name are validated for correct syntax, and the image file is returned from the Home Assistant server. Example relevant config:
+
+```nginx
+server {
+  location ~ ^/snapshots/([a-z\.\-0-9_]+\.jpg)$ {
+    proxy_pass            http://192.168.1.1:8123/local/images/snapshots/$1;
+    proxy_set_header      X-Real-IP        $remote_addr;
+    proxy_set_header      X-Forwarded-For  $proxy_add_x_forwarded_for;
+    proxy_set_header      Host             $http_host;
+  }
+
+  # Fallback for all other requests. Return 403 Forbidden.
+  location / {
+    return 403;
+  }
+}
+```
 
 ## [Smoke Alarm Automations](automation/smoke_alarms.yaml)
 
