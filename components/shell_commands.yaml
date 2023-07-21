@@ -7,6 +7,7 @@ clean_camera_snapshots: >-
   /config/www/images/snapshots
   -mtime +{{ days_threshold }}
   -type f
+  ! -name .gitinclude
   -delete
   -print
 
