@@ -63,16 +63,14 @@
 - alias: Turn Off Master Bathroom Fan After Period Of Time
   id: turn_off_master_bathroom_fan_after_period_of_time
   description: >
-    Turn off the fan after the light has been turned off for a period of time.
-    There isn't motion detection available so instead using the light to guess
-    that there's nobody in the bathroom if it's off is resonable.
+    Turn off the fan if it's been on for 20 minutes. There isn't motion
+    detection available. This amount of time should be enough.
   trigger:
     - platform: state
-      entity_id: light.zooz_unknown_type_a000_id_a008_level_2
-      from: "on"
-      to: "off"
+      entity_id: switch.dimmer_dry_contact_relay_2
+      to: "on"
       for:
-        minutes: 5
+        minutes: 20
   condition: []
   action:
     - service: switch.turn_off
