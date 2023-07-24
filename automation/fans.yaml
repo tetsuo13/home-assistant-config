@@ -60,11 +60,11 @@
     - service: switch.turn_off
       entity_id: switch.dimmer_dry_contact_relay
 
-- alias: Turn Off Master Bathroom Fan After Period Of Time
-  id: turn_off_master_bathroom_fan_after_period_of_time
+- alias: Turn Off Primary Bathroom Fan After Period Of Time
+  id: turn_off_primary_bathroom_fan_after_period_of_time
   description: >
     Turn off the fan if it's been on for 20 minutes. There isn't motion
-    detection available. This amount of time should be enough.
+    detection available.
   trigger:
     - platform: state
       entity_id: switch.dimmer_dry_contact_relay_2

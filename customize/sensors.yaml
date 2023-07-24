@@ -12,7 +12,7 @@ binary_sensor.den_occupancy:
   device_class: motion
 
 binary_sensor.master_bedroom_occupancy:
-  friendly_name: Master Bedroom Occupancy
+  friendly_name: Primary Bedroom Occupancy
   device_class: motion
 
 binary_sensor.flood_sensor_water_leak_state:

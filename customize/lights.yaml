@@ -20,10 +20,10 @@ switch.jasco_products_46201_in_wall_smart_switch_switch:
   icon: mdi:ceiling-light
 
 light.zooz_unknown_type_a000_id_a008_level:
-  friendly_name: Guest Bathroom
+  friendly_name: Guest Bath
   icon: mdi:lightbulb-outline
 
 light.zooz_unknown_type_a000_id_a008_level_2:
-  friendly_name: Master Bathroom
+  friendly_name: Primary Bath
   icon: mdi:lightbulb-outline
 
