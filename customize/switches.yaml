@@ -4,7 +4,7 @@ switch.wemo_mini_1:
   icon: mdi:air-filter
 
 switch.wemo_mini_1_2:
-  friendly_name: Dining Room Lamp
+  friendly_name: Dining Lamp
   icon: mdi:lamp
 
 switch.wemo_mini_4:
@@ -20,6 +20,6 @@ switch.dimmer_dry_contact_relay:
   icon: mdi:fan
 
 switch.dimmer_dry_contact_relay_2:
-  friendly_name: Master Bathroom Fan
+  friendly_name: Primary Bathroom Fan
   icon: mdi:fan
 
