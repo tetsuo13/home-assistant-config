@@ -83,17 +83,17 @@ There's also the birthday binary sensor which, when enabled, causes a birthday j
 
 ## [Motion Automations](automation/motion.yaml)
 
-During the day, the bathroom lights turn on when motion is detected. Overnight, the lights only turn on at a low brightness. The lights will turn back off after a few minutes of no motion. If the fan is on, it'll turn off after a few minutes after the lights are turned off of no motion.
+Guest bathroom lights turn on when motion is detected, they turn back off after a few minutes of no motion. Overnight, the lights only turn on at a low brightness to prevent blindness. If the fan is on, it'll turn off after a few minutes after the lights have turned off.
 
 ### Motion Detection with Cameras
 
-Home Assistant doesn't send a notification when the front door senses motion. Instead, when motion is detected by the camera, it sends a notification to the Amcrest Smart Home app which in turns sends a notification to the phone. The icon shown on the automations tab of the dashboard controls whether or not the camera should notify the Amcrest app. While that behavior is also controlled from within the Amcrest Smart Home app, the aim is to provide as much control as possible from within Home Assistant.
+The front door camera takes care of sending notifications using the Amcrest Smart Home app (one of the few services connected to the cloud). The icon shown on the automations tab of the dashboard just controls whether or not the camera should notify the Amcrest app.
 
-Motion detection notification is handled by taking a camera snapshot and sending a notification to the Companion App with a URL to the snapshot that's accessible from the Internet. The snapshots are created under the `www/images/snapshots` directory so that viewing them doesn't require authentication.
+For the other camera, when motion is detected a snapshot is taken and a notification is sent to the Companion App using a URL to the snapshot that's accessible from the Internet. By default these snapshots are only accessible from the intranet which makes them largely useless when not at home. The snapshots are created in the `www/images/snapshots` directory so that viewing them doesn't require authentication.
 
-Camera snapshots are made available for review in the Media section of Home Assistant. This was done because notifications sent to the Companion App are ephemeral: you view them at the moment of notification, swipe it away, and have no ability to view it again unless going to the NVR. On the other hand the vast majority of these snapshots are useless because the motion detected was a falling leaf, for example, so it will never be looked at again. While the images from the Media browser can be manually deleted there's a scheduled shell script that will delete older images automatically.
+Camera snapshots are made available for review in the Media section of Home Assistant. This was done because notifications sent to the Companion App are ephemeral: you view them at the moment of notification, swipe it away, and have no ability to view it again unless going to the NVR. While the images from the Media browser can be manually deleted there's a scheduled shell script that will automatically delete images older than a few days.
 
-The reverse proxy is handled by Nginx. A request to `https://home-assistant.example.com/snapshots/camera.laundry_main-20230711-223051.140195.jpg` hits the reverse proxy, the path and file name are validated for correct syntax, and the image file is returned from the Home Assistant server. Example relevant config:
+The Home Assistant server isn't on the Internet but instead sits behind a reverse proxy with only the camera snapshots directory exposed. Example relevant Nginx config:
 
 ```nginx
 server {
