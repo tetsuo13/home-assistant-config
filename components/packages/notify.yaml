@@ -19,7 +19,6 @@ notify:
     platform: group
     services:
       - service: mobile_app_andrei_s_phone
-      - service: mobile_app_lees_ipad
       - service: mobile_app_pixel_6
 
   - name: mobile_apps_admin
