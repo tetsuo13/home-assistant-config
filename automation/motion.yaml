@@ -56,11 +56,10 @@
     - service: light.turn_off
       entity_id: light.zooz_unknown_type_a000_id_a008_level
 
-# The automatic snapshot for Android works well so long as the receiving app
-# is on the same network as Home Assistant, otherwise the notification won't
-# have a camera snapshot.
 - alias: Motion - Send Camera Snapshot Notification On Motion
   id: motion_send_camera_snapshot_notification_on_motion
+  description: >
+    Send a notification to the Companion App with a camera snapshot.
   trigger:
     - platform: state
       entity_id: binary_sensor.office_motion_alarm
@@ -72,7 +71,18 @@
       to: "on"
       variables:
         camera_name: camera.laundry_main
+    - platform: state
+      entity_id: binary_sensor.front_door_smart_motion_human
+      to: "on"
+      variables:
+        camera_name: camera.front_door_main
   variables:
+    # Filename made up of several components for later identification:
+    # - Camera name. It's clear from viewing the image but makes it easier
+    #   to browse a particular camera later.
+    # - Time of snapshot (not all cameras stamp the date and time).
+    # - Additional randomness to filename, in this case it's milliseconds.
+    #   This is added to make guessing the filename more difficult.
     snapshot_filename: >
       {{ camera_name }}-{{ now().strftime('%Y%m%d-%H%M%S.%f') }}.jpg
     snapshot_absolute_path: www/images/snapshots/{{ snapshot_filename }}
@@ -86,12 +96,12 @@
       data:
         entity_id: "{{ camera_name }}"
         filename: "{{ snapshot_absolute_path }}"
-    - service: notify.mobile_apps_admin
+    - service: notify.mobile_apps
       data:
         title: Camera Motion Detected
         message: "{{ trigger.to_state.name }}"
         data:
           image: "{{ snapshot_base_url }}/{{ snapshot_filename }}"
-          # Use this instead for debugging, is only accessible on intranet.
+          # Use this instead for debugging. Only accessible from intranet.
           # image: "/api/camera_proxy/{{ camera_name }}"
 
