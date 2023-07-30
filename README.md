@@ -83,9 +83,33 @@ There's also the birthday binary sensor which, when enabled, causes a birthday j
 
 ## [Motion Automations](automation/motion.yaml)
 
-During the day, the bathroom lights turn on when motion is detected. Overnight, the lights only turn on at a low brightness. The lights will turn back off after a few minutes of no motion. If the fan is on, it'll turn off after a few minutes after the lights are turned off of no motion.
+Guest bathroom lights turn on when motion is detected, they turn back off after a few minutes of no motion. Overnight, the lights only turn on at a low brightness to prevent blindness. If the fan is on, it'll turn off after a few minutes after the lights have turned off.
 
-Home Assistant doesn't send a notification when the front door senses motion. Instead, when motion is detected by the camera, it sends a notification to the Amcrest Smart Home app which in turns sends a notification to the phone. The icon shown on the automations tab of the dashboard controls whether or not the camera should notify the Amcrest app.
+### Motion Detection with Cameras
+
+The front door camera takes care of sending notifications using the Amcrest Smart Home app (one of the few services connected to the cloud). The icon shown on the automations tab of the dashboard just controls whether or not the camera should notify the Amcrest app.
+
+For the other camera, when motion is detected a snapshot is taken and a notification is sent to the Companion App using a URL to the snapshot that's accessible from the Internet. By default these snapshots are only accessible from the intranet which makes them largely useless when not at home (see [standard attachments](https://companion.home-assistant.io/docs/notifications/notification-attachments/#parameters) documentation for Companion App). The snapshots are created in the `www/images/snapshots` directory so that viewing them doesn't require authentication. Considering that authentication isn't a requirement and an attacker could potentially guess filenames by iterating through past date and times should they discover the publically accessible URL to the server, an additional component is added to the filename to dramatically increase the possible combinations of characters. This doesn't stop a motivated attacker from eventually finding a valid filename, just makes it more apparent in the logs of a brute-force attack.
+
+Camera snapshots are made available for review in the Media section of Home Assistant. This was done because notifications sent to the Companion App are ephemeral: you view them at the moment of notification, swipe it away, and have no ability to view it again unless going to the NVR. While the images from the Media browser can be manually deleted there's a scheduled shell script that will automatically delete images older than a few days.
+
+The Home Assistant server isn't on the Internet but instead sits behind a reverse proxy with only the camera snapshots directory exposed. Example relevant Nginx config:
+
+```nginx
+server {
+  location ~ ^/snapshots/([a-z\.\-0-9_]+\.jpg)$ {
+    proxy_pass            http://192.168.1.1:8123/local/images/snapshots/$1;
+    proxy_set_header      X-Real-IP        $remote_addr;
+    proxy_set_header      X-Forwarded-For  $proxy_add_x_forwarded_for;
+    proxy_set_header      Host             $http_host;
+  }
+
+  # Fallback for all other requests. Return 403 Forbidden.
+  location / {
+    return 403;
+  }
+}
+```
 
 ## [Smoke Alarm Automations](automation/smoke_alarms.yaml)
 
