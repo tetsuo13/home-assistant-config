@@ -1,0 +1,13 @@
+---
+# https://www.home-assistant.io/integrations/shell_command/
+
+# Delete all files in the camera snapshots directory older than specified.
+clean_camera_snapshots: >-
+  /usr/bin/find
+  /config/www/images/snapshots
+  -mtime +{{ days_threshold }}
+  -type f
+  ! -name .gitinclude
+  -delete
+  -print
+
