@@ -72,7 +72,7 @@
       variables:
         camera_name: camera.laundry_main
     - platform: state
-      entity_id: binary_sensor.front_door_smart_motion_human
+      entity_id: binary_sensor.front_door_cross_region_detection
       to: "on"
       variables:
         camera_name: camera.front_door_main
