@@ -32,7 +32,7 @@
       state: "off"
     - condition: time
       after: "22:00:00"
-      before: "06:00:00"
+      before: "06:15:00"
   action:
     - service: light.turn_on
       entity_id: light.zooz_unknown_type_a000_id_a008_level
