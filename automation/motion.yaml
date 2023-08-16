@@ -1,4 +1,5 @@
 ---
+# Ending time range needs to match next automation's beginning time.
 - alias: Motion - Turn On Guest Bathroom When Motion Detected Daytime
   id: motion_turn_on_guest_bathroom_when_motion_detected_daytime
   trigger:
@@ -12,13 +13,14 @@
       state: "off"
     - condition: time
       after: "06:00:00"
-      before: "22:00:00"
+      before: "21:15:00"
   action:
     - service: light.turn_on
       entity_id: light.zooz_unknown_type_a000_id_a008_level
       data:
         brightness_pct: 100
 
+# Beginning time range needs to match previous automation's ending time.
 - alias: Motion - Turn On Guest Bathroom When Motion Detected Night
   id: motion_turn_on_guest_bathroom_when_motion_detected_night
   trigger:
@@ -31,7 +33,7 @@
       entity_id: light.zooz_unknown_type_a000_id_a008_level
       state: "off"
     - condition: time
-      after: "22:00:00"
+      after: "21:15:00"
       before: "06:15:00"
   action:
     - service: light.turn_on
