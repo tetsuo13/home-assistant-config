@@ -13,7 +13,7 @@ notify:
     sender: !secret smtp_sender
     recipient:
       - !secret smtp_recipient1
-    sender_name: Home Assistant
+    sender_name: !secret smtp_sender_name
 
   - name: mobile_apps
     platform: group
