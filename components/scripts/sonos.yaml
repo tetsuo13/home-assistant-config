@@ -1,7 +1,9 @@
 ---
-# This will first play a chime sound before the TTS recording.
+
 sonos_say:
-  alias: "Sonos TTS script"
+  alias: >-
+    Sonos text to speach (TTS) on all speakers. Will play a chime before the
+    TTS recording.
   mode: queued
   variables:
     base_url: !secret internal_url
@@ -17,7 +19,7 @@ sonos_say:
       data_template:
         entity_id: group.sonos_all
         media_content_id: "{{ base_url }}/local/audio/chime01.mp3"
-        media_content_type: "music"
+        media_content_type: music
     - delay:
         seconds: 3
     - service: tts.google_translate_say
@@ -33,25 +35,34 @@ sonos_say:
         entity_id: group.sonos_all
 
 sonos_play_file:
-  alias: "Sonos play file script"
+  alias: >-
+    Sonos play file. Plays across all Sonos speakers unless it's during
+    business hours on a weekday then the office speaker will be omitted.
   mode: queued
   variables:
     base_url: !secret internal_url
+    sonos_group: >-
+      {% if now().weekday() < 5 and 8 < now().hour < 17 %}
+        group.sonos_all_but_office
+      {% else %}
+        group.sonos_all
+      {% endif %}
+    #sonos_group: "group.sonos_all_except_office"
   sequence:
     - service: sonos.snapshot
-      data_template:
-        entity_id: group.sonos_all
+      data:
+        entity_id: "{{ sonos_group }}"
     - service: media_player.volume_set
-      data_template:
-        entity_id: group.sonos_all
+      data:
+        entity_id: "{{ sonos_group }}"
         volume_level: "0.3"
     - service: media_player.play_media
-      data_template:
-        entity_id: group.sonos_all
+      data:
+        entity_id: "{{ sonos_group }}"
         media_content_id: "{{ base_url }}/local/{{ audio_url }}"
-        media_content_type: "music"
+        media_content_type: music
     - delay: "{{ delay }}"
     - service: sonos.restore
-      data_template:
-        entity_id: group.sonos_all
+      data:
+        entity_id: "{{ sonos_group }}"
 
