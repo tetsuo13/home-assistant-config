@@ -2,7 +2,7 @@
 
 sonos_say:
   alias: >-
-    Sonos text to speach (TTS) on all speakers. Will play a chime before the
+    Sonos text to speech (TTS) on all speakers. Will play a chime before the
     TTS recording.
   mode: queued
   variables:
@@ -37,12 +37,13 @@ sonos_say:
 sonos_play_file:
   alias: >-
     Sonos play file. Plays across all Sonos speakers unless it's during
-    business hours on a weekday then the office speaker will be omitted.
+    business hours on a weekday (Mon-Fri, 8-5) then the office speaker will
+    be omitted.
   mode: queued
   variables:
     base_url: !secret internal_url
     sonos_group: >-
-      {% if now().weekday() < 5 and 8 < now().hour < 17 %}
+      {% if now().weekday() < 5 and 8 <= now().hour < 17 %}
         group.sonos_all_but_office
       {% else %}
         group.sonos_all
