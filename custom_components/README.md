@@ -1,10 +1,16 @@
 # Custom Components
 
-The custom components used for Home Assistant.
+The custom components used for Home Assistant. They're provided as Git submodules, cloned to this directory with the added suffix `_dist`, and provided to Home Assistant via a symbolic link. The added complexity with the directory naming is because the third-party repositories contain other files at their root aside from the custom component. So in order for Home Assistant to recognize these subdirectories as custom components, the only files that can reside within them must be those that directly make the custom component.
 
 ## Dahua
 
+https://github.com/rroller/dahua
+
 The Dahua integration is used to manage the Amcrest cameras.
 
-The custom component comes from https://github.com/rroller/dahua and is added to this repository as a submodule. However, because the custom component contains other files as part of the repository, the submodule is initialized into the `dahua_dist` directory and a `dahua` symbolic link is used to reference the subdirectory needed for Home Assistant to be able to reference this custom component.
+## ElevenLabs TTS
+
+https://github.com/carleeno/elevenlabs_tts
+
+[ElevenLabs](https://elevenlabs.io/) is used to provide a better, more realistic text-to-speech engine.
 

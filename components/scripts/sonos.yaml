@@ -22,10 +22,13 @@ sonos_say:
         media_content_type: music
     - delay:
         seconds: 3
-    - service: tts.google_translate_say
-      data_template:
-        entity_id: group.sonos_all
+    - service: tts.speak
+      data:
+        cache: true
+        media_player_entity_id: group.sonos_all
         message: "{{ message }}"
+      target:
+        entity_id: tts.elevenlabs_tts
     - delay: "{{ delay }}"
     - service: media_player.media_stop
       target:
@@ -48,7 +51,6 @@ sonos_play_file:
       {% else %}
         group.sonos_all
       {% endif %}
-    #sonos_group: "group.sonos_all_except_office"
   sequence:
     - service: sonos.snapshot
       data:

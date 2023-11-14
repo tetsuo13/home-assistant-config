@@ -1,3 +1,6 @@
 [submodule "custom_components/dahua_dist"]
 	path = custom_components/dahua_dist
 	url = https://github.com/rroller/dahua.git
+[submodule "custom_components/elevenlabs_tts_dist"]
+	path = custom_components/elevenlabs_tts_dist
+	url = https://github.com/carleeno/elevenlabs_tts.git

@@ -7,6 +7,7 @@ yaml-files:
 
 ignore: |
   custom_components/dahua_dist/
+  custom_components/elevenlabs_tts_dist/
 
 rules:
   empty-lines:
