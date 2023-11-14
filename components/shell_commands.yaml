@@ -4,7 +4,7 @@
 # Delete all files in the camera snapshots directory older than specified.
 clean_camera_snapshots: >-
   /usr/bin/find
-  /config/www/images/snapshots
+  /homeassistant/www/images/snapshots
   -mtime +{{ days_threshold }}
   -type f
   ! -name .gitinclude
