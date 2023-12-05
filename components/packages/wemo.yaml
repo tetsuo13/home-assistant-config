@@ -6,4 +6,5 @@ wemo:
     - !secret wemo_1_ip
     - !secret wemo_2_ip
     - !secret wemo_4_ip
+    - !secret wemo_5_ip
 

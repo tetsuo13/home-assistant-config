@@ -23,6 +23,11 @@ cards:
     states:
       - arm_home
       - arm_away
+  - type: entities
+    title: Christmas Center
+    state_color: true
+    entities:
+      - switch.366
   - type: grid
     columns: 2
     square: false
