@@ -2,3 +2,19 @@ switch.366:
   friendly_name: Mantelpiece
   icon: mdi:fireplace-off
 
+switch.418:
+  friendly_name: Bedroom 2 Star
+  icon: mdi:star
+
+switch.672:
+  friendly_name: Bedroom 3 Star
+  icon: mdi:star
+
+switch.wemo_mini_3:
+  friendly_name: Dining Room Star
+  icon: mdi:star
+
+group.christmas_stars:
+  friendly_name: Stars in Windows
+  icon: mdi:star
+

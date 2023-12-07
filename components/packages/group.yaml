@@ -17,3 +17,10 @@ group:
       - media_player.sonos02
       - media_player.sonos04
 
+  christmas_stars:
+    name: Stars in Windows
+    entities:
+      - switch.418
+      - switch.672
+      - switch.wemo_mini_3
+
