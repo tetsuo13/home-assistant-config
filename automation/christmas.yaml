@@ -1,7 +1,7 @@
 ---
 
 - alias: Christmas - Turn On Lights at Sunset
-  id: christmas_turn_on_lights_at_sunset 
+  id: christmas_turn_on_lights_at_sunset
   trigger:
     platform: sun
     event: sunset
