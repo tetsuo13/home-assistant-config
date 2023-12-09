@@ -1,0 +1,28 @@
+---
+
+- alias: Christmas - Turn On Lights at Sunset
+  id: christmas_turn_on_lights_at_sunset 
+  trigger:
+    platform: sun
+    event: sunset
+  action:
+    service: switch.turn_on
+    data:
+      entity_id:
+        - switch.tp_link_smart_plug_ac7b
+        - group.christmas_stars
+        - switch.tp_link_smart_plug_ad70
+
+- alias: Christmas - Turn Off Lights Late at Night
+  id: christmas_turn_off_lights_late_at_night
+  trigger:
+    platform: time
+    at: "23:22:33"
+  action:
+    service: switch.turn_off
+    data:
+      entity_id:
+        - switch.366
+        - group.christmas_stars
+        - switch.tp_link_smart_plug_ad70
+

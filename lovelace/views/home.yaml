@@ -27,8 +27,9 @@ cards:
     title: Christmas Center
     state_color: true
     entities:
-      - switch.366
+      - switch.tp_link_smart_plug_ac7b
       - group.christmas_stars
+      - switch.tp_link_smart_plug_ad70
   - type: grid
     columns: 2
     square: false
