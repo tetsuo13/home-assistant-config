@@ -1,3 +1,5 @@
+---
+
 switch.tp_link_smart_plug_ac7b:
   friendly_name: Mantelpiece
   icon: mdi:fireplace-off
