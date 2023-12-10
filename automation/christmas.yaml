@@ -22,7 +22,7 @@
     service: switch.turn_off
     data:
       entity_id:
-        - switch.366
+        - switch.tp_link_smart_plug_ac7b
         - group.christmas_stars
         - switch.tp_link_smart_plug_ad70
 
