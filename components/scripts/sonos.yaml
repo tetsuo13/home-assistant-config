@@ -1,23 +1,31 @@
 ---
 
 sonos_say:
-  alias: >-
-    Sonos text to speech (TTS) on all speakers. Will play a chime before the
-    TTS recording.
+  alias: Sonos TTS
+  description: >-
+    Sonos text to speech (TTS) on all speakers unless it's during business
+    hours on a weekday (Mon-Fri, 8-5) then the office speaker will be omitted.
+    Will play a chime before the TTS recording.
   mode: queued
   variables:
     base_url: !secret internal_url
+    sonos_group: >-
+      {% if now().weekday() < 5 and 8 <= now().hour < 17 %}
+        group.sonos_all_but_office
+      {% else %}
+        group.sonos_all
+      {% endif %}
   sequence:
     - service: sonos.snapshot
       data_template:
-        entity_id: group.sonos_all
+        entity_id: "{{ sonos_group }}"
     - service: media_player.volume_set
       data_template:
-        entity_id: group.sonos_all
+        entity_id: "{{ sonos_group }}"
         volume_level: "0.3"
     - service: media_player.play_media
       data_template:
-        entity_id: group.sonos_all
+        entity_id: "{{ sonos_group }}"
         media_content_id: "{{ base_url }}/local/audio/chime01.mp3"
         media_content_type: music
     - delay:
@@ -25,23 +33,23 @@ sonos_say:
     - service: tts.speak
       data:
         cache: true
-        media_player_entity_id: group.sonos_all
+        media_player_entity_id: "{{ sonos_group }}"
         message: "{{ message }}"
       target:
         entity_id: tts.elevenlabs_tts
     - delay: "{{ delay }}"
     - service: media_player.media_stop
       target:
-        entity_id: group.sonos_all
+        entity_id: "{{ sonos_group }}"
     - service: sonos.restore
       data_template:
-        entity_id: group.sonos_all
+        entity_id: "{{ sonos_group }}"
 
 sonos_play_file:
-  alias: >-
-    Sonos play file. Plays across all Sonos speakers unless it's during
-    business hours on a weekday (Mon-Fri, 8-5) then the office speaker will
-    be omitted.
+  alias: Sonos Play File
+  description: >-
+    Plays across all Sonos speakers unless it's during business hours on a
+    weekday (Mon-Fri, 8-5) then the office speaker will be omitted.
   mode: queued
   variables:
     base_url: !secret internal_url
