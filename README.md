@@ -67,7 +67,7 @@ Runs on a [Raspberry Pi 3B](https://www.raspberrypi.org/products/raspberry-pi-3-
 
 # Automations
 
-Christmas lights automations aren't available year-round (they're added when the tree goes up, removed again when the tree goes down). See previous years in [#15](https://github.com/tetsuo13/home-assistant-config/pull/15) and [c013a7c](https://github.com/tetsuo13/home-assistant-config/commit/c013a7c10aa19f6366598c1a0cd125f82ec8b465) on what was done.
+Christmas lights automations aren't available year-round (they're added when the tree goes up, removed again when the tree goes down). See previous years in [#40](https://github.com/tetsuo13/home-assistant-config/pull/40), [#15](https://github.com/tetsuo13/home-assistant-config/pull/15) and [c013a7c](https://github.com/tetsuo13/home-assistant-config/commit/c013a7c10aa19f6366598c1a0cd125f82ec8b465) on what was done.
 
 ## [Door Automations](automation/doors.yaml)
 
