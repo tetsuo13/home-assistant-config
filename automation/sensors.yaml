@@ -49,6 +49,7 @@
     # Smoke alarms will start chirping the minute they reach 77% battery
     # level. They will stay at 78% for several days however. Send notification
     # just before they drop to 77%.
+    # TODO: Using a 100% level for testing. Change to 78 when done.
     - platform: numeric_state
       entity_id:
         - sensor.zcombo_g_smoke_co_alarm_battery_level
