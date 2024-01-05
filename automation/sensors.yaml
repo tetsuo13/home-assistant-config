@@ -48,7 +48,9 @@
         seconds: 0
     # Smoke alarms will start chirping the minute they reach 77% battery
     # level. They will stay at 78% for several days however. Send notification
-    # just before they drop to 77%.
+    # just before they drop to 77%. Would prefer to trigger only if it's been
+    # at 77% for a few days however restarting Home Assistant will reset that
+    # lookup. Using a more conservative value instead.
     # TODO: Using a 100% level for testing. Change to 78 when done.
     - platform: numeric_state
       entity_id:
@@ -57,7 +59,7 @@
         - sensor.zcombo_g_smoke_co_alarm_battery_level_3
       below: 100
       for:
-        hours: 24
+        hours: 8
   action:
     - service: notify.mobile_apps
       data:
