@@ -51,13 +51,12 @@
     # just before they drop to 77%. Would prefer to trigger only if it's been
     # at 77% for a few days however restarting Home Assistant will reset that
     # lookup. Using a more conservative value instead.
-    # TODO: Using a 100% level for testing. Change to 78 when done.
     - platform: numeric_state
       entity_id:
         - sensor.zcombo_g_smoke_co_alarm_battery_level
         - sensor.zcombo_g_smoke_co_alarm_battery_level_2
         - sensor.zcombo_g_smoke_co_alarm_battery_level_3
-      below: 100
+      below: 78
       for:
         hours: 8
   action:
