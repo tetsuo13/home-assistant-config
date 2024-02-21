@@ -1,30 +1,33 @@
 ---
 - alias: Laundry flooding
-  id: 'laundry_flooding'
+  id: laundry_flooding
   trigger:
     platform: state
     entity_id: binary_sensor.flood_sensor_water_leak_state
-    from: 'off'
-    to: 'on'
+    from: "off"
+    to: "on"
     for:
       seconds: 15
   action:
     - service: notify.email
       data_template:
-        title: "Laundry room is flooding"
-        message: "You should probably check it out."
+        title: Laundry room is flooding
+        message: You should probably check it out.
     - service: script.sonos_say
       data:
-        # yamllint disable-line rule:line-length
-        message: "Crikey! We've sprunga leak in the laundry room! I said crikey! We've sprunga leak in the laundry room!"
-        delay: '00:00:15'
+        message: >-
+          Crikey!
+          We've sprunga leak in the laundry room!
+          I said crikey!
+          We've sprunga leak in the laundry room!
+        delay: "00:00:15"
     - service: notify.mobile_apps
       data:
-        message: "The laundry room is flooding"
+        message: The laundry room is flooding
 
 - alias: Low Battery Notification
   id: low_battery_notification
-  description: Notify of low battery level in devices which have batteries
+  description: Notify of low battery level in devices which have batteries.
   trigger:
     - platform: state
       entity_id:
@@ -37,12 +40,25 @@
         - binary_sensor.zcombo_g_smoke_co_alarm_low_battery_level
         - binary_sensor.zcombo_g_smoke_co_alarm_low_battery_level_2
         - binary_sensor.zcombo_g_smoke_co_alarm_low_battery_level_3
-      from: 'off'
-      to: 'on'
+      from: "off"
+      to: "on"
       for:
         hours: 1
         minutes: 0
         seconds: 0
+    # Smoke alarms will start chirping the minute they reach 77% battery
+    # level. They will stay at 78% for several days however. Send notification
+    # just before they drop to 77%. Would prefer to trigger only if it's been
+    # at 77% for a few days however restarting Home Assistant will reset that
+    # lookup. Using a more conservative value instead.
+    - platform: numeric_state
+      entity_id:
+        - sensor.zcombo_g_smoke_co_alarm_battery_level
+        - sensor.zcombo_g_smoke_co_alarm_battery_level_2
+        - sensor.zcombo_g_smoke_co_alarm_battery_level_3
+      below: 78
+      for:
+        hours: 8
   action:
     - service: notify.mobile_apps
       data:
