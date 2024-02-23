@@ -24,10 +24,14 @@
       transition: 1800
 
 - alias: Turn Off Lights Before Work
+  id: turn_off_lights_before_work
+  description: >-
+    Turn off lights weekday mornings 15 minutes after sunrise.
   initial_state: true
   trigger:
-    platform: time
-    at: "07:45:00"
+    platform: sun
+    event: sunrise
+    offset: "00:15:00"
   condition:
     - condition: time
       weekday:
@@ -89,11 +93,14 @@
       entity_id: light.controller_rgb_44_key_ir_cde6d9
       brightness: 13
 
-- alias: Turn Off Night-Light 8:00am
+- alias: Turn Off Night-Light After Sunrise
+  id: turn_off_night_light_after_sunrise
+  description: Turn off night-light 15 minutes after sunrise.
   initial_state: true
   trigger:
-    platform: time
-    at: "08:00:00"
+    platform: sun
+    event: sunrise
+    offset: "00:15:00"
   action:
     service: light.turn_off
     data:

@@ -37,8 +37,8 @@ automation.turn_on_night_light_at_sunset:
   friendly_name: Turn On Night-Light at Sunset
   icon: mdi:led-strip
 
-automation.turn_off_night_light_8_00am:
-  friendly_name: Turn Off Night-Light 8:00am
+automation.turn_off_night_light_after_sunrise:
+  friendly_name: Turn Off Night-Light After Sunrise
   icon: mdi:led-strip
 
 automation.turn_on_dining_room_lamp_before_sunset:
