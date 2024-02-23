@@ -6,7 +6,7 @@ automation.turn_on_lights_to_wake_us_up:
   icon: mdi:lightbulb-outline
 
 automation.turn_off_lights_before_work:
-  friendly_name: Bedroom Lights Off at 7:45am
+  friendly_name: Bedroom Lights Off Before Work
   icon: mdi:lightbulb-outline
 
 automation.turn_on_lights_before_sunset:
