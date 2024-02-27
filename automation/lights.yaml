@@ -60,6 +60,7 @@
       brightness: 255
       transition: 1500
 
+# Hue bulbs take 30 minutes to fade to off.
 - alias: Turn Off Lee's Bedside By 8:30pm
   initial_state: true
   trigger:
@@ -71,10 +72,12 @@
       entity_id: light.hue_white_lamp_3
       transition: 1800
 
-- alias: Turn Off Andrei's Bedside By 9:15pm
+# Hue bulbs take 30 minutes to fade to off.
+- alias: Turn Off Andrei's Bedside By 9:00pm
+  id: turn_off_andrei_s_bedside_by_9_00pm
   trigger:
     platform: time
-    at: "20:45:00"
+    at: "20:30:00"
   action:
     service: light.turn_off
     data:
