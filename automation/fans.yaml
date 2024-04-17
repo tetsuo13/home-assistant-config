@@ -37,7 +37,7 @@
   id: turn_on_air_purifier_midmorning
   trigger:
     platform: time
-    at: "09:00:00"
+    at: "07:20:00"
   action:
     service: switch.turn_on
     data:
