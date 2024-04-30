@@ -1,10 +1,10 @@
 ---
 
-- alias: Turn Off Air Purifier Weekdays (6:45am)
+- alias: Turn Off Air Purifier Weekdays (6:30am)
   id: turn_off_air_purifier_weekdays
   trigger:
     platform: time
-    at: "06:45:00"
+    at: "06:30:00"
   condition:
     - condition: time
       weekday:
