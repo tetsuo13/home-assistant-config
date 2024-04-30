@@ -26,12 +26,13 @@
 - alias: Turn Off Lights Before Work
   id: turn_off_lights_before_work
   description: >-
-    Turn off lights weekday mornings 15 minutes after sunrise.
+    Turn off lights weekday mornings after sunrise.
   initial_state: true
   trigger:
-    platform: sun
-    event: sunrise
-    offset: "00:15:00"
+    - platform: numeric_state
+      entity_id: sun.sun
+      attribute: elevation
+      above: 5.0
   condition:
     - condition: time
       weekday:
@@ -44,8 +45,9 @@
     service: light.turn_off
     entity_id: light.hue_white_lamp_1
 
-# Gradually fade in lights as the sun sets into the night.
 - alias: Turn On Lights Before Sunset
+  description: >-
+    Gradually fade in lights as the sun sets into the night.
   initial_state: true
   trigger:
     platform: sun
