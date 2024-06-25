@@ -1,0 +1,43 @@
+---
+
+alias: Sonos Play File
+
+icon: mdi:speaker
+
+description: >-
+  Plays across all Sonos speakers unless it's during business hours on a
+  weekday (Mon-Fri, 8-5) then the office speaker will be omitted.
+
+mode: queued
+
+variables:
+  base_url: !secret internal_url
+  sonos_group: >-
+    {% if now().weekday() < 5 and 8 <= now().hour < 17 %}
+      group.sonos_all_but_office
+    {% else %}
+      group.sonos_all
+    {% endif %}
+
+sequence:
+  - service: sonos.snapshot
+    data:
+      entity_id: "{{ sonos_group }}"
+
+  - service: media_player.volume_set
+    data:
+      entity_id: "{{ sonos_group }}"
+      volume_level: "0.3"
+
+  - service: media_player.play_media
+    data:
+      entity_id: "{{ sonos_group }}"
+      media_content_id: "{{ base_url }}/local/{{ audio_url }}"
+      media_content_type: music
+
+  - delay: "{{ delay }}"
+
+  - service: sonos.restore
+    data:
+      entity_id: "{{ sonos_group }}"
+
