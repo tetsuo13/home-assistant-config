@@ -18,15 +18,11 @@ sequence:
 
   # Don't call the automation for this as it toggles the lights -- if they're
   # already off we don't want to toggle them on.
+  # Turn off the "main" switch, automation will handle turning off the other.
   - alias: Turn off living room bookshelf lamps
-    repeat:
-      for_each:
-        - tp_link_smart_plug_d6d2
-        - tp_link_smart_plug_ac23
-      sequence:
-        - service: switch.turn_off
-          target:
-            entity_id: "switch.{{ repeat.item }}"
+    service: switch.turn_off
+    target:
+      entity_id: switch.tp_link_smart_plug_d6d2
 
   - alias: Turn off living room fan
     service: fan.turn_off
