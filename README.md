@@ -69,6 +69,8 @@ Runs on a [Raspberry Pi 3B](https://www.raspberrypi.org/products/raspberry-pi-3-
 
 Christmas lights automations aren't available year-round (they're added when the tree goes up, removed again when the tree goes down). See previous years in [#40](https://github.com/tetsuo13/home-assistant-config/pull/40), [#15](https://github.com/tetsuo13/home-assistant-config/pull/15) and [c013a7c](https://github.com/tetsuo13/home-assistant-config/commit/c013a7c10aa19f6366598c1a0cd125f82ec8b465) on what was done.
 
+The [`bedtime.yaml`](scripts/bedtime.yaml) handles turning off services and devices that may have been forgotten on. There's an associated automation to trigger the script late at night.
+
 ## [Door Automations](automation/doors.yaml)
 
 Opening and closing doors causes an announcement to be made through all of the Sonos speakers. A chime is played first to grab attention followed by a TTS announcement. See the [`sonos_say`](scripts/sonos_say.yaml) script on how this is done.
