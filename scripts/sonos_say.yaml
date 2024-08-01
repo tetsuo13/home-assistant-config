@@ -21,39 +21,27 @@ variables:
     {% endif %}
 
 sequence:
-  - service: sonos.snapshot
-    data_template:
-      entity_id: "{{ sonos_group }}"
-
-  - service: media_player.volume_set
-    data_template:
-      entity_id: "{{ sonos_group }}"
-      volume_level: "0.3"
-
   - service: media_player.play_media
-    data_template:
+    target:
       entity_id: "{{ sonos_group }}"
+    data_template:
       media_content_id: "{{ base_url }}/local/audio/chime01.mp3"
       media_content_type: music
+      announce: true
+      extra:
+        volume: 15
 
   - delay:
-      seconds: 3
+      seconds: 2
 
-  - service: tts.speak
-    data:
-      cache: true
-      media_player_entity_id: "{{ sonos_group }}"
-      message: "{{ message }}"
-    target:
-      entity_id: tts.elevenlabs_tts
-
-  - delay: "{{ delay }}"
-
-  - service: media_player.media_stop
+  - service: media_player.play_media
     target:
       entity_id: "{{ sonos_group }}"
-
-  - service: sonos.restore
     data_template:
-      entity_id: "{{ sonos_group }}"
+      media_content_id: >
+        media-source://tts/tts.elevenlabs_tts?message="{{ message }}"
+      media_content_type: music
+      announce: true
+      extra:
+        volume: 15
 
