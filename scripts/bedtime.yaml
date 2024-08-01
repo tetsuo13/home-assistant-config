@@ -1,0 +1,36 @@
+---
+
+icon: mdi:bed-clock
+
+description: >-
+  Various sequences to run after everyone's gone to bed. Intended to turn off
+  devices that may have been forgotten on and enable services that were
+  unintentionally left disabled.
+
+sequence:
+  - alias: Enable camera notifications
+    service: automation.turn_on
+    entity_id: automation.motion_send_camera_snapshot_notification_on_motion
+
+  - alias: Enable front door camera notifications
+    service: switch.turn_on
+    entity_id: switch.front_door_smart_motion_detection
+
+  # Don't call the automation for this as it toggles the lights -- if they're
+  # already off we don't want to toggle them on.
+  # Turn off the "main" switch, automation will handle turning off the other.
+  - alias: Turn off living room bookshelf lamps
+    service: switch.turn_off
+    target:
+      entity_id: switch.tp_link_smart_plug_d6d2
+
+  - alias: Turn off living room fan
+    service: fan.turn_off
+    target:
+      entity_id: fan.jasco_products_unknown_type_4944_id_3337_level
+
+  - alias: Turn off Sonos speakers
+    service: media_player.media_stop
+    target:
+      entity_id: group.sonos_all
+
