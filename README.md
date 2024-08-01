@@ -23,6 +23,8 @@ Runs on a [Raspberry Pi 3B](https://www.raspberrypi.org/products/raspberry-pi-3-
 | [Aeotec Z-Stick Gen5](https://aeotec.com/products/aeotec-z-stick-gen5/) (ZW090-A) | USB | [Z-Wave JS](https://www.home-assistant.io/integrations/zwave_js/) |
 | [Philips Hue Bridge](https://www.philips-hue.com/en-us/p/hue-bridge/046677458478) | Ethernet | [Philips Hue](https://www.home-assistant.io/integrations/hue) |
 
+The Hue Bridge is easily the most troublesome device in use. Requires power cycling about once a week otherwise it becomes completely unresponsive from Home Assistant.
+
 ## Lighting
 
 | Device | Connection | Home Assistant |
