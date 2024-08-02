@@ -43,5 +43,5 @@ sequence:
       media_content_type: music
       announce: true
       extra:
-        volume: 15
+        volume: 20
 
