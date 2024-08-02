@@ -3,6 +3,9 @@
 # https://www.home-assistant.io/integrations/google_translate/
 
 tts:
+  - platform: elevenlabstts
+    cache: true
+
   - platform: google_translate
     # Most of the TTS usage is to make announcements about doors opening or
     # closing. These don't change so cache them as long as possible.
