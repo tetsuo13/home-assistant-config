@@ -14,7 +14,7 @@
         - thu
         - fri
   action:
-    service: switch.turn_off
+    action: switch.turn_off
     data:
       entity_id: switch.wemo_mini_1
 
@@ -29,7 +29,7 @@
         - sat
         - sun
   action:
-    service: switch.turn_off
+    action: switch.turn_off
     data:
       entity_id: switch.wemo_mini_1
 
@@ -39,7 +39,7 @@
     platform: time
     at: "07:20:00"
   action:
-    service: switch.turn_on
+    action: switch.turn_on
     data:
       entity_id: switch.wemo_mini_1
 
@@ -57,7 +57,7 @@
       entity_id: switch.dimmer_dry_contact_relay
       state: 'on'
   action:
-    - service: switch.turn_off
+    - action: switch.turn_off
       entity_id: switch.dimmer_dry_contact_relay
 
 - alias: Turn Off Primary Bathroom Fan After Period Of Time
@@ -73,6 +73,6 @@
         minutes: 20
   condition: []
   action:
-    - service: switch.turn_off
+    - action: switch.turn_off
       entity_id: switch.dimmer_dry_contact_relay_2
 

@@ -17,7 +17,7 @@
         - thu
         - fri
   action:
-    service: light.turn_on
+    action: light.turn_on
     data:
       entity_id: light.hue_white_lamp_1
       brightness: 255
@@ -42,7 +42,7 @@
         - thu
         - fri
   action:
-    service: light.turn_off
+    action: light.turn_off
     entity_id: light.hue_white_lamp_1
 
 - alias: Turn On Lights Before Sunset
@@ -54,7 +54,7 @@
     event: sunset
     offset: "-1:15:00"
   action:
-    service: light.turn_on
+    action: light.turn_on
     data:
       entity_id:
         - light.hue_white_lamp_1
@@ -69,7 +69,7 @@
     platform: time
     at: "20:00:00"
   action:
-    service: light.turn_off
+    action: light.turn_off
     data:
       entity_id: light.hue_white_lamp_3
       transition: 1800
@@ -81,7 +81,7 @@
     platform: time
     at: "20:30:00"
   action:
-    service: light.turn_off
+    action: light.turn_off
     data:
       entity_id: light.hue_white_lamp_1
       transition: 1800
@@ -93,7 +93,7 @@
     event: sunset
     offset: "-0:30:00"
   action:
-    service: light.turn_on
+    action: light.turn_on
     data:
       entity_id: light.controller_rgb_44_key_ir_cde6d9
       brightness: 13
@@ -107,7 +107,7 @@
     event: sunrise
     offset: "00:15:00"
   action:
-    service: light.turn_off
+    action: light.turn_off
     data:
       entity_id: light.controller_rgb_44_key_ir_cde6d9
 
@@ -117,7 +117,7 @@
     platform: sun
     event: sunrise
   action:
-    - service: light.turn_off
+    - action: light.turn_off
       data:
         entity_id:
           - light.hue_color_lamp_1
@@ -128,7 +128,7 @@
     event: sunset
     offset: '-00:15:00'
   action:
-    - service: light.turn_on
+    - action: light.turn_on
       data:
         entity_id: light.hue_color_lamp_1
         brightness_pct: 75
@@ -141,7 +141,7 @@
     event: sunset
     offset: "-1:00:00"
   action:
-    service: switch.turn_on
+    action: switch.turn_on
     data:
       entity_id: switch.wemo_mini_1_2
 
@@ -151,7 +151,7 @@
     platform: time
     at: "22:30:00"
   action:
-    service: switch.turn_off
+    action: switch.turn_off
     data:
       entity_id: switch.wemo_mini_1_2
 
@@ -160,7 +160,7 @@
     platform: state
     entity_id: binary_sensor.teams_on_call
   action:
-    - service: switch.turn_{{ trigger.to_state.state }}
+    - action: switch.turn_{{ trigger.to_state.state }}
       target:
         entity_id: switch.wemo_mini_4
 
@@ -172,7 +172,7 @@
     - platform: state
       entity_id: switch.tp_link_smart_plug_d6d2
   action:
-    - service: "switch.turn_{{ trigger.to_state.state }}"
+    - action: switch.turn_{{ trigger.to_state.state }}
       target:
         entity_id: switch.tp_link_smart_plug_ac23
 

@@ -7,5 +7,5 @@
     platform: time
     at: "22:30:00"
   action:
-    service: script.bedtime
+    action: script.bedtime
 
