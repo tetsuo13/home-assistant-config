@@ -39,7 +39,7 @@ sequence:
       entity_id: "{{ sonos_group }}"
     data_template:
       media_content_id: >
-        media-source://tts/tts.elevenlabs_tts?message="{{ message }}"
+        media-source://tts/tts.elevenlabs?message="{{ message }}"
       media_content_type: music
       announce: true
       extra:
