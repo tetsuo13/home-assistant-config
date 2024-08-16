@@ -21,16 +21,16 @@ variables:
     {% endif %}
 
 sequence:
-  - service: sonos.snapshot
+  - action: sonos.snapshot
     data_template:
       entity_id: "{{ sonos_group }}"
 
-  - service: media_player.volume_set
+  - action: media_player.volume_set
     data_template:
       entity_id: "{{ sonos_group }}"
       volume_level: "0.3"
 
-  - service: media_player.play_media
+  - action: media_player.play_media
     data_template:
       entity_id: "{{ sonos_group }}"
       media_content_id: "{{ base_url }}/local/audio/chime01.mp3"
@@ -39,21 +39,21 @@ sequence:
   - delay:
       seconds: 3
 
-  - service: tts.speak
+  - action: tts.speak
     data:
       cache: true
       media_player_entity_id: "{{ sonos_group }}"
       message: "{{ message }}"
     target:
-      entity_id: tts.elevenlabs_tts
+      entity_id: tts.elevenlabs
 
   - delay: "{{ delay }}"
 
-  - service: media_player.media_stop
+  - action: media_player.media_stop
     target:
       entity_id: "{{ sonos_group }}"
 
-  - service: sonos.restore
+  - action: sonos.restore
     data_template:
       entity_id: "{{ sonos_group }}"
 

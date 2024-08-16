@@ -38,7 +38,7 @@
       entity_id: binary_sensor.today_is_someones_birthday
       state: "off"
   action:
-    service: script.sonos_say
+    action: script.sonos_say
     data:
       message: "{{ location_name }} door open"
       delay: "00:00:03"
@@ -81,7 +81,7 @@
       entity_id: binary_sensor.today_is_someones_birthday
       state: "off"
   action:
-    service: script.sonos_say
+    action: script.sonos_say
     data:
       message: "{{ location_name }} door closed"
       delay: "00:00:03"
@@ -104,7 +104,7 @@
               entity_id: binary_sensor.today_is_someones_birthday
               state: "on"
           sequence:
-            - service: script.sonos_play_file
+            - action: script.sonos_play_file
               data:
                 audio_url: "audio/birthday01.mp3"
                 delay: "00:00:16"
@@ -113,7 +113,7 @@
               entity_id: binary_sensor.halloween_month
               state: "on"
           sequence:
-            - service: script.sonos_play_file
+            - action: script.sonos_play_file
               data:
                 audio_url: "audio/ghost01.mp3"
                 delay: "00:00:08"
@@ -122,7 +122,7 @@
               entity_id: binary_sensor.thanksgiving_month
               state: "on"
           sequence:
-            - service: script.sonos_play_file
+            - action: script.sonos_play_file
               data:
                 audio_url: "audio/turkey01.mp3"
                 delay: "00:00:08"
@@ -131,7 +131,7 @@
               entity_id: binary_sensor.christmas_month
               state: "on"
           sequence:
-            - service: script.sonos_play_file
+            - action: script.sonos_play_file
               data:
                 audio_url: "audio/christmas01.mp3"
                 delay: "00:00:08"
@@ -154,7 +154,7 @@
               entity_id: binary_sensor.today_is_someones_birthday
               state: "on"
           sequence:
-            - service: script.sonos_play_file
+            - action: script.sonos_play_file
               data:
                 audio_url: "audio/birthday01.mp3"
                 delay: "00:00:16"
@@ -163,7 +163,7 @@
               entity_id: binary_sensor.halloween_month
               state: "on"
           sequence:
-            - service: script.sonos_play_file
+            - action: script.sonos_play_file
               data:
                 audio_url: "audio/howl01.mp3"
                 delay: "00:00:08"
@@ -172,7 +172,7 @@
               entity_id: binary_sensor.thanksgiving_month
               state: "on"
           sequence:
-            - service: script.sonos_play_file
+            - action: script.sonos_play_file
               data:
                 audio_url: "audio/turkey01.mp3"
                 delay: "00:00:08"
@@ -181,7 +181,7 @@
               entity_id: binary_sensor.christmas_month
               state: "on"
           sequence:
-            - service: script.sonos_play_file
+            - action: script.sonos_play_file
               data:
                 audio_url: "audio/christmas01.mp3"
                 delay: "00:00:08"

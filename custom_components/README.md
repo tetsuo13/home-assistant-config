@@ -8,9 +8,3 @@ https://github.com/rroller/dahua
 
 The Dahua integration is used to manage the Amcrest cameras.
 
-## ElevenLabs TTS
-
-https://github.com/carleeno/elevenlabs_tts
-
-[ElevenLabs](https://elevenlabs.io/) is used to provide a better, more realistic text-to-speech engine.
-

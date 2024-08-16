@@ -52,15 +52,15 @@
         type_detected: 'Carbon monoxide'
         location_detected: 'workshop'
   action:
-    - service: notify.email
+    - action: notify.email
       data_template:
         title: "Alert! {{ type_detected }} detected in {{ location_detected }} room"
         message: "{{ type_detected }} was detected in the {{ location_detected }} room! Investigate immediately and evacuate!"
-    - service: script.sonos_say
+    - action: script.sonos_say
       data:
         message: "{{ type_detected }} was detected in the {{ location_detected }} room! Investigate immediately and evacuate!"
         delay: '00:00:06'
-    - service: notify.mobile_apps
+    - action: notify.mobile_apps
       data:
         message: "Alert! {{ type_detected }} detected in {{ location_detected }} room! Investigate immediately and evacuate!"
 
@@ -79,7 +79,7 @@
     for:
       seconds: 15
   action:
-    service: light.turn_on
+    action: light.turn_on
     data:
       entity_id:
         - light.hue_color_lamp_1

@@ -15,7 +15,7 @@
       after: "06:00:00"
       before: "21:15:00"
   action:
-    - service: light.turn_on
+    - action: light.turn_on
       entity_id: light.zooz_unknown_type_a000_id_a008_level
       data:
         brightness_pct: 100
@@ -36,7 +36,7 @@
       after: "21:15:00"
       before: "06:15:00"
   action:
-    - service: light.turn_on
+    - action: light.turn_on
       entity_id: light.zooz_unknown_type_a000_id_a008_level
       data:
         brightness_pct: 21
@@ -55,7 +55,7 @@
       entity_id: light.zooz_unknown_type_a000_id_a008_level
       state: "on"
   action:
-    - service: light.turn_off
+    - action: light.turn_off
       entity_id: light.zooz_unknown_type_a000_id_a008_level
 
 - alias: Motion - Send Camera Snapshot Notification On Motion
@@ -94,11 +94,11 @@
   action:
     - delay:
         seconds: 4
-    - service: camera.snapshot
+    - action: camera.snapshot
       data:
         entity_id: "{{ camera_name }}"
         filename: "{{ snapshot_absolute_path }}"
-    - service: notify.mobile_apps
+    - action: notify.mobile_apps
       data:
         title: Camera Motion Detected
         message: "{{ trigger.to_state.name }}"
