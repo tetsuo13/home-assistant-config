@@ -20,24 +20,13 @@ variables:
     {% endif %}
 
 sequence:
-  - action: sonos.snapshot
-    data:
-      entity_id: "{{ sonos_group }}"
-
-  - action: media_player.volume_set
-    data:
-      entity_id: "{{ sonos_group }}"
-      volume_level: "0.3"
-
   - action: media_player.play_media
-    data:
+    target:
       entity_id: "{{ sonos_group }}"
+    data_template:
       media_content_id: "{{ base_url }}/local/{{ audio_url }}"
       media_content_type: music
-
-  - delay: "{{ delay }}"
-
-  - action: sonos.restore
-    data:
-      entity_id: "{{ sonos_group }}"
+      announce: true
+      extra:
+        volume: 15
 
