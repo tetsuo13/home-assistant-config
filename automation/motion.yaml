@@ -48,8 +48,7 @@
       entity_id: binary_sensor.4_in_1_sensor_home_security_motion_detection
       from: "on"
       to: "off"
-      for:
-        minutes: 3
+      for: "00:03:00"
   conditions:
     - condition: state
       entity_id: light.zooz_unknown_type_a000_id_a008_level

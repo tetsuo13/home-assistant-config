@@ -50,8 +50,7 @@
       entity_id: binary_sensor.4_in_1_sensor_home_security_motion_detection
       from: "on"
       to: "off"
-      for:
-        minutes: 5
+      for: "00:05:00"
   conditions:
     - condition: state
       entity_id: switch.dimmer_dry_contact_relay
@@ -69,8 +68,7 @@
     - trigger: state
       entity_id: switch.dimmer_dry_contact_relay_2
       to: "on"
-      for:
-        minutes: 20
+      for: "00:20:00"
   conditions: []
   actions:
     - action: switch.turn_off
