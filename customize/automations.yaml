@@ -2,11 +2,11 @@
 # Order matters
 
 automation.turn_on_lights_to_wake_us_up:
-  friendly_name: Bedroom Lights On at 6:30am
+  friendly_name: Bedroom Lights On at 6:00am
   icon: mdi:lightbulb-outline
 
 automation.turn_off_lights_before_work:
-  friendly_name: Bedroom Lights Off at 7:45am
+  friendly_name: Bedroom Lights Off Before Work
   icon: mdi:lightbulb-outline
 
 automation.turn_on_lights_before_sunset:
@@ -17,8 +17,8 @@ automation.turn_off_lee_s_bedside_by_8_30pm:
   friendly_name: Turn Off Lee's Bedside By 8:30pm
   icon: mdi:lightbulb-outline
 
-automation.turn_off_andrei_s_bedside_by_9_15pm:
-  friendly_name: Turn Off Andrei's Bedside Off By 9:15pm
+automation.turn_off_andrei_s_bedside_by_9_00pm:
+  friendly_name: Turn Off Andrei's Bedside Off By 9:00pm
   icon: mdi:lightbulb-outline
 
 automation.turn_on_outside_lights_early_morning:
@@ -37,8 +37,8 @@ automation.turn_on_night_light_at_sunset:
   friendly_name: Turn On Night-Light at Sunset
   icon: mdi:led-strip
 
-automation.turn_off_night_light_8_00am:
-  friendly_name: Turn Off Night-Light 8:00am
+automation.turn_off_night_light_after_sunrise:
+  friendly_name: Turn Off Night-Light After Sunrise
   icon: mdi:led-strip
 
 automation.turn_on_dining_room_lamp_before_sunset:

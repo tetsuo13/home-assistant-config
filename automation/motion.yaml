@@ -1,77 +1,79 @@
 ---
+# Ending time range needs to match next automation's beginning time.
 - alias: Motion - Turn On Guest Bathroom When Motion Detected Daytime
   id: motion_turn_on_guest_bathroom_when_motion_detected_daytime
-  trigger:
-    - platform: state
+  triggers:
+    - trigger: state
       entity_id: binary_sensor.4_in_1_sensor_home_security_motion_detection
       from: "off"
       to: "on"
-  condition:
+  conditions:
     - condition: state
       entity_id: light.zooz_unknown_type_a000_id_a008_level
       state: "off"
     - condition: time
       after: "06:00:00"
-      before: "22:00:00"
-  action:
-    - service: light.turn_on
+      before: "21:15:00"
+  actions:
+    - action: light.turn_on
       entity_id: light.zooz_unknown_type_a000_id_a008_level
       data:
         brightness_pct: 100
 
+# Beginning time range needs to match previous automation's ending time.
 - alias: Motion - Turn On Guest Bathroom When Motion Detected Night
   id: motion_turn_on_guest_bathroom_when_motion_detected_night
-  trigger:
-    - platform: state
+  triggers:
+    - trigger: state
       entity_id: binary_sensor.4_in_1_sensor_home_security_motion_detection
       from: "off"
       to: "on"
-  condition:
+  conditions:
     - condition: state
       entity_id: light.zooz_unknown_type_a000_id_a008_level
       state: "off"
     - condition: time
-      after: "22:00:00"
-      before: "06:00:00"
-  action:
-    - service: light.turn_on
+      after: "21:15:00"
+      before: "06:15:00"
+  actions:
+    - action: light.turn_on
       entity_id: light.zooz_unknown_type_a000_id_a008_level
       data:
         brightness_pct: 21
 
 - alias: Motion - Turn Off Guest Bathroom When No Motion Detected
   id: motion_turn_off_guest_bathroom_when_no_motion_detected
-  trigger:
-    - platform: state
+  triggers:
+    - trigger: state
       entity_id: binary_sensor.4_in_1_sensor_home_security_motion_detection
       from: "on"
       to: "off"
       for:
         minutes: 3
-  condition:
+  conditions:
     - condition: state
       entity_id: light.zooz_unknown_type_a000_id_a008_level
       state: "on"
-  action:
-    - service: light.turn_off
+  actions:
+    - action: light.turn_off
       entity_id: light.zooz_unknown_type_a000_id_a008_level
 
 - alias: Motion - Send Camera Snapshot Notification On Motion
   id: motion_send_camera_snapshot_notification_on_motion
   description: >
     Send a notification to the Companion App with a camera snapshot.
-  trigger:
-    - platform: state
+  triggers:
+    - trigger: state
       entity_id: binary_sensor.office_motion_alarm
       to: "on"
       variables:
         camera_name: camera.office_main
-    - platform: state
+    - trigger: state
       entity_id: binary_sensor.laundry_motion_alarm
       to: "on"
       variables:
         camera_name: camera.laundry_main
-    - platform: state
+    - trigger: state
       entity_id: binary_sensor.front_door_cross_region_detection
       to: "on"
       variables:
@@ -89,14 +91,14 @@
     # Secret made available as a variable in order to be able to concatenate
     # it with the filename.
     snapshot_base_url: !secret camera_snapshots_public_url
-  action:
+  actions:
     - delay:
         seconds: 4
-    - service: camera.snapshot
+    - action: camera.snapshot
       data:
         entity_id: "{{ camera_name }}"
         filename: "{{ snapshot_absolute_path }}"
-    - service: notify.mobile_apps
+    - action: notify.mobile_apps
       data:
         title: Camera Motion Detected
         message: "{{ trigger.to_state.name }}"

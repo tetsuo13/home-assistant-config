@@ -1,0 +1,11 @@
+---
+
+- alias: Bedtime routine
+  id: bedtime_routine
+  description: Trigger bedtime routine at 10:30pm.
+  triggers:
+    platform: time
+    at: "22:30:00"
+  actions:
+    action: script.bedtime
+

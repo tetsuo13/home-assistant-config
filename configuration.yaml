@@ -25,7 +25,7 @@ homeassistant:
     camera_snapshots: www/images/snapshots
 
 automation: !include_dir_merge_list automation
-script: !include_dir_merge_named components/scripts
+script: !include_dir_named scripts
 shell_command: !include components/shell_commands.yaml
 
 logger:

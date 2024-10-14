@@ -13,16 +13,16 @@ notify:
     sender: !secret smtp_sender
     recipient:
       - !secret smtp_recipient1
-    sender_name: Home Assistant
+    sender_name: !secret smtp_sender_name
 
   - name: mobile_apps
     platform: group
     services:
-      - service: mobile_app_andrei_s_phone
-      - service: mobile_app_pixel_6
+      - action: mobile_app_pixel_5
+      - action: mobile_app_pixel_6
 
   - name: mobile_apps_admin
     platform: group
     services:
-      - service: mobile_app_andrei_s_phone
+      - action: mobile_app_pixel_5
 

@@ -4,11 +4,11 @@
   id: system_clean_up_camera_snapshots_directory_periodically
   description: >
     Daily delete of all camera shapshots files older than 3 days.
-  trigger:
-    - platform: time
+  triggers:
+    - trigger: time
       at: "05:27:18"
-  action:
-    - service: shell_command.clean_camera_snapshots
+  actions:
+    - action: shell_command.clean_camera_snapshots
       data:
         days_threshold: 3
 

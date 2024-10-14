@@ -3,13 +3,13 @@
 
 - alias: Alarm - Triggered Armed Away
   id: alarm_triggered_armed_away
-  trigger:
-    - platform: state
+  triggers:
+    - trigger: state
       entity_id: alarm_control_panel.alarm
       to: triggered
-  condition: []
-  action:
-    - service: notify.mobile_apps
+  conditions: []
+  actions:
+    - action: notify.mobile_apps
       data:
         title: Alarm Triggered!
         message: The alarm was triggered
@@ -21,35 +21,35 @@
 
 - alias: Alarm - Away Door Alarm
   id: alarm_away_door_alarm
-  trigger:
-    - platform: state
+  triggers:
+    - trigger: state
       entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_2
       to: "on"
       variables:
         location_name: Kitchen
-    - platform: state
+    - trigger: state
       entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open
       to: "on"
       variables:
         location_name: Front
-    - platform: state
+    - trigger: state
       entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_4
       to: "on"
       variables:
         location_name: Laundry
-    - platform: state
+    - trigger: state
       entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_3
       to: "on"
       variables:
         location_name: Office
-  condition:
+  conditions:
     - condition: state
       entity_id: alarm_control_panel.alarm
       state: armed_away
-  action:
-    - service: alarm_control_panel.alarm_trigger
+  actions:
+    - action: alarm_control_panel.alarm_trigger
       entity_id: alarm_control_panel.alarm
-    - service: notify.mobile_apps
+    - action: notify.mobile_apps
       data:
         title: Door Alarm Triggered!
         message: "{{ location_name }} Door Alarm Triggered!"
@@ -58,7 +58,7 @@
           notification_icon: mdi:shield-home-outline
           ttl: 0
           priority: high
-    - service: notify.email
+    - action: notify.email
       data_template:
         title: Door Alarm Triggered
         message: "{{ location_name }} door alarm triggered!"

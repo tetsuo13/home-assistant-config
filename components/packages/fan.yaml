@@ -13,18 +13,18 @@ fan:
         friendly_name: Living Room Fan
         value_template: "{{ states('fan.jasco_products_unknown_type_4944_id_3337_level') }}"
         turn_on:
-          - service: fan.turn_on
+          - action: fan.turn_on
             target:
               entity_id: fan.jasco_products_unknown_type_4944_id_3337_level
         turn_off:
-          - service: fan.turn_off
+          - action: fan.turn_off
             target:
               entity_id: fan.jasco_products_unknown_type_4944_id_3337_level
         percentage_template: >
           {{ state_attr('fan.jasco_products_unknown_type_4944_id_3337_level', 'percentage') }}
         speed_count: 3
         set_percentage:
-          - service: fan.set_percentage
+          - action: fan.set_percentage
             target:
               entity_id: fan.jasco_products_unknown_type_4944_id_3337_level
             data:
@@ -47,7 +47,7 @@ fan:
             off
           {% endif %}
         set_preset_mode:
-          - service: fan.set_percentage
+          - action: fan.set_percentage
             target:
               entity_id: fan.jasco_products_unknown_type_4944_id_3337_level
             data:

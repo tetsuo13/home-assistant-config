@@ -2,29 +2,29 @@
 # yamllint disable rule:line-length
 - alias: Announce Door Opened
   id: "announce_door_opened"
-  trigger:
-    - platform: state
+  triggers:
+    - trigger: state
       entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_2
       to: "on"
       variables:
         location_name: "Kitchen"
-    - platform: state
+    - trigger: state
       entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open
       to: "on"
       variables:
         location_name: "Front"
-    - platform: state
+    - trigger: state
       entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_4
       to: "on"
       variables:
         location_name: "Laundry"
-    - platform: state
+    - trigger: state
       entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_3
       to: "on"
       variables:
         location_name: "Office"
   mode: queued
-  condition:
+  conditions:
     - condition: state
       entity_id: binary_sensor.halloween_month
       state: "off"
@@ -37,37 +37,37 @@
     - condition: state
       entity_id: binary_sensor.today_is_someones_birthday
       state: "off"
-  action:
-    service: script.sonos_say
+  actions:
+    action: script.sonos_say
     data:
       message: "{{ location_name }} door open"
       delay: "00:00:03"
 
 - alias: Announce Door Closed
   id: "announce_door_closed"
-  trigger:
-    - platform: state
+  triggers:
+    - trigger: state
       entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_2
       to: "off"
       variables:
         location_name: "Kitchen"
-    - platform: state
+    - trigger: state
       entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open
       to: "off"
       variables:
         location_name: "Front"
-    - platform: state
+    - trigger: state
       entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_4
       to: "off"
       variables:
         location_name: "Laundry"
-    - platform: state
+    - trigger: state
       entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_3
       to: "off"
       variables:
         location_name: "Office"
   mode: queued
-  condition:
+  conditions:
     - condition: state
       entity_id: binary_sensor.halloween_month
       state: "off"
@@ -80,16 +80,16 @@
     - condition: state
       entity_id: binary_sensor.today_is_someones_birthday
       state: "off"
-  action:
-    service: script.sonos_say
+  actions:
+    action: script.sonos_say
     data:
       message: "{{ location_name }} door closed"
       delay: "00:00:03"
 
 - alias: Announce Door Opened (Event)
   id: "announce_door_opened_event"
-  trigger:
-    platform: state
+  triggers:
+    trigger: state
     entity_id:
       - binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open
       - binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_2
@@ -97,14 +97,14 @@
       - binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_4
     to: "on"
   mode: queued
-  action:
+  actions:
     - choose:
         - conditions:
             - condition: state
               entity_id: binary_sensor.today_is_someones_birthday
               state: "on"
           sequence:
-            - service: script.sonos_play_file
+            - action: script.sonos_play_file
               data:
                 audio_url: "audio/birthday01.mp3"
                 delay: "00:00:16"
@@ -113,7 +113,7 @@
               entity_id: binary_sensor.halloween_month
               state: "on"
           sequence:
-            - service: script.sonos_play_file
+            - action: script.sonos_play_file
               data:
                 audio_url: "audio/ghost01.mp3"
                 delay: "00:00:08"
@@ -122,7 +122,7 @@
               entity_id: binary_sensor.thanksgiving_month
               state: "on"
           sequence:
-            - service: script.sonos_play_file
+            - action: script.sonos_play_file
               data:
                 audio_url: "audio/turkey01.mp3"
                 delay: "00:00:08"
@@ -131,15 +131,15 @@
               entity_id: binary_sensor.christmas_month
               state: "on"
           sequence:
-            - service: script.sonos_play_file
+            - action: script.sonos_play_file
               data:
                 audio_url: "audio/christmas01.mp3"
                 delay: "00:00:08"
 
 - alias: Announce Door Closed (Event)
   id: "announce_door_closed_event"
-  trigger:
-    platform: state
+  triggers:
+    trigger: state
     entity_id:
       - binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open
       - binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_2
@@ -147,14 +147,14 @@
       - binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_4
     to: "off"
   mode: queued
-  action:
+  actions:
     - choose:
         - conditions:
             - condition: state
               entity_id: binary_sensor.today_is_someones_birthday
               state: "on"
           sequence:
-            - service: script.sonos_play_file
+            - action: script.sonos_play_file
               data:
                 audio_url: "audio/birthday01.mp3"
                 delay: "00:00:16"
@@ -163,7 +163,7 @@
               entity_id: binary_sensor.halloween_month
               state: "on"
           sequence:
-            - service: script.sonos_play_file
+            - action: script.sonos_play_file
               data:
                 audio_url: "audio/howl01.mp3"
                 delay: "00:00:08"
@@ -172,7 +172,7 @@
               entity_id: binary_sensor.thanksgiving_month
               state: "on"
           sequence:
-            - service: script.sonos_play_file
+            - action: script.sonos_play_file
               data:
                 audio_url: "audio/turkey01.mp3"
                 delay: "00:00:08"
@@ -181,7 +181,7 @@
               entity_id: binary_sensor.christmas_month
               state: "on"
           sequence:
-            - service: script.sonos_play_file
+            - action: script.sonos_play_file
               data:
                 audio_url: "audio/christmas01.mp3"
                 delay: "00:00:08"

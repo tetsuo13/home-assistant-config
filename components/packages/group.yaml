@@ -10,3 +10,10 @@ group:
       - media_player.sonos03
       - media_player.sonos04
 
+  sonos_all_but_office:
+    name: All Sonos Speakers Except for the Office
+    entities:
+      - media_player.sonos01
+      - media_player.sonos02
+      - media_player.sonos04
+
