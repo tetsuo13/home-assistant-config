@@ -2,10 +2,10 @@
 
 - alias: Turn Off Air Purifier Weekdays (6:30am)
   id: turn_off_air_purifier_weekdays
-  trigger:
-    platform: time
+  triggers:
+    trigger: time
     at: "06:30:00"
-  condition:
+  conditions:
     - condition: time
       weekday:
         - mon
@@ -13,50 +13,50 @@
         - wed
         - thu
         - fri
-  action:
+  actions:
     action: switch.turn_off
     data:
       entity_id: switch.wemo_mini_1
 
 - alias: Turn Off Air Purifier Weekends (7:15am)
   id: turn_off_air_purifier_weekends
-  trigger:
-    platform: time
+  triggers:
+    trigger: time
     at: "07:15:00"
-  condition:
+  conditions:
     - condition: time
       weekday:
         - sat
         - sun
-  action:
+  actions:
     action: switch.turn_off
     data:
       entity_id: switch.wemo_mini_1
 
 - alias: Turn On Air Purifier Mid-Morning
   id: turn_on_air_purifier_midmorning
-  trigger:
-    platform: time
+  triggers:
+    trigger: time
     at: "07:20:00"
-  action:
+  actions:
     action: switch.turn_on
     data:
       entity_id: switch.wemo_mini_1
 
 - alias: Motion - Turn Off Guest Bathroom Fan When No Motion Detected
   id: motion_turn_off_guest_bathroom_fan_when_no_motion_detected
-  trigger:
-    - platform: state
+  triggers:
+    - trigger: state
       entity_id: binary_sensor.4_in_1_sensor_home_security_motion_detection
       from: 'on'
       to: 'off'
       for:
         minutes: 5
-  condition:
+  conditions:
     - condition: state
       entity_id: switch.dimmer_dry_contact_relay
       state: 'on'
-  action:
+  actions:
     - action: switch.turn_off
       entity_id: switch.dimmer_dry_contact_relay
 
@@ -65,14 +65,14 @@
   description: >
     Turn off the fan if it's been on for 20 minutes. There isn't motion
     detection available.
-  trigger:
-    - platform: state
+  triggers:
+    - trigger: state
       entity_id: switch.dimmer_dry_contact_relay_2
       to: "on"
       for:
         minutes: 20
-  condition: []
-  action:
+  conditions: []
+  actions:
     - action: switch.turn_off
       entity_id: switch.dimmer_dry_contact_relay_2
 

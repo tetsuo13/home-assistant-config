@@ -5,10 +5,10 @@
     Fade lights in on weekday mornings to simulate a sunrise next to
     our faces to wake us up.
   initial_state: true
-  trigger:
-    platform: time
+  triggers:
+    trigger: time
     at: "06:00:00"
-  condition:
+  conditions:
     - condition: time
       weekday:
         - mon
@@ -16,7 +16,7 @@
         - wed
         - thu
         - fri
-  action:
+  actions:
     action: light.turn_on
     data:
       entity_id: light.hue_white_lamp_1
@@ -28,12 +28,12 @@
   description: >-
     Turn off lights weekday mornings after sunrise.
   initial_state: true
-  trigger:
-    - platform: numeric_state
+  triggers:
+    - trigger: numeric_state
       entity_id: sun.sun
       attribute: elevation
       above: 6.0
-  condition:
+  conditions:
     - condition: time
       weekday:
         - mon
@@ -41,7 +41,7 @@
         - wed
         - thu
         - fri
-  action:
+  actions:
     action: light.turn_off
     entity_id: light.hue_white_lamp_1
 
@@ -49,11 +49,11 @@
   description: >-
     Gradually fade in lights as the sun sets into the night.
   initial_state: true
-  trigger:
-    platform: sun
+  triggers:
+    trigger: sun
     event: sunset
     offset: "-1:15:00"
-  action:
+  actions:
     action: light.turn_on
     data:
       entity_id:
@@ -65,10 +65,10 @@
 # Hue bulbs take 30 minutes to fade to off.
 - alias: Turn Off Lee's Bedside By 8:30pm
   initial_state: true
-  trigger:
-    platform: time
+  triggers:
+    trigger: time
     at: "20:00:00"
-  action:
+  actions:
     action: light.turn_off
     data:
       entity_id: light.hue_white_lamp_3
@@ -77,10 +77,10 @@
 # Hue bulbs take 30 minutes to fade to off.
 - alias: Turn Off Andrei's Bedside By 9:00pm
   id: turn_off_andrei_s_bedside_by_9_00pm
-  trigger:
-    platform: time
+  triggers:
+    trigger: time
     at: "20:30:00"
-  action:
+  actions:
     action: light.turn_off
     data:
       entity_id: light.hue_white_lamp_1
@@ -88,11 +88,11 @@
 
 - alias: Turn On Night-Light at Sunset
   initial_state: true
-  trigger:
-    platform: sun
+  triggers:
+    trigger: sun
     event: sunset
     offset: "-0:30:00"
-  action:
+  actions:
     action: light.turn_on
     data:
       entity_id: light.controller_rgb_44_key_ir_cde6d9
@@ -102,32 +102,32 @@
   id: turn_off_night_light_after_sunrise
   description: Turn off night-light 15 minutes after sunrise.
   initial_state: true
-  trigger:
-    platform: sun
+  triggers:
+    trigger: sun
     event: sunrise
     offset: "00:15:00"
-  action:
+  actions:
     action: light.turn_off
     data:
       entity_id: light.controller_rgb_44_key_ir_cde6d9
 
 
 - alias: Turn Off Outside Lights Sunrise
-  trigger:
-    platform: sun
+  triggers:
+    trigger: sun
     event: sunrise
-  action:
+  actions:
     - action: light.turn_off
       data:
         entity_id:
           - light.hue_color_lamp_1
 
 - alias: Turn On Outside Lights Sunset
-  trigger:
-    platform: sun
+  triggers:
+    trigger: sun
     event: sunset
     offset: '-00:15:00'
-  action:
+  actions:
     - action: light.turn_on
       data:
         entity_id: light.hue_color_lamp_1
@@ -136,30 +136,30 @@
 
 - alias: Turn On Dining Room Lamp Before Sunset
   initial_state: true
-  trigger:
-    platform: sun
+  triggers:
+    trigger: sun
     event: sunset
     offset: "-1:00:00"
-  action:
+  actions:
     action: switch.turn_on
     data:
       entity_id: switch.wemo_mini_1_2
 
 - alias: Turn Off Dining Room Lamp
   initial_state: true
-  trigger:
-    platform: time
+  triggers:
+    trigger: time
     at: "22:30:00"
-  action:
+  actions:
     action: switch.turn_off
     data:
       entity_id: switch.wemo_mini_1_2
 
 - alias: Toggle Live Sign When Busy in Teams
-  trigger:
-    platform: state
+  triggers:
+    trigger: state
     entity_id: binary_sensor.teams_on_call
-  action:
+  actions:
     - action: switch.turn_{{ trigger.to_state.state }}
       target:
         entity_id: switch.wemo_mini_4
@@ -168,10 +168,10 @@
   id: turn_on_both_living_room_bookshelf_lamps_from_single_switch
   # yamllint disable-line rule:line-length
   description: Physically toggling the one reachable switch should toggle the other switch in tandem
-  trigger:
-    - platform: state
+  triggers:
+    - trigger: state
       entity_id: switch.tp_link_smart_plug_d6d2
-  action:
+  actions:
     - action: switch.turn_{{ trigger.to_state.state }}
       target:
         entity_id: switch.tp_link_smart_plug_ac23

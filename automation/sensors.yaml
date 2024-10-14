@@ -1,14 +1,14 @@
 ---
 - alias: Laundry flooding
   id: laundry_flooding
-  trigger:
-    platform: state
+  triggers:
+    trigger: state
     entity_id: binary_sensor.flood_sensor_water_leak_state
     from: "off"
     to: "on"
     for:
       seconds: 15
-  action:
+  actions:
     - action: notify.email
       data_template:
         title: Laundry room is flooding
@@ -28,8 +28,8 @@
 - alias: Low Battery Notification
   id: low_battery_notification
   description: Notify of low battery level in devices which have batteries.
-  trigger:
-    - platform: state
+  triggers:
+    - trigger: state
       entity_id:
         # Sensor fires at 80% battery level remaining then device is mostly
         # off the network and otherwise unresponsive.
@@ -53,7 +53,7 @@
     # just before they drop to 77%. Would prefer to trigger only if it's been
     # at 77% for a few days however restarting Home Assistant will reset that
     # lookup. Using a more conservative value instead.
-    - platform: numeric_state
+    - trigger: numeric_state
       entity_id:
         - sensor.zcombo_g_smoke_co_alarm_battery_level
         - sensor.zcombo_g_smoke_co_alarm_battery_level_2
@@ -61,7 +61,7 @@
       below: 78
       for:
         hours: 8
-  action:
+  actions:
     - action: notify.mobile_apps
       data:
         message: The {{ trigger.to_state.attributes.friendly_name }} is Low

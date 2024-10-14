@@ -3,12 +3,12 @@
 
 - alias: Alarm - Triggered Armed Away
   id: alarm_triggered_armed_away
-  trigger:
-    - platform: state
+  triggers:
+    - trigger: state
       entity_id: alarm_control_panel.alarm
       to: triggered
-  condition: []
-  action:
+  conditions: []
+  actions:
     - action: notify.mobile_apps
       data:
         title: Alarm Triggered!
@@ -21,32 +21,32 @@
 
 - alias: Alarm - Away Door Alarm
   id: alarm_away_door_alarm
-  trigger:
-    - platform: state
+  triggers:
+    - trigger: state
       entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_2
       to: "on"
       variables:
         location_name: Kitchen
-    - platform: state
+    - trigger: state
       entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open
       to: "on"
       variables:
         location_name: Front
-    - platform: state
+    - trigger: state
       entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_4
       to: "on"
       variables:
         location_name: Laundry
-    - platform: state
+    - trigger: state
       entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_3
       to: "on"
       variables:
         location_name: Office
-  condition:
+  conditions:
     - condition: state
       entity_id: alarm_control_panel.alarm
       state: armed_away
-  action:
+  actions:
     - action: alarm_control_panel.alarm_trigger
       entity_id: alarm_control_panel.alarm
     - action: notify.mobile_apps
