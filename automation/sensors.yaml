@@ -6,8 +6,7 @@
     entity_id: binary_sensor.flood_sensor_water_leak_state
     from: "off"
     to: "on"
-    for:
-      seconds: 15
+    for: "00:00:15"
   actions:
     - action: notify.email
       data_template:
@@ -44,10 +43,7 @@
         - binary_sensor.zcombo_g_smoke_co_alarm_low_battery_level_3
       from: "off"
       to: "on"
-      for:
-        hours: 1
-        minutes: 0
-        seconds: 0
+      for: "01:00:00"
     # Smoke alarms will start chirping the minute they reach 77% battery
     # level. They will stay at 78% for several days however. Send notification
     # just before they drop to 77%. Would prefer to trigger only if it's been
@@ -59,8 +55,7 @@
         - sensor.zcombo_g_smoke_co_alarm_battery_level_2
         - sensor.zcombo_g_smoke_co_alarm_battery_level_3
       below: 78
-      for:
-        hours: 8
+      for: "08:00:00"
   actions:
     - action: notify.mobile_apps
       data:
