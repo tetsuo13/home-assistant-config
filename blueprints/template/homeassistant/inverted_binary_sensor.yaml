@@ -1,3 +1,5 @@
+---
+# yamllint disable rule:line-length
 blueprint:
   name: Invert a binary sensor
   description: Creates a binary_sensor which holds the inverted value of a reference binary_sensor
@@ -25,3 +27,4 @@ binary_sensor:
   # delay_off: not_used in this example
   # auto_off: not_used in this example
   availability: "{{ states(reference_entity) not in ('unknown', 'unavailable') }}"
+
