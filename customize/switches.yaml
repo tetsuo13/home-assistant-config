@@ -1,25 +1,9 @@
 ---
 switch.wemo_mini_1:
-  friendly_name: Air Purifier
-  icon: mdi:air-filter
-
-switch.wemo_mini_1_2:
   friendly_name: Dining Lamp
   icon: mdi:lamp
 
 switch.wemo_mini_4:
   friendly_name: Live
   icon: mdi:broadcast
-
-fan.jasco_products_unknown_type_4944_id_3337_level:
-  friendly_name: Living Room Fan
-  icon: mdi:fan
-
-switch.dimmer_dry_contact_relay:
-  friendly_name: Guest Bathroom Fan
-  icon: mdi:fan
-
-switch.dimmer_dry_contact_relay_2:
-  friendly_name: Primary Bathroom Fan
-  icon: mdi:fan
 

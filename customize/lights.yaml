@@ -1,29 +1,5 @@
 ---
-light.hue_white_lamp_1:
-  friendly_name: Andrei's Bedside
-  icon: mdi:lightbulb-outline
-
-light.hue_white_lamp_3:
-  friendly_name: Lee's Bedside
-  icon: mdi:lightbulb-outline
-
-light.hue_color_lamp_1:
-  friendly_name: Deck Light
-  icon: mdi:lightbulb-outline
-
 light.controller_rgb_44_key_ir_cde6d9:
   friendly_name: Night-Light
   icon: mdi:led-strip
-
-switch.jasco_products_46201_in_wall_smart_switch_switch:
-  friendly_name: Living Room
-  icon: mdi:ceiling-light
-
-light.zooz_unknown_type_a000_id_a008_level:
-  friendly_name: Guest Bath
-  icon: mdi:lightbulb-outline
-
-light.zooz_unknown_type_a000_id_a008_level_2:
-  friendly_name: Primary Bath
-  icon: mdi:lightbulb-outline
 

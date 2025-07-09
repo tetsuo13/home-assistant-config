@@ -1,63 +1,10 @@
 ---
-binary_sensor.home_occupancy:
-  friendly_name: Hallway Occupancy
-  device_class: motion
-
-binary_sensor.living_room_occupancy:
-  friendly_name: Living Room Occupancy
-  device_class: motion
-
-binary_sensor.den_occupancy:
-  friendly_name: Den Occupancy
-  device_class: motion
-
-binary_sensor.master_bedroom_occupancy:
-  friendly_name: Primary Bedroom Occupancy
-  device_class: motion
-
-binary_sensor.flood_sensor_water_leak_state:
-  friendly_name: Laundry
-  device_class: moisture
-
-binary_sensor.flood_sensor_low_battery_level:
-  friendly_name: Laundry Flood Sensor Battery Level
-
 binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open:
-  friendly_name: Front Door
-  device_class: door
-
-binary_sensor.z_wave_door_window_sensor_low_battery_level:
-  friendly_name: Front Door Battery Level
-
-binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_2:
-  friendly_name: Kitchen Door
-  device_class: door
-
-binary_sensor.z_wave_door_window_sensor_low_battery_level_2:
-  friendly_name: Kitchen Door Battery Level
-
-binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_3:
   friendly_name: Office Door
   device_class: door
+  area: Office
 
-binary_sensor.z_wave_door_window_sensor_low_battery_level_3:
+binary_sensor.z_wave_door_window_sensor_low_battery_level:
   friendly_name: Office Door Battery Level
-
-binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_4:
-  friendly_name: Laundry Door
-  device_class: door
-
-binary_sensor.z_wave_door_window_sensor_low_battery_level_4:
-  friendly_name: Laundry Door Battery Level
-
-binary_sensor.4_in_1_sensor_home_security_motion_detection:
-  friendly_name: Guest Bathroom Occupancy
-  device_class: motion
-
-binary_sensor.4_in_1_sensor_low_battery_level:
-  friendly_name: Guest Bathroom Sensor Battery Level
-
-switch.front_door_smart_motion_detection:
-  friendly_name: Trigger Front Door Motion in Amcrest SmartHome app
-  device_class: motion
+  area: Office
 

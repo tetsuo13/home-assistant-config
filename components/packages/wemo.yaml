@@ -2,8 +2,8 @@
 # https://www.home-assistant.io/integrations/wemo/
 
 wemo:
+  discovery: false
   static:
-    - !secret wemo_1_ip
     - !secret wemo_2_ip
     - !secret wemo_4_ip
 

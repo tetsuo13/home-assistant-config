@@ -19,26 +19,16 @@ homeassistant:
   customize: !include_dir_merge_named customize/
   packages: !include_dir_named components/packages
 
-  media_dirs:
-    # Snapshots aren't created in a browseable location. Add location for
-    # easier reviewing and deleting.
-    camera_snapshots: www/images/snapshots
-
 automation: !include_dir_merge_list automation
-script: !include_dir_named scripts
+#script: !include_dir_named scripts
 shell_command: !include components/shell_commands.yaml
 
-logger:
-  default: warning
-  logs:
-    homeassistant.components.shell_command: debug
+# Loads default set of integrations. Do not remove.
+default_config:
 
-# Enables configuration UI
-config:
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
 
-lovelace:
-  mode: yaml
-
-# Enable the system-health card in dev-info
-system_health:
+scene: !include scenes.yaml
 
