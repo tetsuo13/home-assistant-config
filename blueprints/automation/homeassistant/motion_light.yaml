@@ -1,4 +1,5 @@
 ---
+# yamllint disable rule:line-length
 blueprint:
   name: Motion-activated Light
   description: Turn on a light when motion is detected.
