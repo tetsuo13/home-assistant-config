@@ -30,5 +30,3 @@ default_config:
 frontend:
   themes: !include_dir_merge_named themes
 
-scene: !include scenes.yaml
-
