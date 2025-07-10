@@ -1,4 +1,8 @@
 ---
+switch.wemo_mini:
+  friendly_name: Air Purifier
+  icon: mdi:air-purifier
+
 switch.wemo_mini_1:
   friendly_name: Dining Lamp
   icon: mdi:lamp
@@ -6,4 +10,8 @@ switch.wemo_mini_1:
 switch.wemo_mini_4:
   friendly_name: Live
   icon: mdi:broadcast
+
+fan.in_wall_fan_speed_control_500s:
+  friendly_name: Living Room Fan
+  icon: mdi:fan
 

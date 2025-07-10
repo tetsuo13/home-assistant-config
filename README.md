@@ -10,9 +10,7 @@
 - [Screenshots](#screenshots)
 - [Other Noteable Configurations](#other-noteable-configurations)
 
-This is the configuration used in my [Home Assistant](https://home-assistant.io/) (HA) setup.
-
-Runs on a [Raspberry Pi 3B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) using [Home Assistant Operating System](https://github.com/home-assistant/operating-system).
+This is the configuration used in my [Home Assistant](https://home-assistant.io/) (HA) setup. Runs as a virtual machine using [Home Assistant Operating System](https://github.com/home-assistant/operating-system).
 
 # Devices
 

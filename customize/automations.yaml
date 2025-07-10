@@ -1,5 +1,9 @@
 ---
-# Order matters
+# Order matters(?)
+
+automation.low_battery_notification:
+  friendly_name: Low Battery Notification
+  icon: mdi:battery-alert-variant-outline
 
 automation.toggle_live_sign_when_busy_in_teams:
   friendly_name: Toggle Live Sign When Busy in Teams
@@ -8,6 +12,15 @@ automation.toggle_live_sign_when_busy_in_teams:
 automation.turn_on_dining_room_lamp_before_sunset_2:
   friendly_name: Turn On Dining Room Lamp Before Sunset
   icon: mdi:lamp
+
+automation.turn_off_air_purifier_weekdays_6_30am:
+  icon: mdi:air-purifier-off
+
+automation.turn_off_air_purifier_weekends_7_15am:
+  icon: mdi:air-purifier-off
+
+automation.turn_on_air_purifier_mid_morning:
+  icon: mdi:air-purifier
 
 automation.turn_off_dining_room_lamp_2:
   friendly_name: Turn On Dining Room Lamp 10:30pm

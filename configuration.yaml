@@ -20,7 +20,7 @@ homeassistant:
   packages: !include_dir_named components/packages
 
 automation: !include_dir_merge_list automation
-#script: !include_dir_named scripts
+script: !include_dir_named scripts
 shell_command: !include components/shell_commands.yaml
 
 # Loads default set of integrations. Do not remove.

@@ -3,3 +3,7 @@ light.controller_rgb_44_key_ir_cde6d9:
   friendly_name: Night-Light
   icon: mdi:led-strip
 
+switch.in_wall_paddle_switch_qfsw_500s:
+  friendly_name: Living Room
+  icon: mdi:ceiling-light
+
