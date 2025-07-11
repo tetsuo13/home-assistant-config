@@ -1,6 +1,9 @@
 ---
 # Order matters(?)
 
+automation.bedtime_routine:
+  icon: mdi:bed-clock
+
 automation.low_battery_notification:
   friendly_name: Low Battery Notification
   icon: mdi:battery-alert-variant-outline
