@@ -1,13 +1,13 @@
 ---
-switch.wemo_mini:
+switch.tp_link_smart_plug_ad70:
   friendly_name: Air Purifier
   icon: mdi:air-purifier
 
-switch.wemo_mini_1:
+switch.tp_link_smart_plug_ac23:
   friendly_name: Dining Lamp
   icon: mdi:lamp
 
-switch.wemo_mini_4:
+switch.tp_link_smart_plug_d6d2:
   friendly_name: Live
   icon: mdi:broadcast
 

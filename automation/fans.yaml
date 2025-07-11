@@ -15,7 +15,7 @@
   actions:
     action: switch.turn_off
     data:
-      entity_id: switch.wemo_mini
+      entity_id: switch.tp_link_smart_plug_ad70
 
 - alias: Turn Off Air Purifier Weekends (7:15am)
   id: turn_off_air_purifier_weekends
@@ -30,7 +30,7 @@
   actions:
     action: switch.turn_off
     data:
-      entity_id: switch.wemo_mini
+      entity_id: switch.tp_link_smart_plug_ad70
 
 - alias: Turn On Air Purifier Mid-Morning
   id: turn_on_air_purifier_midmorning
@@ -40,5 +40,5 @@
   actions:
     action: switch.turn_on
     data:
-      entity_id: switch.wemo_mini
+      entity_id: switch.tp_link_smart_plug_ad70
 

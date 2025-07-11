@@ -34,7 +34,7 @@
   actions:
     action: switch.turn_on
     data:
-      entity_id: switch.wemo_mini_1
+      entity_id: switch.tp_link_smart_plug_ac23
 
 - alias: Turn Off Dining Room Lamp
   initial_state: true
@@ -44,7 +44,7 @@
   actions:
     action: switch.turn_off
     data:
-      entity_id: switch.wemo_mini_1
+      entity_id: switch.tp_link_smart_plug_ac23
 
 - alias: Toggle Live Sign When Busy in Teams
   triggers:
@@ -53,5 +53,5 @@
   actions:
     - action: switch.turn_{{ trigger.to_state.state }}
       target:
-        entity_id: switch.wemo_mini_4
+        entity_id: switch.tp_link_smart_plug_d6d2
 
