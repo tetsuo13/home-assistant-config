@@ -19,10 +19,10 @@ sequence:
   # Don't call the automation for this as it toggles the lights -- if they're
   # already off we don't want to toggle them on.
   # Turn off the "main" switch, automation will handle turning off the other.
-  #- alias: Turn off living room bookshelf lamps
-  #  action: switch.turn_off
-  #  target:
-  #    entity_id: switch.tp_link_smart_plug_d6d2
+  - alias: Turn off living room bookshelf lamps
+    action: switch.turn_off
+    target:
+      entity_id: switch.tp_link_smart_plug_ac7b
 
   - alias: Turn off living room fan
     action: fan.turn_off

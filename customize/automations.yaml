@@ -16,6 +16,9 @@ automation.turn_on_dining_room_lamp_before_sunset_2:
   friendly_name: Turn On Dining Room Lamp Before Sunset
   icon: mdi:lamp
 
+automation.turn_on_both_living_room_bookshelf_lamps_from_single_switch:
+  icon: mdi:lamps
+
 automation.turn_off_air_purifier_weekdays_6_30am:
   icon: mdi:air-purifier-off
 

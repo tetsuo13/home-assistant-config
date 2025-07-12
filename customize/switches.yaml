@@ -3,14 +3,6 @@ switch.tp_link_smart_plug_ad70:
   friendly_name: Air Purifier
   icon: mdi:air-purifier
 
-switch.tp_link_smart_plug_ac23:
-  friendly_name: Dining Lamp
-  icon: mdi:lamp
-
-switch.tp_link_smart_plug_d6d2:
-  friendly_name: Live
-  icon: mdi:broadcast
-
 fan.in_wall_fan_speed_control_500s:
   friendly_name: Living Room Fan
   icon: mdi:fan

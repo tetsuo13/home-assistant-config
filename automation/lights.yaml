@@ -55,3 +55,16 @@
       target:
         entity_id: switch.tp_link_smart_plug_d6d2
 
+- alias: Turn On Both Living Room Bookshelf Lamps From Single Switch
+  id: turn_on_both_living_room_bookshelf_lamps_from_single_switch
+  description: >-
+    Physically toggling the one reachable switch should toggle the other switch
+    in tandem
+  triggers:
+    - trigger: state
+      entity_id: switch.tp_link_smart_plug_ac7b
+  actions:
+    - action: switch.turn_{{ trigger.to_state.state }}
+      target:
+        entity_id: switch.tp_link_smart_plug_1106
+
