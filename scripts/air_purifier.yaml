@@ -14,7 +14,7 @@ variables:
   switch_entity: switch.tp_link_smart_plug_ad70
 
 sequence:
-  - alias:  Turn off air purifier
+  - alias: Turn off air purifier
     action: switch.turn_off
     data:
       entity_id: "{{ switch_entity }}"
@@ -22,7 +22,7 @@ sequence:
   - alias: Wait a few seconds
     delay: 3
 
-  - alias:  Turn on air purifier
+  - alias: Turn on air purifier
     action: switch.turn_on
     data:
       entity_id: "{{ switch_entity }}"
