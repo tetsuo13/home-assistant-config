@@ -13,9 +13,7 @@
         - thu
         - fri
   actions:
-    action: switch.turn_off
-    data:
-      entity_id: switch.tp_link_smart_plug_ad70
+    action: script.air_purifier
 
 - alias: Turn Off Air Purifier Weekends (9:00am)
   id: turn_off_air_purifier_weekends
@@ -28,17 +26,5 @@
         - sat
         - sun
   actions:
-    action: switch.turn_off
-    data:
-      entity_id: switch.tp_link_smart_plug_ad70
-
-- alias: Turn On Air Purifier Mid-Morning
-  id: turn_on_air_purifier_midmorning
-  triggers:
-    trigger: time
-    at: "07:20:00"
-  actions:
-    action: switch.turn_on
-    data:
-      entity_id: switch.tp_link_smart_plug_ad70
+    action: script.air_purifier
 

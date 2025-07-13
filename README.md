@@ -120,7 +120,7 @@ When a smoke alarm detects smoke or carbon monoxide, an announcement is made ove
 
 ## [Fan Automations](automation/fans.yaml)
 
-Air purifier isn't smart but it's plugged into a TP-Link Kasa smart plug. Air purifier is intended to run overnight. Automation cuts power in the morning to turn it off and another automation task turns power back on however someone must still manually press the "on" button on the air purifier unit to actually turn it on. Toggling power to the dumb air purifier is preferable to some of the much more expensive smart air purifiers out there.
+Air purifier isn't smart but it's plugged into a TP-Link Kasa smart plug. Turning the air purifier on is a manual process of pushing the button on the device; turning it off is achieved through turning off the smart plug although it needs to be turned back on again so that it's ready for the manual process again. The [`air_purifier`](scripts/air_purifier.yaml) script handles this "turn off then back on again" case. Maintaining this automation to toggle power to the dumb air purifier is preferable to some of the much more expensive smart air purifiers out there.
 
 ## [Light Automations](automation/lights.yaml)
 

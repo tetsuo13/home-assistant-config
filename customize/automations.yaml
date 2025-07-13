@@ -25,9 +25,6 @@ automation.turn_off_air_purifier_weekdays_6_30am:
 automation.turn_off_air_purifier_weekends_9_00am:
   icon: mdi:air-purifier-off
 
-automation.turn_on_air_purifier_mid_morning:
-  icon: mdi:air-purifier
-
 automation.turn_off_dining_room_lamp_2:
   friendly_name: Turn On Dining Room Lamp 10:30pm
   icon: mdi:lamp
