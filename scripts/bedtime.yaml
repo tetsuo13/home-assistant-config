@@ -16,9 +16,11 @@ sequence:
   #  action: switch.turn_on
   #  entity_id: switch.front_door_smart_motion_detection
 
-  # Don't call the automation for this as it toggles the lights -- if they're
-  # already off we don't want to toggle them on.
-  # Turn off the "main" switch, automation will handle turning off the other.
+  # Don't call the "turn on both living room bookshelf lamps" automation for
+  # this as it toggles the lights: if they're already off we don't want to
+  # toggle them on. Instead, turn off the "main" switch, the same one that's
+  # used for the trigger in the automation and the automation will take care
+  # of turning off the other lamp.
   - alias: Turn off living room bookshelf lamps
     action: switch.turn_off
     target:
