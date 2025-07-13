@@ -22,7 +22,7 @@ automation.turn_on_both_living_room_bookshelf_lamps_from_single_switch:
 automation.turn_off_air_purifier_weekdays_6_30am:
   icon: mdi:air-purifier-off
 
-automation.turn_off_air_purifier_weekends_7_15am:
+automation.turn_off_air_purifier_weekends_9_00am:
   icon: mdi:air-purifier-off
 
 automation.turn_on_air_purifier_mid_morning:

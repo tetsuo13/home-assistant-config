@@ -17,11 +17,11 @@
     data:
       entity_id: switch.tp_link_smart_plug_ad70
 
-- alias: Turn Off Air Purifier Weekends (7:15am)
+- alias: Turn Off Air Purifier Weekends (9:00am)
   id: turn_off_air_purifier_weekends
   triggers:
     trigger: time
-    at: "07:15:00"
+    at: "09:00:00"
   conditions:
     - condition: time
       weekday:
