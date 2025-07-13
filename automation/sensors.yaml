@@ -10,7 +10,7 @@
         #- binary_sensor.4_in_1_sensor_low_battery_level
         #- binary_sensor.flood_sensor_low_battery_level
         - binary_sensor.z_wave_door_window_sensor_low_battery_level
-        #- binary_sensor.z_wave_door_window_sensor_low_battery_level_2
+        - binary_sensor.z_wave_door_window_sensor_low_battery_level_2
         #- binary_sensor.z_wave_door_window_sensor_low_battery_level_3
         #- binary_sensor.z_wave_door_window_sensor_low_battery_level_4
         #- binary_sensor.zcombo_g_smoke_co_alarm_low_battery_level
