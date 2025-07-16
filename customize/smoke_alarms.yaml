@@ -1,0 +1,13 @@
+---
+binary_sensor.zcombo_g_smoke_co_alarm_co_alarm_carbon_monoxide_detected:
+  friendly_name: Workshop Carbon Monoxide Detected
+
+binary_sensor.zcombo_g_smoke_co_alarm_smoke_alarm_smoke_detected:
+  friendly_name: Workshop Smoke Detected
+
+binary_sensor.zcombo_g_smoke_co_alarm_low_battery_level:
+  friendly_name: Workshop Smoke Detector Low Battery
+
+sensor.zcombo_g_smoke_co_alarm_battery_level:
+  friendly_name: Workshop Smoke Detector Battery Level
+
