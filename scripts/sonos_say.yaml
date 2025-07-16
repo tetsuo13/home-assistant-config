@@ -34,14 +34,14 @@ sequence:
   - delay:
       seconds: 2
 
-  #- action: media_player.play_media
-  #  target:
-  #    entity_id: "{{ sonos_group }}"
-  #  data_template:
-  #    # yamllint disable-line rule:line-length
-  #    media_content_id: media-source://tts/tts.elevenlabs?message="{{ message }}"&voice=Valentino
-  #    media_content_type: music
-  #    announce: true
-  #    extra:
-  #      volume: 20
+  - action: media_player.play_media
+    target:
+      entity_id: "{{ sonos_group }}"
+    data_template:
+      media_content_id: >
+        media-source://tts/tts.elevenlabs?message="{{ message }}"&voice=Valentino
+      media_content_type: music
+      announce: true
+      extra:
+        volume: 20
 
