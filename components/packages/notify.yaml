@@ -19,6 +19,7 @@ notify:
     platform: group
     services:
       - action: mobile_app_andrei_phone
+      - action: mobile_app_lee_phone
 
   - name: mobile_apps_admin
     platform: group
