@@ -1,4 +1,10 @@
 ---
+binary_sensor.flood_sensor_water_leak_state:
+  friendly_name: Laundry
+
+binary_sensor.flood_sensor_low_battery_level:
+  friendly_name: Laundry Flood Sensor Battery Level
+
 binary_sensor.z_wave_door_window_sensor_window_door_is_open:
   friendly_name: Office Door
   device_class: door

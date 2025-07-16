@@ -1,0 +1,6 @@
+---
+
+sensor.flood_sensor_air_temperature:
+  friendly_name: Laundry Temperature
+  device_class: temperature
+
