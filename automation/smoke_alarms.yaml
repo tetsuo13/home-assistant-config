@@ -76,8 +76,8 @@
     data:
       entity_id:
         #- light.hue_color_lamp_1
-        #- light.hue_white_lamp_1
-        #- light.hue_white_lamp_3
+        - light.hue_white_lamp_1
+        - light.hue_white_lamp_2
         #- light.zooz_unknown_type_a000_id_a008_level
         #- light.zooz_unknown_type_a000_id_a008_level_2
         - switch.living_room_bookshelf_lamps

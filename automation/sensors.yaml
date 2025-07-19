@@ -12,14 +12,14 @@
       data_template:
         title: Laundry room is flooding
         message: You should probably check it out.
-    #- action: script.sonos_say
-    #  data:
-    #    message: >-
-    #      Crikey!
-    #      We've sprunga leak in the laundry room!
-    #      I said crikey!
-    #      We've sprunga leak in the laundry room!
-    #    delay: "00:00:15"
+    - action: script.sonos_say
+      data:
+        message: >-
+          Crikey!
+          We've sprunga leak in the laundry room!
+          I said crikey!
+          We've sprunga leak in the laundry room!
+        delay: "00:00:15"
     - action: notify.mobile_apps
       data:
         message: The laundry room is flooding

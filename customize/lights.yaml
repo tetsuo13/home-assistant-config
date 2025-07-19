@@ -4,6 +4,18 @@ light.controller_rgb_44_key_ir_cde6d9:
   friendly_name: Night-Light
   icon: mdi:led-strip
 
+light.hue_color_lamp_1:
+  friendly_name: Deck Light
+  icon: mdi:lightbulb-outline
+
+light.hue_white_lamp_1:
+  friendly_name: Andrei's Bedside
+  icon: mdi:lightbulb-outline
+
+light.hue_white_lamp_2:
+  friendly_name: Lee's Bedside
+  icon: mdi:lightbulb-outline
+
 switch.in_wall_paddle_switch_qfsw_500s:
   friendly_name: Living Room
   icon: mdi:ceiling-light

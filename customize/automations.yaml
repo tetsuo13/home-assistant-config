@@ -37,3 +37,47 @@ automation.turn_off_night_light_after_sunrise:
   friendly_name: Turn Off Night-Light After Sunrise
   icon: mdi:led-strip
 
+automation.announce_door_opened:
+  friendly_name: Announce Door Opened
+  icon: mdi:door-open
+
+automation.announce_door_opened_event:
+  friendly_name: Announce Door Opened (Event)
+  icon: mdi:door-open
+
+automation.announce_door_closed:
+  friendly_name: Announce Door Closed
+  icon: mdi:door-closed
+
+automation.announce_door_closed_event:
+  friendly_name: Announce Door Closed (Event)
+  icon: mdi:door-closed
+
+automation.laundry_flooding:
+  friendly_name: Laundry Flooding
+  icon: mdi:home-flood
+
+automation.smoke_alarm_alert:
+  friendly_name: Smoke Alarm - Alert
+  icon: mdi:smoke-detector-alert-outline
+
+automation.smoke_alarm_turn_on_lights:
+  friendly_name: Smoke Alarm - Turn on Lights
+  icon: mdi:smoke-detector-alert-outline
+
+automation.turn_off_andrei_s_bedside_by_9_00pm:
+  friendly_name: Turn Off Andrei's Bedside By 9:00pm
+  icon: mdi:lamp
+
+automation.turn_off_lights_before_work:
+  friendly_name: Turn Off Lights Before Work
+  icon: mdi:lamp
+
+automation.turn_on_lights_before_sunset:
+  friendly_name: Turn On Lights Before Sunset
+  icon: mdi:lamp
+
+automation.turn_on_lights_to_wake_us_up:
+  friendly_name: Turn On Lights To Wake Us Up
+  icon: mdi:lamp
+
