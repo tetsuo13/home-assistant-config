@@ -39,8 +39,8 @@
         #- binary_sensor.z_wave_door_window_sensor_low_battery_level_3
         #- binary_sensor.z_wave_door_window_sensor_low_battery_level_4
         - binary_sensor.zcombo_g_smoke_co_alarm_low_battery_level
-        #- binary_sensor.zcombo_g_smoke_co_alarm_low_battery_level_2
-        #- binary_sensor.zcombo_g_smoke_co_alarm_low_battery_level_3
+        - binary_sensor.zcombo_g_smoke_co_alarm_low_battery_level_2
+        - binary_sensor.zcombo_g_smoke_co_alarm_low_battery_level_3
       from: "off"
       to: "on"
       for: "01:00:00"
@@ -52,17 +52,17 @@
     - trigger: numeric_state
       entity_id:
         - sensor.zcombo_g_smoke_co_alarm_battery_level
-    #    - sensor.zcombo_g_smoke_co_alarm_battery_level_2
-    #    - sensor.zcombo_g_smoke_co_alarm_battery_level_3
+        - sensor.zcombo_g_smoke_co_alarm_battery_level_2
+        - sensor.zcombo_g_smoke_co_alarm_battery_level_3
       below: 78
       for: "08:00:00"
   actions:
-    #- action: notify.mobile_apps
-    #  data:
-    #    message: The {{ trigger.to_state.attributes.friendly_name }} is Low
-    #    data:
-    #      tag: bettery
-    #      group: battery
+    - action: notify.mobile_apps
+      data:
+        message: The {{ trigger.to_state.attributes.friendly_name }} is Low
+        data:
+          tag: bettery
+          group: battery
     - action: notify.email
       data_template:
         title: Low Battery Detected
