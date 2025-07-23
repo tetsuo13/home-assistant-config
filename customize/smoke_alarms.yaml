@@ -1,13 +1,37 @@
 ---
-binary_sensor.zcombo_g_smoke_co_alarm_co_alarm_carbon_monoxide_detected:
+binary_sensor.zcombo_g_smoke_co_alarm_carbon_monoxide_detected:
   friendly_name: Workshop Carbon Monoxide Detected
 
-binary_sensor.zcombo_g_smoke_co_alarm_smoke_alarm_smoke_detected:
+binary_sensor.zcombo_g_smoke_co_alarm_carbon_monoxide_detected_2:
+  friendly_name: Laundry Carbon Monoxide Detected
+
+binary_sensor.zcombo_g_smoke_co_alarm_carbon_monoxide_detected_3:
+  friendly_name: Hallway Carbon Monoxide Detected
+
+binary_sensor.zcombo_g_smoke_co_alarm_smoke_detected:
   friendly_name: Workshop Smoke Detected
+
+binary_sensor.zcombo_g_smoke_co_alarm_smoke_detected_2:
+  friendly_name: Laundry Smoke Detected
+
+binary_sensor.zcombo_g_smoke_co_alarm_smoke_detected_3:
+  friendly_name: Hallway Smoke Detected
 
 binary_sensor.zcombo_g_smoke_co_alarm_low_battery_level:
   friendly_name: Workshop Smoke Detector Low Battery
 
+binary_sensor.zcombo_g_smoke_co_alarm_low_battery_level_2:
+  friendly_name: Laundry Smoke Detector Low Battery
+
+binary_sensor.zcombo_g_smoke_co_alarm_low_battery_level_3:
+  friendly_name: Hallway Smoke Detector Low Battery
+
 sensor.zcombo_g_smoke_co_alarm_battery_level:
   friendly_name: Workshop Smoke Detector Battery Level
+
+sensor.zcombo_g_smoke_co_alarm_battery_level_2:
+  friendly_name: Laundry Smoke Detector Battery Level
+
+sensor.zcombo_g_smoke_co_alarm_battery_level_3:
+  friendly_name: Hallway Smoke Detector Battery Level
 
