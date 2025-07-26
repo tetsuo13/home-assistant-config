@@ -33,4 +33,5 @@ cards:
       - entity: binary_sensor.flood_sensor_water_leak_state
       - entity: binary_sensor.z_wave_door_window_sensor_window_door_is_open
       - entity: binary_sensor.z_wave_door_window_sensor_window_door_is_open_3
+    state_color: true
 
