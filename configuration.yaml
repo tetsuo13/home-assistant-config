@@ -23,3 +23,6 @@ automation: !include_dir_merge_list automation
 script: !include_dir_named scripts
 shell_command: !include components/shell_commands.yaml
 
+lovelace:
+  mode: yaml
+

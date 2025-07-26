@@ -1,0 +1,36 @@
+---
+
+title: Home
+icon: mdi:home
+cards:
+  - type: grid
+    columns: 2
+    square: false
+    title: Lights
+    cards:
+      - type: tile
+        entity: light.hue_white_lamp_1
+      - type: tile
+        entity: light.hue_white_lamp_2
+      - type: tile
+        entity: light.hue_color_lamp_1
+      - type: tile
+        entity: light.controller_rgb_44_key_ir_cde6d9
+      - type: tile
+        entity: switch.tp_link_smart_plug_ac23
+      - type: tile
+        entity: switch.living_room_bookshelf_lamps
+      - type: tile
+        entity: switch.tp_link_smart_plug_d6d2
+  - type: entities
+    title: Sensors
+    show_header_toggle: false
+    entities:
+      - entity: binary_sensor.home_occupancy
+      - entity: binary_sensor.living_room_occupancy
+      - entity: binary_sensor.den_occupancy
+      - entity: binary_sensor.master_bedroom_occupancy
+      - entity: binary_sensor.flood_sensor_water_leak_state
+      - entity: binary_sensor.z_wave_door_window_sensor_window_door_is_open
+      - entity: binary_sensor.z_wave_door_window_sensor_window_door_is_open_3
+

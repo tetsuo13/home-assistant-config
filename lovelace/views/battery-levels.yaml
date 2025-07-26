@@ -1,0 +1,27 @@
+---
+
+title: Battery Levels
+icon: mdi:battery-charging-100
+cards:
+  - type: entities
+    show_header_toggle: false
+    title: Sensors
+    entities:
+      - entity: sensor.z_wave_door_window_sensor_battery_level
+        name: Office Door
+      - entity: sensor.z_wave_door_window_sensor_battery_level_2
+        name: Kitchen Door
+      - entity: sensor.flood_sensor_battery_level
+        name: Laundry Flood Sensor
+
+  - type: entities
+    title: Smoke Alarms
+    show_header_toggle: false
+    entities:
+      - entity: sensor.zcombo_g_smoke_co_alarm_battery_level
+        name: Workshop
+      - entity: sensor.zcombo_g_smoke_co_alarm_battery_level_2
+        name: Laundry
+      - entity: sensor.zcombo_g_smoke_co_alarm_battery_level_3
+        name: Hallway
+
