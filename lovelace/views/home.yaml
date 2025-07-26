@@ -3,6 +3,11 @@
 title: Home
 icon: mdi:home
 cards:
+  - type: picture-glance
+    title: Front Door
+    entities: []
+    camera_image: camera.front_door_main
+    camera_view: live
   - type: grid
     columns: 2
     square: false
