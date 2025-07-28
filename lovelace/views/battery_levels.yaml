@@ -6,6 +6,7 @@ cards:
   - type: entities
     show_header_toggle: false
     title: Sensors
+    state_color: true
     entities:
       - entity: sensor.z_wave_door_window_sensor_battery_level
         name: Office Door
@@ -13,10 +14,13 @@ cards:
         name: Kitchen Door
       - entity: sensor.flood_sensor_battery_level
         name: Laundry Flood Sensor
+      - entity: sensor.4_in_1_sensor_battery_level
+        name: Guest Bathroom
 
   - type: entities
     title: Smoke Alarms
     show_header_toggle: false
+    state_color: true
     entities:
       - entity: sensor.zcombo_g_smoke_co_alarm_battery_level
         name: Workshop

@@ -1,5 +1,13 @@
 ---
 
+sensor.4_in_1_sensor_air_temperature:
+  friendly_name: Guest Bathroom Temperature
+  device_class: temperature
+
+sensor.4_in_1_sensor_humidity:
+  friendly_name: Guest Bathroom Humidity
+  device_class: humidity
+
 sensor.flood_sensor_air_temperature:
   friendly_name: Laundry Temperature
   device_class: temperature

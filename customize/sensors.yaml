@@ -1,4 +1,9 @@
 ---
+
+binary_sensor.4_in_1_sensor_motion_detection:
+  friendly_name: Guest Bathroom Occupancy
+  device_class: motion
+
 binary_sensor.home_occupancy:
   friendly_name: Hallway Occupancy
   device_class: motion
