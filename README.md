@@ -56,7 +56,7 @@ The Hue Bridge is easily the most troublesome device in use. Requires power cycl
 | Device | Connection | Home Assistant |
 | ------ | ---------- | -------------- |
 | Amcrest PoE Camera (IP5M) | Ethernet | [Dahua](https://github.com/rroller/dahua) |
-| [Amcrest Video Doorbell](https://amcrest.com/4mp-wifi-camera-doorbell-ad410.html) (AD410) | Wi-Fi | [Amcrest](https://www.home-assistant.io/integrations/amcrest/) |
+| [Amcrest Video Doorbell](https://amcrest.com/4mp-wifi-camera-doorbell-ad410.html) (AD410) | Wi-Fi | [Dahua](https://github.com/rroller/dahua) |
 
 ## Media
 

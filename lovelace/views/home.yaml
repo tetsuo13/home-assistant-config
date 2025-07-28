@@ -24,6 +24,8 @@ cards:
       - type: tile
         entity: switch.tp_link_smart_plug_ac23
       - type: tile
+        entity: switch.in_wall_paddle_switch_qfsw_500s_2
+      - type: tile
         entity: switch.living_room_bookshelf_lamps
       - type: tile
         entity: switch.tp_link_smart_plug_d6d2

@@ -81,5 +81,5 @@
         #- light.zooz_unknown_type_a000_id_a008_level
         #- light.zooz_unknown_type_a000_id_a008_level_2
         - switch.living_room_bookshelf_lamps
-        #- switch.jasco_products_46201_in_wall_smart_switch_switch
+        - switch.in_wall_paddle_switch_qfsw_500s_2
 
