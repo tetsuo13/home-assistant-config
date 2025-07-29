@@ -37,6 +37,7 @@ cards:
       - entity: binary_sensor.living_room_occupancy
       - entity: binary_sensor.den_occupancy
       - entity: binary_sensor.master_bedroom_occupancy
+      - entity: binary_sensor.4_in_1_sensor_motion_detection
       - entity: binary_sensor.flood_sensor_water_leak_state
       - entity: binary_sensor.z_wave_door_window_sensor_window_door_is_open
       - entity: binary_sensor.z_wave_door_window_sensor_window_door_is_open_3
