@@ -30,6 +30,13 @@ cards:
       - type: tile
         entity: switch.tp_link_smart_plug_d6d2
   - type: entities
+    title: Switches
+    show_header_toggle: false
+    state_color: true
+    entities:
+      - entity: switch.tp_link_smart_plug_ad70
+      - entity: fan.in_wall_fan_speed_control_500s
+  - type: entities
     title: Sensors
     show_header_toggle: false
     entities:
