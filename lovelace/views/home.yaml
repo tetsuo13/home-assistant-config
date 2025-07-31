@@ -8,6 +8,18 @@ cards:
     entities: []
     camera_image: camera.front_door_main
     camera_view: live
+  - type: horizontal-stack
+    cards:
+      - type: picture-glance
+        title: Laundry
+        entities: []
+        camera_image: camera.laundry_main
+        camera_view: live
+      - type: picture-glance
+        title: Office
+        entities: []
+        camera_image: camera.office_main
+        camera_view: live
   - type: grid
     columns: 2
     square: false
