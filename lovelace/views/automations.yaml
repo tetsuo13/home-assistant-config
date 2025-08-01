@@ -16,4 +16,17 @@ cards:
       - entity: automation.announce_door_opened_event
       - entity: automation.announce_door_closed
       - entity: automation.announce_door_closed_event
+  - type: entities
+    title: Automations for Lights
+    show_header_toggle: false
+    entities:
+      - entity: automation.turn_on_lights_to_wake_us_up
+      - entity: automation.turn_off_lights_before_work
+      - entity: automation.turn_on_lights_before_sunset
+      - entity: automation.turn_off_lee_s_bedside_by_8_30pm
+      - entity: automation.turn_off_andrei_s_bedside_by_9_00pm
+      - entity: automation.turn_on_night_light_at_sunset
+      - entity: automation.turn_off_night_light_after_sunrise
+      - entity: automation.turn_on_dining_room_lamp_before_sunset
+      - entity: automation.turn_off_dining_room_lamp
 
