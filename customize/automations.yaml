@@ -26,7 +26,11 @@ automation.turn_off_air_purifier_weekends_9_00am:
   icon: mdi:air-purifier-off
 
 automation.turn_off_dining_room_lamp_2:
-  friendly_name: Turn On Dining Room Lamp 10:30pm
+  friendly_name: Turn Off Dining Room Lamp 10:30pm
+  icon: mdi:lamp
+
+automation.turn_off_lee_s_bedside_at_night:
+  friendly_name: Turn Off Lee's Bedside by 8:30pm
   icon: mdi:lamp
 
 automation.turn_on_night_light_at_sunset:

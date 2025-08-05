@@ -63,7 +63,7 @@
       transition: 1500
 
 # Hue bulbs take 30 minutes to fade to off.
-- alias: Turn Off Lee's Bedside By 8:30pm
+- alias: Turn Off Lee's Bedside at Night
   initial_state: true
   triggers:
     trigger: time
