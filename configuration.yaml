@@ -18,10 +18,12 @@ homeassistant:
   country: !secret country
   customize: !include_dir_merge_named customize/
   packages: !include_dir_named components/packages
+  media_dirs: !include components/media_dirs.yaml
 
 automation: !include_dir_merge_list automation
 script: !include_dir_named scripts
 shell_command: !include components/shell_commands.yaml
+logger: !include components/logger.yaml
 
 lovelace:
   mode: yaml
