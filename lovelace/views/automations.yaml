@@ -8,6 +8,7 @@ cards:
     show_header_toggle: false
     entities:
       - entity: switch.front_door_smart_motion_detection
+      - entity: automation.motion_send_camera_snapshot_notification_on_motion
   - type: entities
     title: Doors
     show_header_toggle: false

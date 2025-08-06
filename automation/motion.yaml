@@ -45,7 +45,7 @@
         title: Camera Motion Detected
         message: "{{ trigger.to_state.name }}"
         data:
-          #image: "{{ snapshot_base_url }}/{{ snapshot_filename }}"
+          image: "{{ snapshot_base_url }}/{{ snapshot_filename }}"
           # Use this instead for debugging. Only accessible from intranet.
-          image: "/api/camera_proxy/{{ camera_name }}"
+          #image: "/api/camera_proxy/{{ camera_name }}"
 

@@ -8,6 +8,10 @@ automation.low_battery_notification:
   friendly_name: Low Battery Notification
   icon: mdi:battery-alert-variant-outline
 
+automation.motion_send_camera_snapshot_notification_on_motion:
+  friendly_name: Send Camera Snapshot Notification on Motion
+  icon: mdi:motion-sensor
+
 automation.toggle_live_sign_when_busy_in_teams:
   friendly_name: Toggle Live Sign When Busy in Teams
   icon: mdi:broadcast

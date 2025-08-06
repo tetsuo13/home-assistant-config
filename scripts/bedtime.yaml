@@ -10,9 +10,9 @@ description: >-
   unintentionally left disabled.
 
 sequence:
-  #- alias: Enable camera notifications
-  #  action: automation.turn_on
-  #  entity_id: automation.motion_send_camera_snapshot_notification_on_motion
+  - alias: Enable camera notifications
+    action: automation.turn_on
+    entity_id: automation.motion_send_camera_snapshot_notification_on_motion
 
   - alias: Enable front door camera notifications
     action: switch.turn_on
