@@ -50,6 +50,7 @@ cards:
     entities:
       - entity: switch.tp_link_smart_plug_ad70
       - entity: fan.in_wall_fan_speed_control_500s
+      - entity: switch.double_switch_1
   - type: entities
     title: Sensors
     show_header_toggle: false

@@ -29,3 +29,19 @@
   actions:
     action: script.air_purifier
 
+- alias: Motion - Turn Off Guest Bathroom Fan When No Motion Detected
+  id: motion_turn_off_guest_bathroom_fan_when_no_motion_detected
+  triggers:
+    - trigger: state
+      entity_id: binary_sensor.4_in_1_sensor_motion_detection
+      from: "on"
+      to: "off"
+      for: "00:05:00"
+  conditions:
+    - condition: state
+      entity_id: switch.double_switch_1
+      state: "on"
+  actions:
+    - action: switch.turn_off
+      entity_id: switch.double_switch_1
+

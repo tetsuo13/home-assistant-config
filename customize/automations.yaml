@@ -12,6 +12,10 @@ automation.motion_send_camera_snapshot_notification_on_motion:
   friendly_name: Send Camera Snapshot Notification on Motion
   icon: mdi:motion-sensor
 
+automation.motion_turn_off_guest_bathroom_fan_when_no_motion_detected:
+  friendly_name: Turn Off Guest Bathroom Fan When No Motion Detected
+  icon: mdi:motion-sensor
+
 automation.motion_turn_on_guest_bathroom_when_motion_detected_daytime:
   friendly_name: Turn on Guest Bathroom When Motion Detected (Daytime)
   icon: mdi:motion-sensor
