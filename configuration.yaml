@@ -1,5 +1,8 @@
 ---
 # https://www.home-assistant.io/docs/configuration/basic/
+#
+# The aim to keep this file as small as possible by acting as the central hub
+# for all configuration files.
 # https://www.home-assistant.io/docs/configuration/splitting_configuration/
 
 homeassistant:

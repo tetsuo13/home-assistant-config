@@ -2,9 +2,13 @@
 # https://www.home-assistant.io/integrations/shell_command/
 
 # Delete all files in the camera snapshots directory older than specified.
+#
+# WARNING: The Advanced SSH & Web Terminal add-on creates a symbolic link for
+# `/homeassistant` to `/config` for the configuration directory. Develop for
+# the latter.
 clean_camera_snapshots: >-
   /usr/bin/find
-  /homeassistant/www/images/snapshots
+  /config/www/images/snapshots
   -mtime +{{ days_threshold }}
   -type f
   ! -name .gitinclude
