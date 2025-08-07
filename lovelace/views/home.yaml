@@ -40,6 +40,8 @@ cards:
       - type: tile
         entity: switch.living_room_bookshelf_lamps
       - type: tile
+        entity: light.double_switch
+      - type: tile
         entity: switch.tp_link_smart_plug_d6d2
   - type: entities
     title: Switches

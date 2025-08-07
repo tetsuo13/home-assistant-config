@@ -1,5 +1,63 @@
 ---
 
+# Ending time range needs to match next automation's beginning time.
+- alias: Motion - Turn On Guest Bathroom When Motion Detected Daytime
+  id: motion_turn_on_guest_bathroom_when_motion_detected_daytime
+  triggers:
+    - trigger: state
+      entity_id: binary_sensor.4_in_1_sensor_motion_detection
+      from: "off"
+      to: "on"
+  conditions:
+    - condition: state
+      entity_id: light.double_switch
+      state: "off"
+    - condition: time
+      after: "06:00:00"
+      before: "21:15:00"
+  actions:
+    - action: light.turn_on
+      entity_id: light.double_switch
+      data:
+        brightness_pct: 100
+
+# Beginning time range needs to match previous automation's ending time.
+- alias: Motion - Turn On Guest Bathroom When Motion Detected Night
+  id: motion_turn_on_guest_bathroom_when_motion_detected_night
+  triggers:
+    - trigger: state
+      entity_id: binary_sensor.4_in_1_sensor_motion_detection
+      from: "off"
+      to: "on"
+  conditions:
+    - condition: state
+      entity_id: light.double_switch
+      state: "off"
+    - condition: time
+      after: "21:15:00"
+      before: "06:15:00"
+  actions:
+    - action: light.turn_on
+      entity_id: light.double_switch
+      data:
+        brightness_pct: 21
+
+- alias: Motion - Turn Off Guest Bathroom When No Motion Detected
+  id: motion_turn_off_guest_bathroom_when_no_motion_detected
+  triggers:
+    - trigger: state
+      entity_id: binary_sensor.4_in_1_sensor_motion_detection
+      from: "on"
+      to: "off"
+      for: "00:03:00"
+  conditions:
+    - condition: state
+      entity_id: light.double_switch
+      state: "on"
+  actions:
+    - action: light.turn_off
+      entity_id: light.double_switch
+
 - alias: Motion - Send Camera Snapshot Notification On Motion
   id: motion_send_camera_snapshot_notification_on_motion
   description: >
