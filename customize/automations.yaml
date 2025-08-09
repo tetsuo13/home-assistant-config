@@ -32,6 +32,10 @@ automation.toggle_live_sign_when_busy_in_teams:
   friendly_name: Toggle Live Sign When Busy in Teams
   icon: mdi:broadcast
 
+automation.turn_off_main_bathroom_fan_after_period_of_time:
+  friendly_name: Turn Off Main Bathroom Fan After Period of Time
+  icon: mdi:fan-clock
+
 automation.turn_on_dining_room_lamp_before_sunset_2:
   friendly_name: Turn On Dining Room Lamp Before Sunset
   icon: mdi:lamp

@@ -45,3 +45,18 @@
     - action: switch.turn_off
       entity_id: switch.double_switch_1
 
+- alias: Turn Off Main Bathroom Fan After Period Of Time
+  id: turn_off_main_bathroom_fan_after_period_of_time
+  description: >
+    Turn off the fan if it's been on for 20 minutes. There isn't motion
+    detection available.
+  triggers:
+    - trigger: state
+      entity_id: switch.double_switch_1_2
+      to: "on"
+      for: "00:20:00"
+  conditions: []
+  actions:
+    - action: switch.turn_off
+      entity_id: switch.double_switch_1_2
+

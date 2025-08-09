@@ -7,6 +7,9 @@ light.controller_rgb_44_key_ir_cde6d9:
 light.double_switch:
   friendly_name: Guest Bath
 
+light.double_switch_2:
+  friendly_name: Main Bath
+
 light.hue_color_lamp_1:
   friendly_name: Deck Light
   icon: mdi:lightbulb-outline

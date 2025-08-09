@@ -43,6 +43,8 @@ cards:
         entity: light.double_switch
       - type: tile
         entity: switch.tp_link_smart_plug_d6d2
+      - type: tile
+        entity: light.double_switch_2
   - type: entities
     title: Switches
     show_header_toggle: false
@@ -51,6 +53,7 @@ cards:
       - entity: switch.tp_link_smart_plug_ad70
       - entity: fan.in_wall_fan_speed_control_500s
       - entity: switch.double_switch_1
+      - entity: switch.double_switch_1_2
   - type: entities
     title: Sensors
     show_header_toggle: false

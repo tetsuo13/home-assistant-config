@@ -4,6 +4,10 @@ switch.double_switch_1:
   friendly_name: Guest Bath Fan
   icon: mdi:fan
 
+switch.double_switch_1_2:
+  friendly_name: Main Bath Fan
+  icon: mdi:fan
+
 switch.tp_link_smart_plug_ad70:
   friendly_name: Air Purifier
   icon: mdi:air-purifier
