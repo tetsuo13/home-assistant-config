@@ -14,7 +14,7 @@
       state: "off"
     - condition: time
       after: "06:00:00"
-      before: "21:15:00"
+      before: "22:15:00"
   actions:
     - action: light.turn_on
       entity_id: light.double_switch
@@ -34,7 +34,7 @@
       entity_id: light.double_switch
       state: "off"
     - condition: time
-      after: "21:15:00"
+      after: "22:15:00"
       before: "06:15:00"
   actions:
     - action: light.turn_on
