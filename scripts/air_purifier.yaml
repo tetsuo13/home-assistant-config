@@ -1,0 +1,29 @@
+---
+
+alias: Turn Air Purifier Off and On Again
+
+icon: mdi:air-purifier
+
+description: >-
+  The air purifier is not smart but it's plugged into a smart switch. This
+  script will turn off the switch -- thereby turning off the air purifier --
+  and then turn the switch back on again so the air purifier can be manually
+  turned on.
+
+variables:
+  switch_entity: switch.tp_link_smart_plug_ad70
+
+sequence:
+  - alias: Turn off air purifier
+    action: switch.turn_off
+    data:
+      entity_id: "{{ switch_entity }}"
+
+  - alias: Wait a few seconds
+    delay: 3
+
+  - alias: Turn on air purifier
+    action: switch.turn_on
+    data:
+      entity_id: "{{ switch_entity }}"
+

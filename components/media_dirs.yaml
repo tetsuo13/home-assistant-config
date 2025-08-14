@@ -1,0 +1,7 @@
+---
+# https://www.home-assistant.io/integrations/homeassistant/
+
+# Snapshots aren't created in a browseable location. Add location for
+# easier reviewing and deleting.
+camera_snapshots: www/images/snapshots
+

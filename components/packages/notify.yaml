@@ -1,5 +1,5 @@
 ---
-# https://www.home-assistant.io/integrations/notify.group/
+# https://www.home-assistant.io/integrations/group#notify-groups
 # https://www.home-assistant.io/integrations/smtp
 
 notify:
@@ -18,11 +18,11 @@ notify:
   - name: mobile_apps
     platform: group
     services:
-      - action: mobile_app_pixel_5
-      - action: mobile_app_pixel_6
+      - action: mobile_app_andrei_phone
+      #- action: mobile_app_lee_phone
 
   - name: mobile_apps_admin
     platform: group
     services:
-      - action: mobile_app_pixel_5
+      - action: mobile_app_andrei_phone
 
