@@ -5,15 +5,15 @@ group:
   sonos_all:
     name: All Sonos Speakers
     entities:
-      - media_player.sonos01
-      - media_player.sonos02
-      - media_player.sonos03
-      - media_player.sonos04
+      - media_player.main_bedroom
+      - media_player.den
+      - media_player.office
+      - media_player.living_room
 
   sonos_all_but_office:
     name: All Sonos Speakers Except for the Office
     entities:
-      - media_player.sonos01
-      - media_player.sonos02
-      - media_player.sonos04
+      - media_player.main_bedroom
+      - media_player.den
+      - media_player.living_room
 

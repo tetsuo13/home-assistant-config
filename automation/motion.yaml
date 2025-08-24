@@ -1,22 +1,23 @@
 ---
+
 # Ending time range needs to match next automation's beginning time.
 - alias: Motion - Turn On Guest Bathroom When Motion Detected Daytime
   id: motion_turn_on_guest_bathroom_when_motion_detected_daytime
   triggers:
     - trigger: state
-      entity_id: binary_sensor.4_in_1_sensor_home_security_motion_detection
+      entity_id: binary_sensor.4_in_1_sensor_motion_detection
       from: "off"
       to: "on"
   conditions:
     - condition: state
-      entity_id: light.zooz_unknown_type_a000_id_a008_level
+      entity_id: light.double_switch
       state: "off"
     - condition: time
       after: "06:00:00"
-      before: "21:15:00"
+      before: "22:15:00"
   actions:
     - action: light.turn_on
-      entity_id: light.zooz_unknown_type_a000_id_a008_level
+      entity_id: light.double_switch
       data:
         brightness_pct: 100
 
@@ -25,19 +26,19 @@
   id: motion_turn_on_guest_bathroom_when_motion_detected_night
   triggers:
     - trigger: state
-      entity_id: binary_sensor.4_in_1_sensor_home_security_motion_detection
+      entity_id: binary_sensor.4_in_1_sensor_motion_detection
       from: "off"
       to: "on"
   conditions:
     - condition: state
-      entity_id: light.zooz_unknown_type_a000_id_a008_level
+      entity_id: light.double_switch
       state: "off"
     - condition: time
-      after: "21:15:00"
+      after: "22:15:00"
       before: "06:15:00"
   actions:
     - action: light.turn_on
-      entity_id: light.zooz_unknown_type_a000_id_a008_level
+      entity_id: light.double_switch
       data:
         brightness_pct: 21
 
@@ -45,17 +46,17 @@
   id: motion_turn_off_guest_bathroom_when_no_motion_detected
   triggers:
     - trigger: state
-      entity_id: binary_sensor.4_in_1_sensor_home_security_motion_detection
+      entity_id: binary_sensor.4_in_1_sensor_motion_detection
       from: "on"
       to: "off"
       for: "00:03:00"
   conditions:
     - condition: state
-      entity_id: light.zooz_unknown_type_a000_id_a008_level
+      entity_id: light.double_switch
       state: "on"
   actions:
     - action: light.turn_off
-      entity_id: light.zooz_unknown_type_a000_id_a008_level
+      entity_id: light.double_switch
 
 - alias: Motion - Send Camera Snapshot Notification On Motion
   id: motion_send_camera_snapshot_notification_on_motion
@@ -73,7 +74,7 @@
       variables:
         camera_name: camera.laundry_main
     - trigger: state
-      entity_id: binary_sensor.front_door_cross_region_detection
+      entity_id: binary_sensor.front_door_smart_motion_human
       to: "on"
       variables:
         camera_name: camera.front_door_main
@@ -104,5 +105,5 @@
         data:
           image: "{{ snapshot_base_url }}/{{ snapshot_filename }}"
           # Use this instead for debugging. Only accessible from intranet.
-          # image: "/api/camera_proxy/{{ camera_name }}"
+          #image: "/api/camera_proxy/{{ camera_name }}"
 

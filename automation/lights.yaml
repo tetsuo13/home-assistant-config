@@ -1,4 +1,5 @@
 ---
+
 - alias: Turn on Lights to Wake Us Up
   id: turn_on_light_to_wake_us_up
   description: >-
@@ -58,12 +59,12 @@
     data:
       entity_id:
         - light.hue_white_lamp_1
-        - light.hue_white_lamp_3
+        - light.hue_white_lamp_2
       brightness: 255
       transition: 1500
 
 # Hue bulbs take 30 minutes to fade to off.
-- alias: Turn Off Lee's Bedside By 8:30pm
+- alias: Turn Off Lee's Bedside at Night
   initial_state: true
   triggers:
     trigger: time
@@ -71,7 +72,7 @@
   actions:
     action: light.turn_off
     data:
-      entity_id: light.hue_white_lamp_3
+      entity_id: light.hue_white_lamp_2
       transition: 1800
 
 # Hue bulbs take 30 minutes to fade to off.
@@ -87,6 +88,7 @@
       transition: 1800
 
 - alias: Turn On Night-Light at Sunset
+  id: turn_on_night_light_at_sunset
   initial_state: true
   triggers:
     trigger: sun
@@ -111,29 +113,6 @@
     data:
       entity_id: light.controller_rgb_44_key_ir_cde6d9
 
-
-- alias: Turn Off Outside Lights Sunrise
-  triggers:
-    trigger: sun
-    event: sunrise
-  actions:
-    - action: light.turn_off
-      data:
-        entity_id:
-          - light.hue_color_lamp_1
-
-- alias: Turn On Outside Lights Sunset
-  triggers:
-    trigger: sun
-    event: sunset
-    offset: '-00:15:00'
-  actions:
-    - action: light.turn_on
-      data:
-        entity_id: light.hue_color_lamp_1
-        brightness_pct: 75
-        rgb_color: [255, 255, 255]
-
 - alias: Turn On Dining Room Lamp Before Sunset
   initial_state: true
   triggers:
@@ -143,7 +122,7 @@
   actions:
     action: switch.turn_on
     data:
-      entity_id: switch.wemo_mini_1_2
+      entity_id: switch.tp_link_smart_plug_ac23
 
 - alias: Turn Off Dining Room Lamp
   initial_state: true
@@ -153,7 +132,7 @@
   actions:
     action: switch.turn_off
     data:
-      entity_id: switch.wemo_mini_1_2
+      entity_id: switch.tp_link_smart_plug_ac23
 
 - alias: Toggle Live Sign When Busy in Teams
   triggers:
@@ -162,17 +141,18 @@
   actions:
     - action: switch.turn_{{ trigger.to_state.state }}
       target:
-        entity_id: switch.wemo_mini_4
+        entity_id: switch.tp_link_smart_plug_d6d2
 
 - alias: Turn On Both Living Room Bookshelf Lamps From Single Switch
   id: turn_on_both_living_room_bookshelf_lamps_from_single_switch
-  # yamllint disable-line rule:line-length
-  description: Physically toggling the one reachable switch should toggle the other switch in tandem
+  description: >-
+    Physically toggling the one reachable switch should toggle the other switch
+    in tandem
   triggers:
     - trigger: state
-      entity_id: switch.tp_link_smart_plug_d6d2
+      entity_id: switch.tp_link_smart_plug_ac7b
   actions:
     - action: switch.turn_{{ trigger.to_state.state }}
       target:
-        entity_id: switch.tp_link_smart_plug_ac23
+        entity_id: switch.tp_link_smart_plug_1106
 
