@@ -12,6 +12,8 @@ cards:
         name: Office Door
       - entity: sensor.z_wave_door_window_sensor_battery_level_2
         name: Kitchen Door
+      - entity: sensor.z_wave_door_window_sensor_battery_level_3
+        name: Laundry Door
       - entity: sensor.flood_sensor_battery_level
         name: Laundry Flood Sensor
       - entity: sensor.4_in_1_sensor_battery_level

@@ -13,11 +13,11 @@
     #  to: "on"
     #  variables:
     #    location_name: Front
-    #- trigger: state
-    #  entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_4
-    #  to: "on"
-    #  variables:
-    #    location_name: Laundry
+    - trigger: state
+      entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_5
+      to: "on"
+      variables:
+        location_name: Laundry
     - trigger: state
       entity_id: binary_sensor.z_wave_door_window_sensor_window_door_is_open
       to: "on"
@@ -56,11 +56,11 @@
     #  to: "off"
     #  variables:
     #    location_name: Front
-    #- trigger: state
-    #  entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_4
-    #  to: "off"
-    #  variables:
-    #    location_name: Laundry
+    - trigger: state
+      entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_5
+      to: "off"
+      variables:
+        location_name: Laundry
     - trigger: state
       entity_id: binary_sensor.z_wave_door_window_sensor_window_door_is_open
       to: "off"
@@ -94,7 +94,7 @@
       - binary_sensor.z_wave_door_window_sensor_window_door_is_open
       #- binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_2
       - binary_sensor.z_wave_door_window_sensor_window_door_is_open_3
-      #- binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_4
+      - binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_5
     to: "on"
   mode: queued
   actions:
@@ -144,7 +144,7 @@
       - binary_sensor.z_wave_door_window_sensor_window_door_is_open
       #- binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_2
       - binary_sensor.z_wave_door_window_sensor_window_door_is_open_3
-      #- binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_4
+      - binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_5
     to: "off"
   mode: queued
   actions:
