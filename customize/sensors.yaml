@@ -39,6 +39,10 @@ binary_sensor.z_wave_door_window_sensor_window_door_is_open_5:
   friendly_name: Laundry Door
   device_class: door
 
+binary_sensor.z_wave_door_window_sensor_window_door_is_open_7:
+  friendly_name: Front Door
+  device_class: door
+
 sensor.z_wave_door_window_sensor_battery_level:
   friendly_name: Office Door Battery Level
 
@@ -47,4 +51,7 @@ sensor.z_wave_door_window_sensor_battery_level_2:
 
 sensor.z_wave_door_window_sensor_battery_level_3:
   friendly_name: Laundry Door Battery Level
+
+sensor.z_wave_door_window_sensor_battery_level_4:
+  friendly_name: Front Door Battery Level
 
