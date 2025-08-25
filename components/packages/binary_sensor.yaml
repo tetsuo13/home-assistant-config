@@ -1,4 +1,5 @@
 ---
+# yamllint disable rule:line-length
 # https://www.home-assistant.io/integrations/binary_sensor
 
 binary_sensor:
@@ -19,6 +20,17 @@ binary_sensor:
       today_is_someones_birthday:
         friendly_name: Today is Someone's Birthday
         value_template: !secret birthday_evaluator
+
+      # The threshold is fairly arbitrary and unscientific. Based on walking
+      # into the room, feeling when it's too humid, and referencing the result
+      # of (humidity - average) at that time.
+      someone_showering_guest_bathroom:
+        friendly_name: Someone is Showering in Guest Bathroom
+        value_template: >
+          {% set humidity = states("sensor.4_in_1_sensor_humidity") | int(default=0) %}
+          {% set average = states("sensor.guest_bathroom_humidity_average_over_last_24h") | int(default=0) %}
+          {% set threshold = 10 %}
+          {{ (humidity - average) > threshold }}
 
   # Service will return a single object with key "busy" and a boolean value.
   # Sensor value to match the boolean value.

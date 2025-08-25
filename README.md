@@ -125,6 +125,10 @@ When a smoke alarm detects smoke or carbon monoxide, an announcement is made ove
 
 Air purifier isn't smart but it's plugged into a Wemo smart plug. Air purifier is intended to run overnight. Automation cuts power in the morning to turn it off and another automation task turns power back on however someone must still manually press the "on" button on the air purifier unit to actually turn it on. Toggling power to the dumb air purifier is preferable to some of the much more expensive smart air purifiers out there.
 
+The guest bathroom fan will turn on when there's motion detected and the humidity level rises more than 10%. It'll stay on until either manually turned off or the next automation triggers.
+
+The guest bathroom fan will turn off after 5 minutes of no motion detected in the room.
+
 ## [Light Automations](automation/lights.yaml)
 
 There are automations to gradually fade on bedside lamps on weekday mornings, turn off before leaving for work, gradually fade on again at sundown, and gradually fade off by bedtime. Similar automations to handle outside lights.
