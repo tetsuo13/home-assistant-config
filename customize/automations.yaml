@@ -43,10 +43,12 @@ automation.turn_on_dining_room_lamp_before_sunset_2:
 automation.turn_on_both_living_room_bookshelf_lamps_from_single_switch:
   icon: mdi:lamps
 
-automation.turn_off_air_purifier_weekdays_6_30am:
+automation.turn_off_air_purifier_weekdays:
+  friendly_name: Turn Off Air Purifier Weekdays (7:00am)
   icon: mdi:air-purifier-off
 
-automation.turn_off_air_purifier_weekends_9_00am:
+automation.turn_off_air_purifier_weekends:
+  friendly_name: Turn Off Air Purifier Weekends (9:00am)
   icon: mdi:air-purifier-off
 
 automation.turn_off_dining_room_lamp_2:
@@ -106,6 +108,6 @@ automation.turn_on_lights_before_sunset:
   icon: mdi:lamp
 
 automation.turn_on_lights_to_wake_us_up:
-  friendly_name: Turn On Lights To Wake Us Up
+  friendly_name: Turn On Lights To Wake Us Up (6:00)
   icon: mdi:lamp
 
