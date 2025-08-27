@@ -27,4 +27,3 @@ binary_sensor:
   # delay_off: not_used in this example
   # auto_off: not_used in this example
   availability: "{{ states(reference_entity) not in ('unknown', 'unavailable') }}"
-

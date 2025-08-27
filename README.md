@@ -10,9 +10,7 @@
 - [Screenshots](#screenshots)
 - [Other Noteable Configurations](#other-noteable-configurations)
 
-This is the configuration used in my [Home Assistant](https://home-assistant.io/) (HA) setup.
-
-Runs on a [Raspberry Pi 3B](https://www.raspberrypi.org/products/raspberry-pi-3-model-b/) using [Home Assistant Operating System](https://github.com/home-assistant/operating-system).
+This is the configuration used in my [Home Assistant](https://home-assistant.io/) (HA) setup. Runs as a virtual machine using [Home Assistant Operating System](https://github.com/home-assistant/operating-system).
 
 # Devices
 
@@ -44,7 +42,6 @@ The Hue Bridge is easily the most troublesome device in use. Requires power cycl
 
 | Device | Connection | Home Assistant |
 | ------ | ---------- | -------------- |
-| [Belkin Wemo Mini Smart Plug](https://www.belkin.com/us/support-article?articleNum=226110) (F7C063fc) | Wi-Fi | [Belkin WeMo](https://www.home-assistant.io/integrations/wemo) |
 | [Ecolink Door & Window Sensor](https://discoverecolink.com/product/z-wave-door-window-sensor-oem/) (DW-ZWAVE2.5-ECO) | Z-Wave JS | [Z-Wave JS](https://www.home-assistant.io/integrations/zwave_js) |
 | [Fibaro Z-Wave Flood Sensor](https://www.fibaro.com/en/products/flood-sensor/) (FGFS-101) | Z-Wave JS | [Z-Wave JS](https://www.home-assistant.io/integrations/zwave_js) |
 | [First Alert Smoke & CO Alarm](https://www.resideo.com/us/en/products/security/alarms/combo-smoke-carbon-monoxide-alarms/zcombo-wireless-smoke-carbon-monoxide-alarm-works-with-zwave-ring-zcombo/) | Z-Wave JS | [Z-Wave JS](https://www.home-assistant.io/integrations/zwave_js) |
@@ -59,7 +56,7 @@ The Hue Bridge is easily the most troublesome device in use. Requires power cycl
 | Device | Connection | Home Assistant |
 | ------ | ---------- | -------------- |
 | Amcrest PoE Camera (IP5M) | Ethernet | [Dahua](https://github.com/rroller/dahua) |
-| [Amcrest Video Doorbell](https://amcrest.com/4mp-wifi-camera-doorbell-ad410.html) (AD410) | Wi-Fi | [Amcrest](https://www.home-assistant.io/integrations/amcrest/) |
+| [Amcrest Video Doorbell](https://amcrest.com/4mp-wifi-camera-doorbell-ad410.html) (AD410) | Wi-Fi | [Dahua](https://github.com/rroller/dahua) |
 
 ## Media
 
@@ -123,7 +120,7 @@ When a smoke alarm detects smoke or carbon monoxide, an announcement is made ove
 
 ## [Fan Automations](automation/fans.yaml)
 
-Air purifier isn't smart but it's plugged into a Wemo smart plug. Air purifier is intended to run overnight. Automation cuts power in the morning to turn it off and another automation task turns power back on however someone must still manually press the "on" button on the air purifier unit to actually turn it on. Toggling power to the dumb air purifier is preferable to some of the much more expensive smart air purifiers out there.
+Air purifier isn't smart but it's plugged into a TP-Link Kasa smart plug. Turning the air purifier on is a manual process of pushing the button on the device; turning it off is achieved through turning off the smart plug although it needs to be turned back on again so that it's ready for the manual process again. The [`air_purifier`](scripts/air_purifier.yaml) script handles this "turn off then back on again" case. Maintaining this automation to toggle power to the dumb air purifier is preferable to some of the much more expensive smart air purifiers out there.
 
 ## [Light Automations](automation/lights.yaml)
 

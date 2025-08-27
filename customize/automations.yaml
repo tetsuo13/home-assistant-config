@@ -1,37 +1,69 @@
 ---
-# Order matters
+# Order matters(?)
 
-automation.turn_on_lights_to_wake_us_up:
-  friendly_name: Bedroom Lights On at 6:00am
-  icon: mdi:lightbulb-outline
+automation.alarm_away_door_alarm:
+  icon: mdi:shield-home
 
-automation.turn_off_lights_before_work:
-  friendly_name: Bedroom Lights Off Before Work
-  icon: mdi:lightbulb-outline
+automation.alarm_triggered_armed_away:
+  icon: mdi:shield-lock
 
-automation.turn_on_lights_before_sunset:
-  friendly_name: Bedroom Lights On Before Sunset
-  icon: mdi:lightbulb-outline
+automation.bedtime_routine:
+  icon: mdi:bed-clock
 
-automation.turn_off_lee_s_bedside_by_8_30pm:
-  friendly_name: Turn Off Lee's Bedside By 8:30pm
-  icon: mdi:lightbulb-outline
+automation.low_battery_notification:
+  friendly_name: Low Battery Notification
+  icon: mdi:battery-alert-variant-outline
 
-automation.turn_off_andrei_s_bedside_by_9_00pm:
-  friendly_name: Turn Off Andrei's Bedside Off By 9:00pm
-  icon: mdi:lightbulb-outline
+automation.motion_send_camera_snapshot_notification_on_motion:
+  friendly_name: Send Camera Snapshot Notification on Motion
+  icon: mdi:motion-sensor
 
-automation.turn_on_outside_lights_early_morning:
-  friendly_name: Deck Lights On at 6:15am
-  icon: mdi:lightbulb-outline
+automation.motion_turn_off_guest_bathroom_fan_when_no_motion_detected:
+  friendly_name: Turn Off Guest Bathroom Fan When No Motion Detected
+  icon: mdi:motion-sensor
 
-automation.turn_off_outside_lights_sunrise:
-  friendly_name: Deck Lights Off at Sunrise
-  icon: mdi:lightbulb-outline
+automation.motion_turn_on_guest_bathroom_when_motion_detected_daytime:
+  friendly_name: Turn on Guest Bathroom When Motion Detected (Daytime)
+  icon: mdi:motion-sensor
 
-automation.turn_on_outside_lights_sunset:
-  friendly_name: Deck Lights On at Sunset
-  icon: mdi:lightbulb-outline
+automation.motion_turn_on_guest_bathroom_when_motion_detected_night:
+  friendly_name: Turn on Guest Bathroom When Motion Detected (Night)
+  icon: mdi:motion-sensor
+
+automation.motion_turn_off_guest_bathroom_when_no_motion_detected:
+  friendly_name: Turn off Guest Bathroom When No Motion Detected
+  icon: mdi:motion-sensor
+
+automation.toggle_live_sign_when_busy_in_teams:
+  friendly_name: Toggle Live Sign When Busy in Teams
+  icon: mdi:broadcast
+
+automation.turn_off_main_bathroom_fan_after_period_of_time:
+  friendly_name: Turn Off Main Bathroom Fan After Period of Time
+  icon: mdi:fan-clock
+
+automation.turn_on_dining_room_lamp_before_sunset_2:
+  friendly_name: Turn On Dining Room Lamp Before Sunset
+  icon: mdi:lamp
+
+automation.turn_on_both_living_room_bookshelf_lamps_from_single_switch:
+  icon: mdi:lamps
+
+automation.turn_off_air_purifier_weekdays:
+  friendly_name: Turn Off Air Purifier Weekdays (7:00am)
+  icon: mdi:air-purifier-off
+
+automation.turn_off_air_purifier_weekends:
+  friendly_name: Turn Off Air Purifier Weekends (9:00am)
+  icon: mdi:air-purifier-off
+
+automation.turn_off_dining_room_lamp_2:
+  friendly_name: Turn Off Dining Room Lamp 10:30pm
+  icon: mdi:lamp
+
+automation.turn_off_lee_s_bedside_at_night:
+  friendly_name: Turn Off Lee's Bedside by 8:30pm
+  icon: mdi:lamp
 
 automation.turn_on_night_light_at_sunset:
   friendly_name: Turn On Night-Light at Sunset
@@ -40,14 +72,6 @@ automation.turn_on_night_light_at_sunset:
 automation.turn_off_night_light_after_sunrise:
   friendly_name: Turn Off Night-Light After Sunrise
   icon: mdi:led-strip
-
-automation.turn_on_dining_room_lamp_before_sunset:
-  friengly_name: Turn On Dining Room Lamp Before Sunset
-  icon: mdi:lamp
-
-automation.turn_off_dining_room_lamp:
-  friengly_name: Turn On Dining Room Lamp 10:30pm
-  icon: mdi:lamp
 
 automation.announce_door_opened:
   friendly_name: Announce Door Opened
@@ -65,7 +89,31 @@ automation.announce_door_closed_event:
   friendly_name: Announce Door Closed (Event)
   icon: mdi:door-closed
 
-automation.motion_send_camera_snapshot_notification_on_motion:
-  friendly_name: Send Camera Snapshot Notification on Motion
-  device_class: motion
+automation.laundry_flooding:
+  friendly_name: Laundry Flooding
+  icon: mdi:home-flood
+
+automation.smoke_alarm_alert:
+  friendly_name: Smoke Alarm - Alert
+  icon: mdi:smoke-detector-alert-outline
+
+automation.smoke_alarm_turn_on_lights:
+  friendly_name: Smoke Alarm - Turn on Lights
+  icon: mdi:smoke-detector-alert-outline
+
+automation.turn_off_andrei_s_bedside_by_9_00pm:
+  friendly_name: Turn Off Andrei's Bedside By 9:00pm
+  icon: mdi:lamp
+
+automation.turn_off_lights_before_work:
+  friendly_name: Turn Off Lights Before Work
+  icon: mdi:lamp
+
+automation.turn_on_lights_before_sunset:
+  friendly_name: Turn On Lights Before Sunset
+  icon: mdi:lamp
+
+automation.turn_on_lights_to_wake_us_up:
+  friendly_name: Turn On Lights To Wake Us Up (6:00)
+  icon: mdi:lamp
 

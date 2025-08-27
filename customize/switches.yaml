@@ -1,25 +1,18 @@
 ---
-switch.wemo_mini_1:
+
+switch.double_switch_1:
+  friendly_name: Guest Bath Fan
+  icon: mdi:fan
+
+switch.double_switch_1_2:
+  friendly_name: Main Bath Fan
+  icon: mdi:fan
+
+switch.tp_link_smart_plug_ad70:
   friendly_name: Air Purifier
-  icon: mdi:air-filter
+  icon: mdi:air-purifier
 
-switch.wemo_mini_1_2:
-  friendly_name: Dining Lamp
-  icon: mdi:lamp
-
-switch.wemo_mini_4:
-  friendly_name: Live
-  icon: mdi:broadcast
-
-fan.jasco_products_unknown_type_4944_id_3337_level:
+fan.in_wall_fan_speed_control_500s:
   friendly_name: Living Room Fan
-  icon: mdi:fan
-
-switch.dimmer_dry_contact_relay:
-  friendly_name: Guest Bathroom Fan
-  icon: mdi:fan
-
-switch.dimmer_dry_contact_relay_2:
-  friendly_name: Primary Bathroom Fan
   icon: mdi:fan
 

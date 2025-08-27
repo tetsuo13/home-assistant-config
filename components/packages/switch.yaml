@@ -1,5 +1,5 @@
 ---
-# https://www.home-assistant.io/integrations/switch.template/
+# https://www.home-assistant.io/integrations/template/#switch
 
 switch:
   - platform: template
@@ -8,19 +8,19 @@ switch:
         unique_id: switch_living_room_bookshelf_lamps
         friendly_name: Living Bookshelves
         icon_template: mdi:lamps
-        value_template: "{{ is_state('switch.tp_link_smart_plug_ac23', 'on') }}"
+        value_template: "{{ is_state('switch.tp_link_smart_plug_1106', 'on') }}"
         turn_on:
           - action: switch.turn_on
             target:
-              entity_id: switch.tp_link_smart_plug_ac23
+              entity_id: switch.tp_link_smart_plug_1106
           - action: switch.turn_on
             target:
-              entity_id: switch.tp_link_smart_plug_d6d2
+              entity_id: switch.tp_link_smart_plug_ac7b
         turn_off:
           - action: switch.turn_off
             target:
-              entity_id: switch.tp_link_smart_plug_ac23
+              entity_id: switch.tp_link_smart_plug_1106
           - action: switch.turn_off
             target:
-              entity_id: switch.tp_link_smart_plug_d6d2
+              entity_id: switch.tp_link_smart_plug_ac7b
 

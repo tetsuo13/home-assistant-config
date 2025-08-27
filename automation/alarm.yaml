@@ -23,22 +23,22 @@
   id: alarm_away_door_alarm
   triggers:
     - trigger: state
-      entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_2
+      entity_id: binary_sensor.z_wave_door_window_sensor_window_door_is_open_3
       to: "on"
       variables:
         location_name: Kitchen
     - trigger: state
-      entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open
+      entity_id: binary_sensor.z_wave_door_window_sensor_window_door_is_open_7
       to: "on"
       variables:
         location_name: Front
     - trigger: state
-      entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_4
+      entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_5
       to: "on"
       variables:
         location_name: Laundry
     - trigger: state
-      entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_3
+      entity_id: binary_sensor.z_wave_door_window_sensor_window_door_is_open
       to: "on"
       variables:
         location_name: Office

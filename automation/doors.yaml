@@ -1,28 +1,28 @@
 ---
 # yamllint disable rule:line-length
 - alias: Announce Door Opened
-  id: "announce_door_opened"
+  id: announce_door_opened
   triggers:
     - trigger: state
-      entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_2
+      entity_id: binary_sensor.z_wave_door_window_sensor_window_door_is_open_3
       to: "on"
       variables:
-        location_name: "Kitchen"
+        location_name: Kitchen
     - trigger: state
-      entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open
+      entity_id: binary_sensor.z_wave_door_window_sensor_window_door_is_open_7
       to: "on"
       variables:
-        location_name: "Front"
+        location_name: Front
     - trigger: state
-      entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_4
+      entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_5
       to: "on"
       variables:
-        location_name: "Laundry"
+        location_name: Laundry
     - trigger: state
-      entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_3
+      entity_id: binary_sensor.z_wave_door_window_sensor_window_door_is_open
       to: "on"
       variables:
-        location_name: "Office"
+        location_name: Office
   mode: queued
   conditions:
     - condition: state
@@ -44,28 +44,28 @@
       delay: "00:00:03"
 
 - alias: Announce Door Closed
-  id: "announce_door_closed"
+  id: announce_door_closed
   triggers:
     - trigger: state
-      entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_2
+      entity_id: binary_sensor.z_wave_door_window_sensor_window_door_is_open_3
       to: "off"
       variables:
-        location_name: "Kitchen"
+        location_name: Kitchen
     - trigger: state
-      entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open
+      entity_id: binary_sensor.z_wave_door_window_sensor_window_door_is_open_7
       to: "off"
       variables:
-        location_name: "Front"
+        location_name: Front
     - trigger: state
-      entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_4
+      entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_5
       to: "off"
       variables:
-        location_name: "Laundry"
+        location_name: Laundry
     - trigger: state
-      entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_3
+      entity_id: binary_sensor.z_wave_door_window_sensor_window_door_is_open
       to: "off"
       variables:
-        location_name: "Office"
+        location_name: Office
   mode: queued
   conditions:
     - condition: state
@@ -87,14 +87,14 @@
       delay: "00:00:03"
 
 - alias: Announce Door Opened (Event)
-  id: "announce_door_opened_event"
+  id: announce_door_opened_event
   triggers:
     trigger: state
     entity_id:
-      - binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open
-      - binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_2
-      - binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_3
-      - binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_4
+      - binary_sensor.z_wave_door_window_sensor_window_door_is_open
+      - binary_sensor.z_wave_door_window_sensor_window_door_is_open_7
+      - binary_sensor.z_wave_door_window_sensor_window_door_is_open_3
+      - binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_5
     to: "on"
   mode: queued
   actions:
@@ -106,7 +106,7 @@
           sequence:
             - action: script.sonos_play_file
               data:
-                audio_url: "audio/birthday01.mp3"
+                audio_url: audio/birthday01.mp3
                 delay: "00:00:16"
         - conditions:
             - condition: state
@@ -115,7 +115,7 @@
           sequence:
             - action: script.sonos_play_file
               data:
-                audio_url: "audio/ghost01.mp3"
+                audio_url: audio/ghost01.mp3
                 delay: "00:00:08"
         - conditions:
             - condition: state
@@ -124,7 +124,7 @@
           sequence:
             - action: script.sonos_play_file
               data:
-                audio_url: "audio/turkey01.mp3"
+                audio_url: audio/turkey01.mp3
                 delay: "00:00:08"
         - conditions:
             - condition: state
@@ -133,18 +133,18 @@
           sequence:
             - action: script.sonos_play_file
               data:
-                audio_url: "audio/christmas01.mp3"
+                audio_url: audio/christmas01.mp3
                 delay: "00:00:08"
 
 - alias: Announce Door Closed (Event)
-  id: "announce_door_closed_event"
+  id: announce_door_closed_event
   triggers:
     trigger: state
     entity_id:
-      - binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open
-      - binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_2
-      - binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_3
-      - binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_4
+      - binary_sensor.z_wave_door_window_sensor_window_door_is_open
+      - binary_sensor.z_wave_door_window_sensor_window_door_is_open_7
+      - binary_sensor.z_wave_door_window_sensor_window_door_is_open_3
+      - binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_5
     to: "off"
   mode: queued
   actions:
@@ -156,7 +156,7 @@
           sequence:
             - action: script.sonos_play_file
               data:
-                audio_url: "audio/birthday01.mp3"
+                audio_url: audio/birthday01.mp3
                 delay: "00:00:16"
         - conditions:
             - condition: state
@@ -165,7 +165,7 @@
           sequence:
             - action: script.sonos_play_file
               data:
-                audio_url: "audio/howl01.mp3"
+                audio_url: audio/howl01.mp3
                 delay: "00:00:08"
         - conditions:
             - condition: state
@@ -174,7 +174,7 @@
           sequence:
             - action: script.sonos_play_file
               data:
-                audio_url: "audio/turkey01.mp3"
+                audio_url: audio/turkey01.mp3
                 delay: "00:00:08"
         - conditions:
             - condition: state
@@ -183,6 +183,6 @@
           sequence:
             - action: script.sonos_play_file
               data:
-                audio_url: "audio/christmas01.mp3"
+                audio_url: audio/christmas01.mp3
                 delay: "00:00:08"
 

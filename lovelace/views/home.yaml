@@ -1,23 +1,25 @@
 ---
-# yamllint disable rule:line-length
+
 title: Home
 icon: mdi:home
 cards:
   - type: picture-glance
     title: Front Door
     entities: []
-    camera_image: camera.front_doorbell
+    camera_image: camera.front_door_main
     camera_view: live
-  - type: picture-glance
-    title: Laundry
-    entities: []
-    camera_image: camera.laundry_main
-    camera_view: live
-  - type: picture-glance
-    title: Office
-    entities: []
-    camera_image: camera.office_main
-    camera_view: live
+  - type: horizontal-stack
+    cards:
+      - type: picture-glance
+        title: Laundry
+        entities: []
+        camera_image: camera.laundry_main
+        camera_view: live
+      - type: picture-glance
+        title: Office
+        entities: []
+        camera_image: camera.office_main
+        camera_view: live
   - type: alarm-panel
     entity: alarm_control_panel.alarm
     states:
@@ -31,32 +33,32 @@ cards:
       - type: tile
         entity: light.hue_white_lamp_1
       - type: tile
-        entity: light.hue_white_lamp_3
+        entity: light.hue_white_lamp_2
       - type: tile
         entity: light.hue_color_lamp_1
       - type: tile
         entity: light.controller_rgb_44_key_ir_cde6d9
       - type: tile
-        entity: switch.wemo_mini_1_2
+        entity: switch.tp_link_smart_plug_ac23
       - type: tile
-        entity: switch.jasco_products_46201_in_wall_smart_switch_switch
+        entity: switch.in_wall_paddle_switch_qfsw_500s_2
       - type: tile
         entity: switch.living_room_bookshelf_lamps
       - type: tile
-        entity: light.zooz_unknown_type_a000_id_a008_level
+        entity: light.double_switch
       - type: tile
-        entity: light.zooz_unknown_type_a000_id_a008_level_2
+        entity: switch.tp_link_smart_plug_d6d2
       - type: tile
-        entity: switch.wemo_mini_4
+        entity: light.double_switch_2
   - type: entities
     title: Switches
     show_header_toggle: false
     state_color: true
     entities:
-      - entity: switch.wemo_mini_1
-      - entity: fan.living_room_preset_mode
-      - entity: switch.dimmer_dry_contact_relay
-      - entity: switch.dimmer_dry_contact_relay_2
+      - entity: switch.tp_link_smart_plug_ad70
+      - entity: fan.in_wall_fan_speed_control_500s
+      - entity: switch.double_switch_1
+      - entity: switch.double_switch_1_2
   - type: entities
     title: Sensors
     show_header_toggle: false
@@ -65,24 +67,11 @@ cards:
       - entity: binary_sensor.living_room_occupancy
       - entity: binary_sensor.den_occupancy
       - entity: binary_sensor.master_bedroom_occupancy
-      - entity: binary_sensor.4_in_1_sensor_home_security_motion_detection
+      - entity: binary_sensor.4_in_1_sensor_motion_detection
       - entity: binary_sensor.flood_sensor_water_leak_state
-      - entity: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_2
-      - entity: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open
-      - entity: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_4
-      - entity: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_3
+      - entity: binary_sensor.z_wave_door_window_sensor_window_door_is_open
+      - entity: binary_sensor.z_wave_door_window_sensor_window_door_is_open_3
+      - entity: binary_sensor.z_wave_door_window_sensor_window_door_is_open_7
+      - entity: binary_sensor.z_wave_door_window_sensor_window_door_is_open_5
     state_color: true
-  - type: entities
-    title: Thermostats
-    show_header_toggle: false
-    entities:
-      - entity: climate.home
-      - entity: sensor.home_humidity
-      - entity: sensor.home_temperature
-      - entity: sensor.living_room_temperature
-      - entity: sensor.den_temperature
-      - entity: sensor.master_bedroom_temperature
-      - entity: sensor.flood_sensor_air_temperature_2
-      - entity: sensor.4_in_1_sensor_air_temperature
-      - entity: sensor.4_in_1_sensor_humidity
 

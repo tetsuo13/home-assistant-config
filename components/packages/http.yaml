@@ -1,5 +1,5 @@
 ---
-# https://www.home-assistant.io/integrations/http/#configuration-variables
+# https://www.home-assistant.io/integrations/http
 
 http:
   use_x_forwarded_for: true

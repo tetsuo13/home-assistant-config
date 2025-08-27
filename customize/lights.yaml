@@ -1,29 +1,44 @@
 ---
-light.hue_white_lamp_1:
-  friendly_name: Andrei's Bedside
-  icon: mdi:lightbulb-outline
-
-light.hue_white_lamp_3:
-  friendly_name: Lee's Bedside
-  icon: mdi:lightbulb-outline
-
-light.hue_color_lamp_1:
-  friendly_name: Deck Light
-  icon: mdi:lightbulb-outline
 
 light.controller_rgb_44_key_ir_cde6d9:
   friendly_name: Night-Light
   icon: mdi:led-strip
 
-switch.jasco_products_46201_in_wall_smart_switch_switch:
+light.double_switch:
+  friendly_name: Guest Bath
+
+light.double_switch_2:
+  friendly_name: Main Bath
+
+light.hue_color_lamp_1:
+  friendly_name: Deck Light
+  icon: mdi:lightbulb-outline
+
+light.hue_white_lamp_1:
+  friendly_name: Andrei's Bedside
+  icon: mdi:lightbulb-outline
+
+light.hue_white_lamp_2:
+  friendly_name: Lee's Bedside
+  icon: mdi:lightbulb-outline
+
+switch.in_wall_paddle_switch_qfsw_500s_2:
   friendly_name: Living Room
   icon: mdi:ceiling-light
 
-light.zooz_unknown_type_a000_id_a008_level:
-  friendly_name: Guest Bath
-  icon: mdi:lightbulb-outline
+switch.tp_link_smart_plug_1106:
+  friendly_name: Bookshelf Lamp 2
+  icon: mdi:lamp
 
-light.zooz_unknown_type_a000_id_a008_level_2:
-  friendly_name: Primary Bath
-  icon: mdi:lightbulb-outline
+switch.tp_link_smart_plug_ac23:
+  friendly_name: Dining Lamp
+  icon: mdi:lamp
+
+switch.tp_link_smart_plug_ac7b:
+  friendly_name: Bookshelf Lamp 1
+  icon: mdi:lamp
+
+switch.tp_link_smart_plug_d6d2:
+  friendly_name: Live
+  icon: mdi:broadcast
 

@@ -1,4 +1,6 @@
 ---
+# https://www.home-assistant.io/dashboards/dashboards/
+
 title: Home
 views:
   - !include lovelace/views/home.yaml
