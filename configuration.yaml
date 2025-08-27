@@ -28,6 +28,12 @@ script: !include_dir_named scripts
 shell_command: !include components/shell_commands.yaml
 logger: !include components/logger.yaml
 
+# https://www.home-assistant.io/integrations/config/
+config:
+
 lovelace:
   mode: yaml
+
+# https://www.home-assistant.io/integrations/system_health/
+system_health:
 
