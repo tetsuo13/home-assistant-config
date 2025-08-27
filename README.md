@@ -122,6 +122,10 @@ When a smoke alarm detects smoke or carbon monoxide, an announcement is made ove
 
 Air purifier isn't smart but it's plugged into a TP-Link Kasa smart plug. Turning the air purifier on is a manual process of pushing the button on the device; turning it off is achieved through turning off the smart plug although it needs to be turned back on again so that it's ready for the manual process again. The [`air_purifier`](scripts/air_purifier.yaml) script handles this "turn off then back on again" case. Maintaining this automation to toggle power to the dumb air purifier is preferable to some of the much more expensive smart air purifiers out there.
 
+The guest bathroom fan will turn on when there's motion detected and the humidity level rises more than 10%. It'll stay on until either manually turned off or the next automation triggers.
+
+The guest bathroom fan will turn off after 5 minutes of no motion detected in the room.
+
 ## [Light Automations](automation/lights.yaml)
 
 There are automations to gradually fade on bedside lamps on weekday mornings, turn off before leaving for work, gradually fade on again at sundown, and gradually fade off by bedtime. Similar automations to handle outside lights.
