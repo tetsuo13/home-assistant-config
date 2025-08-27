@@ -1,6 +1,12 @@
 ---
 # Order matters(?)
 
+automation.alarm_away_door_alarm:
+  icon: mdi:shield-home
+
+automation.alarm_triggered_armed_away:
+  icon: mdi:shield-lock
+
 automation.bedtime_routine:
   icon: mdi:bed-clock
 

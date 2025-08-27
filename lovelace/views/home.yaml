@@ -20,6 +20,11 @@ cards:
         entities: []
         camera_image: camera.office_main
         camera_view: live
+  - type: alarm-panel
+    entity: alarm_control_panel.alarm
+    states:
+      - arm_home
+      - arm_away
   - type: grid
     columns: 2
     square: false
