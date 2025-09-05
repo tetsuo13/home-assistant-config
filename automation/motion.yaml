@@ -62,6 +62,7 @@
   id: motion_send_camera_snapshot_notification_on_motion
   description: >
     Send a notification to the Companion App with a camera snapshot.
+  mode: queued
   triggers:
     - trigger: state
       entity_id: binary_sensor.office_motion_alarm
