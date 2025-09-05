@@ -102,7 +102,7 @@
     - action: notify.mobile_apps
       data:
         title: Camera Motion Detected
-        message: "{{ trigger.to_state.name }}"
+        message: ""
         data:
           image: "{{ snapshot_base_url }}/{{ snapshot_filename }}"
           # Use this instead for debugging. Only accessible from intranet.
