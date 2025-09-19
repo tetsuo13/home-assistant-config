@@ -27,23 +27,35 @@
 - alias: Low Battery Notification
   id: low_battery_notification
   description: Notify of low battery level in devices which have batteries.
+  mode: parallel
   triggers:
+    # The default trigger is to wait for the "low battery level" sensor to
+    # flip for a period of time however this approach isn't very reliable.
+    # Most of the devices will lose connectivity well before this sensor
+    # flips. Ideally, and in time, each of the unique behavior of the devices
+    # is identified and handled with a its own trigger.
     - trigger: state
       entity_id:
-        # Sensor fires at 80% battery level remaining then device is mostly
-        # off the network and otherwise unresponsive.
-        - sensor.4_in_1_sensor_battery_level
         - binary_sensor.flood_sensor_low_battery_level
         - binary_sensor.z_wave_door_window_sensor_low_battery_level
         - binary_sensor.z_wave_door_window_sensor_low_battery_level_2
         - binary_sensor.z_wave_door_window_sensor_low_battery_level_4
         - binary_sensor.z_wave_door_window_sensor_low_battery_level_5
-        - binary_sensor.zcombo_g_smoke_co_alarm_low_battery_level
-        - binary_sensor.zcombo_g_smoke_co_alarm_low_battery_level_2
-        - binary_sensor.zcombo_g_smoke_co_alarm_low_battery_level_3
       from: "off"
       to: "on"
-      for: "01:00:00"
+      for:
+        hours: 1
+
+    # After it's been on 10% for a few days it'll slowly become more and more
+    # unresponsive until it completely loses connectivity. Never reports lower
+    # than 10%.
+    - trigger: numeric_state
+      entity_id:
+        - sensor.4_in_1_sensor_battery_level
+      below: 11
+      for:
+        hours: 8
+
     # Smoke alarms will start chirping the minute they reach 77% battery
     # level. They will stay at 78% for several days however. Send notification
     # just before they drop to 77%. Would prefer to trigger only if it's been
@@ -55,7 +67,8 @@
         - sensor.zcombo_g_smoke_co_alarm_battery_level_2
         - sensor.zcombo_g_smoke_co_alarm_battery_level_3
       below: 78
-      for: "08:00:00"
+      for:
+        hours: 8
   actions:
     - action: notify.mobile_apps
       data:
