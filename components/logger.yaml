@@ -6,3 +6,14 @@ default: warning
 logs:
   homeassistant.components.shell_command: debug
 
+filters:
+  # Filter out REST platform binary sensor when remote server unavailable.
+  # This is somewhat commonplace and not noteworthy.
+  homeassistant.components.rest.data:
+    - failed with Cannot connect to host
+    - Timeout while fetching data
+  homeassistant.components.binary_sensor:
+    - Setup of binary_sensor platform rest is taking over 10 seconds
+  homeassistant.helpers.entity:
+    - Update of binary_sensor.teams_on_call is taking over 10 seconds
+

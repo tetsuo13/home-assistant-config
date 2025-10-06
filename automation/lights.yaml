@@ -138,6 +138,9 @@
   triggers:
     trigger: state
     entity_id: binary_sensor.teams_on_call
+    # When the REST platform isn't able to get a successful response, this
+    # binary_sensor will emit "unavailable" instead. Ignore it.
+    not_to: unavailable
   actions:
     - action: switch.turn_{{ trigger.to_state.state }}
       target:

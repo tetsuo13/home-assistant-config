@@ -20,9 +20,11 @@ binary_sensor:
         friendly_name: Today is Someone's Birthday
         value_template: !secret birthday_evaluator
 
-  # Service will return a single object with key "busy" and a boolean value.
-  # Sensor value to match the boolean value.
-  # Example payload: {"busy":false}
+  # Service will return a json object with key "busy" and a boolean value.
+  # Sensor value is set to the boolean value. If the service is not available,
+  # it will return "unavailable".
+  #
+  # Example response: {"busy":false}
   - platform: rest
     resource: !secret teams_rest_url
     name: Teams on call
