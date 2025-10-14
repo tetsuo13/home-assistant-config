@@ -6,14 +6,16 @@ icon: mdi:speaker
 
 description: >-
   Plays across all Sonos speakers unless it's during business hours on a
-  weekday (Mon-Fri, 8-5) then the office speaker will be omitted.
+  weekday (Mon-Fri, 8-5) then the office speaker will be omitted unless the
+  'everywhere' variable is set to 'true'.
 
 mode: queued
 
 variables:
   base_url: !secret internal_url
+  # Will override any business hours checks if 'everywhere == true'
   sonos_group: >-
-    {% if now().weekday() < 5 and 8 <= now().hour < 17 %}
+    {% if not everywhere and now().weekday() < 5 and 8 <= now().hour < 17 %}
       group.sonos_all_but_office
     {% else %}
       group.sonos_all
@@ -24,8 +26,10 @@ sequence:
     target:
       entity_id: "{{ sonos_group }}"
     data_template:
-      media_content_id: "{{ base_url }}/local/{{ audio_url }}"
+      media_content_id: "{{ base_url }}/local/audio/{{ audio_file }}"
       media_content_type: music
+      # Fades any existing audio currently playing to play the audio file
+      # instead of outright stopping it, playing audio file, starting again.
       announce: true
       extra:
         volume: 15

@@ -106,8 +106,8 @@
           sequence:
             - action: script.sonos_play_file
               data:
-                audio_url: audio/birthday01.mp3
-                delay: "00:00:16"
+                audio_file: birthday01.mp3
+                everywhere: false
         - conditions:
             - condition: state
               entity_id: binary_sensor.halloween_month
@@ -115,8 +115,8 @@
           sequence:
             - action: script.sonos_play_file
               data:
-                audio_url: audio/ghost01.mp3
-                delay: "00:00:08"
+                audio_file: ghost01.mp3
+                everywhere: false
         - conditions:
             - condition: state
               entity_id: binary_sensor.thanksgiving_month
@@ -124,8 +124,8 @@
           sequence:
             - action: script.sonos_play_file
               data:
-                audio_url: audio/turkey01.mp3
-                delay: "00:00:08"
+                audio_file: turkey01.mp3
+                everywhere: false
         - conditions:
             - condition: state
               entity_id: binary_sensor.christmas_month
@@ -133,8 +133,8 @@
           sequence:
             - action: script.sonos_play_file
               data:
-                audio_url: audio/christmas01.mp3
-                delay: "00:00:08"
+                audio_file: christmas01.mp3
+                everywhere: false
 
 - alias: Announce Door Closed (Event)
   id: announce_door_closed_event
@@ -156,8 +156,8 @@
           sequence:
             - action: script.sonos_play_file
               data:
-                audio_url: audio/birthday01.mp3
-                delay: "00:00:16"
+                audio_file: birthday01.mp3
+                everywhere: false
         - conditions:
             - condition: state
               entity_id: binary_sensor.halloween_month
@@ -165,8 +165,8 @@
           sequence:
             - action: script.sonos_play_file
               data:
-                audio_url: audio/howl01.mp3
-                delay: "00:00:08"
+                audio_file: howl01.mp3
+                everywhere: false
         - conditions:
             - condition: state
               entity_id: binary_sensor.thanksgiving_month
@@ -174,8 +174,8 @@
           sequence:
             - action: script.sonos_play_file
               data:
-                audio_url: audio/turkey01.mp3
-                delay: "00:00:08"
+                audio_file: turkey01.mp3
+                everywhere: false
         - conditions:
             - condition: state
               entity_id: binary_sensor.christmas_month
@@ -183,6 +183,19 @@
           sequence:
             - action: script.sonos_play_file
               data:
-                audio_url: audio/christmas01.mp3
-                delay: "00:00:08"
+                audio_file: christmas01.mp3
+                everywhere: false
+
+- alias: Front Doorbell Pressed
+  id: front_doorbell_pressed
+  triggers:
+    - trigger: state
+      entity_id: binary_sensor.front_door_button_pressed
+      to: "on"
+  mode: queued
+  actions:
+    action: script.sonos_play_file
+    data:
+      audio_file: doorbell01.mp3
+      everywhere: true
 

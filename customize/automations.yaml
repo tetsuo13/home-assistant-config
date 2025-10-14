@@ -10,6 +10,9 @@ automation.alarm_triggered_armed_away:
 automation.bedtime_routine:
   icon: mdi:bed-clock
 
+automation.front_doorbell_pressed:
+  icon: mdi:doorbell
+
 automation.low_battery_notification:
   friendly_name: Low Battery Notification
   icon: mdi:battery-alert-variant-outline
