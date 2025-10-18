@@ -66,7 +66,7 @@
         - sensor.zcombo_g_smoke_co_alarm_battery_level
         - sensor.zcombo_g_smoke_co_alarm_battery_level_2
         - sensor.zcombo_g_smoke_co_alarm_battery_level_3
-      below: 78
+      below: 79
       for:
         hours: 8
   actions:
