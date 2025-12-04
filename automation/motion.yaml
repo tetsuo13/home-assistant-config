@@ -101,7 +101,7 @@
         filename: "{{ snapshot_absolute_path }}"
     - action: notify.mobile_apps
       data:
-        title: Camera Motion Detected
+        title: "{{ trigger.to_state.name }} Detected"
         message: ""
         data:
           image: "{{ snapshot_base_url }}/{{ snapshot_filename }}"
