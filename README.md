@@ -141,6 +141,8 @@ There are some custom components in use. See the [README](custom_components/READ
 
 This repo tries to adhere to the [YAML Style Guide](https://developers.home-assistant.io/docs/documenting/yaml-style-guide) at the Home Assistant Developer Docs.
 
+Noted in the Home Assistant docs for the [Frontend Icons](https://www.home-assistant.io/docs/frontend/icons/) is a helpful website to browse all available icons that are used for customizations: https://pictogrammers.com/library/mdi/
+
 ## Other Noteable Configurations
 
 Below is a list, in no special order, of other configurations that were particularly inspiring:
