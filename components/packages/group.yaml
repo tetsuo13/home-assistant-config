@@ -21,4 +21,5 @@ group:
     name: Stars in Windows
     entities:
       - switch.tp_link_smart_plug_1db3
+      - switch.tp_link_smart_plug_2ea4
 

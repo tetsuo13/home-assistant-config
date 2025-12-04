@@ -8,3 +8,7 @@ switch.tp_link_smart_plug_1db3:
   friendly_name: Dining Room Star
   icon: mdi:star
 
+switch.tp_link_smart_plug_2ea4:
+  friendly_name: Bedroom 2 Star
+  icon: mdi:star
+
