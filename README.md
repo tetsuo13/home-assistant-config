@@ -66,7 +66,7 @@ The Hue Bridge is easily the most troublesome device in use. Requires power cycl
 
 # Automations
 
-Christmas lights automations aren't available year-round (they're added when the tree goes up, removed again when the tree goes down). See previous years in [#40](https://github.com/tetsuo13/home-assistant-config/pull/40), [#15](https://github.com/tetsuo13/home-assistant-config/pull/15) and [c013a7c](https://github.com/tetsuo13/home-assistant-config/commit/c013a7c10aa19f6366598c1a0cd125f82ec8b465) on what was done.
+Christmas lights automations aren't available year-round (they're added when the tree goes up, removed again when the tree goes down). See previous years in [#74](https://github.com/tetsuo13/home-assistant-config/pull/74), [#40](https://github.com/tetsuo13/home-assistant-config/pull/40), [#15](https://github.com/tetsuo13/home-assistant-config/pull/15) and [c013a7c](https://github.com/tetsuo13/home-assistant-config/commit/c013a7c10aa19f6366598c1a0cd125f82ec8b465) on what was done.
 
 The [`bedtime.yaml`](scripts/bedtime.yaml) handles turning off services and devices that may have been forgotten on. There's an associated automation to trigger the script late at night.
 
