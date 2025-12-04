@@ -1,0 +1,10 @@
+---
+
+group.christmas_stars:
+  friendly_name: Stars in Windows
+  icon: mdi:star
+
+switch.tp_link_smart_plug_1db3:
+  friendly_name: Dining Room Star
+  icon: mdi:star
+

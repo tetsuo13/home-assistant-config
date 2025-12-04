@@ -17,3 +17,8 @@ group:
       - media_player.den
       - media_player.living_room
 
+  christmas_stars:
+    name: Stars in Windows
+    entities:
+      - switch.tp_link_smart_plug_1db3
+

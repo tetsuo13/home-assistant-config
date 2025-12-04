@@ -25,6 +25,11 @@ cards:
     states:
       - arm_home
       - arm_away
+  - type: entities
+    title: Christmas Center
+    state_color: true
+    entities:
+      - group.christmas_stars
   - type: grid
     columns: 2
     square: false
