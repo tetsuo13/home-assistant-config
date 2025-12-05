@@ -2,6 +2,14 @@
 # https://www.home-assistant.io/integrations/group
 
 group:
+  christmas_stars:
+    name: Stars in Windows
+    # Order here is what's shown in the dashboard group
+    entities:
+      - switch.tp_link_smart_plug_1db3
+      - switch.tp_link_smart_plug_2ea4
+      - switch.tp_link_smart_plug_297a
+
   sonos_all:
     name: All Sonos Speakers
     entities:
@@ -16,10 +24,4 @@ group:
       - media_player.main_bedroom
       - media_player.den
       - media_player.living_room
-
-  christmas_stars:
-    name: Stars in Windows
-    entities:
-      - switch.tp_link_smart_plug_1db3
-      - switch.tp_link_smart_plug_2ea4
 
