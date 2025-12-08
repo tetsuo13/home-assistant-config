@@ -1,0 +1,29 @@
+---
+# https://www.home-assistant.io/integrations/template/#switch
+
+template:
+  - switch:
+      - unique_id: switch_living_room_bookshelf_lamps
+        turn_on:
+          - action: switch.turn_on
+            target:
+              entity_id:
+                - switch.tp_link_smart_plug_1106
+          - action: switch.turn_on
+            target:
+              entity_id:
+                - switch.tp_link_smart_plug_ac7b
+        turn_off:
+          - action: switch.turn_off
+            target:
+              entity_id:
+                - switch.tp_link_smart_plug_1106
+          - action: switch.turn_off
+            target:
+              entity_id:
+                - switch.tp_link_smart_plug_ac7b
+        default_entity_id: switch.living_room_bookshelf_lamps
+        icon: mdi:lamps
+        name: Living Bookshelves
+        state: "{{ is_state('switch.tp_link_smart_plug_1106', 'on') }}"
+
