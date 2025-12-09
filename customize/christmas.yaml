@@ -16,3 +16,7 @@ switch.tp_link_smart_plug_2ea4:
   friendly_name: Bedroom 2 Star
   icon: mdi:star
 
+switch.tp_link_smart_plug_f40d:
+  friendly_name: Christmas Tree
+  icon: mdi:pine-tree
+

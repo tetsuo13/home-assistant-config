@@ -10,6 +10,7 @@
     data:
       entity_id:
         - group.christmas_stars
+        - switch.tp_link_smart_plug_f40d
 
 - alias: Christmas - Turn Off Star Early
   id: christmas_turn_off_star_early
@@ -32,4 +33,15 @@
     data:
       entity_id:
         - group.christmas_stars
+
+- alias: Christmas - Turn Off Tree
+  id: christmas_turn_off_tree
+  trigger:
+    platform: time
+    at: "23:48:31"
+  action:
+    service: switch.turn_off
+    data:
+      entity_id:
+        - switch.tp_link_smart_plug_f40d
 
