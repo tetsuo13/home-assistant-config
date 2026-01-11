@@ -5,19 +5,19 @@ template:
   - binary_sensor:
       - default_entity_id: binary_sensor.halloween_month
         name: Month of Halloween
-        value_template: "{{ now().month == 10 }}"
+        state: "{{ now().month == 10 }}"
 
       - default_entity_id: binary_sensor.thanksgiving_month
         name: Month of Thanksgiving
-        value_template: "{{ now().month == 11 }}"
+        state: "{{ now().month == 11 }}"
 
       - default_entity_id: binary_sensor.christmas_month
         name: Month of Christmas
-        value_template: "{{ now().month == 12 }}"
+        state: "{{ now().month == 12 }}"
 
       - default_entity_id: binary_sensor.today_is_someones_birthday
         name: Today is Someone's Birthday
-        value_template: !secret birthday_evaluator
+        state: !secret birthday_evaluator
 
   - switch:
       - unique_id: switch_living_room_bookshelf_lamps
