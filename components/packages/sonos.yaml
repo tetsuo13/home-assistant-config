@@ -8,4 +8,5 @@ sonos:
       - !secret sonos02_ip
       - !secret sonos03_ip
       - !secret sonos04_ip
+      - !secret sonos05_ip
 
