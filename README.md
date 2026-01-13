@@ -70,7 +70,7 @@ Christmas lights automations aren't available year-round (they're added when the
 
 ## [Bedtime](automation/bedtime.yaml)
 
-There's a bedtime automation that triggers the [`bedtime.yaml`](scripts.bedtime.yaml) script which takes care of turning off services and devices that may have been forgotten on. Things like Sonos speakers forgotten on or camera snapshot notifications that were disabled.
+There's a bedtime automation that triggers the [`bedtime.yaml`](scripts/bedtime.yaml) script which takes care of turning off services and devices that may have been forgotten on. Things like Sonos speakers forgotten on or camera snapshot notifications that were disabled.
 
 The "white noise sound machine" is achieved using a Sonos speaker and playing a specific media on repeat. Once you find the perfect white noise media (a topic that's very personal), use this process to record it in the automation:
 
