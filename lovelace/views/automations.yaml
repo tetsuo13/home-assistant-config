@@ -18,6 +18,11 @@ cards:
       - entity: automation.announce_door_closed
       - entity: automation.announce_door_closed_event
   - type: entities
+    title: Automations
+    show_header_toggle: false
+    entities:
+      - entity: automation.bedtime_sound_machine
+  - type: entities
     title: Automations for Lights
     show_header_toggle: false
     entities:

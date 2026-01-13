@@ -9,3 +9,47 @@
   actions:
     action: script.bedtime
 
+- alias: Bedtime sound machine
+  id: bedtime_sound_machine
+  description: >-
+    Turn on sound machine in bedroom. It's set to repeat in case the content
+    finishes. There is nothing here to stop the media player, that's handled
+    by the bedtime routine automation.
+  triggers:
+    platform: time
+    at: "20:05:00"
+  variables:
+    target_player: media_player.bedroom
+  conditions: []
+  actions:
+    - action: media_player.play_media
+      target:
+        entity_id: "{{ target_player }}"
+      data:
+        # yamllint disable-line rule:line-length
+        media_content_id: x-sonos-http:sonos%3asleep%3ade4eda51f409f7799a728d8725b340cd%3aloopSD.mp4?sid=303&flags=0&sn=1
+        media_content_type: music
+      metadata:
+        title: Rain Showers and Deep Thunder (Loopable)
+        thumbnail: null
+        media_class: music
+
+    # TODO: Might be nice to fade in the volume over 10 minutes?
+    # Set volume only after successfully playing the media. That way the
+    # volume isn't changed for nothing. Possible the device was already
+    # playing music at a softer volume and the media_content_id is long valid,
+    # it'll bump the volume and continue playing what was previously playing.
+    - action: media_player.volume_set
+      target:
+        entity_id: "{{ target_player }}"
+      data:
+        volume_level: 0.15
+
+    # In case the media content isn't set to a "station" that'll play
+    # continuously, set the media to repeat.
+    - action: media_player.repeat_set
+      target:
+        entity_id: "{{ target_player }}"
+      data:
+        repeat: all
+
