@@ -68,7 +68,24 @@ The Hue Bridge is easily the most troublesome device in use. Requires power cycl
 
 Christmas lights automations aren't available year-round (they're added when the tree goes up, removed again when the tree goes down). See previous years in [#74](https://github.com/tetsuo13/home-assistant-config/pull/74), [#40](https://github.com/tetsuo13/home-assistant-config/pull/40), [#15](https://github.com/tetsuo13/home-assistant-config/pull/15) and [c013a7c](https://github.com/tetsuo13/home-assistant-config/commit/c013a7c10aa19f6366598c1a0cd125f82ec8b465) on what was done.
 
-The [`bedtime.yaml`](scripts/bedtime.yaml) handles turning off services and devices that may have been forgotten on. There's an associated automation to trigger the script late at night.
+## [Bedtime](automation/bedtime.yaml)
+
+There's a bedtime automation that triggers the [`bedtime.yaml`](scripts/bedtime.yaml) script which takes care of turning off services and devices that may have been forgotten on. Things like Sonos speakers forgotten on or camera snapshot notifications that were disabled.
+
+The "white noise sound machine" is achieved using a Sonos speaker and playing a specific media on repeat. Once you find the perfect white noise media (a topic that's very personal), use this process to record it in the automation:
+
+1. In the Sonos app:
+   1. Add the media to your favorite by tapping the three dots button and then **Save to Sonos Favorites**.
+   2. Navigate back to the home screen and tap on the media that was just saved under the **Sonos Favorites** section.
+   3. Play it on the target Sonos device.
+2. In Home Assistant:
+   1. Go to **Developer tools**.
+   2. Filter for the media player device.
+   3. Look at the Attributes for the device and copy the **media_content_id** value.
+
+Using Sonos Favorites was the only way to get Sonos to recognize the media content without error.
+
+Despite how it may seem contrary, the **media_class** metadata value will most likely be "music," even though it's not listed as a [supported audio format](https://docs.sonos.com/docs/supported-audio-formats) under Sonos documentation. Depending on what type of music is chosen, this value may need to be changed however it wasn't needed under my limited experience.
 
 ## [Door Automations](automation/doors.yaml)
 

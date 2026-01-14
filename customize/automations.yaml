@@ -10,6 +10,10 @@ automation.alarm_triggered_armed_away:
 automation.bedtime_routine:
   icon: mdi:bed-clock
 
+automation.bedtime_sound_machine:
+  friendly_name: Sound Machine in Bedroom
+  icon: mdi:blur
+
 automation.front_doorbell_pressed:
   icon: mdi:doorbell
 
