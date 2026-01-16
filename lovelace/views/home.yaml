@@ -35,6 +35,8 @@ cards:
       - type: tile
         entity: light.hue_white_lamp_2
       - type: tile
+        entity: light.hue_white_lamp_3
+      - type: tile
         entity: light.hue_color_lamp_1
       - type: tile
         entity: light.controller_rgb_44_key_ir_cde6d9

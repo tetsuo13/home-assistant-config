@@ -1,7 +1,7 @@
 ---
 
 - alias: Turn on Lights to Wake Us Up
-  id: turn_on_light_to_wake_us_up
+  id: turn_on_lights_to_wake_us_up
   description: >-
     Fade lights in on weekday mornings to simulate a sunrise next to
     our faces to wake us up.
@@ -20,7 +20,9 @@
   actions:
     action: light.turn_on
     data:
-      entity_id: light.hue_white_lamp_1
+      entity_id:
+        - light.hue_white_lamp_1
+        - light.hue_white_lamp_3
       brightness: 255
       transition: 1800
 
@@ -44,7 +46,9 @@
         - fri
   actions:
     action: light.turn_off
-    entity_id: light.hue_white_lamp_1
+    entity_id:
+      - light.hue_white_lamp_1
+      - light.hue_white_lamp_3
 
 - alias: Turn On Lights Before Sunset
   description: >-
@@ -60,6 +64,7 @@
       entity_id:
         - light.hue_white_lamp_1
         - light.hue_white_lamp_2
+        - light.hue_white_lamp_3
       brightness: 255
       transition: 1500
 
@@ -85,6 +90,17 @@
     action: light.turn_off
     data:
       entity_id: light.hue_white_lamp_1
+      transition: 1800
+
+- alias: Turn Off Bedroom Bedside By Sleeptime
+  id: turn_off_bedroom_bedside_by_sleeptime
+  triggers:
+    trigger: time
+    at: "20:00:00"
+  actions:
+    action: light.turn_off
+    data:
+      entity_id: light.hue_white_lamp_3
       transition: 1800
 
 - alias: Turn On Night-Light at Sunset
