@@ -96,7 +96,7 @@
   id: turn_off_bedroom_bedside_by_sleeptime
   triggers:
     trigger: time
-    at: "20:30:00"
+    at: "20:00:00"
   actions:
     action: light.turn_off
     data:
