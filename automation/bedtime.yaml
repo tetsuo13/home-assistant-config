@@ -43,7 +43,7 @@
       target:
         entity_id: "{{ target_player }}"
       data:
-        volume_level: 0.15
+        volume_level: 0.17
 
     # In case the media content isn't set to a "station" that'll play
     # continuously, set the media to repeat.
