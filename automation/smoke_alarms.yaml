@@ -78,6 +78,7 @@
         - light.hue_color_lamp_1
         - light.hue_white_lamp_1
         - light.hue_white_lamp_2
+        - light.hue_white_lamp_3
         - light.double_switch
         - light.double_switch_2
         - switch.living_room_bookshelf_lamps
