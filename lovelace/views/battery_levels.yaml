@@ -20,6 +20,7 @@ cards:
         name: Laundry Flood Sensor
       - entity: sensor.4_in_1_sensor_battery_level
         name: Guest Bathroom
+      - entity: sensor.hue_smart_button_1_battery
 
   - type: entities
     title: Smoke Alarms

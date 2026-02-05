@@ -69,6 +69,13 @@
       below: 79
       for:
         hours: 8
+
+    - trigger: numeric_state
+      entity_id:
+        - sensor.hue_smart_button_1_battery
+      below: 15
+      for:
+        hours: 8
   actions:
     - action: notify.mobile_apps
       data:
@@ -82,4 +89,38 @@
         message: >-
           The {{ trigger.to_state.attributes.friendly_name }} is low.
           You should probably check it out.
+
+# Designed to interrupt any automations that slowly fade the light on/off.
+# If button is pressed during an automation that is fading it on, the light
+# will turn off completely, and vice versa.
+- alias: Bedroom Button Pressed
+  id: bedroom_button_pressed
+  triggers:
+    - trigger: state
+      entity_id: event.hue_smart_button_1_button_1
+      attribute: event_type
+      to:
+        - long_press
+        - long_release
+        - short_release
+  mode: queued
+  actions:
+    - if:
+        - alias: Light is on, any brightness
+          condition: state
+          entity_id: light.hue_white_lamp_1
+          state: "on"
+      then:
+        - alias: Turn it off
+          action: light.turn_off
+          target:
+            entity_id: light.hue_white_lamp_1
+      else:
+        - action: light.turn_on
+          data:
+            entity_id: light.hue_white_lamp_1
+            # Specify brightness to override any previous brightness less than
+            # full. Button could've been pressed before when light was fading
+            # on, don't want to restore that previous dim light.
+            brightness: 255
 
