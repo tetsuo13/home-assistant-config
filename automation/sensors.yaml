@@ -108,17 +108,17 @@
     - if:
         - alias: Light is on, any brightness
           condition: state
-          entity_id: light.hue_white_lamp_1
+          entity_id: light.hue_white_lamp_3
           state: "on"
       then:
         - alias: Turn it off
           action: light.turn_off
           target:
-            entity_id: light.hue_white_lamp_1
+            entity_id: light.hue_white_lamp_3
       else:
         - action: light.turn_on
           data:
-            entity_id: light.hue_white_lamp_1
+            entity_id: light.hue_white_lamp_3
             # Specify brightness to override any previous brightness less than
             # full. Button could've been pressed before when light was fading
             # on, don't want to restore that previous dim light.
