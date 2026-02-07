@@ -17,3 +17,6 @@ filters:
   homeassistant.helpers.entity:
     - Update of binary_sensor.teams_on_call is taking over 10 seconds
 
+  homeassistant.components.sonos.speaker:
+    -  No recent activity and cannot reach .*, marking unavailable
+
