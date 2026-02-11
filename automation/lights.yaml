@@ -32,10 +32,8 @@
     Turn off lights weekday mornings after sunrise.
   initial_state: true
   triggers:
-    - trigger: numeric_state
-      entity_id: sun.sun
-      attribute: elevation
-      above: 6.0
+    trigger: time
+    at: "07:00:00"
   conditions:
     - condition: time
       weekday:
