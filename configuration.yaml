@@ -32,7 +32,14 @@ logger: !include components/logger.yaml
 config:
 
 lovelace:
-  mode: yaml
+  resource_mode: yaml
+  dashboards:
+    lovelace:
+      mode: yaml
+      filename: ui-lovelace.yaml
+      title: Overview
+      icon: mdi:view-dashboard
+      show_in_sidebar: true
 
 # https://www.home-assistant.io/integrations/system_health/
 system_health:
