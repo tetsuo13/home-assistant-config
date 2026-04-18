@@ -27,11 +27,11 @@ binary_sensor.flood_sensor_water_leak_state:
 binary_sensor.flood_sensor_low_battery_level:
   friendly_name: Laundry Flood Sensor Battery Level
 
-binary_sensor.z_wave_door_window_sensor_window_door_is_open:
+binary_sensor.z_wave_door_window_sensor_open_4:
   friendly_name: Office Door
   device_class: door
 
-binary_sensor.z_wave_door_window_sensor_window_door_is_open_3:
+binary_sensor.z_wave_door_window_sensor_open:
   friendly_name: Kitchen Door
   device_class: door
 
@@ -39,7 +39,7 @@ binary_sensor.z_wave_door_window_sensor_window_door_is_open_5:
   friendly_name: Laundry Door
   device_class: door
 
-binary_sensor.z_wave_door_window_sensor_window_door_is_open_7:
+binary_sensor.z_wave_door_window_sensor_open_2:
   friendly_name: Front Door
   device_class: door
 
