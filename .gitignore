@@ -6,6 +6,7 @@
 *.uuid
 *.xml
 
+.cache/
 .HA_VERSION
 .ha_run.lock
 .storage
