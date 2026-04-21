@@ -39,7 +39,7 @@ sequence:
       entity_id: "{{ sonos_group }}"
     data_template:
       # yamllint disable-line rule:line-length
-      media_content_id: media-source://tts/tts.elevenlabs_text_to_speech?message="{{ message }}"&voice=Valentino
+      media_content_id: media-source://tts/tts.elevenlabs_text_to_speech?message="{{ message }}"
       media_content_type: music
       announce: true
       extra:
