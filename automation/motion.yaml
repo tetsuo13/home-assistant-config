@@ -68,12 +68,12 @@
       entity_id: binary_sensor.office_motion_alarm
       to: "on"
       variables:
-        camera_name: camera.office_main
+        camera_name: camera.office_nvr_main
     - trigger: state
       entity_id: binary_sensor.laundry_motion_alarm
       to: "on"
       variables:
-        camera_name: camera.laundry_main
+        camera_name: camera.laundry_nvr_main
     - trigger: state
       entity_id: binary_sensor.front_door_smart_motion_human
       to: "on"

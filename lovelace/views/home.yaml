@@ -13,12 +13,12 @@ cards:
       - type: picture-glance
         title: Laundry
         entities: []
-        camera_image: camera.laundry_main
+        camera_image: camera.laundry_nvr_main
         camera_view: live
       - type: picture-glance
         title: Office
         entities: []
-        camera_image: camera.office_main
+        camera_image: camera.office_nvr_main
         camera_view: live
   - type: alarm-panel
     entity: alarm_control_panel.alarm
