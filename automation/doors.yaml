@@ -14,7 +14,7 @@
       variables:
         location_name: Front
     - trigger: state
-      entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_5
+      entity_id: binary_sensor.z_wave_door_window_sensor
       to: "on"
       variables:
         location_name: Laundry
@@ -57,7 +57,7 @@
       variables:
         location_name: Front
     - trigger: state
-      entity_id: binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_5
+      entity_id: binary_sensor.z_wave_door_window_sensor
       to: "off"
       variables:
         location_name: Laundry
@@ -94,7 +94,7 @@
       - binary_sensor.z_wave_door_window_sensor_open_4
       - binary_sensor.z_wave_door_window_sensor_open_2
       - binary_sensor.z_wave_door_window_sensor_open
-      - binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_5
+      - binary_sensor.z_wave_door_window_sensor
     to: "on"
   mode: queued
   actions:
@@ -144,7 +144,7 @@
       - binary_sensor.z_wave_door_window_sensor_open_4
       - binary_sensor.z_wave_door_window_sensor_open_2
       - binary_sensor.z_wave_door_window_sensor_open
-      - binary_sensor.z_wave_door_window_sensor_access_control_window_door_is_open_5
+      - binary_sensor.z_wave_door_window_sensor
     to: "off"
   mode: queued
   actions:
