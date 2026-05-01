@@ -39,6 +39,8 @@ cards:
       - type: tile
         entity: light.hue_color_lamp_1
       - type: tile
+        entity: light.hue_essential_lamp_1
+      - type: tile
         entity: light.controller_rgb_44_key_ir_cde6d9
       - type: tile
         entity: switch.tp_link_smart_plug_ac23

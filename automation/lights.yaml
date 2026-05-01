@@ -127,6 +127,45 @@
     data:
       entity_id: light.controller_rgb_44_key_ir_cde6d9
 
+- alias: Turn On Night-Light 2 for Bed
+  id: turn_on_night_light_2_for_bed
+  initial_state: true
+  triggers:
+    trigger: time
+    at: "20:00:00"
+  actions:
+    action: light.turn_on
+    data:
+      entity_id: light.hue_essential_lamp_1
+      brightness_pct: 100
+      rgb_color: [255, 150, 45]
+
+- alias: Turn On Night-Light 2 at Night
+  id: turn_on_night_light_2_at_night
+  initial_state: true
+  triggers:
+    trigger: time
+    at: "21:30:00"
+  actions:
+    action: light.turn_on
+    data:
+      entity_id: light.hue_essential_lamp_1
+      brightness_pct: 40
+      rgb_color: [255, 0, 0]
+
+- alias: Turn Off Night-Light 2 After Sunrise
+  id: turn_off_night_light_2_after_sunrise
+  description: Turn off night-light 15 minutes after sunrise.
+  initial_state: true
+  triggers:
+    trigger: sun
+    event: sunrise
+    offset: "00:15:00"
+  actions:
+    action: light.turn_off
+    data:
+      entity_id: light.hue_essential_lamp_1
+
 - alias: Turn On Dining Room Lamp Before Sunset
   initial_state: true
   triggers:
