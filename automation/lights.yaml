@@ -160,7 +160,7 @@
   triggers:
     trigger: sun
     event: sunrise
-    offset: "00:15:00"
+    offset: "00:30:00"
   actions:
     action: light.turn_off
     data:
