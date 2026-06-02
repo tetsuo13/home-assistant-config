@@ -138,7 +138,7 @@
     data:
       entity_id: light.hue_essential_lamp_1
       brightness_pct: 100
-      rgb_color: [255, 150, 45]
+      rgb_color: [255, 255, 251]
 
 - alias: Turn On Night-Light 2 at Night
   id: turn_on_night_light_2_at_night
