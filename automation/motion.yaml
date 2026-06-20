@@ -70,7 +70,7 @@
       variables:
         camera_name: camera.office_nvr_main
     - trigger: state
-      entity_id: binary_sensor.laundry_motion_alarm
+      entity_id: binary_sensor.laundry_nvr_motion_alarm
       to: "on"
       variables:
         camera_name: camera.laundry_nvr_main
