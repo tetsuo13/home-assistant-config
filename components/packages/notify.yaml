@@ -1,20 +1,7 @@
 ---
 # https://www.home-assistant.io/integrations/group#notify-groups
-# https://www.home-assistant.io/integrations/smtp
 
 notify:
-  - name: email
-    platform: smtp
-    server: !secret smtp_server
-    port: !secret smtp_port
-    username: !secret smtp_username
-    password: !secret smtp_password
-    timeout: 15
-    sender: !secret smtp_sender
-    recipient:
-      - !secret smtp_recipient1
-    sender_name: !secret smtp_sender_name
-
   - name: mobile_apps
     platform: group
     services:
