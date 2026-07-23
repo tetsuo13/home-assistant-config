@@ -15,6 +15,7 @@
     Turn on sound machine in bedroom. It's set to repeat in case the content
     finishes. There is nothing here to stop the media player, that's handled
     by the bedtime routine automation.
+  initial_state: false
   triggers:
     platform: time
     at: "20:05:00"
