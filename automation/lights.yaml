@@ -22,6 +22,7 @@
     data:
       entity_id:
         - light.hue_white_lamp_1
+        - light.hue_white_lamp_3
       brightness: 255
       transition: 1800
 
