@@ -22,6 +22,12 @@
     target_player: media_player.bedroom
   conditions: []
   actions:
+    # If the speaker was last part of a group, remove it from the group
+    # otherwise the media will be played on all of the grouped speakers.
+    - action: media_player.unjoin
+      target:
+        entity_id: "{{ target_player }}"
+
     - action: media_player.play_media
       target:
         entity_id: "{{ target_player }}"
