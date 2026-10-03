@@ -14,9 +14,7 @@ cards:
     show_header_toggle: false
     entities:
       - entity: automation.announce_door_opened
-      - entity: automation.announce_door_opened_event
       - entity: automation.announce_door_closed
-      - entity: automation.announce_door_closed_event
   - type: entities
     title: Automations
     show_header_toggle: false

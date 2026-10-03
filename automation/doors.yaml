@@ -2,6 +2,11 @@
 # yamllint disable rule:line-length
 - alias: Announce Door Opened
   id: announce_door_opened
+  description: >-
+    Notify through Sonos when a door is opened.
+    By default the door will be named in the announcement unless it's a
+    special event such as someone's birthday or Holloween or Thanksgiving or
+    Christmas.
   triggers:
     - trigger: state
       entity_id: binary_sensor.z_wave_door_window_sensor_open
@@ -23,79 +28,6 @@
       to: "on"
       variables:
         location_name: Office
-  mode: queued
-  conditions:
-    - condition: state
-      entity_id: binary_sensor.halloween_month
-      state: "off"
-    - condition: state
-      entity_id: binary_sensor.thanksgiving_month
-      state: "off"
-    - condition: state
-      entity_id: binary_sensor.christmas_month
-      state: "off"
-    - condition: state
-      entity_id: binary_sensor.today_is_someones_birthday
-      state: "off"
-  actions:
-    action: script.sonos_say
-    data:
-      message: "{{ location_name }} door open"
-      delay: "00:00:03"
-
-- alias: Announce Door Closed
-  id: announce_door_closed
-  triggers:
-    - trigger: state
-      entity_id: binary_sensor.z_wave_door_window_sensor_open
-      to: "off"
-      variables:
-        location_name: Kitchen
-    - trigger: state
-      entity_id: binary_sensor.z_wave_door_window_sensor_open_2
-      to: "off"
-      variables:
-        location_name: Front
-    - trigger: state
-      entity_id: binary_sensor.z_wave_door_window_sensor
-      to: "off"
-      variables:
-        location_name: Laundry
-    - trigger: state
-      entity_id: binary_sensor.z_wave_door_window_sensor_open_4
-      to: "off"
-      variables:
-        location_name: Office
-  mode: queued
-  conditions:
-    - condition: state
-      entity_id: binary_sensor.halloween_month
-      state: "off"
-    - condition: state
-      entity_id: binary_sensor.thanksgiving_month
-      state: "off"
-    - condition: state
-      entity_id: binary_sensor.christmas_month
-      state: "off"
-    - condition: state
-      entity_id: binary_sensor.today_is_someones_birthday
-      state: "off"
-  actions:
-    action: script.sonos_say
-    data:
-      message: "{{ location_name }} door closed"
-      delay: "00:00:03"
-
-- alias: Announce Door Opened (Event)
-  id: announce_door_opened_event
-  triggers:
-    trigger: state
-    entity_id:
-      - binary_sensor.z_wave_door_window_sensor_open_4
-      - binary_sensor.z_wave_door_window_sensor_open_2
-      - binary_sensor.z_wave_door_window_sensor_open
-      - binary_sensor.z_wave_door_window_sensor
-    to: "on"
   mode: queued
   actions:
     - choose:
@@ -135,17 +67,40 @@
               data:
                 audio_file: christmas01.mp3
                 everywhere: false
+      default:
+        - action: script.sonos_say
+          data:
+            message: "{{ location_name }} door open"
+            delay: "00:00:03"
 
-- alias: Announce Door Closed (Event)
-  id: announce_door_closed_event
+- alias: Announce Door Closed
+  id: announce_door_closed
+  description: >-
+    Notifiy through Sonos when a door is closed.
+    By default the door will be named in the announcement unless it's a
+    special event such as someone's birthday or Holloween or Thanksgiving or
+    Christmas.
   triggers:
-    trigger: state
-    entity_id:
-      - binary_sensor.z_wave_door_window_sensor_open_4
-      - binary_sensor.z_wave_door_window_sensor_open_2
-      - binary_sensor.z_wave_door_window_sensor_open
-      - binary_sensor.z_wave_door_window_sensor
-    to: "off"
+    - trigger: state
+      entity_id: binary_sensor.z_wave_door_window_sensor_open
+      to: "off"
+      variables:
+        location_name: Kitchen
+    - trigger: state
+      entity_id: binary_sensor.z_wave_door_window_sensor_open_2
+      to: "off"
+      variables:
+        location_name: Front
+    - trigger: state
+      entity_id: binary_sensor.z_wave_door_window_sensor
+      to: "off"
+      variables:
+        location_name: Laundry
+    - trigger: state
+      entity_id: binary_sensor.z_wave_door_window_sensor_open_4
+      to: "off"
+      variables:
+        location_name: Office
   mode: queued
   actions:
     - choose:
@@ -185,6 +140,11 @@
               data:
                 audio_file: christmas01.mp3
                 everywhere: false
+      default:
+        - action: script.sonos_say
+          data:
+            message: "{{ location_name }} door closed"
+            delay: "00:00:03"
 
 - alias: Front Doorbell Pressed
   id: front_doorbell_pressed
