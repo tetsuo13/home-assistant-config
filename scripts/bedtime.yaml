@@ -38,3 +38,8 @@ sequence:
     target:
       entity_id: group.sonos_all
 
+  - alias: Turn off bedroom light
+    action: light.turn_off
+    target:
+      entity_id: light.hue_white_lamp_3
+

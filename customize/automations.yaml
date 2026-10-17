@@ -72,10 +72,6 @@ automation.turn_off_lee_s_bedside_at_night:
   friendly_name: Turn Off Lee's Bedside by 8:30pm
   icon: mdi:lamp
 
-automation.turn_off_bedroom_bedside_by_sleeptime:
-  friendly_name: !secret home_automation_user03_automation_turn_off_by_sleeptime
-  icon: mdi:lamp
-
 automation.bedroom_button_pressed:
   friendly_name: !secret home_automation_user03_automation_button_pressed
   icon: mdi:lamp

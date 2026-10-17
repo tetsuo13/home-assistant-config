@@ -90,17 +90,6 @@
       entity_id: light.hue_white_lamp_1
       transition: 1800
 
-- alias: Turn Off Bedroom Bedside By Sleeptime
-  id: turn_off_bedroom_bedside_by_sleeptime
-  triggers:
-    trigger: time
-    at: "20:00:00"
-  actions:
-    action: light.turn_off
-    data:
-      entity_id: light.hue_white_lamp_3
-      transition: 1800
-
 - alias: Turn On Night-Light at Sunset
   id: turn_on_night_light_at_sunset
   initial_state: true
