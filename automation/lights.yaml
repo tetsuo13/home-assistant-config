@@ -116,6 +116,16 @@
     data:
       entity_id: light.controller_rgb_44_key_ir_cde6d9
 
+- alias: Turn Off Deck Light at Sunrise
+  id: turn_off_deck_light_at_sunrise
+  description: Turn off the deck light at sunrise
+  triggers:
+    - trigger: sun.sunrise
+  actions:
+    - action: light.turn_off
+      target:
+        entity_id: light.hue_color_lamp_1
+
 - alias: Turn On Night-Light 2 for Bed
   id: turn_on_night_light_2_for_bed
   initial_state: true
